@@ -1,0 +1,31 @@
+mixin item-text(i, t )
+	+e.slide.swiper-slide.col-lg-6
+		+e.img-wrap.d-md-none
+			img.res-i.lazy(src="#" data-src=`img/text-i-${i}.png`, alt="")
+		+e.title= t
+		block
+	// /+e.slide.swiper-slide.col-lg-6
+mixin item-text-whithoutIcon( t )
+	+e.col.col-lg-6 
+		+e.title= t
+		block
+	// /+e.col.col-lg-6
+
+mixin s-text()
+	// start s-text
+	+b.s-text.section.lazy-background&attributes(attributes)
+		.container 
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					+item-text('1','Контроль веса')
+						+e.text Каждый автомобиль едет через весы с&nbsp;сопровождающими документами,&nbsp;а&nbsp;также&nbsp;Вы всегда можете присутствовать  
+							br 
+							| на&nbsp;погрузке.
+					+item-text('2','Полный пакет документов')
+						+e.text После отгрузки формируем закрывающие документы. Вы&nbsp;получаете на&nbsp;электронный адрес скан документов. В&nbsp;течении 2-ух недель придут к&nbsp;вам на&nbsp;почтовый адрес. При срочности, оригинал документа привезем к&nbsp;Вам в&nbsp;офис.
+					+item-text('3','Всегда на связи')
+						+e.text Наши менеджеры на&nbsp;связи 7&nbsp;дней внеделю, вы&nbsp;всегда можете узнать где находится груз и&nbsp;задать любые вопросы.
+					+item-text('4','Фото с погрузки')
+						+e.text Отправляем фотографии процесса погрузки на&nbsp;WhatsApp, Viber.
+				.swiper-pagination
+	// end s-text

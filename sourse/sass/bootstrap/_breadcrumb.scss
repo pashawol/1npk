@@ -1,0 +1,46 @@
+.breadcrumb {
+  @include media-breakpoint-up(xl) {
+
+    display: flex;
+  }
+  display: none;
+  flex-wrap: wrap;
+  // padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  // margin-bottom: $breadcrumb-margin-bottom;
+  list-style: none;
+  // background-color: $breadcrumb-bg;
+  // @include border-radius($breadcrumb-border-radius);
+  @include media-breakpoint-between(xl, xxl){
+
+    padding-top: rem(0);
+  } 
+  padding-top: rem(0);
+  padding-bottom: rem(20);
+}
+
+.breadcrumb-item {
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  color: #848484;
+  border-bottom: 1px solid transparent;
+  &:not(.active):hover{
+    border-color: $primary;
+  }
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding-x;
+
+    &::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding-x;
+      color: $breadcrumb-divider-color;
+      content: $breadcrumb-divider;
+    }
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+}

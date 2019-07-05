@@ -1,0 +1,40 @@
+mixin s-geo()
+	// start s-geo
+	+b.s-geo.section#s-geo.d-none.d-md-block.lazy-background&attributes(attributes)
+		.container
+			block
+
+			+e.UL.list.d-lg-none
+				- var list = ['Альметьевск','Белебей','Белорецк','Бирск','Благовещенск','Бугульма','Елабуга','Заинск','Зеленодольск','Ишимбай','Казань','Кумертау','Лениногорск','Мелеуз', 'Менделеевск', 'Мензелинск','Набережные Челны', 'Нефтекамск', 'Нижнекамск', 'Нурлат', 'Октябрьский', 'Салават', 'Стерлитамак', 'Сибай', 'Туймазы', 'Уфа', 'Учалы', 'Чистополь' ]
+				each li in list
+					+e.LI.list-item= li
+			+e.img-wrap
+				
+				img.res-i.lazy.d-none.d-lg-inline(src="#" data-src="img/map.png", alt="")
+				img.res-i.lazy.d-none.d-lg-inline.map-city(src="#" data-src="img/map-city.png", alt="")
+				img.res-i.lazy.d-none.d-md-inline.d-lg-none(src="#" data-src="img/map-md.png", alt="")
+			.text-center
+				+e.text Не нашли свой город? оставьте заявку и&nbsp;мы&nbsp;предоставим для&nbsp;Вас индивидуальные условия поставки
+				+e.btn.popup-with-move-anim(href="#modal-call"   data-title='Оставить заявку') Оставить заявку
+	// end s-geo
+
+mixin s-geo()
+	// start s-geo
+	+b.s-geo.section#s-geo.lazy-background&attributes(attributes)
+		.container
+			block
+
+			+e.UL.list.d-lg-none
+				- var list = ['Альметьевск','Белебей','Белорецк','Бирск','Благовещенск','Бугульма','Елабуга','Заинск','Зеленодольск','Ишимбай','Казань','Кумертау','Лениногорск','Мелеуз', 'Менделеевск', 'Мензелинск','Набережные Челны', 'Нефтекамск', 'Нижнекамск', 'Нурлат', 'Октябрьский', 'Салават', 'Стерлитамак', 'Сибай', 'Туймазы', 'Уфа', 'Учалы', 'Чистополь' ]
+				each li in list
+					+e.LI.list-item= li
+			+e.img-wrap.d-none.d-md-block
+				
+				img.res-i.lazy.d-none.d-lg-inline(src="#" data-src="img/map.png", alt="")
+				img.res-i.lazy.d-none.d-lg-inline.map-city(src="#" data-src="img/map-city.png", alt="")
+				img.res-i.lazy.d-none.d-md-inline.d-lg-none(src="#" data-src="img/map-md.png", alt="")
+			.text-center
+				+e.text Не нашли свой город? оставьте заявку и&nbsp;мы&nbsp;предоставим для&nbsp;Вас индивидуальные условия поставки
+				+e.btn.popup-with-move-anim(href="#modal-call"   data-title='Оставить заявку') Оставить заявку
+	// end s-geo
+

@@ -1,0 +1,348 @@
+.s-card-head {
+	.h6{
+		@include media-breakpoint-up(md) {
+
+			max-width: em(500);
+		}
+	}
+		&.visible{
+		
+		}
+
+		&__img-wrap{
+			display: block;
+			@include block;
+			border-radius: 5px;
+			background-color: $light;
+			>img{
+
+				max-width: 100%;
+			}
+			@include media-breakpoint-up(md) {
+				max-height: none
+			}
+			max-height: 200px;
+		}
+		&__slide{
+			margin-bottom: 14px;
+		}
+		&__slider-wrap{
+			margin-top: rem(10);
+			@include media-breakpoint-up(xxl) {
+
+				margin-left: -30px;
+			}
+			position: relative;
+			// max-width: 100%;
+			@include media-breakpoint-up(md) {
+				padding-bottom: 0;
+			}
+			padding-bottom: 15px;
+		}
+		&__slider{
+			// max-width: 100%;
+			
+		}
+		&__slide{
+			
+			// max-width: 100%;
+		}
+		&__label{
+			line-height: 1;
+			@include media-breakpoint-up(sm) {
+
+				display: flex;
+
+			}
+			padding-left: rem(15);
+			display: none;
+				align-items: center;
+				position: absolute;
+				justify-content: center;
+				align-items: center;
+				width: rem(211px);
+				height: rem(50px);
+				box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
+				border-radius: 5px;
+				border: 2px solid #dddddd;
+				@include media-breakpoint-down(sm) {
+					border-width: 1px;
+			} 
+				background-color: #ffffff;
+			z-index: 2;
+			top: rem(30);
+			right: rem(30);
+			.icon{
+				font-size: rem(26);
+				margin-right: rem(14);
+				color: $primary;
+			}
+
+		}
+		&__title{
+			font-weight: bold;
+			@extend .h2;
+			@include media-breakpoint-up(md) {
+			max-width: em(200);
+			}
+			span{
+				font-size: em(12.5);
+			}
+			margin-bottom: em(5);
+		}
+		&__presense{
+			color: #848484;
+			margin-bottom: em(20);
+		}
+		&__row{
+			@include roww(7)
+		}
+		.form-wrap{
+			@include media-breakpoint-up(lg) {
+				
+				max-width: 554px;
+				margin-right: 0;
+				margin-left: 0;
+				// padding-top: 0;
+				padding-top: em(10);
+				text-align: left;
+			}
+			text-align: center;
+			padding-top: rem(30);
+			&__polite{
+				display: inline-block;
+			}
+			&__row-wrap{
+				@include media-breakpoint-up(lg) {
+					margin-left: 0;
+					margin-right: 0;
+					max-width: 100%;
+				}
+				max-width: 396px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			.h55{
+				margin-bottom: em(16);
+			}
+			&__btn{
+				margin: 0;
+				@include media-breakpoint-up(lg) {
+
+					width: em(190);
+				}
+				width: em(166);
+			}
+		}
+		.swiper-button-hand{
+			background-color: #ffffff;
+			border-color: #fff;
+			&-prev{
+				left: 15px;
+			}
+			&-next{
+				right: 15px;
+			}
+			// opacity: 1;
+		}
+		
+		&__btn{
+			margin-left: auto;
+			margin-right: auto;
+			width: 152px;
+			@extend .btn-primary;
+			@extend .btn;
+			display: block;
+			margin-bottom: rem(40);
+		}
+		
+		&__img-wrap--bz{
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(30);
+			}
+			// @include block(555,428);
+			&::before{
+
+				padding-bottom: (  428 / 555 * 100%);
+			}
+
+		}
+	//
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(90);
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+		padding-top: rem(20);
+		&__label,
+		.swiper-button-hand{
+			display: none !important;
+		}
+	}
+	@include media-breakpoint-down(xs) {} 
+&__slide{
+	@include clearfix;
+}
+}
+
+.prod-btn{
+	&--head{
+		margin-bottom: 1.4rem;
+	}
+	@extend .h6;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid #f2f1f0;
+	@include media-breakpoint-down(sm) {
+		border-width: 1px;
+} 
+@include media-breakpoint-down(xs) {
+	font-size: 12px;
+} 
+	background-color: #f2f1f0;
+	text-align: center;
+	// @include mt;
+	display: block;
+	@include media-breakpoint-up(lg) {
+	padding: em(7) em(12);
+}
+padding: em(7) em(10);
+	margin-bottom: em(12);
+	@extend .text-body;
+	@include media-breakpoint-up(sm) {
+		
+		&:hover{
+			background-color: #ffffff;
+		}
+	}
+	&.active,
+	&--active{
+		border-color: $primary;
+		background-color: #ffffff;
+	}
+	&--lg{
+		cursor: default;
+		@include media-breakpoint-up(xl) {
+			font-size: $h5-font-size;
+			margin-bottom: em(22);
+		}
+		margin-bottom: em(15);
+		@include font-size($h55-font-size); 
+		display: inline-block;
+		@include media-breakpoint-down(sm) {
+			border: none;
+		}
+	}
+	&--shipping{
+		@include media-breakpoint-down(sm) {
+			// border: none;
+			font-weight: bold;
+			font-size: calc(1.105rem + 1.74vw);
+			// margin-top: 5px;
+			padding-top: rem(5px);
+			padding-bottom: 0px;
+			margin-bottom: rem(20px);
+			color: $primary !important;
+			// margin-bottom: 0;
+		}
+	}
+}
+
+.prod-pagination{
+	// @include roww(8);
+	text-align: center;
+	padding-top: 10px;
+	@include media-breakpoint-up(md) {
+		padding-top: 0;
+		display: flex;
+	 
+	}
+	.swiper-pagination-bullet{
+		cursor: pointer;
+		@include media-breakpoint-up(md) {
+
+			@include mt; 
+			margin-left: 0 !important;
+			margin-right: 15px !important;
+			&:last-child{
+				margin-right: 0 !important;
+			}
+			width: calc(50% - 30px) !important;  
+			// height: 0 !important;
+			
+			display: block !important; 
+			border-radius: 5px !important; 
+			border: 2px solid #fff; 
+			
+			
+			height: auto !important;
+			&::before{
+				content: '';
+				padding-bottom: 100%;
+				display: block;
+				height: 0;
+			}
+			// background: none !important;
+			&-active{ 
+				border-color: $primary;
+				@include transform(scale(.99)); 
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			background-image: none !important;
+		}
+	}
+}
+
+
+ 
+
+/* Shrink wrap strategy 2 */
+// .easyzoom {
+// 	display: inline-block;
+// }
+// .easyzoom img {
+// 	cursor: crosshair;
+// 	vertical-align: bottom;
+// }
+
+
+.easyzoom {
+	// float: left;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	// z-index: 10000;
+	position: relative;
+}
+.easyzoom img {
+	// display: block;
+	vertical-align: bottom;
+	// vertical-align: bottom;
+}
+@include media-breakpoint-down(xs) {
+	.easyzoom-flyout{
+		display: none !important;
+	}
+}

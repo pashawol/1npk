@@ -1,0 +1,24 @@
+mixin s-values()
+	// start s-values
+	+b.s-values.section#s-values.d-none.d-md-block&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Ценности компании
+				+e.text Уже более 7&nbsp;лет &laquo;Первая Нерудная Компания&raquo; строится на&nbsp;следующих принципах:
+				
+			.row
+				mixin prod(i)
+					+e.col.col-lg-3.col-md-6
+						+e.item.img-animate.img-bg( )
+							img.lazy-bg(src="#" data-src=`img/values-img-${i}.jpg` alt="") 
+							block
+					// /+e.col.col
+				+prod(1)
+					+e.text Постоянное стремление нести пользу и&nbsp;менять мир к&nbsp;лучшему
+				+prod(2)
+					+e.text Честность и&nbsp;Порядочность ни&nbsp;только в&nbsp;работе, но&nbsp;и&nbsp;в&nbsp;других аспектах жизни
+				+prod(3)
+					+e.text Развивайся сам, при этом развивая компанию
+				+prod(4)
+					+e.text Дисциплина &mdash; лучшее начало любого дела
+	// end s-values

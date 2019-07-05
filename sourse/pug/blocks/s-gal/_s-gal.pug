@@ -1,0 +1,107 @@
+mixin s-gal()
+	// start s-gal
+	+b.s-gal.section#s-gal&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Фотографии проекта
+				
+			+e.slider-wrapper
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper.gal
+						mixin item(i)
+							+e.col.col-lg-4.col-md-6.swiper-slide
+								+e.item.img-bg(href=`img/video-${i}.jpg`  )
+									img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+							// +e.col-lg-4.col-md-6.swiper-slide
+							
+						+item('1')
+						+item('2')
+						+item('3')
+						
+						+item('1')
+						+item('2')
+						+item('3')
+
+			+b.swiper-pagination--lg
+	// end s-gal
+
+mixin s-gal-17-1()
+	// start s-gal
+	+b.s-gal.section#s-gal&attributes(attributes)
+		.container
+			+b.section-title
+				h4.strong Фото и видео продукции:
+				
+			+e.slider-wrapper
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper.gal
+						mixin item(i)
+							+e.col.col-lg-4.col-md-6.swiper-slide
+								+e.item.img-bg(href=`img/video-${i}.jpg`  )
+									img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+							// +e.col-lg-4.col-md-6.swiper-slide
+						mixin item-v(i)
+							+e.col.col-lg-4.col-md-6.swiper-slide
+								a.s-video__item.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg` class="swiper-lazy")
+									img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+							// +e.col-lg-4.col-md-6.swiper-slide
+						
+						+item-v('1')
+						+item-v('2')
+						+item-v('3')
+						
+						+item('1')
+						+item('2')
+						+item('3')
+
+			+b.swiper-pagination--lg
+	// end s-gal
+
+mixin s-gal-16-7()
+	// start s-gal
+	+b.s-gal.section#s-gal&attributes(attributes)
+		.container 
+			mixin item(i)
+				+e.col.col-lg-4.col-md-6.swiper-slide
+					+e.item.img-bg(href=`img/video-${i}.jpg`  )
+						img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+				// +e.col-lg-4.col-md-6.swiper-slide
+			mixin item-v(i)
+				+e.col.col-lg-4.col-md-6.swiper-slide
+					a.s-video__item.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg` class="swiper-lazy")
+						img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+				// +e.col-lg-4.col-md-6.swiper-slide
+			.tabs
+				.tabs__caption
+					.tabs__btn.active.prod-btn Фотогалерея
+					.tabs__btn.prod-btn Видеогалерея
+				.tabs__wrap
+					.tabs__content.active
+						+e.slider-wrapper
+							+e.slider.slider--js3.swiper-container
+								.swiper-wrapper.gal 
+									+item('1')
+									+item('2')
+									+item('3')
+									
+									+item('1')
+									+item('2')
+									+item('3')
+								+b.swiper-pagination--lg
+					.tabs__content
+						+e.slider-wrapper
+							+e.slider.slider--js3.swiper-container
+								.swiper-wrapper.gal
+									
+									+item-v('1')
+									+item-v('2')
+									+item-v('3') 
+									
+									+item-v('1')
+									+item-v('2')
+									+item-v('3') 
+								+b.swiper-pagination--lg
+
+
+	// end s-gal
+

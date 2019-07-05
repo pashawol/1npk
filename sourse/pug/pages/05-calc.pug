@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+block title
+	title 5. Калькулятор поставок
+
+
+block pagecontent
+	+header() 
+		+top-nav()(class="fixed-page ")
+		//- +header-block()
+	+b.main-row.row.no-gutters
+		+e.col-aside.col-xl-auto 
+			+e.current-nav.toggle-btn-js.d-xl-none
+				.container Калькулятор поставок
+			
+			+aside-nav
+
+
+
+		+e.col-main.col
+			+b.page-head.container
+				+breadcrumb('Калькулятор поставок', 'Главная')
+				h1 Калькулятор поставок
+				+e.text Узнайте сейчас точную стоимость поставки материала до&nbsp;вашего объекта
+			+s-calc()
+	
+	+footer()

@@ -1,0 +1,107 @@
+mixin s-why()
+	// start s-why
+	+b.s-why.section#s-why.lazy-background&attributes(attributes)
+		.container
+			mixin item(i,t)
+				+e.item
+					.row.align-items-center
+						.col-4
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/s-why-${i}.png`, alt="")
+						.col
+							+e.block
+								+e.title= t
+								block
+				// /+e.item
+			+item('lg','Отсрочка платежа')
+				+e.text Для постоянных клиентов мы&nbsp;предоставляем возможность отсрочки платежа до&nbsp;2&nbsp;недель. Мы&nbsp;отгружаем продукцию по&nbsp;первому запросу, а&nbsp;в&nbsp;течение двух недель вы&nbsp;оплачиваете.
+	// end s-why
+
+
+mixin s-why-04()
+	// start s-why
+	+b.s-why.section#s-why.pb-0.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Почему клиенты предпочитают работать с&nbsp;нами
+		mixin item(i,t)
+			+e.item--md
+				.container
+					.row.align-items-center
+						+e.col.col-md-3
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/why-${i}.png` width='220' height='160', alt="")
+						.col
+							+e.block--md
+								+e.title--lg= t
+								block
+				// /+e.item
+		+item('1','  Высокое качество продукции')
+			+e.text Вся наша продукция проходит обязательную сертификацию.
+		
+		+item('2','  Премиум сервис')
+			+e.text В&nbsp;основе нашей компании&nbsp;&mdash; точный расчёт и&nbsp;пунктуальность в&nbsp;сотрудничестве с&nbsp;каждым клиентом.
+		
+		+item('3','  Персональный менеджер')
+			+e.text В&nbsp;любой момент узнайте, где находится Ваш груз в&nbsp;режиме реального времени.
+		
+		+item('4','  Отсрочка платежа')
+			+e.text Для крупных клиентов возможна отсрочка платежа до&nbsp;2&nbsp;недель с&nbsp;момента поставки.
+			
+	// end s-why
+
+
+mixin s-why-16-9()
+	// start s-why
+	+b.s-why--page.section#s-why.lazy-background&attributes(attributes)
+		.container
+			mixin item(i,t)
+				+e.item
+					.row.align-items-center
+						.col-xxl-4.col-md-auto
+							+e.img-wrap
+								img.res-i.lazy.mw-100(src="#" data-src=`img/s-why-${i}.png`, alt="")
+						.col
+							+e.block
+								+e.title--border= t
+								block
+				// /+e.item
+			+item('l','Бонусы закупщикам')
+				+e.text.h6 Мы&nbsp;всегда готовы предложить заинтересованным в&nbsp;нашей продукции закупщикам компенсацию, а&nbsp;также благоприятные условия поставки инертной продукции надлежащего качества.
+	// end s-why
+
+mixin s-why-16-8()
+	// start s-why
+	+b.s-why--page.section#s-why.lazy-background&attributes(attributes)
+		.container
+			mixin item(i,t)
+				+e.item
+					.row.align-items-center
+						.col-xxl-4.col-md-auto
+							+e.img-wrap
+								img.res-i.lazy.mw-100(src="#" data-src=`img/s-why-${i}.png`, alt="")
+						.col
+							+e.block
+								+e.title--border= t
+								block
+				// /+e.item
+			+item('lg','Для постоянных клиентов')
+				+e.text.h6 Мы&nbsp;предоставляем возможность отсрочки платежа до&nbsp;2&nbsp;недель. Мы&nbsp;отгружаем продукцию по&nbsp;первому запросу, а&nbsp;в&nbsp;течение двух недель вы&nbsp;оплачиваете.
+			+e.sub-title Также мы можем предложить:
+			.row
+				+e.col-border.col-lg-6
+					+e.item-border
+						.h5.strong Оплата 
+							|
+							span.text-primary по факту
+						.h6 Возможность оплатить продукцию по&nbsp;факту отгрузки без предоплаты.
+				
+				+e.col-border.col-lg-6
+					+e.item-border
+						.h5.strong Отгрузка 
+							|
+							span.text-primary по себестоимости
+						.h6 Для новых клиентов первую отгрузку при больших объемах поставим по&nbsp;себестоимости.
+				
+	// end s-why
+

@@ -1,0 +1,113 @@
+.s-text {
+	h2{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: em(400);
+	}
+		 &__title{
+			 @extend h5;
+
+			 font-weight: bold;
+			 position: relative;
+			//  margin-top: ;
+			@include media-breakpoint-up(md) {
+
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					width: 5px;
+					height: 5px;
+					background-color: $primary;
+					border-radius: 50%;
+					top: em(7);
+				}
+				padding-left: rem(25);
+			}
+				margin-bottom: em(15);
+		}
+		&__col{
+			margin-bottom: rem(35);
+		}
+		&__slide{
+			padding-top: rem(10);
+			padding-bottom: rem(25);
+
+		 }
+		 
+
+
+		 &__img-wrap{
+			 margin-bottom: 1.2rem;
+		 }
+
+
+
+		 .swiper-wrapper{
+		
+			margin-bottom: 40px;
+			@include media-breakpoint-up(md) {
+				justify-content: center;
+				margin-bottom: 20px;
+				margin-bottom: rem(5);
+				width: calc(100% + 30px);
+				padding-bottom: 0;
+				transform: translate3d(0px, 0px, 0px) !important; 
+				flex-wrap: wrap;
+				margin-right: -15px;
+				margin-left: -15px;
+				text-align: left;
+				&:before{
+					display: none;
+				}
+			}
+			text-align: center;
+		}
+		.swiper-pagination{
+			width: 100%;
+			@include media-breakpoint-up(md) {
+	
+				display: none !important;
+			}
+		}
+		&__slide{
+			// @include media-breakpoint-up(lg) {}
+		  
+			height: auto;
+			@include media-breakpoint-down(sm) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(sm) {
+		br{
+			display: none;
+		}
+	}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+	} 
+
+}

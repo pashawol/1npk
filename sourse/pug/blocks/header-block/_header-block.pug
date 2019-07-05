@@ -1,0 +1,92 @@
+mixin header-block-body()
+	// start header-block
+	+b.header-block#header-block&attributes(attributes)
+		
+		.container
+			+e.logo.text-center.d-sm-none
+				img.res-i(src="img/logo.png", alt="")
+			block
+			+e.down--js
+				+icon('arrow-down')
+	// end header-block
+mixin header-block()
+	+header-block-body()(class="header-block--main")
+		.video-fallback.d-none.d-md-block
+		.video-container.d-none.d-md-block
+			video.fillItUp.video.lazy( width="100%" height="" id="bgvid"    playsinline autoplay muted loop)
+				source(src="#" data-src='video/video.mp4', type='video/mp4')
+				source(src="#" data-src='video/video.webm', type='video/webm')
+				source(src="#" data-src='video/video.ogv', type='video/ogg')
+				//- source(src='video/video.webm', type='video/webm')
+		+e.text--top.d-sm-block.d-none Доставим за&nbsp;2&nbsp;часа напрямую с&nbsp;карьера без предоплаты
+		h1 Нерудные материалы по&nbsp;оптовым ценам от&nbsp;480 руб за&nbsp;тонну с&nbsp;НДС
+		.row
+			.col-md-6.col-12
+				+e.text-block
+					+e.text.d-sm-block.d-none Оставьте заявку прямо сейчас и&nbsp;получите материал на&nbsp;выгодных услов
+					+e.btn.popup-with-move-anim(href="#modal-thank" data-title='Оставить заявку') Оставить заявку
+			.col-auto.d-md-block.d-none
+				+e.item
+					+e.count 9&nbsp;500
+					+e.text отгрузок осуществили 
+						br
+						| за&nbsp;2018 год
+			.col-auto.d-md-block.d-none
+				+e.item
+					+e.count 462&nbsp;000
+					+e.text тонн нерудных материалов 
+						br
+						| отгрузили за&nbsp;2018 год
+			
+
+mixin header-block-09()
+	+header-block-body()(class="header-block--rew")
+		h1 Отзывы клиентов о&nbsp;сотрудничестве с&nbsp;нашей компанией
+		+e.text--top.h55.d-sm-block.d-none За&nbsp;долгие годы работы к&nbsp;нам обратились множество клиентов с&nbsp;разными потребностями. Спасибо за&nbsp;ваше доверие.
+		.row.justify-content-between
+			.col-md-6.col-12
+				+e.text-block
+					//- +e.text.d-sm-block.d-none Оставьте заявку прямо сейчас и&nbsp;получите материал на&nbsp;выгодных услов
+					+e.btn--js(href="#"  ) Смотреть отзывы
+			.col-auto.d-md-block.d-none
+				+e.item
+					+e.count 7&nbsp;лет
+					+e.text успешной работы
+						br
+						| с&nbsp;2012 года
+			.col-auto.d-md-block.d-none
+				+e.item
+					+e.count 6&nbsp;560
+					+e.text клиентов за&nbsp;последние
+						br
+						| 4&nbsp;года 
+
+mixin header-block-04() 
+	+header-block-body()(class="header-block--about")
+		h1 О компании
+
+		+e.text--top.h55 Первая нерудная компания&nbsp;&mdash; надежный партнер и&nbsp;ведущий поставщик 
+			br.d-none.d-md-block
+			| нерудных материалов по&nbsp;Республике Татарстан 
+			br.d-none.d-md-block 
+			| и&nbsp;Республике Башкортостан  
+
+mixin header-block-07() 
+	+header-block-body()(class="header-block--contact")
+		.row
+			.col.align-self-lg-center
+				h1 Контакты
+				+e.text--contract.h55.d-none.d-md-block Чтобы обсудить условия поставки или другой вопрос, свяжитесь с&nbsp;нами
+			.col-lg-auto 
+				+e.group
+					+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+					+e.text--top.h55 Отдел по работе с клиентами
+				
+				+e.group
+					+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+					+e.text--top.h55 Отдел продаж
+				
+				+e.group.d-none.d-md-block
+					+e.link--mail.h4.strong(href="tel:info@pn-company.ru") info@pn-company.ru
+					+e.text--sm.h6 Техническая поддержка клиентов
+				

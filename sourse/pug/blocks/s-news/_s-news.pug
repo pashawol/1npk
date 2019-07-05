@@ -1,0 +1,19 @@
+mixin s-news()
+	// start s-news
+	+b.s-news#s-news&attributes(attributes)
+		.container
+			- for (var x = 0; x < 6; x++)
+				+e.ARTICAL.item.section-border-bottom
+					.row
+						.col-md-6
+							+e.img-wrap.img-bg.img-animate(href="#")
+								img.lazy-bg(src="#" data-src="img/prod-1.jpg", alt="")
+						.col
+							+e.text-block
+								+e.time  4 февраля 2019
+								+e.title
+									a.text-body(href="#") Hyundai WIA в спец проекте Минпромторга России
+								+e.text Текст под замену. В настоящий момент в онлайн-каталоге представлены наиболее ходовые позиции основных видов продукции Первой нерудной компании.
+								+e.btn(href="#") Подробнее
+			+e.btn-more(href="#") Загрузить еще
+	// end s-news

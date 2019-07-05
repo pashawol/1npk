@@ -1,0 +1,107 @@
+mixin s-project-head()
+	// start s-project-head
+	+b.s-project-head.section#s-project-head&attributes(attributes)
+		.container
+			.row
+				.col.order-md-first 
+					+b.section-title.text-md-left.text-center
+						h1 Строительство 
+							br
+							| аэропорта «Бегишево»
+
+				.col-12
+					+e.img-wrap.img-bg
+						img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="")
+				.col-md-auto.order-md-first.align-self-center
+					+b.section-title--video
+						+b.play-block.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg`)
+							+e.icon-wrap
+								+icon('play')
+							| Посмотреть видео с&nbsp;отгрузки
+	// end s-project-head
+
+
+mixin s-project-head-2()
+	// start s-project-head
+	+b.s-project-head.section.pb-0#s-project-head&attributes(attributes)
+		
+		.container
+			.section-title
+				.row
+					.col-md-auto.order-md-last.align-self-center.text-md-left.text-center
+						+e.btn-head(href="#") Вернуться назад
+					.col 
+						
+							h1 Hyundai WIA в спец проекте Минпромторга России
+				
+				.text-gray2.fw-400  4 февраля 2019
+			+e.img-wrap--artical.img-bg.mb-0
+				img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="")
+	// end s-project-head
+mixin s-project-head-bz()
+	// start s-project-head
+	+b.s-project-head--bz.--artical.section#s-project-head.pb-0&attributes(attributes)
+		
+		.container
+			+e.img-wrap--bz.--artical.img-bg.img-animate(href="#")
+				img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="") 
+			.date-row.row.row--md.align-items-center
+				.col-auto
+					.text-gray2.fw-400  4 февраля 2019 
+				.col-auto
+					.fw-400
+						+icon('eye')  
+						| 313
+				.col-auto
+					+b.badge--primary Песок
+			+e.title 
+				a.text-body(href="#") Как купить качественный песок и&nbsp;не&nbsp;ошибиться с&nbsp;поставщиком?
+			+e.btn-head(href="#") Читать полностью
+			+e.body
+				.row
+					mixin item(t)
+						+e.col.col-md-6
+							+e.ARTICAL.item
+								.date-row.row.row--md.align-items-center
+									.col-auto
+										.text-gray2.fw-400  4 февраля 2019 
+									.col-auto
+										.fw-400
+											+icon('eye')  
+											| 313
+									.col-auto
+										+b.badge--primary Песок
+								+e.item-title
+									a.text-body(href="#")= t
+								+e.btn-head(href="#") Читать полностью
+						// /+e.col.col-md-6
+					- for (var x = 0; x < 3; x++)
+						+item('Чем отличается ПГС от ОПГС?')
+						+item('Чем отличается ПГС от ОПГС длинное название в 2 строки?')
+				+e.btn-more(href="#") Загрузить еще
+	// end s-project-head
+mixin s-project-head-bz-artical()
+	// start s-project-head
+	+b.s-project-head--bz.section#s-project-head&attributes(attributes)
+		
+		.container
+			.section-title.section-title--bz
+				.row
+					.col-md-auto.order-md-last.align-self-center.text-md-left.text-center
+						+e.btn-head(href="#") Вернуться назад
+					.col 
+						
+						h1 Как купить качественный песок и&nbsp;не&nbsp;ошибиться с&nbsp;поставщиком?
+				.date-row.row.row--md.align-items-center.pb-0
+					.col-auto
+						.text-gray2.fw-400  4 февраля 2019 
+					.col-auto
+						.fw-400
+							+icon('eye')  
+							| 313
+					.col-auto
+						+b.badge--primary Песок
+			+e.img-wrap--bz.--artical.img-bg
+				img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="") 
+			 
+	// end s-project-head

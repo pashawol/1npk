@@ -1,0 +1,71 @@
+ 
+	  
+.soc{
+	@include media-breakpoint-up(lg) {
+
+		padding-left: rem(30px);
+	}
+	@include media-breakpoint-up(md) {
+
+		margin: 0 rem(-13.5px);
+	}
+	margin: 0 rem(-10px);
+	text-align: center;
+
+	&__item{
+		display: inline-block;
+		text-decoration: none !important;
+		@include media-breakpoint-up(md) {
+
+			margin: 0 rem(13.5px);
+		}
+		margin: 0 rem(10px);
+		vertical-align: middle; 
+		color: #ffffff;
+		&:hover{
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// opacity: .6 ;
+		}
+	}
+	.icon{
+		@include media-breakpoint-up(md) {
+			font-size: rem(32px);
+			&-whatsup{
+				
+				font-size: rem(29px);
+			}
+			
+			&-telegram{
+				
+				font-size: rem(27px);
+			}
+
+		} 
+		font-size: $h5-font-size;
+		&-whatsup{
+			
+			font-size: $h55-font-size;
+		}
+		
+		&-telegram{
+			
+			font-size: rem(19px);
+		}
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+
+

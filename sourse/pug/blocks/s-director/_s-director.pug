@@ -1,0 +1,17 @@
+mixin s-director()
+	// start s-director
+	+b.s-director.section#s-director.bg-light.d-none.d-md-block.lazy-background&attributes(attributes)
+		.container
+			.row
+				.col-lg.col-5
+					img.res-i.lazy(src="#" data-src="img/director.jpg" width="488" height="570", alt="")
+				.col
+					+b.section-title
+						h2 Шайхутдинов Фирдус Фаритович
+						+e.text Руководитель отдела поставок
+					+e.text
+						p На&nbsp;сегодняшний день &laquo;Первая нерудная компания&raquo; &mdash; это команда единомышленников, профессионалов своего дела, объединившихся для создания единого холдинга, удовлетворяющего ежедневные потребности своих клиентов.
+
+						p Каждый день мы&nbsp;вносим на&nbsp;рынок В2В: честность и&nbsp;прозрачность проводимых сделок, ответственность за&nbsp;взятые на&nbsp;себя обязательства и&nbsp;высокий сервис в&nbsp;работе с&nbsp;клиентами.
+					+e.btn.popup-with-move-anim(href="#modal-call" data-title='Получить консультацию')  Получить консультацию
+	// end s-director

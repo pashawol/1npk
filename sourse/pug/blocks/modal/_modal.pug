@@ -1,0 +1,198 @@
+
+mixin modal() 
+ 
+	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+	//- 		+form-wrap()(class=" modal-content modal-win ")
+	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
+				
+	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
+	//- 			+b.wrap-polite
+	//- 				+b.custom-input.polite
+	//- 					+b.LABEL.custom-input.polite
+	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
+	//- 						+e.SPAN.lab
+	//- 						| Даю 
+	//- 						| 
+	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
+
+	//- 						| на хранение и обработку   персональных данных
+	
+ 
+
+	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
+	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
+	//- 		+form-wrap()(class=" modal-content modal-win ")
+	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+	//- 			br
+	//- 			.h2 Заявка принята
+	//- 			br
+	//- 			.h3 Скоро с Вами свяжутся
+	//- 			br 
+	div(id="modal-nav" class="  mfp-hide modal-win modal-form " )
+		+b.nav-block
+			.container
+				.row
+					.col
+						+e.block
+							+e.main-item: +e.main-link(href="#") Главная
+							+e.main-item: +e.main-link(href="#") Продукция
+							+e.main-item: +e.main-link(href="#") Доставка
+							+e.main-item: +e.main-link(href="#") Компания
+							+e.main-item: +e.main-link(href="#") Реализованные проекты
+							+e.main-item: +e.main-link(href="#") Ответы на вопросы
+							+e.main-item: +e.main-link(href="#") Отзывы клиентов
+							+e.main-item: +e.main-link(href="#") Документы
+							+e.main-item: +e.main-link(href="#") Контакты
+					.col-auto.d-none.d-md-block
+						// добавил обертку
+						+e.block-wrap
+							+e.block
+								+e.item: +e.link(href="#") Щебень
+								+e.item: +e.link(href="#") Отсев щебня
+								+e.item: +e.link(href="#") Бутовый камень
+								+e.item: +e.link(href="#") Узкие фракции
+								+e.item: +e.link(href="#") Смеси щебня
+								+e.item: +e.link(href="#") Песок
+								+e.item: +e.link(href="#") Гравий
+								+e.item: +e.link(href="#") ПГС ОПГС
+
+							+e.block
+								+e.item: +e.link(href="#") Доставка автотранспортом
+								+e.item: +e.link(href="#") Доставка Ж/Д вагонами
+								+e.item: +e.link(href="#") Доставка баржами по воде
+				
+				+e.btn.btn-lg.d-md-none(href="#") Калькулятор поставок
+	// #modal-nav
+
+
+	+form-wrap()(id="modal-call" class="  mfp-hide modal-win modal-form " )
+		+e.block
+			.text-center
+				+e.title
+
+				+e.text Заполните форму и&nbsp;персональный менеджер свяжется с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+				+input('text','Ваше имя')
+				+input('tel','Ваш телефон')(class='is-invalid')
+				//- .d-none.d-sm-block
+				+input('email','Ваш E-mail') 
+				+ta('Ваш вопрос')
+				+add-file(n)
+				+e.btn(type="submit") Отправить
+				+polite
+	// /#modal-call
+	
+	+form-wrap()(id="modal-profile" class="  mfp-hide modal-win modal-form " )
+		+e.block
+			.text-center
+				+e.title Анкета соискателя
+
+				+e.text Заполните форму, прикрепите резюме и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+				+input('text','Ваше имя')
+				+input('tel','Ваш телефон')(class='is-invalid')
+				.d-none.d-sm-block
+					+input('email','Ваш E-mail') 
+					+ta('Ваш вопрос')
+					+add-file(n)
+				+e.btn(type="submit") Отправить
+				+polite
+	// /#modal-profile
+	
+	+b.form(id="modal-city" class="  mfp-hide modal-win modal-form " )
+		+b.city
+			+e.title Выберите город
+			+e.wrap.row
+				.col-lg-3.col-sm-6
+					+e.group
+						+e.group-title А
+						+e.item
+							+e.link(href="#") Альметьевск
+					// /+e.group
+					+e.group
+						+e.group-title Б
+						+e.item: +e.link(href="#") Белебей
+						+e.item: +e.link(href="#") Белорецк
+						+e.item: +e.link(href="#") Бирск
+						+e.item: +e.link(href="#") Благовещенск
+						+e.item: +e.link(href="#") Бугульма
+					// /+e.group
+					+e.group
+						+e.group-title Е
+						+e.item: +e.link(href="#") Елабуга
+					// /+e.group
+				.col-lg-3.col-sm-6
+					+e.group
+						+e.group-title З
+						+e.item: +e.link(href="#") Заинск
+						+e.item: +e.link(href="#") Зеленодольск
+					// /+e.group
+					+e.group
+						+e.group-title И
+						+e.item: +e.link(href="#") Ишимбай
+
+					// /+e.group
+					+e.group
+						+e.group-title К
+						+e.item: +e.link(href="#") Казань
+						+e.item: +e.link(href="#") Кумертау
+					// /+e.group
+					+e.group
+						+e.group-title Л
+						+e.item: +e.link(href="#") Лениногорск
+					// /+e.group
+				.col-lg-3.col-sm-6
+					+e.group
+						+e.group-title М
+						+e.item: +e.link(href="#") Мелеуз
+						+e.item: +e.link(href="#") Менделеевск
+						+e.item: +e.link(href="#") Мензелинск
+					// /+e.group
+					+e.group
+						+e.group-title Н
+						+e.item: +e.link(href="#") Набережные Челны
+						+e.item: +e.link(href="#") Нефтекамск
+						+e.item: +e.link(href="#") Нижнекамск
+						+e.item: +e.link(href="#") Нурлат
+					// /+e.group
+					+e.group
+						+e.group-title О
+						+e.item: +e.link(href="#") Октябрьский
+					// /+e.group
+				.col-lg-3.col-sm-6
+					+e.group
+						+e.group-title С
+						+e.item: +e.link(href="#") Салават
+						+e.item: +e.link(href="#") Стерлитамак
+						+e.item: +e.link(href="#") Сибай
+					// /+e.group
+					+e.group
+						+e.group-title Т
+						+e.item: +e.link(href="#") Туймазы
+					// /+e.group
+					+e.group
+						+e.group-title У
+						+e.item: +e.link(href="#") Уфа
+						+e.item: +e.link(href="#") Учалы
+					// /+e.group
+					
+					+e.group
+						+e.group-title Ч
+						+e.item: +e.link(href="#") Чистополь
+
+				// /+e.group
+
+
+	// #modal-city
+
+	+b.form-wrap(id="modal-thank" class="  mfp-hide modal-win modal-form " )
+		+e.block
+			.text-center
+				.h2.strong Спасибо за обращение!
+
+				+e.text Персональный менеджер свяжется с Вами в течение 15 минут
+				+e.btn.btn-close-js(type="button") Закрыть 
+	// /#modal-thank
+
+	// modal

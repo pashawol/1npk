@@ -1,0 +1,114 @@
+.s-soc {
+	&__block{
+		background-color: $light;
+		@include media-breakpoint-up(md) {
+			margin-top: 10px;
+
+			padding-top: rem(73);
+			padding-bottom: rem(53);
+			margin-bottom: rem(32);
+		}
+		padding-top: rem(43);
+		padding-bottom: rem(33);
+		margin-bottom: rem(22);
+	}
+
+	&__row{
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		@include roww(30);
+	}
+	&__row-sm{
+		@include media-breakpoint-up(lg) {
+
+			@include roww(15);
+		}
+		@include roww(10);
+	}
+	&__item{
+		color: #ffffff !important;
+		@include media-breakpoint-up(md) {
+
+			width: rem(60px);
+			height: rem(60px);
+		}
+		width: rem(44);
+		height: rem(44);
+		border-radius: 5px;
+		margin-bottom: 1rem;
+		// display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@include mt;
+		.icon{
+			@include media-breakpoint-up(md) {
+
+				font-size: rem(24);
+			}
+			font-size: rem(20);
+		}
+		&--vk{
+			
+			background-color: #4d76a1;
+			&:hover{
+				background-color: #5782b0;
+			}
+		}
+		&--fb{
+			background-color: #3b5998;
+			&:hover{
+				background-color: #4160a2;
+			}
+		}
+		&--twitter{
+			background-color: #55acee;
+			&:hover{
+				background-color: #66bafa;
+			}
+		}
+		&--odnoklassniki{
+			background-color: #f8941e;
+			&:hover{
+				background-color: #ffa132;
+			}
+		}
+	}
+	&__title{
+		@extend h4;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+		&::before{
+			display: none;
+		}
+		
+	}
+	@include media-breakpoint-down(xs) {} 
+
+}

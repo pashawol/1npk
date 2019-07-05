@@ -1,0 +1,251 @@
+
+mixin prod(t, t2, ...items)
+	+b.item-prod&attributes(attributes)
+		block
+		+e.caption
+			+e.title
+				a.text-body.tdn(href="#")= t
+					.d-xl-block.d-inline-block.text-primary= t2
+			+e.UL.list
+				each item in items
+					+e.LI.item
+						+e.link.body-link(href='#')= item 
+mixin prod-cap(t, t2 )
+	+b.item-prod--cap&attributes(attributes)
+		+e.caption
+			+e.title
+				.text-body.tdn()= t
+					.d-xl-block.d-inline-block.text-primary= t2 
+			block
+
+mixin prod1(i,t, t2, ...items)
+	+b.item-prod&attributes(attributes)
+		.row
+			.col-xl-12.col-6.d-none.d-md-block
+				+e.img-wrap.img-animate.img-bg(href="#" )
+					img.lazy-bg(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+			.col-xl-12.col-md-6
+				+e.caption--lg
+					+e.title
+						a.text-body.tdn(href="#")= t
+							.d-xl-block.d-inline-block.text-primary= t2
+					+e.UL.list
+						each item in items
+							+e.LI.item
+								+e.link.body-link(href='#')= item 
+mixin prod-col2(i,t, t2 )
+	+b.item-prod&attributes(attributes) 
+		+e.img-wrap.img-animate.img-bg.d-xl-block.d-none(href="#" )
+			img.lazy-bg(src="#" data-src=`img/prod-${i}.jpg`, alt="")  
+		+e.caption
+			+e.title
+				a.text-body.tdn(href="#")= t
+					.d-xl-block.d-inline-block.text-primary= t2
+			+e.row.row.row--sm
+				block
+				//- each item in items
+							
+mixin prodf(i,t, t2 )
+	+b.item-prod&attributes(attributes)
+		.row
+			.col-xl-12.col-6.d-none.d-md-block
+				+e.img-wrap.img-animate.img-bg(href="#" )
+					img.lazy-bg(src="#" data-src=`img/prod-${i}.jpg`, alt="") 
+			.col-xl-12.col-md-6
+				+e.caption--lg
+					+e.title
+						a.text-body.tdn(href="#")= t
+							.d-xl-block.d-inline-block.text-primary= t2
+					+e.row.row.row--sm
+						block
+						//- each item in items
+							
+
+mixin s-prod()
+	// start s-prod
+	+b.s-prod.section#s-prod.lazy-background&attributes(attributes)
+		.container
+			block
+				
+			.row
+				+e.col.col-xl-6
+					+prodf(1,"Щебень"," от 450 руб/тн",'5-20','20-40','40-70','70-120','Гранитный','Известняковый','Доломитовый','Жигулевский','М400','М600','М800','М1000','М1200','М1400')(class="item-prod--lg")
+						.col-auto
+							+e.item: +e.link.body-link(href='#') 5-20
+							+e.item: +e.link.body-link(href='#') 20-40
+							+e.item: +e.link.body-link(href='#') 40-70
+							+e.item: +e.link.body-link(href='#') 70-120
+						.col-auto
+							+e.item: +e.link.body-link(href='#') Гранитный
+							+e.item: +e.link.body-link(href='#') Известняковый
+							+e.item: +e.link.body-link(href='#') Доломитовый
+							+e.item: +e.link.body-link(href='#') Жигулевский
+						.col-auto
+							+e.item: +e.link.body-link(href='#') М400 
+							+e.item: +e.link.body-link(href='#') М600
+							+e.item: +e.link.body-link(href='#') М800
+							+e.item: +e.link.body-link(href='#') М1000
+						.col-auto
+							+e.item: +e.link.body-link(href='#') М1200
+							+e.item: +e.link.body-link(href='#') М1400
+				+e.col.col-xl-3.col-md-6
+					+prod-col2(2,'Узкие фракции','цена по запросу','3-10','5-10','5-15','10-15','10-20','20-70','25-60')(class="item-prod--col2")  
+						.col-auto
+							+e.item: +e.link.body-link(href='#') 3-10
+							+e.item: +e.link.body-link(href='#') 5-10
+							+e.item: +e.link.body-link(href='#') 5-15
+							+e.item: +e.link.body-link(href='#') 10-15 
+						.col-auto
+							+e.item: +e.link.body-link(href='#') 20-70
+							+e.item: +e.link.body-link(href='#') 40-70 
+				+e.col--sm.col-xl-3.col-md-6.d-xl-none
+					+prod('Отсев щебня','от 420 руб/тн','0-5','0-10','0-20')(class="item-prod--sm ")
+				+e.col--sm.col-xl-3.col-md-6
+					+prod('Отсев щебня','от 420 руб/тн','0-5','0-10','0-20')(class="item-prod--sm d-none d-xl-block")
+					//- +e.col--sm.col-3
+					+prod('Смеси щебня','цена по запросу','0-20','0-40','0-80','0-120')(class="item-prod--sm") 
+
+				+e.col.col-xl-3.col-md-6
+					+prod('Бутовый камень','от 400 руб/тн','70-150','100-300','нестандартный' )
+						+e.img-wrap.img-animate.img-bg.d-xl-block.d-none(href="#"  )
+							img.lazy-bg(src="#" data-src=`img/prod-3.jpg`, alt="")
+				
+				
+				+e.col.col-xl-3
+					+prod1(4,'Песок','от 200 руб/тн','Песок речной','Песок обогащённый','Песок строительный','Песок растворный (волжский) ' )  
+				
+				+e.col.col-xl-3.col-md-6
+					+prod-col2(5,'Гравий','цена по запросу','5-10','5-20','20-40','20-70','40-70' )(class="item-prod--col2") 
+						.col-auto
+							+e.item: +e.link.body-link(href='#') 5-10
+							+e.item: +e.link.body-link(href='#') 5-20
+							+e.item: +e.link.body-link(href='#') 20-40
+						
+						.col-auto
+							+e.item: +e.link.body-link(href='#') 20-70
+							+e.item: +e.link.body-link(href='#') 40-70 
+				+e.col.col-xl-3.col-md-6
+					+prod('ПГС ОПГС','от 280 руб/тн','Песчано-гравийная смесь','Обогащённая песчано-гравийная смесь')
+						+e.img-wrap.img-animate.img-bg.d-xl-block.d-none(href="#"  )
+							img.lazy-bg(src="#" data-src=`img/prod-6.jpg`, alt="")
+				
+
+
+	// end s-prod
+
+mixin s-prod-03()
+	// start s-prod
+	+b.s-prod.section#s-prod.pt-1&attributes(attributes)
+		.container
+			block
+				
+			.row  
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Качественная', 'продукция' )
+						+e.text.h6  Поставляемый щебень высокой прочности имеет паспорта 
+							|
+							br.d-none.d-xl-block
+							| качества
+
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Быстрая ', 'доставка ' ) 
+						+e.text.h6 Быстрая доставка щебня до&nbsp;любого объекта, точно в&nbsp;срок
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Бесплатные', ' образцы' ) 
+						+e.text.h6 В&nbsp;течении недели бесплатно доставим образцы щебня
+				
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Отгрузка', 'в первый день ' ) 
+						+e.text.h6 Начинаем отгрузку материала в&nbsp;день обращения
+
+
+
+	// end s-prod
+
+mixin s-prod-02-6()
+	// start s-prod
+	+b.s-prod.section#s-prod.pt-1&attributes(attributes)
+		.container
+			block
+				
+			.row  
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Качественная', 'продукция' )
+						+e.text.h6  Поставляемый материал имеет паспорта
+							|
+							br.d-none.d-xl-block
+							| качества
+
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Быстрая ', 'доставка ' ) 
+						+e.text.h6 Быстрая доставка материала до&nbsp;любого объекта, точно в&nbsp;срок
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Бесплатные', ' образцы' ) 
+						+e.text.h6 В&nbsp;течении недели бесплатно доставим образцы материала
+				
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Отгрузка', 'в первый день ' ) 
+						+e.text.h6 Начинаем отгрузку материала в&nbsp;день обращения
+
+
+
+	// end s-prod
+
+mixin s-prod-02-5()
+	// start s-prod
+	+b.s-prod.section#s-prod.pt-1&attributes(attributes)
+		.container
+			block
+				
+			.row  
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Качественная', 'продукция' )
+						+e.text.h6  Поставляемый бутовый камень высокой прочности имеет паспорта качества
+
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Быстрая ', 'доставка ' ) 
+						+e.text.h6 Быстрая доставка бутового камня до&nbsp;любого объекта, точно в&nbsp;срок
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Бесплатные', ' образцы' ) 
+						+e.text.h6 В&nbsp;течении недели бесплатно доставим образцы бутового камня
+				
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Отгрузка', 'в первый день ' ) 
+						+e.text.h6 Начинаем отгрузку материала в&nbsp;день обращения
+
+
+
+	// end s-prod
+
+
+mixin s-prod-03-()
+	// start s-prod
+	+b.s-prod.section#s-prod.pt-1&attributes(attributes)
+		.container
+			mixin prod-cap(t )
+				+b.item-prod--cap&attributes(attributes)
+					+e.caption
+						+e.title.text-body.tdn()= t 
+						block
+			.row  
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Качественная', 'продукция' )
+						+e.text.h6  Поставляемый щебень высокой прочности имеет паспорта 
+							|
+							br.d-none.d-xl-block
+							| качества
+
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( 'Быстрая ', 'доставка ' ) 
+						+e.text.h6 Быстрая доставка щебня до&nbsp;любого объекта, точно в&nbsp;срок
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Бесплатные', ' образцы' ) 
+						+e.text.h6 В&nbsp;течении недели бесплатно доставим образцы щебня
+				
+				+e.col.col-xl-3.col-md-6
+					+prod-cap( ' Отгрузка', 'в первый день ' ) 
+						+e.text.h6 Начинаем отгрузку материала в&nbsp;день обращения
+
+
+
+	// end s-prod

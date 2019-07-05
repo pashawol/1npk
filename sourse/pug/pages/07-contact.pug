@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+//- include ../blocks/s-shipping/_s-shipping.pug
+//- include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+//- include ../blocks/s-objects/_s-objects.pug
+//- include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-why/_s-why.pug
+
+include ../blocks/s-about-text/_s-about-text.pug
+include ../blocks/s-director/_s-director.pug
+include ../blocks/s-problems/_s-problems.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-conditions/_s-conditions.pug
+include ../blocks/s-values/_s-values.pug
+include ../blocks/s-representations/_s-representations.pug
+
+block title
+	title  7. Контакты
+
+block pagecontent
+	+header() 
+		+top-nav()(class="top-nav--js")
+		+header-block-07
+	+s-representations
+	+s-contact-whithoutTitle
+		+b.section-title--page.text-center.pb-0
+			h2 Оставьте заявку и&nbsp;получите коммерческое предложение на&nbsp;индивидуальных условиях
+			+e.text.strong.mw-100 Заполните форму и&nbsp;персональный менеджер свяжется с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+	+footer()
+	
+	

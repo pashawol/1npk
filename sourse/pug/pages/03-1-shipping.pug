@@ -1,0 +1,101 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+include ../blocks/s-card-head/_s-card-head.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-char/_s-char.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-shipping2/_s-shipping2.pug
+include ../blocks/s-text/_s-text.pug
+include ../blocks/s-why/_s-why.pug
+
+block title
+	title 3.1 Доставка автотранспортом
+
+
+block pagecontent
+	+header() 
+		+top-nav()(class="fixed-page ")
+		//- +header-block()
+	+b.main-row.row.no-gutters
+		+e.col-aside.col-xl-auto 
+			+e.current-nav.toggle-btn-js.d-xl-none
+				.container Доставка автотранспортом
+
+			
+			+aside-nav
+
+
+
+		+e.col-main.col
+			+s-card-head-shipping('Доставка автотранспортом', 'от 40 тонн', '1' ,'Услуга "Доставка  автотранспортом" для тех, кому необходимо доставить материал на объект как можно быстрее, при этом минимизировать стоимость доставки. ','Доставка материала до любого объекта осуществляется на самосвалах КАМАЗ, МАЗ и Тонарах, вместимость каждого от 15 до 40 тонн. Также возможна комбинированная доставка: ЖД-вагонами и автотранспортом.') 
+				+e.label
+					+e.icon-wrap
+						+icon('like')
+					.small Самый популярный способ доставки
+
+			//- +s-prod-03-(class="section-border-bottom")
+			//- // start s-text
+			//- +b.s-text.section#s-text.lazy-background(class="section-border-bottom")&attributes(attributes)
+			//- 	.container 
+			//- 		.row
+			//- 			+item-text-whithoutIcon('Выгодные условия')
+			//- 				+e.text Мы&nbsp;всегда готовы предложить выгодные условия для наших клиентов.
+			//- 			+item-text-whithoutIcon('Неизменность цены')
+			//- 				+e.text Все непредвиденные расходы мы&nbsp;берем на&nbsp;себя, вы&nbsp;платите только оговоренную сумму.
+			//- 			+item-text-whithoutIcon('Доступная цена')
+			//- 				+e.text Мы&nbsp;снизили производственные издержки за&nbsp;счет полноценной логистики и&nbsp;развитию собственных карьеров. Именно поэтому, стоимость наших материалов остается доступной.
+			//- 			+item-text-whithoutIcon('Программа лояльности (бонусы)')
+			//- 				+e.text Предоставляем закупщикам дополнительный стимул к&nbsp;организации более эффективных закупок.
+			//- // end s-text
+
+			+s-now-03-(class="section-border-bottom") 
+			+s-video-tech(class="section-border-bottom")
+			+s-video-03-(class="section-border-bottom")
+				+b.section-title.text-center
+					h2 Как проходит погрузка автотранспорта
+
+			//- +s-char(class="section-border-bottom d-none d-md-block")
+
+			// start s-text
+			+b.s-text.section.lazy-background(class="section-border-bottom section-border-bottom--md")&attributes(attributes)
+				.container 
+					+b.section-title.text-center
+						h2 Почему клиенты выбирают доставку автотранспортом в&nbsp;нашей компании?
+					.row
+						+item-text-whithoutIcon('Держим слово')
+							+e.text Если мы&nbsp;сказали, что доставим материалы сегодня, значит привезем его сегодня любой ценой.
+						+item-text-whithoutIcon('Отгрузка в день обращения')
+							+e.text Если у&nbsp;заказчика горящий объект, мы&nbsp;начинаем отгрузку материала в&nbsp;день обращения.
+						+item-text-whithoutIcon('Высокое качество')
+							+e.text Вся продукция соответствует ГОСТ и&nbsp;поставляется c&nbsp;надлежащими сертификатами и&nbsp;документами. В&nbsp;некоторых случаях&nbsp;&mdash; заказчик заказывает щебень М400 (Марка 400), Мы&nbsp;привозим М600-800(Марка 600-800) что значительно выше чем заказывал заказчик.
+						+item-text-whithoutIcon('Полный пакет документов')
+							+e.text  После отгрузки наша бухгалтерия формирует закрывающие документы. Клиент получает на&nbsp;электронный адрес скан закрывающих документов. При срочности оригинал документа привезет наш менеджер к&nbsp;вам в&nbsp;офис. Если срочности нет&nbsp;&mdash; в&nbsp;течении 2х&nbsp;недель придут к&nbsp;вам на&nbsp;почтовый адрес.
+						
+						+item-text-whithoutIcon('Контроль веса')
+							+e.text  Каждый автомобиль едет через весы с&nbsp;сопровождающими документами, а&nbsp;также&nbsp;Вы всегда можете присутствовать на&nbsp;погрузке.
+						
+						+item-text-whithoutIcon('Всегда на связи')
+							+e.text Наши менеджеры на&nbsp;связи 7&nbsp;дней внеделю, вы&nbsp;всегда можете узнать где находится груз и&nbsp;задать любые вопросы.
+						
+			// end s-text 
+			+s-contact-whithoutTitle
+				+b.section-title.text-center.pb-0
+					h2.mw-100 Заказать доставку автотранспортом
+
+					+e.text.h4.strong на выгодных условиях
+					.h6 Заполните форму и&nbsp;персональный менеджер свяжется с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+	+footer()

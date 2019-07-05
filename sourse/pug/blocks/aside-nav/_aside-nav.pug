@@ -1,0 +1,48 @@
+mixin aside-nav()
+	// start aside-nav
+	+b.aside-nav.section.d-xl-block.toggle-aside-nav-js
+		+e.UL.list
+			+e.item--has-children.--js
+				+e.link--main.--js( ) Продукция
+				.toggle--js.active
+				+e.UL.sub--open
+					+e.item--sub: +e.link--sub(href="#") Щебень
+					+e.item--sub: +e.link--sub(href="#") Отсев щебня
+					+e.item--sub: +e.link--sub(href="#") Бутовый камень
+					+e.item--sub: +e.link--sub(href="#") Узкие фракции
+					+e.item--sub: +e.link--sub(href="#") Смеси щебня
+					+e.item--sub: +e.link--sub(href="#") Песок
+					+e.item--sub: +e.link--sub(href="#") Гравий
+					+e.item--sub: +e.link--sub(href="#") ПГС ОПГС
+
+
+			
+			+e.item--has-children.--js
+				+e.link--main.--js( ) Доставка
+				.toggle--js
+				+e.UL.sub
+					+e.item--sub: +e.link--sub(href="#") Доставка автотранспортом
+					+e.item--sub: +e.link--sub(href="#") Доставка ЖД-вагонами
+					+e.item--sub: +e.link--sub(href="#") Доставка баржами по воде
+			+e.item--has-children.--js
+				+e.link--main.--js( ) Возможно вы искали это
+				.toggle--js
+				+e.UL.sub
+					//- +e.item--sub: +e.link--sub(href="#") О компании
+					//- +e.item--sub: +e.link--sub(href="#") Реализованные проекты
+					//- +e.item--sub: +e.link--sub(href="#") Ответы на вопросы
+					//- +e.item--sub: +e.link--sub(href="#") Отзывы клиентов
+					//- +e.item--sub: +e.link--sub(href="#") Документы
+					//- +e.item--sub: +e.link--sub(href="#") Контакты
+
+					+e.item--sub: +e.link--sub(href="#") 40 причин заказать у&nbsp;нас
+					+e.item--sub: +e.link--sub(href="#") Компания в цифрах
+					+e.item--sub: +e.link--sub(href="#") Какие проблемы клиента мы решаем
+					+e.item--sub: +e.link--sub(href="#") Видео с&nbsp;отгрузок
+					+e.item--sub: +e.link--sub(href="#") Качество продукции
+					+e.item--sub: +e.link--sub(href="#") Этапы работ
+					+e.item--sub: +e.link--sub(href="#") Отсрочка платежа
+					+e.item--sub: +e.link--sub(href="#") Наши площадки
+					+e.item--sub: +e.link--sub(href="#") Бонусы закупщикам
+
+	// end aside-nav

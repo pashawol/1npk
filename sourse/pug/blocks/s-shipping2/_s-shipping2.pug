@@ -1,0 +1,46 @@
+mixin item-shipping(i,t,t1, t2, t3  )
+	+e.slide.swiper-slide.col-lg-4
+		+b.item-prod--shipping&attributes(attributes)
+			+e.caption
+				.row
+
+					+e.icon-wrap.col-lg-12.col-md-3
+						img.res-i.lazy(src="#"  data-src=`img/ship-i-${i}.jpg` alt="")
+					+e.text-col.col-lg-12.col-md-5
+						+e.title--lg
+							.text-body.tdn Доставка
+								span.d-block= t
+								.d-xl-block.d-block.text-primary= t1 
+						+e.text= t2
+					+e.foot-col.col-lg-12.col
+						.h5.strong= t3
+						.text-gray2 в среднем требуется на погрузку
+		// /+e.slide.swiper-slide.col-lg-4
+mixin s-shipping2()
+	// start s-shipping2
+	+b.s-shipping2.section#s-shipping2.lazy-background&attributes(attributes)
+		.container
+			block
+				
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					+item-shipping('1','автотранспортом','от 40 тонн','Самый быстрый способ доставки', '1 день')
+					+item-shipping('2','ЖД-вагонами','от 69 тонн','Самый экономичный способ доставки','6 дней' )
+					+item-shipping('3','баржей по воде ','от 1 500 тонн','Оптимальный способ доставки больших объемов','15 дней')
+				.swiper-pagination
+	// end s-shipping2
+
+mixin s-shipping2-whithoutItem
+	// start s-shipping2
+	+b.s-shipping2.section#s-shipping2.lazy-background&attributes(attributes)
+		.container
+			block
+				
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper 
+					+item-shipping('1','автотранспортом','от 40 тонн','Самый быстрый способ доставки', '1 день')
+					//- +item-shipping('2','ЖД-вагонами','от 69 тонн','Самый экономичный способ доставки','6 дней' )
+					+item-shipping('3','баржей по воде ','от 1 500 тонн','Оптимальный способ доставки больших объемов','15 дней')
+				.swiper-pagination
+	// end s-shipping2
+

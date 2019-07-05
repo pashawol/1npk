@@ -1,0 +1,282 @@
+mixin s-now-body()
+	+e.slider-wrap
+		.container
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(t)
+						+e.slide.swiper-slide.col-md-3
+							+e.item--top
+								+e.count--lg= t
+								block
+						// /.col-3
+					+item('7 лет')
+						.h6 успешной работы
+							br
+							| 
+							| с&nbsp;2012 года
+					+item('6 560')
+						.h6 клиентов за&nbsp;последние
+							br
+							| 
+							| 4&nbsp;года
+					+item('633 600')
+						.h6 тонн материала отгрузили
+							br
+							|  
+							| за&nbsp;последние 4&nbsp;года
+					+item('17')
+						.h6 сотрудников в&nbsp;штате
+							br
+							| 
+							| и&nbsp;46&nbsp;на подряде
+					mixin itemf(t)
+						+e.slide.swiper-slide.col-md-3
+							+e.item--foot
+								+e.count--sm= t
+								block
+						// /.col-3
+					+itemf('25 000')
+						.h6  тонн готовой продукции
+							br
+							| 
+							| на&nbsp;карьерах постоянно
+					+itemf('1 000')
+						.h6 тонн материалов
+							br
+							| 
+							| отгружаем ежедневно
+					+itemf('20')
+						.h6 самосвалов и&nbsp;тонаров
+							br
+							| 
+							| ежедневно на&nbsp;линии
+					+itemf('320 000')
+						.h6 тонн в&nbsp;год материалов
+							br
+							| 
+							| добывает наша компания
+	.swiper-pagination
+mixin s-now-body-s-now-17-1()
+	+e.slider-wrap
+		.container
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					 
+					mixin itemf(t)
+						+e.slide.swiper-slide.col-md-3
+							+e.item--foot
+								+e.count--sm= t
+								block
+						// /.col-3
+					+itemf('25 000')
+						.h6  тонн готовой продукции
+							br
+							| 
+							| на&nbsp;карьерах постоянно
+					+itemf('1 000')
+						.h6 тонн материалов
+							br
+							| 
+							| отгружаем ежедневно
+					+itemf('20')
+						.h6 самосвалов и&nbsp;тонаров
+							br
+							| 
+							| ежедневно на&nbsp;линии
+					+itemf('320 000')
+						.h6 тонн в&nbsp;год материалов
+							br
+							| 
+							| добывает наша компания
+	.swiper-pagination
+
+mixin s-now-body-3-1()
+	+e.slider-wrap
+		.container
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+ 
+					mixin itemf(t)
+						+e.slide.swiper-slide.col-md-3
+							+e.item--foot
+								+e.count--sm.h5= t
+								block
+						// /.col-3
+					+itemf('от 40 тонн')
+						.h6  минимальный объем поставки автотранспортом
+					+itemf('20 единиц')
+						.h6 техники на линии ежедневно
+					+itemf('1 день')
+						.h6 в&nbsp;среднем требуется на&nbsp;погрузку
+					+itemf('Фото с погрузки')
+						.h6 Отправим фотографии процесса погрузки на&nbsp;WhatsApp, Viber
+	.swiper-pagination
+
+mixin s-now()
+	// start s-now
+	+b.s-now.section#s-now.img-bg.lazy-background&attributes(attributes)
+		
+		block
+		+s-now-body()
+		+e.btn.d-none.d-md-block(href="#") Подробнее о компании
+	// end s-now
+
+mixin s-now-03()
+	// start s-now
+	+b.s-now.section.pb-md-0#s-now&attributes(attributes)
+		
+		block
+		+s-now-body()
+	// end s-now
+
+mixin s-now-03-()
+	// start s-now
+	+b.s-now.section.pt-0.pb-md-0#s-now&attributes(attributes)
+		
+		block
+		+s-now-body-3-1()
+	// end s-now
+
+mixin s-now-03-2()
+	// start s-now
+	+b.s-now.section.pt-0.pb-md-0#s-now&attributes(attributes)
+		
+		block
+		+e.slider-wrap
+			.container
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper
+	
+						mixin itemf(t)
+							+e.slide.swiper-slide.col-md-3
+								+e.item--foot
+									+e.count--sm.h5= t
+									block
+							// /.col-3
+						+itemf('от 69 тонн')
+							.h6  минимальный объем поставки Ж/Д вагонами
+						+itemf('6 дней')
+							.h6 в&nbsp;среднем требуется на&nbsp;погрузку и&nbsp;отправку
+						+itemf('По 1 запросу')
+							.h6 сообщаем точное местоположение состава и&nbsp;дату прибытия
+						+itemf('Фото с погрузки')
+							.h6 Отправим фотографии процесса погрузки на&nbsp;WhatsApp, Viber
+		.swiper-pagination
+	// end s-now
+
+mixin s-now-03-3
+	// start s-now
+	+b.s-now.section.pt-0.pb-md-0#s-now&attributes(attributes)
+		
+		block
+		+e.slider-wrap
+			.container
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper
+	
+						mixin itemf(t)
+							+e.slide.swiper-slide.col-md-3
+								+e.item--foot
+									+e.count--sm.h5= t
+									block
+							// /.col-3
+						+itemf('от 1 500 тонн')
+							.h6  минимальный объем поставки баржей по&nbsp;воде
+						+itemf('15 дней')
+							.h6 в&nbsp;среднем требуется на&nbsp;погрузку и&nbsp;отправку
+						+itemf('Твердость цены')
+							.h6 Все расходы мы&nbsp;берем на&nbsp;себя, вы&nbsp;платите оговоренную сумму
+						+itemf('Фото с погрузки')
+							.h6 Отправим фотографии процесса погрузки на&nbsp;WhatsApp, Viber
+		.swiper-pagination
+	// end s-now
+
+mixin s-now-16-6()
+	// start s-now
+	+b.s-now--numbers.section.pb-lg-0#s-now&attributes(attributes) 
+		+e.slider-wrap
+			.container
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(t)
+							+e.slide.swiper-slide.col-md-3
+								+e.item--top.--border
+									+e.count--md= t
+									block
+							// /.col-3
+						+item('7 лет')
+							.h6 успешной работы
+								br
+								| 
+								| с&nbsp;2012 года
+						+item('6 560')
+							.h6 клиентов за&nbsp;последние
+								br
+								| 
+								| 4&nbsp;года
+						+item('633 600')
+							.h6 тонн материала отгрузили
+								br
+								|  
+								| за&nbsp;последние 4&nbsp;года
+						+item('17')
+							.h6 сотрудников в&nbsp;штате
+								br
+								| 
+								| и&nbsp;46&nbsp;на подряде
+		.swiper-pagination
+		.container.container--foot
+			.row
+				mixin itemf(t)
+					.col-lg-3.col-md-4.col-6
+						+e.item--foot.border-0.px-0
+							+e.count--sm.--numbers= t
+							block
+					// /.col-lg-3.col-md-4.col-6
+				+itemf('9 500')
+					.h6  отгрузок осуществили
+						br
+						| за&nbsp;2019 год
+				
+				+itemf('462 000')
+					.h6 отгрузок осуществили
+						br
+						| за&nbsp;2018 год
+				
+				+itemf('25 000')
+					.h6  тонн готовой продукции
+						br
+						| 
+						| на&nbsp;карьерах постоянно
+				
+				+itemf('20')
+					.h6 самосвалов и&nbsp;тонаров
+						br
+						| 
+						| ежедневно на&nbsp;линии
+				+itemf('1 000')
+					.h6 тонн материалов
+						br
+						| 
+						| отгружаем ежедневно
+				+itemf('320 000')
+					.h6 тонн в&nbsp;год материалов
+						br
+						| 
+						| добывает наша компания
+				
+				+itemf('300-350')
+					.h6 самосвалов задействуются в&nbsp;поставках материалов ежемесячно
+				
+				+itemf('40')
+					.h6 тонн минимальный объем поставки материала 
+	// end s-now
+
+
+mixin s-now-17-1()
+	// start s-now
+	+b.s-now.section#s-now&attributes(attributes)
+		
+		block
+		+s-now-body-s-now-17-1()
+	// end s-now

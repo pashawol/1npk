@@ -1,0 +1,100 @@
+mixin char-whitout-item(t, i)
+	+s-char-body()
+		+b.section-title.text-center
+			h2= t 
+		.row
+			.col-lg-12.col.order-lg-first.order-last
+				block
+				
+			.col-lg-12.col-md-8
+				+e.img-wrap
+					img.res-i.lazy(src="#" data-src=`img/${i}.jpg`, alt="")
+mixin s-char-body()
+	// start s-char
+	+b.s-char.section#s-char.lazy-background(class="section-border-bottom d-none d-md-block")&attributes(attributes)
+		.container
+			block
+			+e.btn.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+	// end s-char
+mixin s-char()
+	+s-char-body()
+		+b.section-title.text-center
+			h2 Характеристики щебня 
+		.row
+			.col-lg-12.col.order-lg-first.order-last
+				ul
+					li ГОСТ 8267-93
+					li Средняя плотность щебня от&nbsp;1,32 до&nbsp;1,38&nbsp;т/м3
+					li Морозостойкость 
+						br
+						| до&nbsp;300 циклов
+					li Прочность M400, M600, М800, М1000, М1200, М1400
+					li Радиоактивность щебня в&nbsp;пределах нормы
+					li Лещадность 1-3 
+						br
+						| группы
+					li Плотная горная порода
+			.col-lg-12.col-md-8
+				+e.img-wrap
+					img.res-i.lazy(src="#" data-src='img/char-img.jpg', alt="")
+
+mixin s-char-02-6
+	+s-char-body()
+		+b.section-title.text-center
+			h2 Характеристики песка
+		.row
+			.col-lg-12.col.order-lg-first.order-last
+				ul 
+					li.sand Класс песка: 1 класс
+
+					li.sand Модуль крупности 
+						br
+						| песка: 2,0&nbsp;&mdash; 3,0  
+					li.sand Коэффициент уплотнения:
+						br
+						| 1&nbsp;м3 = 1,4 тонны
+					li.sand ГОСТ 8736-93
+			.col-lg-12.col-md-8
+				+e.img-wrap
+					img.res-i.lazy(src="#" data-src='img/char-img-sand.jpg', alt="")  
+
+mixin s-char-02-8
+	+s-char-body()
+		+b.section-title.text-center
+			h2 Характеристики гравия
+		.row
+			.col-lg-12.col.order-lg-first.order-last
+				ul 
+					li.sand Класс песка: 1 класс
+
+					li.sand Модуль крупности 
+						br
+						| песка: 2,0&nbsp;&mdash; 3,0  
+					li.sand Коэффициент уплотнения:
+						br
+						| 1&nbsp;м3 = 1,4 тонны
+					li.sand ГОСТ 8736-93
+			.col-lg-12.col-md-8
+				+e.img-wrap
+					img.res-i.lazy(src="#" data-src='img/char-img-gravel.jpg', alt="")
+
+mixin s-char-02-7
+	+s-char-body()
+		+b.section-title.text-center
+			h2 Характеристики смеси гравия и песка
+		.row
+			.col-lg-12.col.order-lg-first.order-last
+				ul 
+					li.sand Класс песка: 1 класс
+
+					li.sand Модуль крупности 
+						br
+						| песка: 2,0&nbsp;&mdash; 3,0  
+					li.sand Коэффициент уплотнения:
+						br
+						| 1&nbsp;м3 = 1,4 тонны
+					li.sand ГОСТ 8736-93
+			.col-lg-12.col-md-8
+				+e.img-wrap
+					img.res-i.lazy(src="#" data-src='img/char-img-pgs.jpg', alt="")
+

@@ -1,0 +1,68 @@
+mixin footer()
+	+b.FOOTER.footer
+		+e.body
+			+e.container.container
+				.d-none.d-md-block
+					.row
+						.col-lg-auto.d-none.d-lg-block
+							
+								+e.logo(href="#")
+									img.lazy(src="#" data-src="img/logo.png", alt="")
+								+e.copy «Первая нерудная компания».
+									br
+									| Все права защищены, © 2019
+						+e.col.col-xxxl-3.col-auto
+							+e.title
+								a(href="#") Продукция
+							+e.UL.list
+								
+								+e.LI.list-item: +e.list-link(href="#") Щебень
+								+e.LI.list-item: +e.list-link(href="#") Отсев щебня
+								+e.LI.list-item: +e.list-link(href="#") Бутовый камень
+								+e.LI.list-item: +e.list-link(href="#") Узкие фракции
+								+e.LI.list-item: +e.list-link(href="#") Смеси щебня
+								+e.LI.list-item: +e.list-link(href="#") Песок
+								+e.LI.list-item: +e.list-link(href="#") Гравий
+								+e.LI.list-item: +e.list-link(href="#") ПГС ОПГС
+						.col-auto
+							+e.title
+								a(href="#") Доставка
+							+e.UL.list
+								+e.LI.list-item: +e.list-link(href="#") Автодоставка
+								+e.LI.list-item: +e.list-link(href="#") Ж/Д доставка
+								+e.LI.list-item: +e.list-link(href="#") Морская доставка
+						
+						.col-auto
+							+e.title
+								a(href="#") Компания
+							+e.UL.list
+								+e.LI.list-item: +e.list-link(href="#") Реализованные проекты 
+								+e.LI.list-item: +e.list-link(href="#") Ответы на вопросы
+								+e.LI.list-item: +e.list-link(href="#") Отзывы клиентов
+						
+						.col-auto
+							+e.title
+								a(href="#") Контакты
+							+e.UL.list
+								+e.LI.list-item: +e.list-link(href="#") Документы
+						
+						.col-auto.d-none.d-xl-block
+							+e.btn-outline.btn-sm(href="#") Калькулятор поставок
+			.d-md-none.text-center
+				+e.btn.btn-lg(href="tel:8(800)100-73-75") Позвонить
+				+e.btn-outline.btn-lg.popup-with-move-anim(href="#modal-call"  data-title='Оставить заявку') Оставить заявку
+				
+				+soc()
+		+e.foot
+			+e.container.container
+				+e.copy.d-md-none «Первая нерудная компания».
+					br
+					| Все права защищены, © 2019
+				.row
+					.col-md-auto
+						+e.list-link(href="#") Политика конфиденциальности
+					.col-auto.d-none.d-md-block
+						+soc()
+					.col-md-auto
+						+e.developer Разработка сайта — 
+							a(href="#" target="_blank") Ishmetov.Studio

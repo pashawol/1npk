@@ -1,0 +1,85 @@
+mixin s-calc()
+	// start s-calc
+	+b.s-calc.section#s-calc.lazy-background&attributes(attributes)
+		.container
+			block
+			+form-wrap
+				.row
+					.col-xl-7.col-lg-6
+						mixin radio(n, t)
+							.col-auto
+								+b.LABEL.custom-radio
+									+e.INPUT.input(type="radio" name= n)&attributes(attributes)
+									+e.SPAN.text= t
+						+e.group
+							+e.group-title Тип продукции:
+							.row.row--sm
+								+radio('type','Щебень')(checked)
+								+radio('type','Бутовый камень')
+								+radio('type','Узкие фракции')
+								+radio('type','Смеси')
+								+radio('type','Отсев')
+								+radio('type','ПГС')
+								+radio('type','ОПГС')
+								+radio('type','Гравий')
+								+radio('type','Песок') 
+						+e.group
+							+e.group-title Марка:
+							.row.row--sm
+								+radio('marka','M400')(checked)
+								+radio('marka','M600')
+								+radio('marka','M800')
+								+radio('marka','M1000')
+								+radio('marka','M1200')
+								+radio('marka','M1400')
+						
+						+e.group
+							+e.group-title Фракции:
+							.row.row--sm
+								+radio('FRACTION','5-20')(checked)
+								+radio('FRACTION','10-20')
+								+radio('FRACTION','20-40')
+								+radio('FRACTION','40-70')
+								+radio('FRACTION','70-120')
+						+e.group--sm
+							+e.group-title Объём поставки:
+							.range-block
+								input.form-control.mb-0.range-result-js(type="text" value="500" )
+								+e.SPAN.symbol т
+								input.slider-js(type="text" data-min='10' data-from="500" data-max='1000')
+						
+						+e.group--sm
+							+e.group-title Город, куда нужно доставить:
+							+sel('Выберите город из списка')
+								option Город 1
+								option Город 2
+								option Город 3
+								option Город 4
+						
+					.col-xl-5.col-lg-6
+						+e.block--calc
+							+e.block-group
+								.h6 Продукция на сумму:
+								+e.result--lg 316 786
+									span.rub j 
+							
+							+e.block-group
+								.h6 Рекомендуемый способ доставки:
+								+e.block-i
+									+e.group-title Доставка автотранспортом
+									.text-secondary Погрузка в&nbsp;первый день обращения
+									+e.block-text  Стоимость: 
+										| 
+										strong 37 540
+											span.rub j 
+							+e.block-group
+								.h6 Итоговая стоимость:
+								.h4.strong 366 786
+									span.rub j 
+								+e.btn.btn-lg.popup-with-move-anim(href="#modal-call"  data-title='Оставить заявку') Оставить заявку
+							
+
+							
+
+
+	// end s-calc

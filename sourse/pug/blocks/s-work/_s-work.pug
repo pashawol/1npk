@@ -1,0 +1,56 @@
+mixin s-work()
+	// start s-work
+	+b.s-work.section.section-border-bottom
+		.container
+			+b.section-title.text-center
+				h2 Командная работа — залог успеха!
+				+e.text Заполните и&nbsp;отправьте краткую анкету соискателя, чтобы мы&nbsp;могли подобрать вам работу и&nbsp;пригласить на&nbsp;собеседование
+				+e.btn.popup-with-move-anim(href="#modal-profile"  data-title='Анкета соискателя') Заполнить анкету
+	 
+	+b.s-work.section
+		.container
+			+b.section-title.text-center
+				h2 Как мы работаем
+				
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper.no-gutters
+					mixin sl(i)
+						+e.col.col-md-4.swiper-slide
+							+e.item()
+								+e.img-wrap(   )&attributes(attributes)
+									img.lazy.res-i(src="#" data-src=`img/work-i-${i}.png` alt="")  
+								block
+						// /+e.col.col-lg-4.col-md-6.swiper-slide
+					+sl(1)
+						+e.text Оставляете заявку на&nbsp;сайте 
+							br 
+							| или звоните по&nbsp;телефону:
+							br
+							+e.link(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+					+sl(2)
+						+e.text Рассчитываем стоимость продукции и&nbsp;доставки, после чего связываемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут.
+					+sl(3)
+						+e.text Согласовываем условия, сроки и&nbsp;цены поставок.
+					+sl(4)
+						+e.text Заключаем договор 
+							br 
+							| и&nbsp;предоставляем вам личного менеджера, который будет  
+							br 
+							|  на&nbsp;связи 7&nbsp;дней в&nbsp;неделю.
+					+sl(5)
+						+e.text Выставляем счет и&nbsp;получаем 
+							br 
+							| оплату.
+					+sl(6)
+						+e.text Производим отгрузку 
+							br 
+							| продукции.
+					+sl(7)
+						+e.text Поставляем продукцию на&nbsp;ваш объект.
+					+sl(8)
+						+e.text Отправляем оригиналы закрывающих документов.
+					+sl(9)
+						+e.text Связываемся с&nbsp;вами, чтобы убедиться, что всё прошло хорошо и&nbsp;нет никаких претензий.
+				.swiper-pagination
+	
+	// end s-work

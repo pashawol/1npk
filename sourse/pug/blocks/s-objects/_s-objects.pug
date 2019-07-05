@@ -1,0 +1,94 @@
+
+mixin s-objects()
+	// start s-objects
+	+b.s-objects.section#s-objects.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Мы&nbsp;принимали участие на&nbsp;объектах
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin prod(i,  p)
+						+e.col.col-md-6.swiper-slide
+							+e.item.img-bg.img-animate(href="#")
+								img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
+								+e.DIV.title= p
+								 
+						// /+e.col.col
+					+prod('1','Строительство аэропорта «Бегишево»') 
+
+					+prod('2','Строительство автосалона грузовой техники «DAF»') 
+					+prod('3','Строительство терминалов ТК «ПЭК»') 
+					+prod('4','Строительные работы на объекте «ТАНЭКО»') 
+				.swiper-pagination
+			+e.btn(href="#") Выполненные проекты
+	// end s-objects
+
+
+mixin s-objects-03()
+	// start s-objects
+	+b.s-objects.section#s-objects.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Мы&nbsp;принимали участие на&nbsp;объектах
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin prod(i,  p)
+						+e.col.col-lg-4.col-md-6.swiper-slide
+							+e.item.img-bg.img-animate(href="#")
+								img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
+								+e.DIV.title--sm= p
+								 
+						// /e.col.col-lg-4.col-md-6.swiper-slide
+					+prod('1','Строительство аэропорта «Бегишево»') 
+
+					+prod('2','Строительство автосалона грузовой техники «DAF»') 
+					+prod('3','Строительство терминалов ТК «ПЭК»') 
+					+prod('4','Строительные работы на объекте «ТАНЭКО»') 
+					+prod('5','Строительство ОЭЗ «Алабуга»') 
+					+prod('6','Строительство гипермаркета «ЛЕНТА»') 
+				.swiper-pagination
+	// end s-objects
+
+mixin s-objects-04()
+	// start s-objects
+	+b.s-objects.section#s-objects.lazy-background&attributes(attributes)
+		.container
+			block
+			.row
+				mixin prod(i,  p)
+					+e.col.col-md-6
+						+e.item.img-bg.img-animate(href="#")
+							img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
+							+e.DIV.title= p
+								
+					// /+e.col.col
+				+prod('1','Строительство аэропорта «Бегишево»') 
+
+				+prod('2','Строительство автосалона грузовой техники «DAF»') 
+				+prod('3','Строительство терминалов ТК «ПЭК»') 
+				+prod('4','Строительные работы на объекте «ТАНЭКО»')  
+			+e.btn--md(href="#") Загрузить еще
+	// end s-objects
+
+
+mixin s-objects-06-1
+	// start s-objects
+	+b.s-objects.section#s-objects.lazy-background&attributes(attributes)
+		.container
+			block
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin prod(i,  p)
+						+e.col.col-md-6.swiper-slide
+							+e.item.img-bg.img-animate(href="#")
+								img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
+								+e.DIV.title= p
+								 
+						// /+e.col.col
+					+prod('1','Строительство аэропорта «Бегишево»') 
+
+					+prod('2','Строительство автосалона грузовой техники «DAF»') 
+				.swiper-pagination
+	// end s-objects
+
+

@@ -1,0 +1,23 @@
+mixin s-rew-gal()
+	// start s-rew-gal
+	+b.s-rew-gal&attributes(attributes)
+		.container
+			.section.section-border-bottom
+				+b.section-title.text-center
+					h2 Ищите надежного партнера по&nbsp;поставке нерудных материалов?
+					+e.text Оставьте заявку и&nbsp;мы&nbsp;предоставим для вас выгодные условия, а&nbsp;также бесплатно доставим образцы материала
+					+e.btn.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+			.section
+				+e.slider.slider--js.swiper-container
+					.swiper-wrapper.no-gutters.rew-gal
+						mixin sl()
+							+e.col.col-lg-4.col-md-6.swiper-slide
+								+e.item(href="img/rew.jpg")
+									+e.img-wrap.img-bg(   )&attributes(attributes)
+										img.lazy-bg(src="#" data-src=`img/rew.jpg` alt="")  
+									+e.title ООО «Лукойл - Поволжье»
+							// /+e.col.col-lg-4.col-md-6.swiper-slide
+						- for (var x = 0; x < 6; x++)
+							+sl()
+					.swiper-pagination 
+	// end s-rew-gal

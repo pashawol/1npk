@@ -1,0 +1,73 @@
+mixin s-shipping()
+	// start s-shipping
+	+b.s-shipping.section#s-shipping.lazy-background&attributes(attributes)
+		.container
+			block
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin prod(i,  p)
+						+e.col.col-md.swiper-slide
+							+e.item.img-animate(href="#" )&attributes(attributes)
+								img.lazy.d-none.d-md-block(src="#" data-src=`img/shipping-${i}.jpg` alt="") 
+								+e.DIV.caption
+									block
+									+e.DIV.text= p
+									+e.btn(type="button") Подробнее
+						// /+e.col.col
+					+prod('1','Самый быстрый способ доставки')
+						+e.title Доставка
+							br
+							| автотранспортом
+							.text-primary от 40 тонн
+
+					+prod('2','Самый экономичный способ доставки')
+						+e.title Доставка
+							br
+							| ЖД-вагонами
+							.text-primary от 69 тонн
+					
+
+					+prod('3','Оптимальный способ доставки больших объемов')
+						+e.title Доставка
+							br
+							| баржами по воде
+							.text-primary от 1 500 тонн
+				.swiper-pagination
+
+	// end s-shipping
+
+mixin s-shipping-04()
+	// start s-shipping
+	+b.s-shipping.section#s-shipping.lazy-background&attributes(attributes)
+		.container
+			block
+			.row
+				mixin prod(i,  p)
+					+e.col.col-md
+						+e.item.img-animate(href="#" )&attributes(attributes)
+							img.lazy.d-none.d-md-block(src="#" data-src=`img/shipping-${i}.jpg` alt="") 
+							+e.DIV.caption
+								block
+								+e.DIV.text= p
+								+e.btn(type="button") Подробнее
+					// /+e.col.col
+				+prod('1','Самый быстрый способ доставки')
+					+e.title Доставка
+						br
+						| автотранспортом
+						.text-primary от 40 тонн
+
+				+prod('2','Самый экономичный способ доставки')
+					+e.title Доставка
+						br
+						| ЖД-вагонами
+						.text-primary от 69 тонн
+				
+
+				+prod('3','Оптимальный способ доставки больших объемов')
+					+e.title Доставка
+						br
+						| баржами по воде
+						.text-primary от 1 500 тонн 
+	// end s-shipping
+

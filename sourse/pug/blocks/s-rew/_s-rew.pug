@@ -1,0 +1,57 @@
+mixin s-rew()
+	// start s-rew
+	+b.s-rew.section#s-rew.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Видео отзывы
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin sl(i, t,t2,   d)
+						+e.col.col-md-6.swiper-slide
+							+e.item
+								+e.img-wrap.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  )&attributes(attributes)
+									img.lazy-bg(src="#" data-src=`img/rew-${i}.jpg` alt="") 
+								+e.caption
+									+e.head
+										.row
+											.col
+												+e.title= t
+												+e.prof= t2
+											.col-auto.d-none.d-lg-block
+												img.res-i.lazy(src="#" data-src=`img/rew-logo-${i}.png`, alt="")
+									+e.text Выражаю огромную благодарность Первой нерудной компании за прекрасные условия сотрудничества и оперативную поставку щебня на наш объект.
+									+e.date= d
+						// /+e.col.col-md-6.swiper-slide
+					+sl('1','Антон Геннадьев','Руководитель отдела закупок компании «Лукойл»','22 января 2019')
+					+sl('2','Лариса Иванова','Руководитель компании «DAF» в г. Казань','5 февраля 2019')
+					+sl('2','Лариса Иванова','Руководитель компании «DAF» в г. Казань','5 февраля 2019')
+					+sl('1','Антон Геннадьев','Руководитель отдела закупок компании «Лукойл»','22 января 2019')
+				.swiper-pagination
+	// end s-rew
+mixin s-rew--16-2()
+	// start s-rew
+	+b.s-rew.section#s-rew.lazy-background&attributes(attributes)
+		.container 
+			.row
+				mixin sl(i, t,t2,   d)
+					+e.col.col-md-6
+						+e.item
+							+e.img-wrap.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  )&attributes(attributes)
+								img.lazy-bg(src="#" data-src=`img/rew-${i}.jpg` alt="") 
+							+e.caption
+								+e.head
+									.row
+										.col
+											+e.title Щебень 40-70 для строительства автосалона "DAW"
+											//- +e.prof= t2
+										.col-auto.d-none.d-lg-block
+											img.res-i.lazy(src="#" data-src=`img/rew-logo-${i}.png`, alt="")
+								//- +e.text Выражаю огромную благодарность Первой нерудной компании за прекрасные условия сотрудничества и оперативную поставку щебня на наш объект.
+								+e.date= d
+					// /+e.col.col-md-6
+				+sl('1','Антон Геннадьев','Руководитель отдела закупок компании «Лукойл»','22 января 2019')
+				+sl('2','Лариса Иванова','Руководитель компании «DAF» в г. Казань','5 февраля 2019')
+				+sl('2','Лариса Иванова','Руководитель компании «DAF» в г. Казань','5 февраля 2019')
+				+sl('1','Антон Геннадьев','Руководитель отдела закупок компании «Лукойл»','22 января 2019') 
+			+e.btn-more(href="#") Загрузить еще
+	// end s-rew

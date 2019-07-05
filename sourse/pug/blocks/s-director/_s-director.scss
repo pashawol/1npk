@@ -1,0 +1,59 @@
+.s-director {
+		&__text{
+			p{
+				@extend .h6;
+				line-height: (30 / 18);
+				margin-bottom: em(28);
+			}
+		}
+		&__btn{
+			@include btn;
+			width: em(245);
+			@include media-breakpoint-up(lg) {
+
+				margin-top: em(29);
+			}
+			// margin-top: em(29);
+
+			@include media-breakpoint-down(md) {
+				margin-left: em(-130);
+			}
+			// @extend .btn;
+			// @extend .btn-prima;
+		}
+		img{
+			margin-top: rem(10);
+			margin-bottom: em(30);
+			@include media-breakpoint-only(xl) {
+				max-width: 70%;
+			}
+		}
+		h2{
+			max-width: em(170);
+		}
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

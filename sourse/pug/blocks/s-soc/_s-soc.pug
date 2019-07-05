@@ -1,0 +1,25 @@
+mixin s-soc(t)
+	// start s-soc
+	+b.s-soc.section#s-soc&attributes(attributes)
+		.container
+			+e.block
+				+e.row.row
+					.col-auto
+						+e.title= t
+					.col-auto
+						+e.row-sm.row
+							.col-auto
+								+e.item--vk(href="#")
+									+icon('vk')
+							.col-auto
+								
+								+e.item--fb(href="#")
+									+icon('fb')
+							.col-auto
+								+e.item--twitter(href="#")
+									+icon('twitter')
+							.col-auto
+								+e.item--odnoklassniki(href="#")
+									+icon('odnoklassniki')
+
+	// end s-soc

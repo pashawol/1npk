@@ -1,0 +1,17 @@
+mixin s-category-item(t,  ...items)
+	+e.item
+		+e.title
+			.text-body.tdn()= t 
+		.row.row--sm
+			each item in items
+				.col-auto
+					+b.prod-btn(href="#")= item 
+			block
+mixin s-category()
+	// start s-category
+	+b.s-category.section#s-category.lazy-background&attributes(attributes)
+		.container 
+			.row
+				block
+				
+	// end s-category

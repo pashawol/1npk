@@ -1,0 +1,118 @@
+mixin card-form()
+	block
+	form
+		+e.row-wrap
+			.row.row--sm
+				.col
+					+input('tel','+7 (___)___-__-__')(class="form-control-lg text-left")
+				.col-auto
+					+e.btn(type="submit") Оставить заявку
+		+polite
+
+
+mixin card-head-radio( ...items)
+	+e.row.row.row--sm
+		each t in items
+			.col-auto
+				+b.prod-btn(href="#")&attributes(attributes)= t
+
+mixin s-card-head(t, t2,  p, ...items)
+	// start s-card-head
+	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
+		.container 
+			.row
+				.col-xl-5.col-md-6 
+					+e.slider-wrap
+						+e.label
+							+e.icon-wrap
+								+icon('wallet')
+								| Отсрочка платежа
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								each item in items
+									+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
+										.easyzoom( ) 
+											+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
+												img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
+							+arrow()
+						.prod-pagination
+				.col-xl-7.col-md-6.order-md-first
+					.text-md-left.text-center
+						+e.H1.title= t 
+							| 
+							span.text-primary.d-block= t2 
+						+e.presense.h55.d-none.d-md-block
+							span.text-body 20 000 тонн  
+							| 
+							| продукции в наличии
+						+b.prod-btn--active.--lg()= p
+
+						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+					
+					block
+					+b.form-wrap.d-none.d-lg-block
+						+card-form()
+							.h55 
+								strong Оставьте заявку
+								|
+								| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
+			+b.form-wrap.d-none.d-md-block.d-lg-none
+				+card-form()
+					.h55 
+						strong Оставьте заявку
+						|
+						| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
+	// end s-card-head
+
+mixin s-card-head-shipping(t,  p, item, ...items)
+	// start s-card-head
+	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
+		.container 
+			.row
+				.col-xl-5.col-md-6 
+					+e.slider-wrap
+						block
+						
+						+e.img-wrap.img-bg( )
+							img.lazy-bg(src="#" data-src=`img/head-ship-${item}.jpg`   alt="")
+					 
+				.col-xl-7.col-md-6.order-md-first
+					.text-md-left.text-center
+						+e.H1.title= t   
+						+b.prod-btn--active.--lg.--shipping()= p
+
+						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+					each text in items
+						.h6= text
+					+b.form-wrap.d-none.d-lg-block
+						+card-form()
+			+b.form-wrap.d-none.d-md-block.d-lg-none
+				+card-form()
+	// end s-card-head
+
+mixin s-card-head-shipping-3( p, item, ...items)
+	// start s-card-head
+	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
+		.container 
+			.row
+				.col-xl-5.col-md-6 
+					+e.slider-wrap
+						
+						+e.img-wrap.img-bg( )
+							img.lazy-bg(src="#" data-src=`img/head-ship-${item}.jpg`   alt="")
+					 
+				.col-xl-7.col-md-6.order-md-first
+					.text-md-left.text-center
+						block
+						
+						+b.prod-btn--active.--lg.--shipping()= p
+
+						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+					each text in items
+						.h6= text
+					+b.form-wrap.d-none.d-lg-block
+						+card-form()
+			+b.form-wrap.d-none.d-md-block.d-lg-none
+				+card-form()
+	// end s-card-head
+

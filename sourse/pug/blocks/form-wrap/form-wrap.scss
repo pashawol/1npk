@@ -1,0 +1,490 @@
+.form-wrap{
+	&__block{
+
+		box-shadow: 0 10px 30px rgba(51, 51, 51, 0.15);
+		border-radius: 5px;
+		border: 2px solid #e7e7e7;
+		@include media-breakpoint-down(sm) {
+			border-width: 1px;
+	} 
+		background-color: #ffffff;
+		@include media-breakpoint-up(lg) {
+			max-width: 458px; 
+			
+			padding: rem(50px) rem(65px) rem(30px);
+		}
+		padding: rem(50px) rem(20px) rem(30px);
+		&--calc{
+			@include media-breakpoint-up(xl) { 
+				
+				padding: rem(50px) rem(65px) rem(30px);
+			}
+			@include media-breakpoint-up(lg) {
+			
+				// padding: rem(50px) rem(65px) rem(30px);
+				// padding: rem(50px) rem(40px) rem(30px);
+				padding-left: rem(40px);
+				padding-right: rem(40px);
+			}
+			// padding: 50px 20px 30px;
+		}
+	}
+	&__title{
+		text-align: center;
+		@extend .h3;
+		font-weight: bold;
+		margin-bottom: em(9);
+	}
+	&__text{
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			font-size: $h6-font-size;
+		}
+		// @extend .h6;
+		font-size: $small;
+		margin-bottom: em(32);
+
+	}
+ 	&__input-wrap{
+ 
+ 	}
+ 	&__input{
+		//  outline: 0 !important;
+		//  resize: none;
+		 text-align: center;
+		 @include media-breakpoint-up(sm){
+
+			 &:hover{
+				 border-color: $primary;
+				}
+			}
+	 }
+	 select:not(:focus):hover{
+		 border-color: #dddddd;
+	 }
+	 textarea{
+		 @include media-breakpoint-up(xl) {
+
+			 height: rem(115);
+		 }
+		 height: rem(108);
+	 }
+ 	&__btn{
+		 cursor: pointer;
+		 @extend .btn;
+		 @extend .btn-primary;
+		 @extend .btn-block;
+		 margin-top: em(25);
+		 @include media-breakpoint-up(xl) {
+
+			//  font-size: $h6-font-size;
+			//  padding-top: rem(15);
+			//  padding-bottom: rem(15);
+			}
+			margin-bottom: em(18);
+ 	}
+ 	label{
+ 		width: 100%;
+ 		display: block;
+	 }
+	 
+	 &__group{
+			padding-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+
+				&--sm{
+					max-width: 458px;
+				}
+			}
+	 }
+	 &__group-title{
+		 font-weight: bold;
+		@extend .h55;
+		margin-bottom: em(15);
+		line-height: 1.2;
+	 }
+	 &__result--lg{
+		 @extend h2;
+		 font-weight: bold;
+	 }
+	 &__block-group{
+		 padding-bottom: rem(10);
+		 &:not(:last-child){
+
+			 border-bottom: 1px solid #dadada;
+			 margin-bottom: rem(25);
+			}
+	 }
+	 &__block-text{
+	}
+	&__block-i{
+		padding-left: 100px;
+		margin-top: rem(20px);
+		position: relative;
+		padding-bottom: rem(10px);
+		&::before{
+			content: url(../img/truck.png);
+			left: 0;
+			top: 5px;
+			position: absolute;
+		}
+		.text-secondary{
+			line-height: 1.4;
+			margin-bottom: .8em;
+		}
+	 }
+	 &__symbol{
+		 position: absolute;
+		 right: rem(20px);
+		 @include a-cent(y);
+		 margin-top: rem(1px);
+	 }
+}
+// .form-wrap
+.form-control{
+	position: relative;
+	.irs--big{
+		margin-left: -.6rem;
+		margin-right: -.6rem;
+		// position: absolute;
+		// bottom: 0;
+		// left: 0;
+		// width: 100%;
+	}
+}
+ 
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+
+
+.custom-radio{
+	@extend .h6;
+	cursor: pointer;
+	&__input{
+		position: absolute; 
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+	}
+	&__text{
+		border-radius: 5px;
+		border: 2px solid #f2f1f0;
+		@include media-breakpoint-down(sm) {
+			border-width: 1px;
+	} 
+		background-color: #f2f1f0;
+		text-align: center;
+		// @include mt;
+		display: block;
+		padding: em(7) em(12);
+		margin-bottom: em(12);
+		@include media-breakpoint-up(sm) {
+
+			&:hover{
+				background-color: #ffffff;
+			}
+		}
+	}
+	&__input:checked ~ &__text{
+		border-color: $primary;
+		background-color: #ffffff;
+	}
+}
+
+.custom-input{
+	display: block;
+	margin: auto;
+	text-align: left;
+	 
+	margin-bottom: rem(20);
+	cursor: pointer;
+	position: relative;
+	padding-left: rem(35px);
+	display: inline-block;
+	&__input{
+		position: absolute;
+		// opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+	}
+	&__lab{
+		left: 0;
+		display: block;
+		@include mt;
+		top: -1px;
+		// display: inline-block;
+		width: rem(24px);
+		height: rem(24px);
+		border-radius: 3px;
+		border: 1px solid #e7e7e7;
+		background-color: #f9f9f9;
+		position: absolute; 
+		margin-right: rem(10px);
+
+	}
+	&__input[type="checkbox"] + &__lab{
+		&::after{ 
+			content:   url(../img/check.svg);
+			position: absolute;
+			@include a-cent; 
+			opacity: 0;
+			// margin-top: 3px;
+		}
+	}
+	&__input[type="radio"] + &__lab{
+		 
+		border-radius: 50%;
+		&::after{ 
+			content: '';
+			position: absolute;
+			@include a-cent;
+			background-color: $success;
+			opacity: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+	}
+
+	&__input[type="checkbox"]:checked + &__lab{
+		// background-color: $success;
+		 
+	}
+	&__input:checked + &__lab{ 
+		&::after{
+
+			opacity: 1;
+		}
+	}
+
+}
+.range-block{
+	position: relative;
+	margin-bottom: rem(28);
+	.range-result-js{
+		text-align: right;
+		padding-right: rem(30px);
+	}
+}
+.range-result-js{
+	border: .125rem solid #ddd !important;
+
+}
+.irs--big {
+height: rem(2px);
+	// z-index: -1;
+	position: relative;
+	bottom: 0;
+	top: auto;
+	position: absolute;
+	width: 100%;
+	.irs-line{
+		// top: -20px;
+	}
+}
+.irs--big .irs-line{
+	z-index: 2;
+	height: rem(4px);
+border-radius: rem(2px);
+background:  transparent;
+border: 1px solid transparent;
+margin-top: -36px;
+}
+.irs--big .irs-bar {
+	height: rem(4px);
+	border-radius: rem(2px);
+	background: $primary;
+	border: rem(1px) solid  $primary;
+	box-shadow: none;
+	top: 0;
+}
+.irs--big .irs-handle {
+	width: $h4-font-size;
+	height: $h4-font-size;
+	box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.15);
+	border: 1px solid #e7e7e7 !important;
+	cursor: pointer;
+	background: #ffffff !important;
+	top: rem(-14px);
+	z-index: 10;
+	&::before{
+		content: '';
+		position: absolute;
+		@include a-cent;
+		width: $small;
+		height: $small;
+		background-color: $primary;
+		border-radius: 50%;
+	}
+}
+
+// .jq-selectbox{
+// 	max-width: 100%;
+// 	margin: auto;
+// 	display: block !important;
+//  // height: auto;
+// 	&__select{
+// 		// background-color: transparent;
+		 
+// 		box-shadow: none !important; 
+// 		background-image: none !important;
+// 		text-shadow: none;
+// 		font-family: $default-font;
+// 		font-size: rem(14); 
+// 		text-align: left;
+// 		border: 1px solid #dadada;
+// 		background-color: #fff;
+// 		padding-top: rem(12);
+// 		padding-bottom: rem(12);
+// 		height: auto;
+// 		border-radius: rem(6);
+// 		@include mt;
+// 		&:hover{
+		 
+// 		}
+// 		&-text{
+// 			// width: 100% !important;
+// 			line-height: 1;
+// 		}
+// 	}	
+// 	&__select:hover &__trigger{
+		 
+// 	}
+// 	&__trigger{
+// 		border: none;
+// 		background-color: #dadada; 
+// 		height: 100%;
+// 		width: 40px;
+// 		border-radius: rem(6);
+// 		text-align: center;
+// 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAA40lEQVRIS9XVXRXCMAwF4HsVgARQABLAATgAZeAAHIAEJIADUFBOdtqdwdKk7OeBPa7pl61JW8J5QghLAKcYtiV58+bQCojgBcA0xj0BrD04iypgyu/CKmqARXALLQBd+AP9ATThGg0h7AAcvMoq4601rtAeYDPHnuRRXnAgMOEVLKg086LDb2tTHiRnZvN3TfRH6MBreic5H6f6o/RpqnCPfn0B2JC8Jkvb+zI4KWwnAVff52vulCqBVbDaptoXxdPKgrNgFo3Fk7tJg03QRDOwC7poAz7HZZIq97tNCzugFfYGUK5wGWWE5JYAAAAASUVORK5CYII=);
+// 		background-position: center;
+// 		background-repeat: no-repeat;
+// 		@include mt;
+// 		&:hover{
+			
+
+// 		}
+// 	}
+// 	&__trigger-arrow { 
+// 		border: none;
+    
+// }
+// li{
+// 	font-size: rem(16);
+// 	padding: em(10px) 10px em(10px);
+// 	&:hover {
+     
+//     color: #fff;
+// }
+// }
+// }
+
+
+.add-file{
+	cursor: pointer; 
+	@extend .form-control;
+		border-radius: 5px;
+		background-color: #ffffff;
+		display: flex !important;
+		align-items: center;
+		text-align: left;
+		border: 2px solid $primary;
+		@include media-breakpoint-down(sm) {
+			border-width: 1px;
+	} 
+		// padding: rem(18px) rem(21px);
+		cursor: pointer;
+		&::before{
+			content: url(../img/office-48-512.png);
+			margin-right: 10px;
+			position: relative;
+			top: 2px;
+		} 
+	&__input{
+		// opacity: 0;
+		visibility: hidden;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		position: absolute;
+	}
+	&__filename{
+		@include ellips;
+		max-width: calc(100% - 40px );
+	}
+}
+
+
+.select2-container--default{
+	display: block;
+	outline: 0 !important; 
+	.select2-selection--single{
+		border-radius: 0;
+		border: none;
+		border-bottom: solid 1px ;
+		height: auto;
+		font-size: rem(24px);
+		outline: 0 !important; 
+		.select2-selection__arrow b{
+				border-color: $success transparent transparent transparent;
+			  border-style: solid;
+			  border-width: 7px 7px 0 7px;
+		}
+		.select2-selection__rendered{
+			white-space: normal;
+			 color: $def;
+			 padding-left: 0;
+			 padding-bottom: 5px;
+		}
+	}
+} 
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+	border-color: transparent transparent $success transparent;
+  border-width: 0 7px 7px 7px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: $success;
+}

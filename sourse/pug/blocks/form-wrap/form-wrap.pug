@@ -1,0 +1,55 @@
+mixin form-head()
+	form.js-form-validate( data-parsley-validate="") 
+		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+		block
+mixin input(t , pl)
+	+e.input-wrap.form-group
+		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+mixin sel(t )
+	+e.input-wrap.form-group
+		+e.SELECT.input.form-control()&attributes(attributes)
+			option( selected).d-none= t
+			block
+	// +e.input-wrap
+
+mixin ta(pl)
+	+e.input-wrap.form-group
+		+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+
+mixin form-wrap()
+	+b.form-wrap&attributes(attributes)
+		form
+			block
+
+mixin ci()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox")
+		+e.SPAN.lab
+		| 
+mixin in-rad(n)
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="radio" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+mixin in-ch()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+mixin add-file(n)
+	+b.LABEL.add-file 
+		+e.INPUT.input(name='file', type='file')
+		+e.SPAN.filename Прикрепить файл 
+			| 
+			span.text-secondary (до 10 мб)
+
+
+mixin polite()
+	+e.polite
+		+in-ch('checked')(checked)
+			+e.SPAN.text.small Отправляя, вы&nbsp;соглашаетесь с&nbsp;
+				a.tdu(href="#") политикой конфиденциальности 
+				| и&nbsp;
+				a.tdu(href="#") пользовательским соглашением

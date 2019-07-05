@@ -1,0 +1,278 @@
+.s-faq {
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {
+		padding-top: rem(35);
+	}
+	padding-top: rem(15);
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+.tabs {
+	&__btn {
+		display: inline-block;
+
+		&:not(:last-child) {
+			@include media-breakpoint-up(md) {
+
+				margin-right: rem(13);
+			}
+			margin-right: rem(5);
+		}
+	}
+
+	&__btn-outline {
+		@extend .btn;
+		@extend .btn-sm;
+		border: 1px solid #dddddd;
+		
+		@include media-breakpoint-up(md) {
+			margin-bottom: 2.2rem;
+			
+		}
+
+		@include media-breakpoint-up(sm) {
+			border-width: 2px ;
+
+			// margin-bottom: 0;
+		}
+		min-width: em(180);
+
+		margin-bottom: rem(25);
+		// width: em(170);
+
+		&:hover {
+			border-color: #c1c1c1;
+		}
+	}
+
+	&__caption {
+		padding-bottom: rem(28);
+	}
+}
+
+.accord {
+	
+	border-top: 1px solid $gray;
+	&:last-child{
+
+		border-bottom: 1px solid $gray;
+	}
+
+	&__head,
+	&__body {
+		padding-left: rem(64 * .2);
+		padding-right: rem(54 * .2);
+
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(64);
+			padding-right: rem(54);
+
+			@include media-breakpoint-up(md) {
+				padding-left: rem(64 * .8);
+				padding-right: rem(54 * .8);
+			}
+
+			margin-bottom: 0;
+		}
+	}
+
+	&__head {
+		@include media-breakpoint-up(md) {
+
+			padding-top: rem(34);
+			padding-bottom: rem(34);
+		}
+		padding-top: rem(15);
+			padding-bottom: rem(20);
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__inner {
+		position: relative;
+		padding-right: rem(55px);
+
+	}
+			&__before {
+				content: '';
+				background-image: url(../img/chevron-down.svg);
+				@include a-cent(y);
+				cursor: pointer;
+				
+				right: 0;
+				border-radius: 50%;
+	
+				@include media-breakpoint-up(lg) {
+					font-size: 14px;
+	
+					width: rem(50px);
+					height: rem(50px);
+					line-height: rem(50px);
+				}
+	
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				line-height: 38px;
+				width: 40px;
+				height: 40px;
+				display: block;
+				border: 2px solid #dddddd;
+				right: 0;
+	
+				@include media-breakpoint-down(sm) {
+					border-width: 1px;
+				}
+	
+				@include mt;
+	
+				@include media-breakpoint-up(md) {
+	
+					&:hover {
+						border-color: #c1c1c1;
+					}
+				}
+			}
+
+	&__body {
+		border-top: 1px solid $gray;
+		@include media-breakpoint-up(md) {
+			padding-top: rem(54);
+			padding-bottom: rem(55);
+
+		}
+		padding-top: rem(25);
+			padding-bottom: rem(25);
+		position: relative;
+		background-color: $light;
+		display: none;
+		margin-bottom: rem(30);
+	}
+
+	&__text {
+		@include media-breakpoint-up(md) {
+
+			padding-left: rem(85);
+			max-width: rem(950);
+			position: relative;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: rem(14);
+				right: 0;
+				width: rem(45px);
+				height: rem(4px);
+				background-color: $primary;
+				
+		}
+			}
+			&--vac{
+				&::before{
+					display: none;
+				}
+				padding-left: 0 !important;
+			}
+	}
+	
+	&__body-title {
+		padding-bottom: rem(25);
+		padding-right: 15px;
+	}
+
+	&__body-foot {
+		padding-top: rem(18);
+	}
+
+	&__close {
+		position: absolute;
+		background-image: url(../img/close-dark.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: $h6-font-size;
+		height: $h6-font-size;
+		right: rem(14);
+		top: rem(-10);
+		cursor: pointer;
+	}
+
+	&__body-inner {
+		position: relative;
+	}
+
+	&__group{
+		padding-bottom: 2rem;
+		 
+		ul{
+			list-style-type: none;
+			// padding-bottom: rem(20);
+		}
+		li{
+			// @extend .h6;
+			list-style-type: none;
+			position: relative;
+			padding-left: rem(20);
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: em(10);
+				width: em(5px);
+				 height: em(5px);
+				 background-color: $primary;
+				 border-radius: 50%;
+			}
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		padding-left: em(20);
+		padding-right: rem(20);
+		// @extend .btn-primary;
+		@include media-breakpoint-up(xxl) {
+
+			max-width: rem(323);
+		}
+	}
+	&__group-title{
+		padding-bottom: 1rem;
+		font-weight: bold;
+
+	}
+}

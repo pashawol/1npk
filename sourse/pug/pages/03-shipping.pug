@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+block title
+	title 3. Доставка
+
+
+block pagecontent
+	+header() 
+		+top-nav()(class="fixed-page ")
+		//- +header-block()
+	+b.main-row.row.no-gutters
+		+e.col-aside.col-xl-auto 
+			+e.current-nav.toggle-btn-js.d-xl-none
+				.container  Доставка
+			
+			+aside-nav
+
+
+
+		+e.col-main.col
+			+b.page-head.container
+				+breadcrumb(' Доставка', 'Главная')
+				h1 Виды доставки
+				+e.text Осуществляем доставку любыми способами до&nbsp;Вашего объекта
+			+s-shipping-04(class="bg-white")
+	
+	+footer()

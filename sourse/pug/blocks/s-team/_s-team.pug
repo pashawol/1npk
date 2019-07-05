@@ -1,0 +1,59 @@
+mixin s-team()
+	// start s-team
+	+b.s-team.section#s-team.d-none.d-md-block
+		.container
+			+b.section-title.text-center
+				h2 Руководство
+				+e.text Мы добиваемся лучших результатов, работая вместе
+				
+			.row
+				mixin item(i,f,n,t)
+					+e.col.col
+						+e.item
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/team-${i}.png`, alt="")
+							+e.caption
+								+e.name
+									.strong= f
+									span= n
+								+e.prof= t
+					// /+e.col.col
+				+item('1','Шайхутдинов','Фирдус Фаритович','Руководитель отдела поставок')
+				+item('2','Гапсалимов','Руслан Рашитович','Управляющий партнер')
+				+item('3','Якупов','Ильнар Набиуллович','Главный инженер')
+		+e.foot
+			.container
+				+e.btn.popup-with-move-anim(href="#modal-call"  data-title='Задать вопрос') Задать вопрос руководству
+	// end s-team
+
+mixin s-team-04()
+	// start s-team
+	+b.s-team.section#s-team.d-none.d-md-block
+		.container
+			+b.section-title.text-center
+				h2 Команда
+				+e.text Мы добиваемся лучших результатов, работая вместе
+		+e.slider-wrap
+			.container
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(i,f,n,t)
+							+e.col.swiper-slide
+								+e.item
+									+e.img-wrap
+										img.res-i.swiper-lazy(src="#" data-src=`img/team-${i}.png`, alt="")
+									+e.caption
+										+e.name
+											.strong= f
+											span= n
+										+e.prof= t
+							// /+e.col.swiper-slide
+						+item('1','Шайхутдинов','Фирдус Фаритович','Руководитель отдела поставок')
+						+item('2','Гапсалимов','Руслан Рашитович','Управляющий партнер Управляющий партнер')
+						+item('3','Якупов','Ильнар Набиуллович','Главный инженер') 
+						+item('3','Якупов','Ильнар Набиуллович','Главный инженер') 
+						+item('3','Якупов','Ильнар Набиуллович','Главный инженер') 
+				+arrow()
+				+b.swiper-pagination--lg
+	// end s-team
+

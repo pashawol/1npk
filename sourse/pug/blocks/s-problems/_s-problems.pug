@@ -1,0 +1,43 @@
+mixin s-problems()
+	// start s-problems
+	+b.s-problems.section#s-problems.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Какие проблемы в&nbsp;бизнесе наших клиентов мы&nbsp;решаем
+				
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin prod-cap(t, t2 )
+						+e.col.swiper-slide.col-lg-3.col-md-6
+							+b.item-prod--cap&attributes(attributes)
+								+e.caption
+									+e.title
+										.text-body.tdn()= t
+											.d-xl-block.d-inline-block.text-primary= t2 
+									block
+							// /.item-prod
+					+prod-cap("Бесперебойные","поставки")
+						+e.text.h6 качественных нерудных материалов на&nbsp;ваш объект
+					
+					+prod-cap("Быстрая","доставка")
+						+e.text.h6 больших объемов нерудных материалов по&nbsp;выгодной цене
+					
+					+prod-cap("Оперативное","закрытие")
+						+e.text.h6 горячих объектов с&nbsp;отгрузкой в&nbsp;первый день обращения
+					
+					+prod-cap("Доставка","точно в срок")
+						+e.text.h6 до&nbsp;любого объекта без задержек и&nbsp;форс-мажоров
+					
+					+prod-cap("100%","прозрачность")
+						+e.text.h6 каждой проводимой сделки
+					
+					+prod-cap("Гарантия","возврата")
+						+e.text.h6 денежных средств при&nbsp;поставке некачественной продукции
+					
+					+prod-cap("Контроль","веса")
+						+e.text.h6 проходит каждый автомобиль с&nbsp;сопровождающими документами
+					
+					+prod-cap("Оптимальный","маршрут")
+						+e.text.h6 и&nbsp;контроль всех этапов поставки продукции
+				.swiper-pagination
+	// end s-problems

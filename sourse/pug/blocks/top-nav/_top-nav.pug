@@ -1,0 +1,43 @@
+
+mixin mob-mnu()
+	
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav&attributes(attributes)
+		+e.container.container
+			//- +mnu()
+			.row
+				.col-md-auto.col.d-none.d-sm-block
+					+e.logo--top(href="#")
+						img(src="img/logo.png", alt="")
+					
+					+e.logo--fixed(href="#")
+						img(src="img/logo-dark.png", alt="")
+					
+				.col.d-none.d-md-block
+					+e.link.popup-with-move-anim(href="#modal-city")
+						+icon('map')
+						| Набережные Челны
+				+e.cont-wrap.col-sm-auto.col
+					.row.text-sm-right
+						.col-xxl-auto.order-xxl-last
+							+e.link--tel(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+						.col-xxl-auto.d-none.d-sm-block
+							+e.link(href="mailto:info@pn-company.ru") info@pn-company.ru
+				.col-auto.d-none.d-xl-block
+					+e.btn(href="#") Калькулятор поставок
+				.col-auto
+					+b.toggle-menu-mobile--js.popup-with-move-anim(href="#modal-nav")
+						span
+						+e.DIV.text.d-none.d-lg-block Меню
+
+					
+	// end top-nav

@@ -1,0 +1,64 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.section.d-none.d-md-block#s-form&attributes(attributes)
+		.container
+			.row
+				.col-xl-7.col-md-6
+					+b.section-title
+						h2 Бесплатно доставим образцы материала
+
+						+e.text Мы&nbsp;гарантируем качество нашей продукции и&nbsp;отправим 20&nbsp;кг материала для исследований моментально по&nbsp;вашему запросу
+				.col
+					+form-wrap()
+						+e.block
+							+e.title Оставьте заявку,
+							+e.text  и мы перезвоним в течение 15 минут
+							+input('text','Ваше имя')
+							+input('tel','Телефон')(class='is-invalid')
+							+e.btn(type="submit") Бесплатно получить образцы
+							+polite
+	// end s-form
+
+
+mixin s-form-03()
+	.s-form-wrap.section.d-none.d-md-block&attributes(attributes)
+		.container
+			// start s-form
+			+b.s-form.pb-0
+				
+					.row
+						.col-xl-7.col-md-6
+							+e.left-block
+								block
+						.col
+							+form-wrap()
+								+e.block
+									+e.title Оставьте заявку,
+									+e.text  и мы перезвоним в течение 15 минут
+									+input('text','Ваше имя')
+									+input('tel','Телефон')(class='is-invalid')
+									+e.btn(type="submit") Бесплатно получить образцы
+									+polite
+			// end s-form
+
+
+mixin s-form-04()
+	// start s-form
+	+b.s-form--ab.section.d-none.d-md-block#s-form&attributes(attributes)
+		.container
+			+b.section-title--head.text-center.mx-a
+				h2 Хотите сотрудничать с&nbsp;нами?
+				+e.text.h4.text-primary.strong Бесплатно доставим образцы до&nbsp;20&nbsp;кг для лабоработных исследований
+			.row
+				.col-xl-7.col-md-6
+					block
+				.col
+					+form-wrap()
+						+e.block
+							+e.title Оставьте заявку,
+							+e.text  и мы перезвоним в течение 15 минут
+							+input('text','Ваше имя')
+							+input('tel','Телефон')(class='is-invalid')
+							+e.btn(type="submit") Бесплатно получить образцы
+							+polite
+	// end s-form

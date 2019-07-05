@@ -1,0 +1,22 @@
+mixin s-client()
+	// start s-client
+	+b.s-client.section#s-client.bg-light.d-none.d-md-block
+		.container
+			+b.section-title.text-center
+				h2 Наши клиенты
+				+e.text Профессиональный подход к&nbsp;поставленным задачам, уже сегодня позволил нам увидеть среди наших клиентов такие компании как:
+			.sldier-wrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						- for (var x = 1; x < 7; x++)
+							+e.slide.swiper-slide
+								img.res-i.lazy(src="#" data-src=`img/client-${x}.png`, alt="")
+							// /+e.slide.swiper-slide
+							
+						- for (var x = 1; x < 7; x++)
+							+e.slide.swiper-slide
+								img.res-i.lazy(src="#" data-src=`img/client-${x}.png`, alt="")
+							// /+e.slide.swiper-slide
+				.swiper-pagination.swiper-pagination--lg
+				+arrow()
+	// end s-client

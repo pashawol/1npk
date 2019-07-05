@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+
+block title
+	title  Главная страница
+
+block pagecontent
+	+header() 
+		+top-nav()(class="top-nav--js")
+		+header-block()
+		
+	+s-prod
+		+b.section-title.text-center
+			h2 Поставляемая продукция
+			+e.text Всегда в&nbsp;наличии более 20&nbsp;000 тонн нерудных материалов
+	+s-form()
+	+s-shipping
+		+b.section-title.text-center
+				h2 Виды доставки
+				+e.text Осуществляем доставку любыми способами до&nbsp;Вашего объекта
+	+s-geo
+		+b.section-title.text-center
+			h2 География поставок
+			+e.text Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
+	+s-now(class="text-md-white")
+		img.lazy-bg.d-none.d-md-block(src="#" data-src='img/bg-now.jpg', alt="")
+		.container
+			+b.section-title.text-center
+				h2 Наша компания сегодня
+				+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
+			+e.logo.d-none.d-md-block
+				img.res-i.lazy(src="#" data-src="img/logo--lg.png", alt="")
+	+s-team
+	+s-client
+	+s-objects(class="section-border-bottom")
+	+s-calc
+		+b.section-title.text-center
+				h2 Узнайте сейчас точную стоимость поставки продукции до&nbsp;объекта
+				+e.text Уже сейчас вы&nbsp;можете иметь представление о&nbsp;стоимости нужного для вас объема продукции, доставки и&nbsp;итоговой стоимости
+	+s-contact()
+	+footer()
+	
+	

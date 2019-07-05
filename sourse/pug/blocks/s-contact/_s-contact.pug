@@ -1,0 +1,66 @@
+
+mixin cont-form()
+	.row
+		.col-md
+			+input('text','Ваше имя')
+			+input('tel','Ваш телефон')
+			+input('email','Ваш E-mail')
+		.col-md
+			+ta('Ваш вопрос')
+			+add-file(n)
+	+e.btn(type="submit") Задать вопрос
+	+polite
+
+mixin s-contact()
+	// start s-contact
+	+b.s-contact.section.d-none.d-md-block#s-contact&attributes(attributes)
+		.container 
+			.row
+				.col.text-center
+					+e.tel(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+					.text-primary.h55 Отдел по работе с клиентами
+				
+				.col.text-center
+					+e.tel(href="tel:8(800)100-73-76") 8 (800) 100-73-76
+					.text-primary.h55 Отдел по работе с клиентами
+			+form-wrap
+				+e.text Если у&nbsp;вас есть вопрос&nbsp;&mdash; задайте его нам и&nbsp;мы&nbsp;ответим в&nbsp;течение дня
+				+cont-form()
+	// end s-contact
+mixin s-contact-03()
+	// start s-contact
+	+b.s-contact.section.d-none.d-md-block.bgin.bg-white#s-contact&attributes(attributes)
+		.container 
+			+b.section-title.text-center.pb-0
+					h2 Оставьте заявку прямо сейчас и&nbsp;получите щебень
+					+e.text.h4.strong на выгодных условиях
+					.h6 Заполните форму и&nbsp;персональный менеджер свяжется с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+			+form-wrap
+				.row
+					.col-md
+						+input('text','Ваше имя')
+						+input('tel','Ваш телефон')
+						+input('email','Ваш E-mail')
+					.col-md
+						+ta('Комментарий')
+						+add-file(n)
+				+e.btn(type="submit") Отправить
+				+polite
+	// end s-contact
+mixin s-contact-whithoutTitle()
+	// start s-contact
+	+b.s-contact.section.d-none.d-md-block.bgin.bg-white#s-contact&attributes(attributes)
+		.container 
+			block
+			+form-wrap
+				.row
+					.col-md
+						+input('text','Ваше имя')
+						+input('tel','Ваш телефон')
+						+input('email','Ваш E-mail')
+					.col-md
+						+ta('Комментарий')
+						+add-file(n)
+				+e.btn(type="submit") Отправить
+				+polite
+	// end s-contact

@@ -1,0 +1,45 @@
+mixin s-conditions()
+	// start s-conditions
+	+b.s-conditions.section.bg-light.d-none.d-md-block&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Предоставляем специальные условия сотрудничества для:
+				
+			.row
+				mixin prod(i)
+					+e.col.col-lg-4.col-md-6
+						+e.item.img-animate.img-bg( )
+							img.lazy-bg(src="#" data-src=`img/cond-img-${i}.jpg` alt="") 
+							block
+					// /+e.col.col
+				+prod(1)
+					+e.text Заводы-производители
+						br 
+						| бетона, ЖБИ и&nbsp;ЖБК
+				
+				+prod(2)
+					+e.text Строительные 
+						br 
+						| компании
+				
+				+prod(3)
+					+e.text Дорожностроительные 
+						br 
+						| компании
+				
+				+prod(4)
+					+e.text Гидростроительные 
+						br 
+						| компании
+				
+				+prod(5)
+					+e.text Торговые 
+						br 
+						| организации
+				
+				+prod(6)
+					+e.text Государственные 
+						br 
+						| учреждения
+				
+	// end s-conditions

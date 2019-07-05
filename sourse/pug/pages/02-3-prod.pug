@@ -1,0 +1,120 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+include ../blocks/s-card-head/_s-card-head.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-char/_s-char.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-shipping2/_s-shipping2.pug
+include ../blocks/s-text/_s-text.pug
+include ../blocks/s-why/_s-why.pug
+
+block title
+	title 2.3 Отсев щебня
+
+
+block pagecontent
+	+header() 
+		+top-nav()(class="fixed-page ")
+		//- +header-block()
+	+b.main-row.row.no-gutters
+		+e.col-aside.col-xl-auto 
+			+e.current-nav.toggle-btn-js.d-xl-none
+				.container Продукция
+			
+			+aside-nav
+
+
+
+		+e.col-main.col
+			+s-card-head(' Отсев щебня','по оптовым ценам', 'от 420 руб/тн с НДС', '3-1','2-2','2-3','2-4')
+				
+				+card-head-radio('0-5', '0-10', '0-20')
+
+			+s-prod-03(class="section-border-bottom")
+
+			+s-category(class="section-border-bottom d-none d-md-block")
+				.col-md-6
+					+s-category-item('Щебень','5-20','20-20','40-70','70-120')
+						+card-head-radio('M400','M600','M800','M1000','M1200','M1400')
+						+card-head-radio('Гранитный','Известняковый','Жигулевский','Доломитовый')
+					
+
+
+
+				.col-md-3
+					+s-category-item('Узкие фракции','3-10','5-10','10-15', '10-20 ','20-70','25-60')
+					+s-category-item('Смеси щебня','0-20','0-40','0-80','0-120') 
+				.col-md-3
+					+s-category-item('Бутовый камень','70-150','100-300','нестандартный')
+			+s-now-03(class="section-border-bottom")
+				.container
+					+b.section-title.text-center
+						h2 Первая нерудная компания сегодня
+						+e.text.text-gray2.fw-400 Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
+
+			+s-video(class="section-border-bottom")
+
+			+char-whitout-item('Характеристики щебня ', 'char-img')
+				ul
+					li ГОСТ 8267-93
+					li Средняя плотность щебня от&nbsp;1,32 до&nbsp;1,38&nbsp;т/м3
+					li Морозостойкость 
+						br
+						| до&nbsp;300 циклов
+					li Прочность M400, M600, М800, М1000, М1200, М1400
+					li Радиоактивность щебня в&nbsp;пределах нормы
+					li Лещадность 1-3 
+						br
+						| группы
+					li Плотная горная порода
+
+			+s-applications(class="section-border-bottom d-none d-md-block")
+				+b.section-title.text-center
+					h2 Области применения щебня 
+			+s-shipping2(class="section-border-bottom")
+				+b.section-title.text-center
+					h2 Доставка щебня
+
+			+s-text(class="section-border-bottom")
+
+			+s-form-03(class="section-border-bottom")
+				+b.section-title
+					h2 Бесплатно доставим образцы щебня
+
+					+e.text.text-secondary.fw-400 Мы&nbsp;гарантируем качество нашей продукции и&nbsp;отправим 20&nbsp;кг материала для исследований моментально по&nbsp;вашему запросу
+
+			+s-objects-03(class="section-border-bottom")
+
+			+s-geo(class="section-border-bottom bgin")
+				+b.section-title.text-center
+					h2 География поставок
+					+e.text.h55.fw-400.text-secondary Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
+
+			+s-why(class="section-border-bottom d-none d-md-block")
+
+			+s-calc(class="section-border-bottom")
+				+b.section-title.text-center
+					h2 Калькулятор поставок
+					+e.text.h55.fw-400.text-secondary Узнайте сейчас точную стоимость поставки щебня до&nbsp;вашего объекта
+
+			+s-content(class="section-border-bottom")
+				h5.strong Купить отсев щебня - как сделать правильный выбор?
+				p СЕО ТЕКСТ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+				p СЕО ТЕКСТ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+			+s-contact-03
+	+footer()

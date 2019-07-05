@@ -1,0 +1,74 @@
+mixin s-video()
+	// start s-video
+	+b.s-video.section#s-video.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Видео с&nbsp;наших площадок 
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(i)
+						+e.slide.swiper-slide
+							+e.item.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg` class="swiper-lazy")
+								img(src="#"  data-src=`img/video-${i}.jpg` class="swiper-lazy", alt="")
+						// +e.slide.swiper-slide
+					+item('1')
+					+item('2')
+					+item('3')
+					
+					+item('1')
+					+item('2')
+
+			+b.swiper-pagination--lg
+	// end s-video
+mixin s-video-03-()
+	// start s-video
+	+b.s-video.section#s-video.lazy-background&attributes(attributes)
+		.container
+			block
+			+e.slider--js.swiper-container.gal
+				.swiper-wrapper
+					mixin item(i)
+						+e.slide.swiper-slide
+							+e.item.img-bg(href=`img/video-${i}.jpg` data-background=`img/video-${i}.jpg` class="swiper-lazy")
+								img(src="#"  data-src=`img/video-${i}.jpg` class="swiper-lazy", alt="")
+						// +e.slide.swiper-slide
+					+item('1')
+					+item('2')
+					+item('3')
+					
+					+item('1')
+					+item('2')
+
+			+b.swiper-pagination--lg
+	// end s-video
+mixin s-video-tech()
+	// start s-video
+	+b.s-video.section#s-video.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наша техника
+			+e.slider--js.--tech.swiper-container.gal
+				.swiper-wrapper.swiper-wrapper--tech
+					mixin item(i)
+						+e.slide.--tech.swiper-slide.col-md-4
+							+e.item--tech.img-bg( data-background=`img/car-${i}.jpg` class="swiper-lazy")
+								img(src="#"  data-src=`img/car-${i}.jpg` class="swiper-lazy", alt="")
+								block
+						// +e.slide.swiper-slide
+					+item('1')
+						+e.caption
+							.h55.strong Самосвалы КАМАЗ 65115 / 6520
+							.h6 15 тн; 20 тн; 25 тн
+
+					+item('2')
+						+e.caption
+							.h55.strong Самосвалы МАЗ
+							.h6 20 тн; 30 тн
+
+					+item('3')
+						+e.caption
+							.h55.strong Тонары (полуприцеп)
+							.h6 30 тн; 40 тн
+
+			+b.swiper-pagination--lg.--tech
+	// end s-video

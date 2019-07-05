@@ -1,0 +1,20 @@
+mixin s-about-text()
+	// start s-about-text
+	+b.s-about-text.section.text-center&attributes(attributes)
+		.container
+			.row
+				mixin col(t)
+					+e.col.col-md
+						+e.title= t
+						block
+					// /+e.col.col
+				+col('25 000')
+					+e.text тонн готовой продукции на&nbsp;карьерах постоянно. Этого достаточно, чтобы покрыть самый крупный запрос клиента&nbsp;&mdash; моментально, сегодня&nbsp;же начав погрузку
+				
+				+col('320 000')
+					+e.text тонн составляет добыча нашей компанией нерудных материалов ежегодно
+				
+				+col('300-350')
+					+e.text самосвалов задействуются в&nbsp;поставках материалов ежемесячно. Каждый из&nbsp;автотранспорта точно по&nbsp;расписанию приходит к&nbsp;заказчику, без задержек и&nbsp;форс-мажоров
+				
+	// end s-about-text

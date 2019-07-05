@@ -1,0 +1,252 @@
+
+
+.s-doc {
+	counter-reset: num;
+
+	&__body-title{
+		padding-top: em(14);
+		@extend h4;
+		font-weight: bold;
+		padding-bottom: rem(27);
+	}
+	&__body{
+		// columns: 2;
+		// column-gap: 30px;
+		// vertical-align: top;
+	}
+
+	&__link{
+		@include media-breakpoint-down(xs) {
+			border-bottom: 1px solid ;
+		} 
+	}
+	&__col{
+		// margin-bottom: 30px;
+		margin-bottom: rem(30px);
+	}
+	&__item{
+		border-radius: 5px;
+		background-color: #ffffff;
+		display: inline-block;
+		width: 100%;
+		@extend h6;
+		margin-bottom: rem(30px);
+		&--40{
+			height: 100%;
+			margin-bottom: 0;
+			@include media-breakpoint-up(md) {
+			padding: em(30) em(30) em(21);
+		}
+		padding: em(20) em(20) em(21);
+
+			border: 2px solid $gray;
+		}
+		@include media-breakpoint-up(md) {
+			padding: em(30) em(30) em(21);
+
+			border: 2px solid $gray;
+			@include mt;
+			&:hover{
+				box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
+			}
+		}
+	}
+	&__title{
+		@extend h5;
+		font-weight: bold;
+		padding-bottom: em(5);
+		&--problem{
+			position: relative;
+
+			padding-bottom: em(20);
+			margin-bottom: em(18);
+			&::before{
+				content: counter(num)'.';
+				counter-increment: num;
+				color: $primary;
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: rem(45px);
+				height: rem(4);
+				background-color: $primary;
+			}
+		}
+
+	}
+	&__link-wrap{
+		margin-bottom: em(8);
+	}
+	&__text{
+		font-size: 1rem;
+		max-width: em(450);
+	}
+
+
+	
+	
+	.swiper-wrapper{
+		margin-bottom: rem(20px);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(5);
+			width: calc(100% + 30px);
+			padding-bottom: 0;
+			transform: translate3d(0px, 0px, 0px) !important; 
+			flex-wrap: wrap;
+			margin-right: -15px;
+			margin-left: -15px;
+			// text-align: left;
+			&:before{
+				display: none;
+			}
+		}
+		// text-align: center;
+	}
+	.swiper-pagination{
+		width: 100%;
+		@include media-breakpoint-up(md) {
+
+			display: none !important;
+		}
+	}
+
+	&__slider-wrap{
+		@include media-breakpoint-down(sm) {
+			// background-color: #f9f9f9;
+			margin-bottom: rem(25);
+			.container{
+				// padding: 0;
+			}
+		}
+	}
+	position: relative;
+//
+@include media-breakpoint-up(xl) {}
+&__slide{
+	height: auto;
+	@include media-breakpoint-up(xxl) {
+		margin-bottom: rem(60px);
+	}
+
+	
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(40px);
+	}
+
+
+		@include media-breakpoint-up(md) {
+		margin-bottom: 40px;
+	}
+}	
+&__count{
+	font-weight: bold;
+	@extend .h5;
+	
+				&::before{
+					content: '';
+					position: absolute;
+					width: rem(45px);
+					height: rem(4px);
+					background-color: #dbb041;
+					bottom: 0;
+				} 
+ 
+ 
+	
+	// font-size: calc(#{rem(38)} + 1.05vw) ;
+	// margin-bottom: em(2);
+		// @extend .h3;
+		position: relative;
+	 
+			@include media-breakpoint-down(xs) {
+				// padding-bottom: em(10);
+
+				margin-bottom: em(10 * 1.4);
+			}
+			padding-bottom: em(12  * 1.4);
+			margin-bottom: em(8  * 1.4);
+			&::before{
+				content: '';
+				position: absolute;
+				width: rem(45px);
+				height: rem(4px);
+				background-color: #dbb041;
+				bottom: 0;
+			}  
+}
+
+		 
+	@include media-breakpoint-up(xl) {
+		.section-border-bottom.pt-0{
+			padding-bottom: rem(15);
+			margin-top: rem(30);
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {
+	}
+	padding-top: rem(26px);
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {
+		.section-border-bottom.pt-0{
+			padding-bottom: 0;
+		}
+	}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+				&.section-border-bottom{
+					&::before{
+						display: none;
+					}
+				}
+		.section-border-bottom{
+
+			padding-top: rem(20);
+		}
+		&__item-top{
+			border-radius: 5px;
+			border: 1px solid #d4d4d4;
+			padding: rem(20) rem(20) rem(10);
+		}
+		&__slider-wrap{
+			margin-bottom: rem(50);
+		}
+		.swiper-pagination{
+			bottom: rem(40);
+		}
+		&__slide{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	@include media-breakpoint-down(xs) {} 
+
+}
+
+.doc-link--lg{
+	margin-bottom: rem(30px);
+}
+
+// .page-head{
+// 	margin-top: 32px;
+// }
