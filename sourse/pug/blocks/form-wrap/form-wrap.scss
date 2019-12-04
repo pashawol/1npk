@@ -680,6 +680,10 @@ margin-top: -36px;
 
 	@extend .form-control;
 	@extend .form-control-lg;
+	@include media-breakpoint-down(sm) {
+		height: calc(1.5em * .94 + 2.25rem * .94 + .25rem * .94);
+    padding: (1.125rem * .94) 1rem;
+	}
 	border: 1px solid #dddddd;
 	position: relative; 
 	text-align: left;
@@ -736,7 +740,11 @@ margin-top: -36px;
 				bottom: 0;
 				width: 100%;
 				z-index: -1;
-				height: calc(100% + #{rem(68)});
+				@include media-breakpoint-up(md) {
+
+					height: calc(100% + #{rem(68)});
+				}
+				height: calc(100% + #{rem(60)});
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 			}
 		}
@@ -761,5 +769,8 @@ margin-top: -36px;
 		}
 
 		.select-default{
-			@extend .form-control-lg
+			// @extend .form-control-lg;
+			@include media-breakpoint-down(sm) {
+
+			}
 		}
