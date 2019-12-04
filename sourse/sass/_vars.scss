@@ -1,12 +1,12 @@
 
 
-@include font-face (Tahoma, "../fonts/Tahoma/Tahoma", $file-formats: woff2 woff ttf);
-@include font-face (Tahoma, "../fonts/Tahoma-Bold/Tahoma-Bold", bold, $file-formats: woff2 woff ttf);
+@include font-face (Arial, "../fonts/ArialMT", $file-formats: woff2);
+@include font-face (Arial, "../fonts/Arial-BoldMT", bold, $file-formats: woff2);
 @include font-face ("ALS Rubl", "../fonts/ALSRubl/ALSRubl",   $file-formats: woff2 woff ttf);
 // @include font-face (Tahoma, "../fonts/Roboto-Black/Roboto-Black", 900, $file-formats: woff2 woff ttf);
 
 
-$default-font: Tahoma;
+$default-font: Arial;
 
 $def: #373a41;
 $em-base: 16px;

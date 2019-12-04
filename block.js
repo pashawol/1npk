@@ -17,14 +17,16 @@ const BLOCKS_DIR = path.join(__dirname, 'sourse/pug/blocks');
 const fileSources = {
 	pug: `mixin {blockName}()
 	// start {blockName}
-	+b.{blockName}.section#{blockName}&attributes(attributes)
+	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 {blockName}
 				
 			.row
 	// end {blockName}`,
-	scss: `.{blockName} \{
+	scss: `
+	// start .{blockName}
+	.{blockName} \{
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -50,9 +52,13 @@ const fileSources = {
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
-}`
+} // end.{blockName}`
 	,
-	// js	: `// .{blockName} scripts goes here`
+	// js: `JSCCommon{blockName}();
+	// {blockName}() {
+
+	// }
+	// `
 };
 
 function validateBlockName(blockName) {

@@ -1,17 +1,17 @@
 .s-prod {
-	position: relative;
-	z-index: 3;
+	// position: relative;
+	// z-index: 3;
 	// background-color: #ffffff;
 		&.visible{
 		
 		}
 
 		&__col{
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(xxl) {
 
 				margin-bottom: 30px;
 			}
-			margin-bottom: 20px;
+			margin-bottom: rem(20);
 		}
 
 		&__col--sm{
@@ -22,7 +22,9 @@
 	@include media-breakpoint-up(xl) {
 		// padding-top: 170px;
 	}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+ 
+	}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-up(xs) {}
@@ -49,47 +51,35 @@
 }
 
 .item-prod{
-	&__link{
-		@include media-breakpoint-down(lg) { 
-			@include media-breakpoint-up(sm) {
-			
-				&:hover{
-					background-color: #ffffff;
-					border-color: #f2f1f0;
-					color: $body-color;
-				}
-			}
-			border: 2px solid #f2f1f0;
-			border-radius: rem(5px);
-			@include media-breakpoint-down(sm) {
-				// border-width: 1px;
-		} 
-	 
-			background-color: #f2f1f0;
-			text-align: center;
-			// @include mt;
-			display: inline-block;
-			@include media-breakpoint-up(lg) {
-			padding: em(7) em(12);
-		}
-		padding: em(7) em(10); 
-		 
-		} 
-
-	}
-	border-radius: 5px;
-	border: 2px solid #e7e7e7;
-	@include media-breakpoint-down(sm) {
-		border-width: 1px;
-} 
+	@extend .panel;
+	padding-bottom: rem(10);
 	background-color: #ffffff;
 	position: relative;
 	height: 100%;
 	display: block;
 	width: 100%;
-
-	@extend .h6;
 	margin-bottom: 0;
+	min-height: rem(213);
+	@extend .h6;
+	// margin-bottom: 0;
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-primary;
+	}
+	&__link{
+		font-size: 1rem;
+		@extend .link-color; 
+		font-size: 1rem;
+		line-height: 1.2; 
+		min-width: rem(76);
+		position: relative;
+			z-index: 2; 
+	}
+	&__item{
+		line-height: 1;
+		margin-bottom: em(12);
+	}
 	.text-gray2{
 		font-size: 1rem;
 	}
@@ -127,9 +117,10 @@
 		background-color: $body-color;
 	}
 	&__row{
-		@include media-breakpoint-up(xl) {
-		@include roww(20);
-		}
+		// @include media-breakpoint-up(xl) {
+		// @include roww(20);
+		// }
+		padding-right: rem(107);
 	}
 	&__row,
 	&__list{
@@ -137,9 +128,7 @@
 		 
 		margin-bottom: 0; 
 	}
-	&__item{
-		margin-bottom: em(10);
-	}
+	
 	&--lg &__list{
 		@include media-breakpoint-up(lg) {
 
@@ -156,10 +145,15 @@
 		columns: 2;
 	}
 	&__title{
-		line-height: 1.1;
-		@extend .h5;
-		font-weight: bold;
-		margin-bottom: em(16);
+		line-height: 1.3;
+		@extend .h55;
+		margin-top: rem(-4);
+		// font-weight: bold;
+		// padding-top: rem(2);
+		margin-bottom: em(12);
+	}
+	&__price{
+		display: inline-block;
 	}
 	&__caption{
 		@include media-breakpoint-up(xl) {
@@ -261,6 +255,13 @@
 		 
 
 		text-align: center;
+	}
+	img{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		max-width: rem(218);
+		max-height: rem(114);
 	}
 }
  

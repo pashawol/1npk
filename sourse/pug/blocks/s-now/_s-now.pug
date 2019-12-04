@@ -10,25 +10,16 @@ mixin s-now-body()
 								block
 						// /.col-3
 					+item('7 лет')
-						.h6 успешной работы
-							br
-							| 
-							| с&nbsp;2012 года
+						+e.text успешной работы с&nbsp;2012 года
 					+item('6 560')
-						.h6 клиентов за&nbsp;последние
-							br
-							| 
-							| 4&nbsp;года
+						+e.text клиентов за&nbsp;последние 4&nbsp;года
 					+item('633 600')
-						.h6 тонн материала отгрузили
+						+e.text тонн материала отгрузили
 							br
 							|  
 							| за&nbsp;последние 4&nbsp;года
 					+item('17')
-						.h6 сотрудников в&nbsp;штате
-							br
-							| 
-							| и&nbsp;46&nbsp;на подряде
+						+e.text сотрудников в&nbsp;штате  и&nbsp;46&nbsp;на подряде
 					mixin itemf(t)
 						+e.slide.swiper-slide.col-md-3
 							+e.item--foot
@@ -36,25 +27,15 @@ mixin s-now-body()
 								block
 						// /.col-3
 					+itemf('25 000')
-						.h6  тонн готовой продукции
-							br
-							| 
-							| на&nbsp;карьерах постоянно
+						+e.text  тонн готовой продукции на&nbsp;карьерах постоянно
 					+itemf('1 000')
-						.h6 тонн материалов
+						+e.text тонн материалов  отгружаем  
 							br
-							| 
-							| отгружаем ежедневно
+							| ежедневно
 					+itemf('20')
-						.h6 самосвалов и&nbsp;тонаров
-							br
-							| 
-							| ежедневно на&nbsp;линии
+						+e.text самосвалов и&nbsp;тонаров  ежедневно на&nbsp;линии
 					+itemf('320 000')
-						.h6 тонн в&nbsp;год материалов
-							br
-							| 
-							| добывает наша компания
+						+e.text тонн в&nbsp;год материалов добывает наша компания
 	.swiper-pagination
 mixin s-now-body-s-now-17-1()
 	+e.slider-wrap
@@ -118,7 +99,7 @@ mixin s-now()
 		
 		block
 		+s-now-body()
-		+e.btn.d-none.d-md-block(href="#") Подробнее о компании
+		+e.btn(href="#") Подробнее о компании
 	// end s-now
 
 mixin s-now-03()

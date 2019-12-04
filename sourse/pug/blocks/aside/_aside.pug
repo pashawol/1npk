@@ -1,0 +1,26 @@
+mixin aside()
+	// start aside
+	+b.ASIDE.aside--js
+		+e.inner
+			//- +b.toggle-menu-mobile--js.d-xl-none
+			//- 	span
+			+e.head
+				+e.logo.d-none.d-xl-block
+					a(href="/")
+						img(src="img/logo.png", alt="")
+				+form-wrap
+					+input2('Например, щебень 5-20')
+					+e.btn-search(type="button")
+						+icon('search')
+			+mnu
+			+e.foot 
+				+e.link-city.popup-with-move-anim(href="#modal-city")
+						+icon('map')
+						| Набережные Челны
+					
+				br
+				+e.mail(href="mailto:info@1pnk.com") info@1pnk.com
+			
+				br
+				+e.link--tel(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+	// end aside

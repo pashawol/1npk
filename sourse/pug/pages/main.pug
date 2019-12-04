@@ -1,6 +1,7 @@
 extends layout/main.pug
 
 
+include ../blocks/footer-white/_footer-white.pug
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
 include ../blocks/s-prod/_s-prod.pug
@@ -11,44 +12,72 @@ include ../blocks/s-team/_s-team.pug
 include ../blocks/s-client/_s-client.pug
 include ../blocks/s-objects/_s-objects.pug
 include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-rent/_s-rent.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-departure/_s-departure.pug
 
+include ../blocks/aside/_aside.pug
+block variables
+	- let  mainPage= null
 block title
-	title  Главная страница
-
+	- let  title= 'Главная страница'
+	title= title
 block pagecontent
+	+aside
 	+header() 
-		+top-nav()(class="top-nav--js")
 		+header-block()
+			//- (class="top-nav--js")
 		
-	+s-prod
+		+top-nav()
+	+s-prod()(class="under-top-nav")
 		+b.section-title.text-center
 			h2 Поставляемая продукция
 			+e.text Всегда в&nbsp;наличии более 20&nbsp;000 тонн нерудных материалов
-	+s-form()
-	+s-shipping
+	+s-rent
 		+b.section-title.text-center
-				h2 Виды доставки
-				+e.text Осуществляем доставку любыми способами до&nbsp;Вашего объекта
-	+s-geo
+			h2 Аренда спецтехники
+			+e.text Ежедневно на&nbsp;линии более 15&nbsp;единиц техники
+	+s-video
 		+b.section-title.text-center
-			h2 География поставок
-			+e.text Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
-	+s-now(class="text-md-white")
-		img.lazy-bg.d-none.d-md-block(src="#" data-src='img/bg-now.jpg', alt="")
+			h2 Видео с&nbsp;наших площадок 
+			+e.text Первая нерудная компания ведет видео-отчет каждой отгрузки
+	+s-now()(class="bg-wrap text-md-white bg-light")
+		+pic("s-now-bg","bg")(class="picture-bg d-none d-md-block")
 		.container
 			+b.section-title.text-center
 				h2 Наша компания сегодня
 				+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
-			+e.logo.d-none.d-md-block
-				img.res-i.lazy(src="#" data-src="img/logo--lg.png", alt="")
-	+s-team
-	+s-client
 	+s-objects(class="section-border-bottom")
-	+s-calc
-		+b.section-title.text-center
-				h2 Узнайте сейчас точную стоимость поставки продукции до&nbsp;объекта
-				+e.text Уже сейчас вы&nbsp;можете иметь представление о&nbsp;стоимости нужного для вас объема продукции, доставки и&nbsp;итоговой стоимости
-	+s-contact()
-	+footer()
+			 
+			+b.section-title.text-center
+				h2 Выполненные проекты
+				+e.text За 7 лет мы выполнили проекты различной сложности и для разного уровня клиентов
+	+s-departure
+
+	//- +s-form()
+	//- +s-shipping
+	//- +s-now(class="text-md-white")
+	//- 	img.lazy-bg.d-none.d-md-block(src="#" data-src='img/bg-now.jpg', alt="")
+	//- 	.container
+	//- 		+b.section-title.text-center
+	//- 			h2 Наша компания сегодня
+	//- 			+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
+	//- 		+e.logo.d-none.d-md-block
+	//- 			img.res-i.lazy(src="#" data-src="img/logo--lg.png", alt="")
+	//- 	+b.section-title.text-center
+	//- 			h2 Виды доставки
+	//- 			+e.text Осуществляем доставку любыми способами до&nbsp;Вашего объекта
+	//- +s-geo
+	//- 	+b.section-title.text-center
+	//- 		h2 География поставок
+	//- 		+e.text Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
+	//- +s-team
+	//- +s-client
+	//- +s-calc
+	//- 	+b.section-title.text-center
+	//- 			h2 Узнайте сейчас точную стоимость поставки продукции до&nbsp;объекта
+	//- 			+e.text Уже сейчас вы&nbsp;можете иметь представление о&nbsp;стоимости нужного для вас объема продукции, доставки и&nbsp;итоговой стоимости
+	//- +s-contact()
+	+footer-white
 	
 	

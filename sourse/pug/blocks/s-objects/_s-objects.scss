@@ -7,20 +7,19 @@
 		.section-title{
 			margin-left: auto;
 			margin-right: auto;
-			max-width: rem(600px);
-			padding-bottom: em(29);
+			// max-width: rem(600px);
+			// padding-bottom: em(29);
 		}
 		.swiper-wrapper{
 			margin-bottom: rem(30px);
 			
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(10px);
-				width: calc(100% + 30px);
+				width: calc(100% + #{rem(30px)});
 				padding-bottom: 0;
 				transform: translate3d(0px, 0px, 0px) !important; 
 				flex-wrap: wrap;
-				margin-right: rem(-15px);
-				margin-left: rem(-15px); 
+				@include roww(15);
 				&:before{
 					display: none;
 				}
@@ -41,25 +40,25 @@
 			text-decoration: none !important;
 			color: #ffffff;
 			display: block;
-			@include block(555,428);
+			@include block(458,258);
 			// height: rem(428);
 			@include media-breakpoint-between(xl, xl){
-
+				
 				// height: rem(380);
 			}
 			position: relative;
 			overflow: hidden;
 			border-radius: 5px;
 			
-			@extend .h3;
+			// @extend .h3;
 			font-weight: bold;
 			&::before{
 				opacity: 0.4;
 			}
 			@include media-breakpoint-up(sm) {
-			&:hover{
-				&::before{
-
+				&:hover{
+					&::before{
+						
 						opacity: 0.5;
 					}
 				}
@@ -67,33 +66,32 @@
 			margin-bottom: 0;
 		}
 		&__title{
+			@extend .h55;
 			
 			position: absolute;
-			@include media-breakpoint-up(xl) {
-
-				left: em(30);
-				bottom: em(20);
-			}
-			left: em(15);
-			bottom: em(12);
+			 
 			padding-right: em(15);
 			@include media-breakpoint-down(xs) {
 
-				// max-width: em(180);
+				max-width: em(180);
 			} 
-			// max-width: em(280);
+			max-width: em(280);
 			line-height: 1.4;
+
+			left: rem(30);
+			bottom: rem(20);
 			&--sm{
-				@extend .h55;
 				max-width: em(230);
 			}
 		}
 		&__col{
-			margin-bottom: 30px;
+			margin-bottom: rem(30px);
 		}
 		&__btn{
 			
 			@include btn;
+			margin-top: rem(20);
+			margin-bottom: rem(30);
 			@include media-breakpoint-up(lg) {
 
 			} 

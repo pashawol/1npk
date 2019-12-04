@@ -26,22 +26,27 @@ html(lang="ru")
 		link(rel='shortcut icon',   type="image/ico",  href='img/favicon/favicon.ico')
 		
 		// Custom Browsers Color
-		meta(name='theme-color', content='#e2b542')
+		meta(name='theme-color', content='#3b3836')
 		
 		link(rel="stylesheet", href="libs/magnificPopup/magnific-popup.css")
-		link(rel="stylesheet", href="libs/swiper/swiper.min.css")
+		link(rel="stylesheet", href="libs/@fancyapps/fancybox/jquery.fancybox.min.css")
+		link(rel="stylesheet", href="libs/swiper/css/swiper.min.css")
 		link(rel="stylesheet", href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css")
+		//- link(rel="stylesheet", href="libs/jQueryFormStyler/jquery.formstyler.css")
+		link(rel="stylesheet", href="libs/select2/css/select2.min.css")
 		//- link(rel="stylesheet", href="libs/slick/slick.css") 
 		//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 
 		//- link(rel="stylesheet", href="css/main.css")
 		link(rel="stylesheet", href="css/main.min.css")
-	body
+	block variables
+	body(class= mainPage)
 		.main-wrapper
 			block pagecontent
 				h3 content
 		+modal()
 		//- link(rel="stylesheet", href="fonts/fontello/css/fontello.css")
+		script(src="js/lazy.js")
 		script(src="js/jquery.min.js")
 		//- bootstrab libs
 		//- script(src="libs/popper.min.js")
@@ -50,13 +55,20 @@ html(lang="ru")
 		//- script(src="libs/bootstrap/tooltip.js")
 		//- script(src="libs/bootstrap/popover.js")
 		//- /bootstrab libs
+		// полифил для picture
+		script(src="libs/picturefill/picturefill.min.js")
+		// полифил для object-fit
+		script(src="libs/object-fit-images/ofi.min.js")
+		// modal libs
+		script(src="libs/@fancyapps/fancybox/jquery.fancybox.min.js")
+		// modal libs
 
 		// modal libs
 		script(src="libs/magnificPopup/jquery.magnific-popup.min.js")
 		// modal libs
 		// slider libs
 		//- script(src="libs/slick/slick.min.js")
-		script(src="libs/swiper/swiper.min.js")
+		script(src="libs/swiper/js/swiper.min.js")
 		// /slider libs
 		// for svg libs
 		script(src="libs/svg4everybody-master/svg4everybody.min.js")
@@ -78,7 +90,10 @@ html(lang="ru")
 		//- script(src="libs/jquery.lazy/jquery.lazy.min.js")
 		script(src="libs/sticky-kit.js")
 		script(src="libs/EasyZoom/src/easyzoom.js")
+		//- script(src="libs/jQueryFormStyler/jquery.formstyler.min.js")
+		script(src="libs/select2/js/select2.min.js")
 
 		//- script(src="js/scripts.min.js")
 
 		script(src="js/common.js")
+		script(src="js/common2.js")

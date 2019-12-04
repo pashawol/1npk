@@ -1,0 +1,113 @@
+
+	// start .s-departure
+	.s-departure {
+		text-align: center;
+		@include media-breakpoint-down(xs) {
+			padding-top: 0;
+			padding-bottom: 0;
+			&__head{
+				padding-top: rem(40);
+				padding-bottom: rem(20);
+				position: relative;
+				.container{
+					max-width: rem(470);
+				}
+			}
+		}
+		 
+ 
+		.picture-bg{
+			background-color: #3b3836;
+			img{
+				opacity: 0.3;
+			}
+		}
+
+		&__top-text{
+			color: #b2aeac;
+			@extend .h55;
+			margin-bottom: rem(20);
+
+		}
+		H2{
+			color: #ffffff;
+			padding-bottom: rem(20);
+		}
+		.section-title{
+			padding-bottom: rem(35);
+		}
+		 &__foot{
+			 padding-top: rem(60);
+			 .row{
+				 justify-content: center;
+				 @include media-breakpoint-up(xl) {
+
+					 @include roww(34);
+					}
+			 }
+		 }
+		&__item{
+				width: rem(330);
+				text-align: center;
+				@include media-breakpoint-up(sm) {
+
+					color: #ffffff;
+					margin-bottom: rem(35);
+				}
+				position: relative;
+				padding-left: rem(60);
+				padding-right: rem(60);
+				margin-bottom: rem(70);
+				&::before,
+				&::after{
+					content: '';
+					position: absolute;
+					width: rem(66px);
+					height: rem(120px);
+					background-size: 100% 100%;
+					background-image: url(../img/@2x/lavr.png);
+					background-repeat: no-repeat;
+					top: 0;
+				}
+				&::before{
+					left: 0;
+				}
+				&::after{
+					right: 0;
+					transform: rotateY(180deg);
+				}
+		}
+		&__title{
+			@extend h2;
+			font-weight: bold;
+			margin-bottom: rem(10);
+		}
+		&__text{
+			line-height: 1.63;
+		}
+		
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.s-departure

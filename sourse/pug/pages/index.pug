@@ -42,7 +42,10 @@ block pagecontent
 				.section-title.pt-2
 					h1.h2 Карта сайта
 				ul.h55.site-page
-					li: a(href="main.html" target="_blank") 1. Главная
+					mixin li(a, t)
+						li
+							a(href= a target="_blank")= t
+					+li("main.html","1. Главная") 
 					li
 						a(href="02-catalog.html" target="_blank") 2. Продукция
 						ul

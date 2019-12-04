@@ -11,33 +11,27 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav&attributes(attributes)
+	+b.top-nav.d-none.d-md-block&attributes(attributes)
 		+e.container.container
-			//- +mnu()
-			.row
-				.col-md-auto.col.d-none.d-sm-block
-					+e.logo--top(href="#")
-						img(src="img/logo.png", alt="")
-					
-					+e.logo--fixed(href="#")
-						img(src="img/logo-dark.png", alt="")
-					
-				.col.d-none.d-md-block
-					+e.link.popup-with-move-anim(href="#modal-city")
-						+icon('map')
-						| Набережные Челны
-				+e.cont-wrap.col-sm-auto.col
-					.row.text-sm-right
-						.col-xxl-auto.order-xxl-last
-							+e.link--tel(href="tel:8(800)100-73-75") 8 (800) 100-73-75
-						.col-xxl-auto.d-none.d-sm-block
-							+e.link(href="mailto:info@pn-company.ru") info@pn-company.ru
-				.col-auto.d-none.d-xl-block
-					+e.btn(href="#") Калькулятор поставок
-				.col-auto
-					+b.toggle-menu-mobile--js.popup-with-move-anim(href="#modal-nav")
-						span
-						+e.DIV.text.d-none.d-lg-block Меню
+			-
+				let nav= {
+					"поставляемая продукция":"#s-prod",
+					"Аренда спецтехники":"#s-rent",
+					"Видео с наших площадок":"#s-video",
+					"О компании":"#s-now",
+					"выполненные проекты":"#s-objects",
+					"рассчитать стоимость":"#s-departure",
+					}
+			.row 
+				.col
+					+mnu2(nav)
+
+				+e.col.col-auto.d-none.d-xl-block
+					+e.link--tel(href="tel:8(800)100-73-75") 
+						+e.icon-wrap
+							+icon("call")
+						| +7 (917) 926-27-77
+
 
 					
 	// end top-nav

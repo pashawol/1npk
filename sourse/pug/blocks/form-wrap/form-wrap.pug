@@ -12,6 +12,43 @@ mixin sel(t )
 			option( selected).d-none= t
 			block
 	// +e.input-wrap
+	
+mixin sel2(t )
+	+e.input-wrap.form-group
+		+e.SELECT()&attributes(attributes)
+			option()= t
+			block
+	// +e.input-wrap
+
+mixin input2(placeholder,  t='text', label, name= t)
+	mixin t(t='text',placeholder, name= t)
+		if t== "textarea"
+			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+		else if t== "select"
+			+e.SELECT.input.form-control( name= name)&attributes(attributes)
+				option(value= placeholder) placeholder
+				- for (var x = 1; x < 5; x++)
+					option(value=` placeholder ${x}`)= `placeholder ${x}`
+		else
+			+e.INPUT.input.form-control(type= t placeholder= placeholder name= name)&attributes(attributes)
+	+e.input-wrap.form-group
+		if label
+			label
+				+e.SPAN.title= label
+				+t(t,placeholder, name)&attributes(attributes)
+				block
+		else
+			+t(t,placeholder, name)&attributes(attributes)
+		block
+	// +e.input-wrap
+mixin select(pl,...items)
+	+e.input-wrap
+		label 
+			+e.SELECT.input
+
+					option()= pl
+					each item in items
+						option()= item
 
 mixin ta(pl)
 	+e.input-wrap.form-group
@@ -53,3 +90,22 @@ mixin polite()
 				a.tdu(href="#") политикой конфиденциальности 
 				| и&nbsp;
 				a.tdu(href="#") пользовательским соглашением
+
+
+mixin form-payment()
+	+form-wrap()(class="form-wrap--payment")
+		
+		+e.panel 
+			.row
+				.col-sm-6
+					+sel2("Выберите продукцию")(class="form-control-lg   select-js"   )
+						option(value="#")  Щебень
+						option(value="#")  Узкие фракции щебня
+						option(value="#")  Отсев щебня
+						option(value="#")  Смеси щебня
+						option(value="#")  Бутовый камень
+						option(value="#")  Песок
+						option(value="#")  Гравий
+						option(value="#")  ПГС ОПГС
+				.col-sm-6
+					+e.btn.btn-lg.mt-0(type="button") Рассчитать стоимость поставки

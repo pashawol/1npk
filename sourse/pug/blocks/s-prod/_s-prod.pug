@@ -18,6 +18,7 @@ mixin prod-cap(t, t2 )
 					.d-xl-block.d-inline-block.text-primary= t2 
 			block
 
+
 mixin prod1(i,t, t2, ...items)
 	+b.item-prod&attributes(attributes)
 		.row
@@ -61,6 +62,27 @@ mixin prodf(i,t, t2 )
 						//- each item in items
 							
 
+mixin prodf(t,pr, ...items)
+	+b.item-prod&attributes(attributes)
+		+e.head
+			.row
+				.col
+					+e.title
+						strong= t
+						| 
+						+e.SPAN.price= pr
+				.col-auto
+					+e.btn(href="#") Заказать
+		+e.row.row
+
+			if block
+				block
+			else
+				.col-auto
+					each item in items
+						+e.item: +e.link(href='#')= item
+		+pic("prod")
+
 mixin s-prod()
 	// start s-prod
 	+b.s-prod.section#s-prod.lazy-background&attributes(attributes)
@@ -68,66 +90,71 @@ mixin s-prod()
 			block
 				
 			.row
-				+e.col.col-xl-6
-					+prodf(1,"Щебень"," от 450 руб/тн",'5-20','20-40','40-70','70-120','Гранитный','Известняковый','Доломитовый','Жигулевский','М400','М600','М800','М1000','М1200','М1400')(class="item-prod--lg")
+				+e.col.col-xl-4.col-md-6
+					+prodf("Щебень"," от 450 руб/тн",'5-20','20-40','40-70','70-120','Гранитный','Известняковый','Доломитовый','Жигулевский','М400','М600','М800','М1000','М1200','М1400')
 						.col-auto
-							+e.item: +e.link.body-link(href='#') 5-20
-							+e.item: +e.link.body-link(href='#') 20-40
-							+e.item: +e.link.body-link(href='#') 40-70
-							+e.item: +e.link.body-link(href='#') 70-120
+							+e.item: +e.link(href='#') 5-20
+							+e.item: +e.link(href='#') 20-40
+							+e.item: +e.link(href='#') 40-70
+							+e.item: +e.link(href='#') 70-120 
 						.col-auto
-							+e.item: +e.link.body-link(href='#') Гранитный
-							+e.item: +e.link.body-link(href='#') Известняковый
-							+e.item: +e.link.body-link(href='#') Доломитовый
-							+e.item: +e.link.body-link(href='#') Жигулевский
+							+e.item: +e.link(href='#') М400 
+							+e.item: +e.link(href='#') М600
+							+e.item: +e.link(href='#') М800
+							+e.item: +e.link(href='#') М1000
 						.col-auto
-							+e.item: +e.link.body-link(href='#') М400 
-							+e.item: +e.link.body-link(href='#') М600
-							+e.item: +e.link.body-link(href='#') М800
-							+e.item: +e.link.body-link(href='#') М1000
-						.col-auto
-							+e.item: +e.link.body-link(href='#') М1200
-							+e.item: +e.link.body-link(href='#') М1400
-				+e.col.col-xl-3.col-md-6
-					+prod-col2(2,'Узкие фракции','цена по запросу','3-10','5-10','5-15','10-15','10-20','20-70','25-60')(class="item-prod--col2")  
-						.col-auto
-							+e.item: +e.link.body-link(href='#') 3-10
-							+e.item: +e.link.body-link(href='#') 5-10
-							+e.item: +e.link.body-link(href='#') 5-15
-							+e.item: +e.link.body-link(href='#') 10-15 
-						.col-auto
-							+e.item: +e.link.body-link(href='#') 20-70
-							+e.item: +e.link.body-link(href='#') 40-70 
-				+e.col--sm.col-xl-3.col-md-6.d-xl-none
-					+prod('Отсев щебня','от 420 руб/тн','0-5','0-10','0-20')(class="item-prod--sm ")
-				+e.col--sm.col-xl-3.col-md-6
-					+prod('Отсев щебня','от 420 руб/тн','0-5','0-10','0-20')(class="item-prod--sm d-none d-xl-block")
-					//- +e.col--sm.col-3
-					+prod('Смеси щебня','цена по запросу','0-20','0-40','0-80','0-120')(class="item-prod--sm") 
+							+e.item: +e.link(href='#') М1200
+							+e.item: +e.link(href='#') М1400
+ 
 
-				+e.col.col-xl-3.col-md-6
-					+prod('Бутовый камень','от 400 руб/тн','70-150','100-300','нестандартный' )
-						+e.img-wrap.img-animate.img-bg.d-xl-block.d-none(href="#"  )
-							img.lazy-bg(src="#" data-src=`img/prod-3.jpg`, alt="")
-				
-				
-				+e.col.col-xl-3
-					+prod1(4,'Песок','от 200 руб/тн','Песок речной','Песок обогащённый','Песок строительный','Песок растворный (волжский) ' )  
-				
-				+e.col.col-xl-3.col-md-6
-					+prod-col2(5,'Гравий','цена по запросу','5-10','5-20','20-40','20-70','40-70' )(class="item-prod--col2") 
+				+e.col.col-xl-4.col-md-6
+					+prodf("Щебень"," от 450 руб/тн" )
 						.col-auto
-							+e.item: +e.link.body-link(href='#') 5-10
-							+e.item: +e.link.body-link(href='#') 5-20
-							+e.item: +e.link.body-link(href='#') 20-40
+							+e.item: +e.link(href='#') Гранитный
+							+e.item: +e.link(href='#') Известняковый
+							+e.item: +e.link(href='#') Доломитовый
+							+e.item: +e.link(href='#') Жигулевский 
+				+e.col.col-xl-4.col-md-6
+					+prodf( 'Песок','от 200 руб/тн','Песок речной','Песок обогащённый','Песок строительный','Песок растворный (волжский) ' )
+				+e.col.col-xl-4.col-md-6
+					+prodf('ПГС ОПГС','от 280 руб/тн','Песчано-гравийная смесь','Обогащённая песчано-гравийная смесь')
+
+				+e.col.col-xl-4.col-md-6
+					+prodf('Гравий','цена по запросу')
+						.col-auto
+							+e.item: +e.link(href='#') 5-10
+							+e.item: +e.link(href='#') 5-20
+							+e.item: +e.link(href='#') 20-40
+							+e.item: +e.link(href='#') 20-70
 						
 						.col-auto
-							+e.item: +e.link.body-link(href='#') 20-70
-							+e.item: +e.link.body-link(href='#') 40-70 
-				+e.col.col-xl-3.col-md-6
-					+prod('ПГС ОПГС','от 280 руб/тн','Песчано-гравийная смесь','Обогащённая песчано-гравийная смесь')
-						+e.img-wrap.img-animate.img-bg.d-xl-block.d-none(href="#"  )
-							img.lazy-bg(src="#" data-src=`img/prod-6.jpg`, alt="")
+							+e.item: +e.link(href='#') 40-70 
+				+e.col.col-xl-4.col-md-6
+					+prodf('Бутовый камень','от 400 руб/тн','70-150','100-300','нестандартный' )
+				+e.col.col-xl-4.col-md-6
+					+prodf('Отсев щебня','от 420 руб/тн','0-5','0-10','0-20')
+			 
+				+e.col.col-xl-4.col-md-6
+					+prodf('Смеси щебня','цена по запросу')
+						.col-auto
+							+e.item: +e.link(href='#') 0-20
+							+e.item: +e.link(href='#') 0-40
+							+e.item: +e.link(href='#') 0-80
+						.col-auto
+							+e.item: +e.link(href='#') 0-120
+				+e.col.col-xl-4.col-md-6 
+					+prodf('Узкие фракции','цена по запросу','3-10','5-10','5-15','10-15','10-20','20-70','25-60')
+						.col-auto
+							+e.item: +e.link(href='#') 3-10
+							+e.item: +e.link(href='#') 5-10
+							+e.item: +e.link(href='#') 5-15
+						.col-auto
+							+e.item: +e.link(href='#') 10-15 
+							+e.item: +e.link(href='#') 20-70
+							+e.item: +e.link(href='#') 40-70  
+					//- +e.col--sm.col-3
+
+ 
 				
 
 

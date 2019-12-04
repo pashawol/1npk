@@ -1,0 +1,36 @@
+mixin s-rent()
+	// start s-rent
+	+b.SECTION.s-rent.section.bg-light#s-rent&attributes(attributes)
+		.container
+			block
+				
+			.row
+				mixin item(i,t,pr, ...items)
+					+e.col.col-md-4
+						+b.item-rent.panel&attributes(attributes)
+							.row
+								+e.col.col-xl-auto.col-md-12.col-auto
+									+pic(`rent-${i}`,'','lazy',0)
+								.col
+									+e.title
+										.strong= t
+										| 
+										+e.price= pr 
+									if block
+										block
+									else 
+										each item in items
+											+e.item: +e.link.link-color(href='#')= item
+								+e.col.col-12
+									+e.btn(href="#") Заказать 
+					// /+e.col.col-4
+				+item("1",'Самосвалы КАМАЗ','от 800 руб/час','','','')
+					+e.item: +e.link.link-color(href='#') Кузов 10 м
+						sup 3
+					+e.item: +e.link.link-color(href='#') Кузов 15 м
+						sup 3
+					+e.item: +e.link.link-color(href='#') Кузов 30 м
+						sup 3
+				+item("2",'Фронтальные погрузчики','от 1400 руб/час','Volvo','Mitsuber')
+				+item("3",'Экскаваторы-погрузчики','от 5400 руб/час','Caterpillar','JCB')
+	// end s-rent

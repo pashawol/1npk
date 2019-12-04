@@ -1,43 +1,20 @@
 mixin header-block-body()
 	// start header-block
-	+b.header-block#header-block&attributes(attributes)
+	+b.header-block#header-block&attributes(attributes) 
 		
-		.container
-			+e.logo.text-center.d-sm-none
-				img.res-i(src="img/logo.png", alt="")
-			block
-			+e.down--js
-				+icon('arrow-down')
+		
+		block 
 	// end header-block
 mixin header-block()
-	+header-block-body()(class="header-block--main")
-		.video-fallback.d-none.d-md-block
-		.video-container.d-none.d-md-block
-			video.fillItUp.video.lazy( width="100%" height="" id="bgvid"    playsinline autoplay muted loop)
-				source(src="#" data-src='video/video.mp4', type='video/mp4')
-				source(src="#" data-src='video/video.webm', type='video/webm')
-				source(src="#" data-src='video/video.ogv', type='video/ogg')
-				//- source(src='video/video.webm', type='video/webm')
-		+e.text--top.d-sm-block.d-none Доставим за&nbsp;2&nbsp;часа напрямую с&nbsp;карьера без предоплаты
-		h1 Нерудные материалы по&nbsp;оптовым ценам от&nbsp;480 руб за&nbsp;тонну с&nbsp;НДС
-		.row
-			.col-md-6.col-12
-				+e.text-block
-					+e.text.d-sm-block.d-none Оставьте заявку прямо сейчас и&nbsp;получите материал на&nbsp;выгодных услов
-					+e.btn.popup-with-move-anim(href="#modal-thank" data-title='Оставить заявку') Оставить заявку
-			.col-auto.d-md-block.d-none
-				+e.item
-					+e.count 9&nbsp;500
-					+e.text отгрузок осуществили 
-						br
-						| за&nbsp;2018 год
-			.col-auto.d-md-block.d-none
-				+e.item
-					+e.count 462&nbsp;000
-					+e.text тонн нерудных материалов 
-						br
-						| отгрузили за&nbsp;2018 год
-			
+	+header-block-body()(class="header-block--main") 
+
+		+e.body
+			.container 
+				+e.text--top Сэкономьте ваше время, деньги и&nbsp;нервы, доверив поставку нам
+				h1 Щебень, песок, ПГС, ОПГС, гравий по&nbsp;оптовым ценам от&nbsp;260 руб за&nbsp;тонну с&nbsp;НДС
+				+e.title-payment Рассчитайте поставку и&nbsp;получите уже завтра на&nbsp;вашем объекте до&nbsp;2000 тонн материала
+		.container 
+			+form-payment()
 
 mixin header-block-09()
 	+header-block-body()(class="header-block--rew")

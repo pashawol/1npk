@@ -1,6 +1,7 @@
 $output-bourbon-deprecation-warnings: false;
 // @import "mq";
-@import "bourbon";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "bourbon";
 @import "bootstrap/vendor/rfs";
 // @import "../../node_modules/rfs/scss";
 @import "vars";
@@ -27,65 +28,7 @@ $output-bourbon-deprecation-warnings: false;
 
 
 
-@import "../pug/blocks/mixin-wrap/mixin-wrap";
-@import "../pug/blocks/form-wrap/form-wrap";
-@import "../pug/blocks/header/_header";
-@import "../pug/blocks/top-line/top-line";
-@import "../pug/blocks/top-nav/top-nav";
-
-
-@import "../pug/blocks/header-block/_header-block";
-
-
-@import "../pug/blocks/s-prod/_s-prod";
-@import "../pug/blocks/s-shipping/_s-shipping";
-@import "../pug/blocks/s-geo/_s-geo";
-@import "../pug/blocks/s-now/_s-now";
-@import "../pug/blocks/s-team/_s-team";
-@import "../pug/blocks/s-client/_s-client";
-@import "../pug/blocks/s-objects/_s-objects";
-@import "../pug/blocks/s-calc/_s-calc";
-
-@import "../pug/blocks/s-content/_s-content";
-@import "../pug/blocks/s-contact/_s-contact";
-@import "../pug/blocks/aside-nav/_aside-nav";
-
-@import "../pug/blocks/s-card-head/_s-card-head";
-@import "../pug/blocks/s-category/_s-category";
-@import "../pug/blocks/s-video/_s-video";
-@import "../pug/blocks/s-char/_s-char";
-@import "../pug/blocks/s-applications/_s-applications";
-@import "../pug/blocks/s-shipping2/_s-shipping2";
-@import "../pug/blocks/s-text/_s-text";
-@import "../pug/blocks/s-why/_s-why";
-
-
-@import "../pug/blocks/s-rew/_s-rew";
-@import "../pug/blocks/s-rew-gal/_s-rew-gal";
-
-@import "../pug/blocks/s-about-text/_s-about-text";
-@import "../pug/blocks/s-director/_s-director";
-@import "../pug/blocks/s-problems/_s-problems";
-@import "../pug/blocks/s-work/_s-work";
-@import "../pug/blocks/s-conditions/_s-conditions";
-@import "../pug/blocks/s-values/_s-values";
-
-@import "../pug/blocks/s-project-head/_s-project-head";
-@import "../pug/blocks/s-soc/_s-soc";
-@import "../pug/blocks/s-gal/_s-gal";
-@import "../pug/blocks/s-form/s-form";
-@import "../pug/blocks/footer/footer";
-@import "../pug/blocks/modal/modal";
- 
-
-@import "../pug/blocks/s-representations/_s-representations";
-
-@import "../pug/blocks/s-doc/_s-doc";
-
-@import "../pug/blocks/s-404/_s-404";
-
-@import "../pug/blocks/s-faq/_s-faq";
-@import "../pug/blocks/s-news/_s-news";
+@import '../pug/blocks/**/*.scss';
 
 @import "media";// Всегда в конце
 

@@ -1,0 +1,25 @@
+mixin s-departure()
+	// start s-departure
+	+b.SECTION.s-departure.section#s-departure.bg-wrap&attributes(attributes)
+		+e.head
+			+pic("s-departure-bg",'bg','lazy','576px')(class="picture-bg")
+			.container
+				+e.top-text Предоставляем цены на&nbsp;15% ниже рынка
+				+b.section-title.text-center
+					h2 Выезжаем на отгрузку в первый день обращения
+					+e.text Рассчитайте поставку и&nbsp;получите уже завтра на&nbsp;вашем объекте до&nbsp;2000 тонн материала
+				
+		.container
+			+form-payment()
+			+e.foot
+				.row
+					mixin item(t)
+						+e.col.col-auto
+							+e.item
+								+e.title= t
+								block
+					+item("10 тыс.")
+						+e.text отгрузок осуществили за&nbsp;2019 год
+					+item("462 тыс.")
+						+e.text тонн нерудных материалов отгрузили за&nbsp;2019 год
+	// end s-departure

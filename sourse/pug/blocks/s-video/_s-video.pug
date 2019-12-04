@@ -2,14 +2,14 @@ mixin s-video()
 	// start s-video
 	+b.s-video.section#s-video.lazy-background&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 Видео с&nbsp;наших площадок 
+			block
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					mixin item(i)
 						+e.slide.swiper-slide
-							+e.item.img-bg.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg` class="swiper-lazy")
-								img(src="#"  data-src=`img/video-${i}.jpg` class="swiper-lazy", alt="")
+							+e.item--video.bg-wrap(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  data-fancybox="video-gal" )
+								picture.picture-bg
+									img.object-fit-js( src=`img/video-${i}.jpg` , alt="")
 						// +e.slide.swiper-slide
 					+item('1')
 					+item('2')
@@ -17,6 +17,7 @@ mixin s-video()
 					
 					+item('1')
 					+item('2')
+					+item('3')
 
 			+b.swiper-pagination--lg
 	// end s-video

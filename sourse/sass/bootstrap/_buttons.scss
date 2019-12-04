@@ -145,13 +145,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $h6-font-size, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, 1rem, $btn-line-height-sm, $btn-border-radius-sm);
   @include media-breakpoint-down(xl) {
     // font-size: rem(14);
   }
   
   @include media-breakpoint-down(sm) {
-    font-size: rem(12);
+    // font-size: rem(12);
   }
 
 }

@@ -9,7 +9,15 @@ mixin breadcrumb(act, ...items)
 		each item in items
 			a.breadcrumb-item(href='#')= item 
 		span.breadcrumb-item.active= act
-		
+//- breadcrumb
+mixin breadcrumb2(...items)
+	nav(aria-label="breadcrumb" )
+		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+			-for (var i = 0; i < items.length; i++)
+				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href=(i == 0 ? "/" : '#') itemprop="item" )
+						span( itemprop="name")= items[i]
+						meta(itemprop="position" content= (i + 1) )
 mixin pugin()
 	nav(aria-label='...')
 		ul.pagination.justify-content-center
@@ -68,8 +76,85 @@ mixin soc()
 //- 		each linkPatch, linkName in nav
 //- 			li.menu-item: a(href="#")= linkName
 
+//- menu
 mixin mnu()
-	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
-	+e.UL.nav
+	-
+		var nav= {
+			"Узкие фракции щебня":"#",
+			"Отсев щебня":"#",
+			"Смеси щебня":"#",
+			"Бутовый камень":"#",
+			"Песок":"#",
+			"Гравий":"#",
+			"ПГС ОПГС":"#",
+			}
+	+b.UL.site-nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		+e.LI.item( itemprop="item" ): +e.A.link--lg.active(href="#"  itemprop="url")  Продукция
+		+e.LI.item( itemprop="item" )
+			+e.A.link--sm(href="#"  itemprop="url")  Щебень
+			.sub-menu-wrap: +b.UL.sub-menu
+				- for (var x = 0; x < 23; x++)
+					+e.LI.item( itemprop="item" )
+						+e.A.link(href="#"  itemprop="url")= x
 		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href= linkPatch)= linkName
+			+e.LI.item( itemprop="item" )
+				+e.A.link--sm(href= linkPatch  itemprop="url")= linkName
+				.sub-menu-wrap: +b.UL.sub-menu
+					- for (var x = 0; x < 5; x++)
+						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 3-10 
+							= x
+
+		-
+			var nav2= {
+				"Аренда спецтехники":"#",
+				"Услуги":"#",
+				"Выполненные проекты":"#",
+				"Компания":"#", 
+			
+				}
+		each linkPatch2, linkName2 in nav2
+			+e.LI.item( itemprop="item" )
+				+e.A.link--lg(href= linkPatch2  itemprop="url")= linkName2
+				.sub-menu-wrap
+					+b.UL.sub-menu
+						- for (var x = 0; x < 5; x++)
+							+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 3-10 
+								= x
+		
+//- /menu
+
+
+mixin mnu2(navObj)
+	+b.UL.top-menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in navObj
+			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+
+mixin pic(i, bg, lazy="lazy", media)
+	-
+		const smpath2 = "2x"
+		const smpath1 = "1x"
+		let expArr = i.split(".")
+		let exp = (expArr[1] || 'jpg')
+	mixin src(i, exp, path , lazy, source, bg)
+		-
+			const url= `img/@${path}/${expArr[0]}.${exp}`
+			const ifLazy = (lazy== "lazy")
+			const src = ( ifLazy ? "#" : url)
+			const data = (ifLazy ?  url  : null)
+
+		if source
+			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+		else
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+	
+	// picture
+	picture( class= lazy)&attributes(attributes) 
+		if media
+			each val in [exp] 
+				each val2 in [smpath2,smpath1] 
+					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
+		else 
+			+src(i,'webp',smpath2+`/webp`,lazy,"source")
+			// /webp images  
+		+src(i, exp,smpath2, lazy,"",bg) 
+	// /picture
