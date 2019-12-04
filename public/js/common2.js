@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
-	// whenever we hover over a menu item that has a submenu
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>'); // whenever we hover over a menu item that has a submenu
+
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
 				$submenuWrapper = $('> .sub-menu-wrap', $menuItem); // grab the menu item's position relative to its positioned parent

@@ -363,8 +363,7 @@ JSCCommon.LazyFunction();
 /***/
 
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>'); // для свг
-
+	// для свг
 	svg4everybody({}); // Custom JS
 	// вызов magnificPopupCall
 
