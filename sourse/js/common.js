@@ -763,10 +763,10 @@ jQuery(document).ready(function ($) {
 
 
 
-	var wow = new WOW({
-		mobile: false
-	});
-	wow.init();
+	// var wow = new WOW({
+	// 	mobile: false
+	// });
+	// wow.init();
 
 	$(".btn-close-js").click(function () {
 		$.magnificPopup.close();
@@ -777,5 +777,7 @@ jQuery(document).ready(function ($) {
 	var $easyzoom = $('.easyzoom').easyZoom({
 		loadingNotice: ""
 	});
+
+
 
 });

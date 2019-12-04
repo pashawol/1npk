@@ -103,85 +103,69 @@ mixin modal()
 	+b.form(id="modal-city" class="  mfp-hide modal-win modal-form " )
 		+b.city
 			+e.title Выберите город
-			+e.wrap.row
-				.col-lg-3.col-sm-6
-					+e.group
-						+e.group-title А
-						+e.item
-							+e.link(href="#") Альметьевск
-					// /+e.group
-					+e.group
-						+e.group-title Б
-						+e.item: +e.link(href="#") Белебей
-						+e.item: +e.link(href="#") Белорецк
-						+e.item: +e.link(href="#") Бирск
-						+e.item: +e.link(href="#") Благовещенск
-						+e.item: +e.link(href="#") Бугульма
-					// /+e.group
-					+e.group
-						+e.group-title Е
-						+e.item: +e.link(href="#") Елабуга
-					// /+e.group
-				.col-lg-3.col-sm-6
-					+e.group
-						+e.group-title З
-						+e.item: +e.link(href="#") Заинск
-						+e.item: +e.link(href="#") Зеленодольск
-					// /+e.group
-					+e.group
-						+e.group-title И
-						+e.item: +e.link(href="#") Ишимбай
+			+e.UL.wrap
+				mixin li(a)
+					+e.LI.item: +e.link&attributes(attributes)(href="#")= a
+				+li("Азнакаево")
+				+li("Аксубаево")
+				+li("Актаныш")
+				+li("Алексеевское")
+				+li("Альметьевск")(class="strong")
+				+li("Апастово")
+				+li("Арск")
+				+li("Бавлы")
+				+li("Базарные Матаки")
+				+li("Балтаси")
+				+li("Богатые Сабы")
+				+li("Болгар")
+				+li("Большая Атня")
+				+li("Большие Кайбицы") 
+				
+				+li("Белебей")
+				+li("Белорецк")
+				+li("Бирск")
+				+li("Благовещенск")
+				+li("Бугульма")
+				+li("Буинск")
+				+li("Верхний Услон")
+				+li("Волжск")
+				+li("Высокая Гора")
+				+li("Елабуга")
+				+li("Заинск")
+				+li("Зеленодольск")
+				+li("Ишимбай")
+				+li("Йошкар-Ола")(class="strong")
 
-					// /+e.group
-					+e.group
-						+e.group-title К
-						+e.item: +e.link(href="#") Казань
-						+e.item: +e.link(href="#") Кумертау
-					// /+e.group
-					+e.group
-						+e.group-title Л
-						+e.item: +e.link(href="#") Лениногорск
-					// /+e.group
-				.col-lg-3.col-sm-6
-					+e.group
-						+e.group-title М
-						+e.item: +e.link(href="#") Мелеуз
-						+e.item: +e.link(href="#") Менделеевск
-						+e.item: +e.link(href="#") Мензелинск
-					// /+e.group
-					+e.group
-						+e.group-title Н
-						+e.item: +e.link(href="#") Набережные Челны
-						+e.item: +e.link(href="#") Нефтекамск
-						+e.item: +e.link(href="#") Нижнекамск
-						+e.item: +e.link(href="#") Нурлат
-					// /+e.group
-					+e.group
-						+e.group-title О
-						+e.item: +e.link(href="#") Октябрьский
-					// /+e.group
-				.col-lg-3.col-sm-6
-					+e.group
-						+e.group-title С
-						+e.item: +e.link(href="#") Салават
-						+e.item: +e.link(href="#") Стерлитамак
-						+e.item: +e.link(href="#") Сибай
-					// /+e.group
-					+e.group
-						+e.group-title Т
-						+e.item: +e.link(href="#") Туймазы
-					// /+e.group
-					+e.group
-						+e.group-title У
-						+e.item: +e.link(href="#") Уфа
-						+e.item: +e.link(href="#") Учалы
-					// /+e.group
-					
-					+e.group
-						+e.group-title Ч
-						+e.item: +e.link(href="#") Чистополь
+				+li("Казань")(class="strong")
+				+li("Камское Устье")
+				+li("Канаш")
+				+li("Кумертау")
+				+li("Кукмор")
+				+li("Лаишево")
+				+li("Лениногорск")(class="strong")
+				+li("Мамадыш")
+				+li("Мелеуз")
+				+li("Менделеевск")
+				+li("Мензелинск")
+				+li("Можга")
+				+li("Муслюмово")
+				+li("Набережные Челны")(class="strong")
 
-				// /+e.group
+				+li("Нефтекамск")
+				+li("Нижнекамск")(class="strong")
+				+li("Нурлат")
+				+li("Октябрьский")(class="strong")
+				+li("Пестрецы")
+				+li("Рыбная Слобода")
+				+li("Сарманово")
+				+li("Тетюши")
+				+li("Туймазы")(class="strong")
+				+li("Уруссу")
+				+li("Уфа")(class="strong")
+				+li("Учалы")
+				+li("Черемшан")
+				+li("Чистополь")(class="strong")
+
 
 
 	// #modal-city

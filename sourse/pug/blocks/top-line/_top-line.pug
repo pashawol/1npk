@@ -1,4 +1,19 @@
 mixin top-line()
 	// start .top-line
-	+b.top-line
+	+b.top-line.d-xl-none
+		.container
+			.row
+				.col-auto
+					+b.toggle-menu-mobile--js2
+						span
+						+e.text Открыть меню
+				.col-auto
+					+e.logo
+						a(href="/")
+							img(src="img/logo.png", alt="")
+				+e.col.col-auto
+					+e.link--tel(href="tel:8(800)100-73-75") 
+						+e.icon-wrap
+							+icon("call")
+						| +7 (917) 926-27-77
 	// end .top-line

@@ -228,13 +228,14 @@ body {
 		width: 100%;
 		left: 0;
 		top: 0;
-		z-index: 999;
+		z-index: 1100;
 		
 		&::before {
-			z-index: -1;
-
+			z-index: 1100;
+			background-color: #252525;
+			opacity: 0.9;
 			// opacity: 1;
-			opacity: 1;
+			// opacity: 1;
 		}
 	}
 }
@@ -328,7 +329,7 @@ body {
 	
 	&.mfp-ready .mfp-content {
 		transform: translateY(0);
-		@include mt;
+		@include mt(.6);
 		// opacity: 1;
 		// transform: translateY(0) perspective(600px) rotateX(0);
 	}

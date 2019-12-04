@@ -1,7 +1,54 @@
 .top-line {
-
+  background-color: #3b3836;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  position: relative;
+  z-index: 1101;
+  .row{
+    justify-content: space-between;
+    align-items: center;
+  }
 	
-// 
+	&__logo{
+		display: block;
+		width: rem(100 * 1.4);
+    height: rem(50 * 1.4);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+		img{
+      @extend .res-i;
+      max-height: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: none;
+		}
+		max-width: 107px;
+  }
+  
+	&__link--tel{
+		display: inline-flex;
+		align-items: center;
+		color: #ffffff;
+		font-weight: bold;
+		margin-bottom: rem(5);
+	}
+	&__icon-wrap{
+		@extend .btn-primary;
+		width: $h3-font-size;
+		height: $h3-font-size;
+		line-height: $h3-font-size;
+		vertical-align: middle;
+		border-radius: 50%;
+		text-align: center;
+		margin-right: rem(10);
+		.icon{
+			margin-right: 0;
+			font-size: $small;
+			color: #252525 ;
+		}
+	}
+
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}

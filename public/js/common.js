@@ -616,11 +616,11 @@ jQuery(document).ready(function ($) {
 	// 		$(this).find('.form-control').val(from);
 	// }
 	// });
+	// var wow = new WOW({
+	// 	mobile: false
+	// });
+	// wow.init();
 
-	var wow = new WOW({
-		mobile: false
-	});
-	wow.init();
 	$(".btn-close-js").click(function () {
 		$.magnificPopup.close();
 	}); // Instantiate EasyZoom instances

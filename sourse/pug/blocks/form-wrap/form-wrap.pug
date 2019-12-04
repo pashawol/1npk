@@ -15,8 +15,8 @@ mixin sel(t )
 	
 mixin sel2(t )
 	+e.input-wrap.form-group
-		+e.SELECT()&attributes(attributes)
-			option()= t
+		+e.SELECT( placeholder= t)&attributes(attributes)
+		 
 			block
 	// +e.input-wrap
 
@@ -98,14 +98,26 @@ mixin form-payment()
 		+e.panel 
 			.row
 				.col-sm-6
-					+sel2("Выберите продукцию")(class="form-control-lg   select-js"   )
-						option(value="#")  Щебень
-						option(value="#")  Узкие фракции щебня
-						option(value="#")  Отсев щебня
-						option(value="#")  Смеси щебня
-						option(value="#")  Бутовый камень
-						option(value="#")  Песок
-						option(value="#")  Гравий
-						option(value="#")  ПГС ОПГС
+					.select-js-wrap
+						+sel2("Выберите продукцию")(class="form-control-lg  select-js"   )
+							option(value="")  Выберите продукцию
+							option(value=" Узкие фракции щебня")  Узкие фракции щебня
+							option(value=" Отсев щебня")  Отсев щебня
+							option(value=" Смеси щебня")  Смеси щебня
+							option(value=" Бутовый камень")  Бутовый камень
+							option(value=" Песок")  Песок
+							option(value=" Гравий")  Гравий
+							option(value=" ПГС ОПГС")  ПГС ОПГС
+					
+					+sel2("Выберите продукцию")(class="form-control-lg form-control  d-none select-default"   )
+						option(value="")  Выберите продукцию
+						option(value=" Узкие фракции щебня")  Узкие фракции щебня
+						option(value=" Отсев щебня")  Отсев щебня
+						option(value=" Смеси щебня")  Смеси щебня
+						option(value=" Бутовый камень")  Бутовый камень
+						option(value=" Песок")  Песок
+						option(value=" Гравий")  Гравий
+						option(value=" ПГС ОПГС")  ПГС ОПГС
+
 				.col-sm-6
 					+e.btn.btn-lg.mt-0(type="button") Рассчитать стоимость поставки

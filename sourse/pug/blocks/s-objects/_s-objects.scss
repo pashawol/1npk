@@ -48,7 +48,8 @@
 			}
 			position: relative;
 			overflow: hidden;
-			border-radius: 5px;
+			// border-radius: 5px;
+
 			
 			// @extend .h3;
 			font-weight: bold;
@@ -56,7 +57,10 @@
 				opacity: 0.4;
 			}
 			@include media-breakpoint-up(sm) {
+				@include mt;
 				&:hover{
+					transform:  scale(1.04);
+					box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
 					&::before{
 						
 						opacity: 0.5;
@@ -113,7 +117,11 @@
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+		.swiper-container {
+			overflow: inherit;
+		}
+	}
 	@include media-breakpoint-up(xs) {}
 	
 	//

@@ -14,11 +14,36 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css">
 		<link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css">
-		<link rel="stylesheet" href="libs/select2/css/select2.min.css">
+		<link rel="stylesheet" href="libs/selectize.js/css/selectize.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
-	<body>
+	<body><script>(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4)))&&document.body.classList.add('mobile');</script>
+<script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
+<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<!-- start .top-line-->
+			<div class="top-line d-xl-none">
+				<div class="container">
+					<div class="row">
+						<div class="col-auto">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js2"><span></span>
+								<div class="toggle-menu-mobile__text">Открыть меню
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="top-line__logo"><a href="/"><img src="img/logo.png" alt=""/></a>
+							</div>
+						</div>
+						<div class="top-line__col col-auto"><a class="top-line__link top-line__link--tel" href="tel:8(800)100-73-75"> <span class="top-line__icon-wrap">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></span>+7 (917) 926-27-77</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end .top-line-->
 			<!-- start aside-->
 			<aside class="aside aside--js">
 				<div class="aside__inner">
@@ -41,7 +66,7 @@
 					<ul class="site-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg active" href="#" itemprop="url"> Продукция</a>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url"> Щебень</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url"> Щебень</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0</a>
@@ -93,7 +118,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Узкие фракции щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Узкие фракции щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -109,7 +134,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Отсев щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Отсев щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -125,7 +150,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Смеси щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Смеси щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -141,7 +166,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Бутовый камень</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Бутовый камень</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -157,7 +182,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Песок</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Песок</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -173,7 +198,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Гравий</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Гравий</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -189,7 +214,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">ПГС ОПГС</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">ПГС ОПГС</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -205,7 +230,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Аренда спецтехники</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Аренда спецтехники</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -221,7 +246,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Услуги</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Услуги</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -237,7 +262,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Выполненные проекты</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Выполненные проекты</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -253,7 +278,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Компания</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Компания</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
 									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
@@ -297,17 +322,31 @@
 								<div class="form-wrap__panel"> 
 									<div class="row">
 										<div class="col-sm-6">
+											<div class="select-js-wrap">
+												<div class="form-wrap__input-wrap form-group">
+													<select class="form-wrap__form-control-lg select-js" placeholder="Выберите продукцию">
+														<option value=""> Выберите продукцию</option>
+														<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+														<option value=" Отсев щебня"> Отсев щебня</option>
+														<option value=" Смеси щебня"> Смеси щебня</option>
+														<option value=" Бутовый камень"> Бутовый камень</option>
+														<option value=" Песок"> Песок</option>
+														<option value=" Гравий"> Гравий</option>
+														<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+													</select>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
 											<div class="form-wrap__input-wrap form-group">
-												<select class="form-wrap__form-control-lg select-js">
-													<option>Выберите продукцию</option>
-													<option value="#"> Щебень</option>
-													<option value="#"> Узкие фракции щебня</option>
-													<option value="#"> Отсев щебня</option>
-													<option value="#"> Смеси щебня</option>
-													<option value="#"> Бутовый камень</option>
-													<option value="#"> Песок</option>
-													<option value="#"> Гравий</option>
-													<option value="#"> ПГС ОПГС</option>
+												<select class="form-wrap__form-control-lg form-control d-none select-default" placeholder="Выберите продукцию">
+													<option value=""> Выберите продукцию</option>
+													<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+													<option value=" Отсев щебня"> Отсев щебня</option>
+													<option value=" Смеси щебня"> Смеси щебня</option>
+													<option value=" Бутовый камень"> Бутовый камень</option>
+													<option value=" Песок"> Песок</option>
+													<option value=" Гравий"> Гравий</option>
+													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
 												</select>
 											</div>
 											<!-- +e.input-wrap-->
@@ -784,27 +823,27 @@
 					</div>
 					<div class="s-video__slider s-video__slider--js swiper-container">
 						<div class="swiper-wrapper">
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-1.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-2.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-3.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-1.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-2.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
-								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal">
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/video-3.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
@@ -985,17 +1024,31 @@
 							<div class="form-wrap__panel"> 
 								<div class="row">
 									<div class="col-sm-6">
+										<div class="select-js-wrap">
+											<div class="form-wrap__input-wrap form-group">
+												<select class="form-wrap__form-control-lg select-js" placeholder="Выберите продукцию">
+													<option value=""> Выберите продукцию</option>
+													<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+													<option value=" Отсев щебня"> Отсев щебня</option>
+													<option value=" Смеси щебня"> Смеси щебня</option>
+													<option value=" Бутовый камень"> Бутовый камень</option>
+													<option value=" Песок"> Песок</option>
+													<option value=" Гравий"> Гравий</option>
+													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
 										<div class="form-wrap__input-wrap form-group">
-											<select class="form-wrap__form-control-lg select-js">
-												<option>Выберите продукцию</option>
-												<option value="#"> Щебень</option>
-												<option value="#"> Узкие фракции щебня</option>
-												<option value="#"> Отсев щебня</option>
-												<option value="#"> Смеси щебня</option>
-												<option value="#"> Бутовый камень</option>
-												<option value="#"> Песок</option>
-												<option value="#"> Гравий</option>
-												<option value="#"> ПГС ОПГС</option>
+											<select class="form-wrap__form-control-lg form-control d-none select-default" placeholder="Выберите продукцию">
+												<option value=""> Выберите продукцию</option>
+												<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+												<option value=" Отсев щебня"> Отсев щебня</option>
+												<option value=" Смеси щебня"> Смеси щебня</option>
+												<option value=" Бутовый камень"> Бутовый камень</option>
+												<option value=" Песок"> Песок</option>
+												<option value=" Гравий"> Гравий</option>
+												<option value=" ПГС ОПГС"> ПГС ОПГС</option>
 											</select>
 										</div>
 										<!-- +e.input-wrap-->
@@ -1183,142 +1236,120 @@
 			<div class="city">
 				<div class="city__title">Выберите город
 				</div>
-				<div class="city__wrap row">
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">А
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Альметьевск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Б
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Белебей</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Белорецк</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Бирск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Благовещенск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Бугульма</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Е
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Елабуга</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">З
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Заинск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Зеленодольск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">И
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Ишимбай</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">К
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Казань</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Кумертау</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Л
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Лениногорск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">М
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Мелеуз</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Менделеевск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Мензелинск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Н
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Набережные Челны</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нефтекамск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нижнекамск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нурлат</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">О
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Октябрьский</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">С
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Салават</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Стерлитамак</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Сибай</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Т
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Туймазы</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">У
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Уфа</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Учалы</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Ч
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Чистополь</a>
-							</div>
-						</div>
-					</div>
-					<!-- /+e.group-->
-				</div>
+				<ul class="city__wrap">
+					<li class="city__item"><a class="city__link" href="#">Азнакаево</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Аксубаево</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Актаныш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Алексеевское</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Альметьевск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Апастово</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Арск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бавлы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Базарные Матаки</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Балтаси</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Богатые Сабы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Болгар</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Большая Атня</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Большие Кайбицы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Белебей</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Белорецк</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бирск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Благовещенск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бугульма</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Буинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Верхний Услон</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Волжск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Высокая Гора</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Елабуга</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Заинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Зеленодольск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Ишимбай</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Йошкар-Ола</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Казань</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Камское Устье</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Канаш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Кумертау</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Кукмор</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Лаишево</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Лениногорск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мамадыш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мелеуз</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Менделеевск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мензелинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Можга</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Муслюмово</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Набережные Челны</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Нефтекамск</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Нижнекамск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Нурлат</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Октябрьский</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Пестрецы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Рыбная Слобода</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Сарманово</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Тетюши</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Туймазы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Уруссу</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Уфа</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Учалы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Черемшан</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Чистополь</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<!-- #modal-city-->
@@ -1356,10 +1387,9 @@
 		<script src="libs/jquery.touchSwipe.min.js"></script>
 		<script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/jquery.inputmask.bundle.min.js"></script>
-		<script src="libs/wow.min.js"></script>
 		<script src="libs/sticky-kit.js"></script>
 		<script src="libs/EasyZoom/src/easyzoom.js"></script>
-		<script src="libs/select2/js/select2.min.js"></script>
+		<script src="libs/selectize.js/js/standalone/selectize.min.js"></script>
 		<script src="js/common.js"></script>
 		<script src="js/common2.js"></script>
 	</body>

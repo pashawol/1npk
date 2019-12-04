@@ -7,7 +7,7 @@ mixin s-video()
 				.swiper-wrapper
 					mixin item(i)
 						+e.slide.swiper-slide
-							+e.item--video.bg-wrap(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  data-fancybox="video-gal" )
+							+e.item--video.bg-wrap(href="http://www.youtube.com/watch?v=0O2aH4XLbto"  data-fancybox="video-gal" data-animation-duration="500" )
 								picture.picture-bg
 									img.object-fit-js( src=`img/video-${i}.jpg` , alt="")
 						// +e.slide.swiper-slide
