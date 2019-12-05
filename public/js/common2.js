@@ -132,4 +132,24 @@ jQuery(document).ready(function ($) {
 		$(".aside--js").toggleClass('active');
 		$("body").toggleClass("fixed");
 	});
+	$(".menu-mobile-page__inner .menu > .menu-item-has-children > a").click(function (e) {
+		e.preventDefault();
+		$(this).parent().toggleClass("active").siblings().removeClass("active");
+		searchTogggle();
+		$(this).next().toggleClass("active"); // $(".top-submenu--js").slideUp(0);
+	});
+	$(".site-nav__item--has-child > a").each(function () {
+		var title = $(this).text();
+		var toggleBlock = $(this).next().find("ul");
+		toggleBlock.prepend('<li class="hide-parent-js">' + title + '</li>');
+		$(this).click(function (e) {
+			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
+			// searchTogggle();
+
+			$(this).next().toggleClass("active"); // $(".top-submenu--js").slideUp(0);
+		});
+	});
+	$(".hide-parent-js").click(function () {
+		$(this).parents(".sub-menu-wrap").removeClass('active');
+	});
 });

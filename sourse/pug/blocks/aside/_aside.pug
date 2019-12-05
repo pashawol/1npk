@@ -13,7 +13,7 @@ mixin aside()
 					+e.btn-search(type="button")
 						+icon('search')
 			+mnu
-			+e.foot 
+			+e.foot.d-none.d-sm-block
 				+e.link-city.popup-with-move-anim(href="#modal-city")
 						+icon('map')
 						| Набережные Челны
@@ -23,4 +23,8 @@ mixin aside()
 			
 				br
 				+e.link--tel(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+			.d-sm-none
+				+e.link-btn(href="tel:+7(917)926-27-77")
+					+icon('call')
+					| Позвонить +7 (917) 926-27-77
 	// end aside

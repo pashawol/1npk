@@ -47,8 +47,12 @@ $h: em(3);
 	span:before {
 		// width: 32px;
 		font-size: 30px;
+		@include media-breakpoint-down(xs) {
+			font-size: 20px;
+
+		}
 		width: 1em;
-		height: 3px;
+		height: 2px;
 		background-color: #ffffff;
 		transition: all 0.3s;
 		backface-visibility: hidden; 

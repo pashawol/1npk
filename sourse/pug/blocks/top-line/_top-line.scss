@@ -48,6 +48,12 @@
 			color: #252525 ;
 		}
 	}
+	&__link-city{
+		.icon{
+
+			font-size: 14px;
+		}
+	}
 
 @include media-breakpoint-up(xl) {}
 
@@ -82,5 +88,10 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+	&__col{
+		width: 50px;
+		text-align: right;
+	}
+}
 }
