@@ -141,7 +141,7 @@ jQuery(document).ready(function ($) {
 	$(".site-nav__item--has-child > a").each(function () {
 		var title = $(this).text();
 		var toggleBlock = $(this).next().find("ul");
-		toggleBlock.prepend('<li class="hide-parent-js">' + title + '</li>');
+		toggleBlock.prepend('<li class="hide-parent-js d-sm-none">' + title + '</li>');
 		$(this).click(function (e) {
 			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
