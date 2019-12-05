@@ -59,7 +59,10 @@
 			@include media-breakpoint-up(sm) {
 				@include mt;
 				&:hover{
-					transform:  scale(1.04);
+					@include media-breakpoint-up(sm) {
+
+						transform:  scale(1.04);
+					}
 					box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
 					&::before{
 						

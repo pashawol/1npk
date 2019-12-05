@@ -80,8 +80,9 @@
 		height: rem(90);
 		line-height: rem(90);
 		margin-bottom: rem(30);
+		width: rem(122);
 	  @include media-breakpoint-between(md, xl) {
-
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			height: rem(180);
