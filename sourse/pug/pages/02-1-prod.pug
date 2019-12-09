@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+include ../blocks/s-card-head/_s-card-head.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-char/_s-char.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-shipping2/_s-shipping2.pug
+include ../blocks/s-text/_s-text.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-advantages/_s-advantages.pug
+
+ 
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Щебень'
+	title= title
+
+block pagecontent
+	+header() 
+		+breadcrumb2('главная','продукция', title)
+		+s-card-head('Щебень по оптовым ценам от 460 руб/тн в т.ч. с НДС','по оптовым ценам', 'от 450 руб/тн с НДС', 1,2,3,4)
+		+top-line()
+	//- +card-head-radio('5-20', '20-20', '40-70', '70-120')
+
+	//- +card-head-radio('M400', 'M600', 'M800', 'M1000', 'M1200', 'M1400')
+
+	//- +card-head-radio('Гранитный', 'Известняковый', 'Доломитовый', 'Жигулевский')
+
+
+	+s-char(class="section-border-bottom d-none d-md-block")
+
+	+s-now()(class="bg-wrap text-md-white bg-light")
+		+pic("s-now-bg","bg")(class="picture-bg d-none d-md-block")
+	+s-video
+		+b.section-title.text-center
+			h2 Видео с&nbsp;наших площадок 
+			+e.text Первая нерудная компания ведет видео-отчет каждой отгрузки
+	+s-shipping
+	+s-advantages 
+	+s-rent
+		+b.section-title.text-center
+			h2 Аренда спецтехники
+			+e.text Ежедневно на&nbsp;линии более 15&nbsp;единиц техники
+	+s-objects
+		+b.section-title.text-center
+			h2 Выполненные проекты
+			+e.text За 7 лет мы выполнили проекты различной сложности и для разного уровня клиентов
+	+s-departure
+	+footer()

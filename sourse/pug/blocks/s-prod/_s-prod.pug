@@ -72,7 +72,7 @@ mixin prodf(t,pr, ...items)
 						| 
 						+e.SPAN.price= pr
 				.col-auto
-					+e.btn(href="#") Заказать
+					+e.btn.btn-primary(href="#") Заказать
 		+e.row.row
 
 			if block
@@ -115,7 +115,7 @@ mixin s-prod()
 							+e.item: +e.link(href='#') Доломитовый
 							+e.item: +e.link(href='#') Жигулевский 
 				+e.col.col-xl-4.col-md-6
-					+prodf( 'Песок','от 200 руб/тн','Песок речной','Песок обогащённый','Песок строительный','Песок растворный (волжский) ' )
+					+prodf( 'Песок','от 200 руб/тн','Песок растворный (волжский) ' ,'Песок речной','Песок обогащённый','Песок строительный')
 				+e.col.col-xl-4.col-md-6
 					+prodf('ПГС ОПГС','от 280 руб/тн','Песчано-гравийная смесь','Обогащённая песчано-гравийная смесь')
 
@@ -125,9 +125,9 @@ mixin s-prod()
 							+e.item: +e.link(href='#') 5-10
 							+e.item: +e.link(href='#') 5-20
 							+e.item: +e.link(href='#') 20-40
-							+e.item: +e.link(href='#') 20-70
 						
 						.col-auto
+							+e.item: +e.link(href='#') 20-70
 							+e.item: +e.link(href='#') 40-70 
 				+e.col.col-xl-4.col-md-6
 					+prodf('Бутовый камень','от 400 руб/тн','70-150','100-300','нестандартный' )

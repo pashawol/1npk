@@ -1,7 +1,7 @@
 extends layout/main.pug
 
 
-include ../blocks/footer-white/_footer-white.pug
+
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
 include ../blocks/s-prod/_s-prod.pug
@@ -16,16 +16,16 @@ include ../blocks/s-rent/_s-rent.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-departure/_s-departure.pug
 
-include ../blocks/aside/_aside.pug
+
 block variables
 	- let  mainPage= null
 block title
 	- let  title= 'Главная страница'
 	title= title
 block pagecontent
-	+top-line()
-	+aside
+	//- +aside
 	+header() 
+		+top-line()
 		+header-block()
 			//- (class="top-nav--js")
 		
@@ -48,7 +48,7 @@ block pagecontent
 			+b.section-title.text-center
 				h2 Наша компания сегодня
 				+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
-	+s-objects(class="section-border-bottom")
+	+s-objects
 			 
 			+b.section-title.text-center
 				h2 Выполненные проекты
@@ -79,6 +79,6 @@ block pagecontent
 	//- 			h2 Узнайте сейчас точную стоимость поставки продукции до&nbsp;объекта
 	//- 			+e.text Уже сейчас вы&nbsp;можете иметь представление о&nbsp;стоимости нужного для вас объема продукции, доставки и&nbsp;итоговой стоимости
 	//- +s-contact()
-	+footer-white
+	+footer()
 	
 	

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					if (lazyImage.tagName == 'IMG' ) { 
 						lazyImage.src = lazyImage.dataset.src;
 						lazyImage.removeAttribute("data-src"); 
+						lazyImage.classList.remove('lazy'); 
 						if(lazyImage.dataset.srcset) { 
 							lazyImage.srcset = lazyImage.dataset.srcset; 
 							lazyImage.removeAttribute("data-srcset"); 
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			if (lazyImage.tagName == 'IMG' ) { 
 				lazyImage.src = lazyImage.dataset.src;
+				lazyImage.classList.remove('lazy'); 
 			}
 			if (lazyImage.tagName == 'SOURCE' ) {
 				

@@ -3,10 +3,42 @@
 // }
 .top-nav { 
 	// position: absolute;
+	&.is_stuck{
+		@include media-breakpoint-up(xl){
+ 
+				.top-menu{
+					
+					justify-content: flex-start;
+				}
+				.row{
+					
+					justify-content: flex-start;
+				} 
+			
+			.top-menu{
+	
+				
+			}
+			.row{
+	
+				justify-content: space-around;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			
+			// margin-top: ;
+			transform: translateY(67px);
+			// @include mt;
+			// tr
+			transition: transform .2s ;
+		}
+	}
+	// margin-top: 0;
+	transform: translateY(0);
 	top: 0;
 	top: 100%;
 	z-index: 100; 
-	background-color: #413e3c;
+	background-color: #3b3836;
 	position: relative;
 	// @include media-breakpoint-up(md) {
 		
@@ -51,7 +83,9 @@
 	&__col{
 		overflow: hidden;
 		@include mt;
+		// padding-left: rem(40);
 	}
+
 	&:not(.is_stuck) &__col{
 		width: 0;
 		position: relative;
@@ -190,9 +224,13 @@
 	&__link--tel{
 		display: inline-flex;
 		align-items: center;
-		color: #ffffff;
+		color: #ffffff !important;
 		font-weight: bold;
-		margin-bottom: rem(5);
+		// margin-bottom: rem(5);
+	}
+	&__link--tel:hover 	&__icon-wrap{
+		background-color: #f5c64b;
+    border-color: #f5c64b;
 	}
 	&__icon-wrap{
 		@extend .btn-primary;
@@ -254,24 +292,39 @@
 
 
 .top-menu{
+	justify-content: space-between;
 		list-style-type: none;
 		display: flex;
 		text-transform: uppercase;
 		margin-bottom: 0;
 		text-align: center;
+		@include media-breakpoint-up(xxl) {
+
+			@include roww(15);
+		}
+		@include media-breakpoint-up(lg) {
+
+			@include roww(12);
+		}
+		
 		@include media-breakpoint-up(md) {
 
-			@include roww(10);
+			@include roww(8);
 		}
+
 		@include roww(3);
-		justify-content: space-between;
 		&__link{
 			color: #b2aeac;
 			display: block;
 			font-size: rem(12px);
 			font-weight: 700; 
 			text-transform: uppercase;
-			padding: rem(23) 0 rem(24);
+			@include media-breakpoint-up(xxxl){
+
+				padding: rem(24) 0  rem(20);
+			}
+			padding: rem(26) 0  rem(19);
+			// padding: rem(20) 0 ;
 			border-bottom: 3px solid transparent;
 			@include mt;
 			&:hover,
@@ -402,9 +455,7 @@ $h: em(2);
 		.container{
 			max-width: 100% !important;
 		}
-		.row{
-			justify-content: space-around;
-		}
+		
 		.col-auto,
 		.col{
 			display: flex !important;

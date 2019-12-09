@@ -581,7 +581,7 @@ jQuery(document).ready(function ($) {
 				// slidesPerView: 5,
 				slidesPerView: 1,
 				watchOverflow: true,
-				spaceBetween: 0,
+				spaceBetween: 30,
 				watchOverflow: true,
 				touchStartForcePreventDefault: true,
 				autoplay: {

@@ -1,13 +1,17 @@
+"use strict";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJX
-	LazyFunction: function () {
+	LazyFunction: function LazyFunction() {
 		// Для лэзи загрузки 
 		// лэзи 
 		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
-			let active = false;
+			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+			var active = false;
 
-			const lazyLoad = function () {
+			var lazyLoad = function lazyLoad() {
 				if (active === false) {
 					active = true;
 					setTimeout(function () {
@@ -40,10 +44,10 @@ var JSCCommon = {
 			window.addEventListener("DOMContentLoaded", lazyLoad);
 		});
 		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll("video.lazy"));
-			let active = false;
+			var lazyImages = [].slice.call(document.querySelectorAll("video.lazy"));
+			var active = false;
 
-			const lazyLoad = function () {
+			var lazyLoad = function lazyLoad() {
 				if (active === false) {
 					active = true;
 					setTimeout(function () {
@@ -101,7 +105,7 @@ var JSCCommon = {
 			}
 		});
 	},
-	magnificPopupCall: function () {
+	magnificPopupCall: function magnificPopupCall() {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',
 			fixedContentPos: true,
@@ -207,7 +211,7 @@ var JSCCommon = {
 		});
 	},
 	// табы  . 
-	tabscostume: function (tab) {
+	tabscostume: function tabscostume(tab) {
 		var params = {
 			// slidesPerView: 5,
 			slidesPerView: 1,
@@ -222,7 +226,7 @@ var JSCCommon = {
 			},
 			loop: true,
 			on: {
-				init: function () {
+				init: function init() {
 					JSCCommon.magnificPopupCall();
 				}
 			}
@@ -238,7 +242,7 @@ var JSCCommon = {
 		// // mySwiper.slideNext();
 		// mySwiper.init();
 	},
-	inputMask: function () {
+	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	},
@@ -253,7 +257,7 @@ var JSCCommon = {
 	// lazyJS: function () {
 	// 	$('.lazy-js').Lazy();
 	// },
-	customRange: function () {
+	customRange: function customRange() {
 		var $d3 = $(".slider-js");
 		$d3.ionRangeSlider({
 			skin: "big",
@@ -279,7 +283,7 @@ var JSCCommon = {
 			});
 		});
 	},
-	stickyFunc: function () {
+	stickyFunc: function stickyFunc() {
 		if (window.matchMedia("(min-width: 1200px)").matches) {
 			$(".aside-nav").stick_in_parent({
 				offset_top: $(".top-nav").height() + 30,
@@ -290,7 +294,7 @@ var JSCCommon = {
 			});
 		}
 	},
-	asideNav: function () {
+	asideNav: function asideNav() {
 		$('.toggle--js, .aside-nav__link--js').click(function () {
 			var th = $(this);
 			th.parent().find('.toggle--js').toggleClass('active').next('.aside-nav__sub').slideToggle(function () {
@@ -314,7 +318,7 @@ var JSCCommon = {
 			}
 		});
 	},
-	accordion: function () {
+	accordion: function accordion() {
 		if (document.querySelector('.main-row__col-aside')) {
 			var ell = document.querySelector('.main-row__col-aside');
 			$('.accord__head').click(function () {
@@ -336,18 +340,18 @@ var JSCCommon = {
 			});
 		}
 	},
-	videoBg: function () {
+	videoBg: function videoBg() {
 		if ($('div').is("#bgvid")) {
+			var vidFade = function vidFade() {
+				vid.classList.add("stopfade");
+			};
+
 			var vid = document.getElementById("bgvid");
 
 			if (window.matchMedia('(prefers-reduced-motion)').matches) {
 				vid.removeAttribute("autoplay");
 				vid.pause();
 				pauseButton.innerHTML = "Paused";
-			}
-
-			function vidFade() {
-				vid.classList.add("stopfade");
 			}
 
 			vid.addEventListener('ended', function () {
@@ -453,64 +457,48 @@ jQuery(document).ready(function ($) {
 	function sliderSection(sec, sl, pag) {
 		// slider
 		$(sec).each(function () {
-			var swiper4 = new Swiper($(this).find(sl), {
+			var _ref;
+
+			var swiper4 = new Swiper($(this).find(sl), (_ref = {
 				// slidesPerView: 5,
 				slidesPerView: 1,
 				watchOverflow: true,
-				spaceBetween: 0,
-				watchOverflow: true,
-				touchStartForcePreventDefault: true,
-				autoplay: {
-					delay: 3000
-				},
-				pagination: {
-					el: $(this).find(pag),
-					clickable: true
-				},
-				loop: true,
-				loopFillGroupWithBlank: true,
-				lazy: {
-					loadPrevNext: true
-				},
-				on: {
-					init: function () {
-						/* do something */
-						JSCCommon.magnificPopupCall();
-					}
+				spaceBetween: 30
+			}, _defineProperty(_ref, "watchOverflow", true), _defineProperty(_ref, "touchStartForcePreventDefault", true), _defineProperty(_ref, "autoplay", {
+				delay: 3000
+			}), _defineProperty(_ref, "pagination", {
+				el: $(this).find(pag),
+				clickable: true
+			}), _defineProperty(_ref, "loop", true), _defineProperty(_ref, "loopFillGroupWithBlank", true), _defineProperty(_ref, "lazy", {
+				loadPrevNext: true
+			}), _defineProperty(_ref, "on", {
+				init: function init() {
+					/* do something */
+					JSCCommon.magnificPopupCall();
 				}
-			});
+			}), _ref));
 		});
 	}
 
 	sliderSection('.section', '.slider--js', '.swiper-pagination');
 	sliderSection('.section', '.slider--js2', '.swiper-pagination');
 	$('.section').each(function () {
-		var swiper5 = new Swiper($(this).find('.s-client__slider--js'), {
+		var _ref2;
+
+		var swiper5 = new Swiper($(this).find('.s-client__slider--js'), (_ref2 = {
 			// slidesPerView: 5,
 			slidesPerView: 3,
 			watchOverflow: true,
-			spaceBetween: 0,
-			watchOverflow: true,
-			slidesPerGroup: 2,
-			slidesPerColumn: 2,
-			spaceBetween: 30,
-			lazy: {
-				loadPrevNext: true
-			},
-			// centeredSlides: true,
-			// loop: true,
-			// loopFillGroupWithBlank: true,
-			// touchRatio: 0.2,
-			// slideToClickedSlide: true, 
-			navigation: {
-				nextEl: $(this).find('.swiper-button-next'),
-				prevEl: $(this).find('.swiper-button-prev')
-			},
-			pagination: {
-				el: $(this).find('.swiper-pagination'),
-				clickable: true
-			}
-		});
+			spaceBetween: 0
+		}, _defineProperty(_ref2, "watchOverflow", true), _defineProperty(_ref2, "slidesPerGroup", 2), _defineProperty(_ref2, "slidesPerColumn", 2), _defineProperty(_ref2, "spaceBetween", 30), _defineProperty(_ref2, "lazy", {
+			loadPrevNext: true
+		}), _defineProperty(_ref2, "navigation", {
+			nextEl: $(this).find('.swiper-button-next'),
+			prevEl: $(this).find('.swiper-button-prev')
+		}), _defineProperty(_ref2, "pagination", {
+			el: $(this).find('.swiper-pagination'),
+			clickable: true
+		}), _ref2));
 		var titles = [];
 		$('.s-card-head__slider--js .swiper-slide').each(function (i) {
 			titles.push($(this).data('thumb'));
@@ -533,7 +521,7 @@ jQuery(document).ready(function ($) {
 			pagination: {
 				el: $(this).find('.prod-pagination'),
 				clickable: true,
-				renderBullet: function (index, className) {
+				renderBullet: function renderBullet(index, className) {
 					return '<div class="' + className + ' img-bg  " style="background-image: url(' + titles[index] + ')"></div>';
 				}
 			}
@@ -569,7 +557,7 @@ jQuery(document).ready(function ($) {
 				}
 			},
 			on: {
-				init: function () {
+				init: function init() {
 					/* do something */
 					JSCCommon.magnificPopupCall();
 				}

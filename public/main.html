@@ -21,36 +21,6 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<!-- start .top-line-->
-			<div class="top-line d-xl-none">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js2"><span></span>
-								<div class="toggle-menu-mobile__text d-none d-sm-inline">Открыть меню
-								</div>
-							</div>
-						</div>
-						<div class="col-auto">
-							<div class="top-line__logo"><a href="/"><img src="img/logo.png" alt=""/></a>
-							</div>
-						</div>
-						<div class="top-line__col col-auto">
-							<div class="d-none d-sm-block"><a class="top-line__link top-line__link--tel" href="tel:8(800)100-73-75"> <span class="top-line__icon-wrap">
-								<svg class="icon icon-call ">
-									<use xlink:href="img/svg/sprite.svg#call"></use>
-								</svg></span>+7 (917) 926-27-77</a>
-							</div>
-							<div class="d-sm-none"><a class="top-line__link-city popup-with-move-anim" href="#modal-city">
-								<svg class="icon icon-mark ">
-									<use xlink:href="img/svg/sprite.svg#mark"></use>
-								</svg></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end .top-line-->
 			<!-- start aside-->
 			<aside class="aside aside--js">
 				<div class="aside__inner">
@@ -76,227 +46,193 @@
 						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url"> Щебень</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-20</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-40</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">70-120</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M400</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M600</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">6</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M800</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">7</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1000</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">8</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1200</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">9</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1400</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">10</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Гранитный</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">11</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Известняковый</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">12</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Доломитовый</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">13</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Жигулевский</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">14</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">15</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">16</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">17</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">18</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">19</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">21</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">22</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Гравийный</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Узкие фракции щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Песок</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок растворный (волжский)</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок речной</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок обогащенный</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок строительный</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Отсев щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">ПГС ОПГС</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песчано-гравийная смесь</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Обогащенная песчано-гравийная смесь</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Смеси щебня</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Гравий</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-10</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-20</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-40</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-70</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Бутовый камень</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Бутовый камень</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">70-150</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">100-300</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">нестандартный</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Песок</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Отсев щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-5</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-10</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-20</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">Гравий</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Смеси щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-20</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-40</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-80</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-120</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url">ПГС ОПГС</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Узкие фракции щебня</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-10</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-15</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">10-15</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-70</a>
+									</li>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Аренда спецтехники</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Аренда спецтехники</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Самосвал КАМАЗ кузов 10 м3</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Самосвал КАМАЗ кузов 15 м3</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Самосвал КАМАЗ кузов 30 м3</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Фронтальный погрузчик Volvo</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Фронтальный погрузчик Mitsuber</a>
+									</li>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Экскаватор-погрузчик Caterpillar</a>
+									</li>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Экскаватор-погрузчик JCB</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Услуги</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Услуги</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Уборка и вывоз снега</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Выполненные проекты</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Выполненные проекты</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Аэропорт Бегишево</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Автосалон DAF</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Нефтепровод Газпром</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
-									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Супермаркет Лента (пока этих достаточно)</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--lg" href="#" itemprop="url">Компания</a>
+						<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Компания</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 0</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">О компании</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 1</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Ответы на вопросы</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 2</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Новости</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 3</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">База знаний</a>
 									</li>
-									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10 4</a>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Документы</a>
+									</li>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Вакансии</a>
+									</li>
+									<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Контакты</a>
 									</li>
 								</ul>
 							</div>
@@ -317,6 +253,36 @@
 			<!-- end aside-->
 			<!-- start HEADER.header-->
 			<header class="header"> 
+				<!-- start .top-line-->
+				<div class="top-line d-xl-none">
+					<div class="container">
+						<div class="row">
+							<div class="col-auto">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js2"><span></span>
+									<div class="toggle-menu-mobile__text d-none d-sm-inline">Открыть меню
+									</div>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="top-line__logo"><a href="/"><img src="img/logo.png" alt=""/></a>
+								</div>
+							</div>
+							<div class="top-line__col col-auto">
+								<div class="d-none d-sm-block"><a class="top-line__link top-line__link--tel" href="tel:8(800)100-73-75"> <span class="top-line__icon-wrap">
+									<svg class="icon icon-call ">
+										<use xlink:href="img/svg/sprite.svg#call"></use>
+									</svg></span>+7 (917) 926-27-77</a>
+								</div>
+								<div class="d-sm-none"><a class="top-line__link-city popup-with-move-anim" href="#modal-city">
+									<svg class="icon icon-mark ">
+										<use xlink:href="img/svg/sprite.svg#mark"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end .top-line-->
 				<!-- start header-block-->
 				<div class="header-block header-block header-block--main" id="header-block">  
 					<div class="header-block__body">
@@ -338,33 +304,35 @@
 												<div class="form-wrap__input-wrap form-group">
 													<select class="form-wrap__form-control-lg select-js" placeholder="Выберите продукцию">
 														<option value=""> Выберите продукцию</option>
-														<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+														<option value=" Щебень"> Щебень</option>
+														<option value=" Песок"> Песок</option>
+														<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+														<option value=" Гравий"> Гравий</option>
+														<option value=" Бутовый камень"> Бутовый камень</option>
 														<option value=" Отсев щебня"> Отсев щебня</option>
 														<option value=" Смеси щебня"> Смеси щебня</option>
-														<option value=" Бутовый камень"> Бутовый камень</option>
-														<option value=" Песок"> Песок</option>
-														<option value=" Гравий"> Гравий</option>
-														<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+														<option value=" Узкие фракции"> Узкие фракции</option>
 													</select>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
 											<div class="form-wrap__input-wrap form-group">
-												<select class="form-wrap__form-control-lg form-control d-none select-default" placeholder="Выберите продукцию">
+												<select class="d-sm-none d-block form-control form-control-lg" placeholder="Выберите продукцию">
 													<option value=""> Выберите продукцию</option>
-													<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+													<option value=" Щебень"> Щебень</option>
+													<option value=" Песок"> Песок</option>
+													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+													<option value=" Гравий"> Гравий</option>
+													<option value=" Бутовый камень"> Бутовый камень</option>
 													<option value=" Отсев щебня"> Отсев щебня</option>
 													<option value=" Смеси щебня"> Смеси щебня</option>
-													<option value=" Бутовый камень"> Бутовый камень</option>
-													<option value=" Песок"> Песок</option>
-													<option value=" Гравий"> Гравий</option>
-													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+													<option value=" Узкие фракции"> Узкие фракции</option>
 												</select>
 											</div>
 											<!-- +e.input-wrap-->
 										</div>
 										<div class="col-sm-6">
-											<button class="form-wrap__btn btn-lg mt-0" type="button">Рассчитать стоимость поставки
+											<button class="form-wrap__btn btn-primary btn-lg mt-0" type="button">Рассчитать стоимость поставки
 											</button>
 										</div>
 									</div>
@@ -422,7 +390,7 @@
 											<div class="item-prod__title"><strong>Щебень</strong> <span class="item-prod__price"> от 450 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -470,7 +438,7 @@
 											<div class="item-prod__title"><strong>Щебень</strong> <span class="item-prod__price"> от 450 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -502,19 +470,19 @@
 											<div class="item-prod__title"><strong>Песок</strong> <span class="item-prod__price">от 200 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-prod__row row">
 									<div class="col-auto">
+										<div class="item-prod__item"><a class="item-prod__link" href="#">Песок растворный (волжский) </a>
+										</div>
 										<div class="item-prod__item"><a class="item-prod__link" href="#">Песок речной</a>
 										</div>
 										<div class="item-prod__item"><a class="item-prod__link" href="#">Песок обогащённый</a>
 										</div>
 										<div class="item-prod__item"><a class="item-prod__link" href="#">Песок строительный</a>
-										</div>
-										<div class="item-prod__item"><a class="item-prod__link" href="#">Песок растворный (волжский) </a>
 										</div>
 									</div>
 								</div>
@@ -534,7 +502,7 @@
 											<div class="item-prod__title"><strong>ПГС ОПГС</strong> <span class="item-prod__price">от 280 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -562,7 +530,7 @@
 											<div class="item-prod__title"><strong>Гравий</strong> <span class="item-prod__price">цена по запросу</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -574,10 +542,10 @@
 										</div>
 										<div class="item-prod__item"><a class="item-prod__link" href="#">20-40</a>
 										</div>
-										<div class="item-prod__item"><a class="item-prod__link" href="#">20-70</a>
-										</div>
 									</div>
 									<div class="col-auto">
+										<div class="item-prod__item"><a class="item-prod__link" href="#">20-70</a>
+										</div>
 										<div class="item-prod__item"><a class="item-prod__link" href="#">40-70 </a>
 										</div>
 									</div>
@@ -598,7 +566,7 @@
 											<div class="item-prod__title"><strong>Бутовый камень</strong> <span class="item-prod__price">от 400 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -628,7 +596,7 @@
 											<div class="item-prod__title"><strong>Отсев щебня</strong> <span class="item-prod__price">от 420 руб/тн</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -658,7 +626,7 @@
 											<div class="item-prod__title"><strong>Смеси щебня</strong> <span class="item-prod__price">цена по запросу</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -692,7 +660,7 @@
 											<div class="item-prod__title"><strong>Узкие фракции</strong> <span class="item-prod__price">цена по запросу</span>
 											</div>
 										</div>
-										<div class="col-auto"><a class="item-prod__btn" href="#">Заказать</a>
+										<div class="col-auto"><a class="item-prod__btn btn-primary" href="#">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -738,13 +706,8 @@
 								<div class="s-rent__col col-md-4">
 									<div class="item-rent panel">
 										<div class="row">
-											<div class="item-rent__col col-xl-auto col-md-12 col-auto">
-												<!-- picture-->
-												<picture class="lazy"> 
-													<source srcset="#" data-srcset="img/@2x/webp/rent-1.webp" type="image/webp"/>
-													<!-- /webp images  --><img src="#" data-src="img/@2x/rent-1.jpg" alt=""/>
-												</picture>
-												<!-- /picture-->
+											<div class="item-rent__col col-lg-auto col-md-12 col-auto">
+												<picture><img class="res-i lazy" src="#" data-src="img/@2x/rent-1.png" alt=""/></picture>
 											</div>
 											<div class="col">
 												<div class="item-rent__title">
@@ -759,7 +722,7 @@
 												<div class="item-rent__item"><a class="item-rent__link link-color" href="#">Кузов 30 м<sup>3</sup></a>
 												</div>
 											</div>
-											<div class="item-rent__col col-12"><a class="item-rent__btn" href="#">Заказать </a>
+											<div class="item-rent__col col-12"><a class="item-rent__btn btn-primary" href="#">Заказать </a>
 											</div>
 										</div>
 									</div>
@@ -768,13 +731,8 @@
 								<div class="s-rent__col col-md-4">
 									<div class="item-rent panel">
 										<div class="row">
-											<div class="item-rent__col col-xl-auto col-md-12 col-auto">
-												<!-- picture-->
-												<picture class="lazy"> 
-													<source srcset="#" data-srcset="img/@2x/webp/rent-2.webp" type="image/webp"/>
-													<!-- /webp images  --><img src="#" data-src="img/@2x/rent-2.jpg" alt=""/>
-												</picture>
-												<!-- /picture-->
+											<div class="item-rent__col col-lg-auto col-md-12 col-auto">
+												<picture><img class="res-i lazy" src="#" data-src="img/@2x/rent-2.png" alt=""/></picture>
 											</div>
 											<div class="col">
 												<div class="item-rent__title">
@@ -787,7 +745,7 @@
 												<div class="item-rent__item"><a class="item-rent__link link-color" href="#">Mitsuber</a>
 												</div>
 											</div>
-											<div class="item-rent__col col-12"><a class="item-rent__btn" href="#">Заказать </a>
+											<div class="item-rent__col col-12"><a class="item-rent__btn btn-primary" href="#">Заказать </a>
 											</div>
 										</div>
 									</div>
@@ -796,13 +754,8 @@
 								<div class="s-rent__col col-md-4">
 									<div class="item-rent panel">
 										<div class="row">
-											<div class="item-rent__col col-xl-auto col-md-12 col-auto">
-												<!-- picture-->
-												<picture class="lazy"> 
-													<source srcset="#" data-srcset="img/@2x/webp/rent-3.webp" type="image/webp"/>
-													<!-- /webp images  --><img src="#" data-src="img/@2x/rent-3.jpg" alt=""/>
-												</picture>
-												<!-- /picture-->
+											<div class="item-rent__col col-lg-auto col-md-12 col-auto">
+												<picture><img class="res-i lazy" src="#" data-src="img/@2x/rent-3.png" alt=""/></picture>
 											</div>
 											<div class="col">
 												<div class="item-rent__title">
@@ -815,7 +768,7 @@
 												<div class="item-rent__item"><a class="item-rent__link link-color" href="#">JCB</a>
 												</div>
 											</div>
-											<div class="item-rent__col col-12"><a class="item-rent__btn" href="#">Заказать </a>
+											<div class="item-rent__col col-12"><a class="item-rent__btn btn-primary" href="#">Заказать </a>
 											</div>
 										</div>
 									</div>
@@ -836,27 +789,27 @@
 					<div class="s-video__slider s-video__slider--js swiper-container">
 						<div class="swiper-wrapper">
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-1.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-1.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-2.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-2.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-3.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-3.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-1.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-4.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-2.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-5.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
-									<picture class="picture-bg"><img class="object-fit-js" src="img/video-3.jpg" alt=""/></picture></a>
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-6.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 						</div>
@@ -966,7 +919,7 @@
 			</div>
 			<!-- end s-now-->
 			<!-- start s-objects-->
-			<div class="s-objects section lazy-background section-border-bottom" id="s-objects">
+			<div class="s-objects section lazy-background" id="s-objects">
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Выполненные проекты</h2>
@@ -1007,7 +960,7 @@
 								<!-- /+e.col.col-->
 						</div>
 						<div class="swiper-pagination"></div>
-					</div><a class="s-objects__btn" href="#">Смотреть все проекты</a>
+					</div><a class="s-objects__btn btn-primary" href="#">Смотреть все проекты</a>
 				</div>
 			</div>
 			<!-- end s-objects-->
@@ -1040,33 +993,35 @@
 											<div class="form-wrap__input-wrap form-group">
 												<select class="form-wrap__form-control-lg select-js" placeholder="Выберите продукцию">
 													<option value=""> Выберите продукцию</option>
-													<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+													<option value=" Щебень"> Щебень</option>
+													<option value=" Песок"> Песок</option>
+													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+													<option value=" Гравий"> Гравий</option>
+													<option value=" Бутовый камень"> Бутовый камень</option>
 													<option value=" Отсев щебня"> Отсев щебня</option>
 													<option value=" Смеси щебня"> Смеси щебня</option>
-													<option value=" Бутовый камень"> Бутовый камень</option>
-													<option value=" Песок"> Песок</option>
-													<option value=" Гравий"> Гравий</option>
-													<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+													<option value=" Узкие фракции"> Узкие фракции</option>
 												</select>
 											</div>
 											<!-- +e.input-wrap-->
 										</div>
 										<div class="form-wrap__input-wrap form-group">
-											<select class="form-wrap__form-control-lg form-control d-none select-default" placeholder="Выберите продукцию">
+											<select class="d-sm-none d-block form-control form-control-lg" placeholder="Выберите продукцию">
 												<option value=""> Выберите продукцию</option>
-												<option value=" Узкие фракции щебня"> Узкие фракции щебня</option>
+												<option value=" Щебень"> Щебень</option>
+												<option value=" Песок"> Песок</option>
+												<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+												<option value=" Гравий"> Гравий</option>
+												<option value=" Бутовый камень"> Бутовый камень</option>
 												<option value=" Отсев щебня"> Отсев щебня</option>
 												<option value=" Смеси щебня"> Смеси щебня</option>
-												<option value=" Бутовый камень"> Бутовый камень</option>
-												<option value=" Песок"> Песок</option>
-												<option value=" Гравий"> Гравий</option>
-												<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+												<option value=" Узкие фракции"> Узкие фракции</option>
 											</select>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>
 									<div class="col-sm-6">
-										<button class="form-wrap__btn btn-lg mt-0" type="button">Рассчитать стоимость поставки
+										<button class="form-wrap__btn btn-primary btn-lg mt-0" type="button">Рассчитать стоимость поставки
 										</button>
 									</div>
 								</div>

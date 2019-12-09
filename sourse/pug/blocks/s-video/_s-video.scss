@@ -19,7 +19,7 @@
 			}
 			padding: 0;
 		}
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			.swiper-container {
 				overflow: inherit;
 			}
@@ -31,7 +31,7 @@
 			z-index: 2;
 			color: #ffffff !important;
 			@include mt;
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 				
 				&:hover{
 					transform:  scale(1.04);
@@ -127,8 +127,8 @@
 					@include roww(15);
 					flex-wrap: wrap;
 					width: calc(100% + #{rem(30)});
-					margin-left: rem(-15);
-					margin-right: rem(-15);
+				// width: initial;
+				 
 				}
 			}
 		}
@@ -137,11 +137,13 @@
 
 				flex:  0 0  (100% / 3);
 				width: (100% / 3 ) !important; 
+				max-width: (100% / 3 ) !important; 
 			}
 			@include media-breakpoint-up(md) {
-
+				
 				flex:  0 0  (100% / 2);
 				width: (100% / 2 ) !important; 
+				max-width: (100% / 2 ) !important; 
 				margin-bottom: rem(30);
 			}
 

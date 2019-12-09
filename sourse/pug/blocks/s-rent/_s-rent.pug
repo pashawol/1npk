@@ -9,8 +9,10 @@ mixin s-rent()
 					+e.col.col-md-4
 						+b.item-rent.panel&attributes(attributes)
 							.row
-								+e.col.col-xl-auto.col-md-12.col-auto
-									+pic(`rent-${i}`,'','lazy',0)
+								+e.col.col-lg-auto.col-md-12.col-auto
+									picture
+										img.res-i.lazy(src="#" data-src=`img/@2x/rent-${i}.png`, alt="")
+									//- +pic(`rent-${i}`,'','lazy',0)
 								.col
 									+e.title
 										.strong= t
@@ -22,7 +24,7 @@ mixin s-rent()
 										each item in items
 											+e.item: +e.link.link-color(href='#')= item
 								+e.col.col-12
-									+e.btn(href="#") Заказать 
+									+e.btn.btn-primary(href="#") Заказать 
 					// /+e.col.col-4
 				+item("1",'Самосвалы КАМАЗ','от 800 руб/час','','','')
 					+e.item: +e.link.link-color(href='#') Кузов 10 м

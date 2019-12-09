@@ -35,16 +35,16 @@ button.mfp-arrow{
 	&-left {
 			@include media-breakpoint-up(md) {
 
-				left: 35px;
+				left: rem(35px);
 			}
-			left: 5px;
+			left: rem(5px);
 	}
 	&-right {
 			@include media-breakpoint-up(md) {
 
-				right: 35px;
+				right: rem(35px);
 			}
-			right: 5px;
+			right: rem(5px);
 		&::before{
 
 			@include transform(rotateY(180deg));
@@ -53,13 +53,13 @@ button.mfp-arrow{
 }
 
 .show-gal-rew{
-		padding-top: 60px;
+		padding-top: rem(60px);
 		.mfp-figure{
 			position: relative;
 		}
 	.mfp-content{
 		// padding-top: 60px;
-	padding-top: 30px;
+	padding-top: rem(30px);
 	}
 	figure{
 		// position: relative;
@@ -92,18 +92,18 @@ button.mfp-close {
 	outline: none;
 	// background-size: 50%;
 	border-radius: 50%;
-	font-size: 12px;
+	font-size: rem(12px);
 
 	@include media-breakpoint-up(lg) {
-		font-size: 14px;
+		font-size: rem(14px);
 	
-		width: 60px;
-		height: 60px; 
-		line-height: 56px;
+		width: rem(60px);
+		height: rem(60px); 
+		line-height: rem(56px);
 	}
-	line-height: 38px; 
-	width: 40px;
-	height: 40px;
+	line-height: rem(38px); 
+	width: rem(40px);
+	height: rem(40px);
 	display: block;
 	transform: scale(1);
 	border: 2px solid #dddddd;
@@ -126,15 +126,18 @@ button.mfp-close {
 	 
 	}
 	@include media-breakpoint-up(md) {
-		right: 35px; 
-		top: 35px !important;
+		right: rem(35px); 
+		top: rem(35px) !important;
 		
 	}
-	line-height: 38px;
-	top: 5px !important;
-	right: 5px;
+	line-height: rem(38px);
+	top: rem(5px) !important;
+	right: rem(5px);
 }   
 .modal-win {
+	box-shadow: 0 rem(10px) rem(30px) rgba(51, 51, 51, 0.15);
+	border-radius: rem(5px);
+	border: 1px solid #eeeeee;
 	display: block;
 	position: relative;
 	.modal-content {
@@ -262,7 +265,13 @@ a {
 	padding: rem(50px) rem(50px);
 	vertical-align: top;
 	&__wrap{
-		columns: 4;
+		@include media-breakpoint-up(md) {
+			columns: 4;
+		}
+		@include media-breakpoint-up(sm) {
+			
+			columns: 2;
+		}
 		list-style-type: none;
 	}
 	&__title{
@@ -294,6 +303,7 @@ a {
 	&__link{
 		color: #252525;
 		@include mt;
+		&.active,
 		&:hover{
 			color: #389aff;
 		}

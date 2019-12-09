@@ -64,17 +64,26 @@ jQuery(document).ready(function ($) {
 		// so we can get a fancy scroll animation
 		menuItems.click(function(e){
 			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+					offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
 			$('html, body').stop().animate({ 
 					scrollTop: offsetTop
 			}, 1100);
 			e.preventDefault();
+			lastId = $(this).parent();
+			
 		});
-
+		function getFirst(){
+			menuItems
+					.removeClass("active").parent()
+					.first().find('a').addClass("active");
+		}
+		getFirst();
 		// Bind to scroll
 		$(window).scroll(function(){
 			// Get container scroll position
-			var fromTop = $(this).scrollTop()+topMenuHeight;
+			var fromTop = window.matchMedia("(min-width: 1200px)").matches 
+									? ($(this).scrollTop()+topMenuHeight) 
+									:( $(this).scrollTop()+topMenuHeight + 67 );
 			
 			// Get id of current scroll item
 			var cur = scrollItems.map(function(){
@@ -84,14 +93,39 @@ jQuery(document).ready(function ($) {
 			// Get the id of the current element
 			cur = cur[cur.length-1];
 			var id = cur && cur.length ? cur[0].id : "";
-			
-			if (lastId !== id) {
+			// if()
+			// console.log(cur)
+		
+			var menuItemPos = $(".top-nav").position(); 
+			let body= $('body').height();
+			let win = $(this).height();
+			let  firstLi =  menuItems.first();
+
+
+			// console.log($(this).scrollTop());
+			// console.log(body );
+			// console.log( win);
+			// console.log(body - win);
+			if ((body - win) <= fromTop ) {
+				lastId = id;
+				// Set/remove active class
+				menuItems
+					.removeClass("active").parent()
+					.last().find('a').addClass("active");
+				}
+			else if (fromTop < win) {
+				getFirst();
+			}
+			else{
+				if (lastId !== id) {
+					
 					lastId = id;
 					// Set/remove active class
 					menuItems
-						.removeClass("active").parent()
-						.end().filter("[href='#"+id+"']").addClass("active");
-			}                   
+					.removeClass("active").parent()
+					.end().filter("[href='#"+id+"']").addClass("active");
+				}       
+			}
 		});
 
 		};
@@ -107,7 +141,7 @@ jQuery(document).ready(function ($) {
 		// 		selectSmartPositioning: false,
 		// 	});
 		// }, 100)
-		isMobile = {
+		let isMobile = {
 			Android: function() {
 					return navigator.userAgent.match(/Android/i);
 			},
@@ -157,18 +191,53 @@ jQuery(document).ready(function ($) {
 
 $(".site-nav__item--has-child > a").each(function(){
 	var title= $(this).text();
+	var href= $(this).attr("href");
 	var toggleBlock = $(this).next().find("ul");
-	toggleBlock.prepend('<li class="hide-parent-js d-sm-none">' +title+ '</li>')
+	toggleBlock.prepend(`<li class="hide-parent-js d-sm-none"> ${title} </li>
+											<li class="sub-menu__item">
+												<a class="sub-menu__link" href="${href}">${title} </a>
+											</li>`)
 	$(this).click(function (e) {
 			e.preventDefault();
 			// $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
+			
+			$(".top-line").toggleClass("invisible");
 			$(this).next().toggleClass("active");
+			// setTimeout(() => {
+			// },500);
 			// $(".top-submenu--js").slideUp(0);
 			
 	})
 });
 $(".hide-parent-js").click(function(){
 	$(this).parents(".sub-menu-wrap").removeClass('active');
+	$(".top-line").removeClass("invisible");
 })
+
+	// анимация кнопок
+	$(".btn-primary, .btn-js").each(function() {
+		var B = $(this);
+		var A, C, z, D;
+		setInterval(function() {
+				if (B.find(".animate-js").length === 0) {
+						B.prepend("<span class='animate-js'></span>");
+				}
+				A = B.find(".animate-js");
+				A.removeClass("btn_animate");
+				if (!A.height() && !A.width()) {
+						C = Math.max(B.outerWidth(), B.outerHeight());
+						A.css({
+								height: C,
+								width: C
+						});
+				}
+				z = Math.round(Math.random() * A.width() - A.width() / 2);
+				D = Math.round(Math.random() * A.height() - A.height() / 2);
+				A.css({
+						top: D + "px",
+						left: z + "px"
+				}).addClass("btn_animate");
+		}, 3000);
+});
 })

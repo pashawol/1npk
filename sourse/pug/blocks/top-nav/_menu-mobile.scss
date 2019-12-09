@@ -9,6 +9,13 @@ $h: em(3);
 	position: relative;
 	// padding-left: rem(45);
 	cursor: pointer;
+	&::after{
+		content: '';
+		position: absolute;
+		@include a-cent;
+		width: 200%;
+		height: 150%;
+	}
 	&__text{ 
 		margin-left: 45px;
 		color: #b2aeac; 

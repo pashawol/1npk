@@ -1,9 +1,9 @@
 .breadcrumb {
   @include media-breakpoint-up(xl) {
 
-    display: flex;
   }
-  display: none;
+  display: flex;
+  // display: none;
   flex-wrap: wrap;
   // padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   // margin-bottom: $breadcrumb-margin-bottom;

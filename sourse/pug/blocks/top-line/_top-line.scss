@@ -1,9 +1,16 @@
 .top-line {
   background-color: #3b3836;
   padding-top: rem(10);
-  padding-bottom: rem(10);
-  position: relative;
-  z-index: 1101;
+	padding-bottom: rem(10);
+	@include media-breakpoint-up(xl) {
+		position: relative;
+
+	}
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+  z-index: 1021;
   .row{
     justify-content: space-between;
     align-items: center;
@@ -29,7 +36,7 @@
 	&__link--tel{
 		display: inline-flex;
 		align-items: center;
-		color: #ffffff;
+		color: #ffffff !important;
 		font-weight: bold;
 		margin-bottom: rem(5);
 	}

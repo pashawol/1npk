@@ -145,18 +145,21 @@
 		max-width: rem(908px); 
 
 	 }
-	 &--payment
+	//  &--payment
 	 &__panel{
-		@include media-breakpoint-up(sm) {
-			margin-left: 0;
-			margin-right: 0;
+		 margin-left: 0;
+		 margin-right: 0;
+		 @include media-breakpoint-up(sm) {
 			box-shadow: 0 5px 15px rgba(37, 37, 37, 0.15);
 			padding: rem(30) rem(30) rem(8);
 		}
-		margin-left: -15px;
-		margin-right: -15px;
-		background-color: #ffffff;
-		padding: rem(30) 15px rem(8);
+		// margin-left: -15px;
+		// margin-right: -15px;
+		@include media-breakpoint-up(lg) {
+
+			background-color: #ffffff;
+		}
+		padding: rem(30) 0 rem(8);
 	 }
 	 &__title-payment{
 		 text-align: center;
@@ -753,7 +756,7 @@ margin-top: -36px;
 			// margin-top: -1px;
 			.option{
 				@extend .h6;
-				padding: rem(24) rem(30);
+				padding: rem(19) rem(20);
 				margin-bottom: 0;
 				cursor: pointer;
 				@include mt;
@@ -764,6 +767,7 @@ margin-top: -36px;
 				&.active,
 				&:hover{
 					background-color: #fafafa;
+					color: $body-color;
 				}
 			}
 		}
@@ -773,4 +777,11 @@ margin-top: -36px;
 			@include media-breakpoint-down(sm) {
 
 			}
+		}
+
+		.select-js-wrap{
+			@include media-breakpoint-up(sm) {
+				display: block;
+			}
+			display: none;
 		}

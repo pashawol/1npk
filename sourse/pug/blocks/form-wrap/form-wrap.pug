@@ -94,30 +94,23 @@ mixin polite()
 
 mixin form-payment()
 	+form-wrap()(class="form-wrap--payment")
-		
+		mixin select(cl)
+			+sel2("Выберите продукцию")(class= cl)
+				option(value="")  Выберите продукцию
+				option(value=" Щебень")  Щебень
+				option(value=" Песок")  Песок
+				option(value=" ПГС ОПГС")  ПГС ОПГС
+				option(value=" Гравий")  Гравий
+				option(value=" Бутовый камень")  Бутовый камень
+				option(value=" Отсев щебня")  Отсев щебня
+				option(value=" Смеси щебня")  Смеси щебня
+				option(value=" Узкие фракции")  Узкие фракции
 		+e.panel 
 			.row
 				.col-sm-6
 					.select-js-wrap
-						+sel2("Выберите продукцию")(class="form-control-lg  select-js"   )
-							option(value="")  Выберите продукцию
-							option(value=" Узкие фракции щебня")  Узкие фракции щебня
-							option(value=" Отсев щебня")  Отсев щебня
-							option(value=" Смеси щебня")  Смеси щебня
-							option(value=" Бутовый камень")  Бутовый камень
-							option(value=" Песок")  Песок
-							option(value=" Гравий")  Гравий
-							option(value=" ПГС ОПГС")  ПГС ОПГС
-					
-					+sel2("Выберите продукцию")(class="form-control-lg form-control  d-none select-default"   )
-						option(value="")  Выберите продукцию
-						option(value=" Узкие фракции щебня")  Узкие фракции щебня
-						option(value=" Отсев щебня")  Отсев щебня
-						option(value=" Смеси щебня")  Смеси щебня
-						option(value=" Бутовый камень")  Бутовый камень
-						option(value=" Песок")  Песок
-						option(value=" Гравий")  Гравий
-						option(value=" ПГС ОПГС")  ПГС ОПГС
+						+select("form-control-lg  select-js")
+					+select(" d-sm-none  d-block form-control form-control-lg ")
 
 				.col-sm-6
-					+e.btn.btn-lg.mt-0(type="button") Рассчитать стоимость поставки
+					+e.btn.btn-primary.btn-lg.mt-0(type="button") Рассчитать стоимость поставки

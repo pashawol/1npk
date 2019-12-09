@@ -12,12 +12,13 @@ mixin breadcrumb(act, ...items)
 //- breadcrumb
 mixin breadcrumb2(...items)
 	nav(aria-label="breadcrumb" )
-		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
-			-for (var i = 0; i < items.length; i++)
-				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
-					a(href=(i == 0 ? "/" : '#') itemprop="item" )
-						span( itemprop="name")= items[i]
-						meta(itemprop="position" content= (i + 1) )
+		.container
+			ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+				-for (var i = 0; i < items.length; i++)
+					li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href=(i == 0 ? "/" : '#') itemprop="item" )
+							span( itemprop="name")= items[i]
+							meta(itemprop="position" content= (i + 1) )
 mixin pugin()
 	nav(aria-label='...')
 		ul.pagination.justify-content-center
@@ -88,38 +89,46 @@ mixin mnu()
 			"Гравий":"#",
 			"ПГС ОПГС":"#",
 			}
+	mixin sub(...items)
+		.sub-menu-wrap: +b.UL.sub-menu
+			each item in items 
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")= item
 	+b.UL.site-nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		+e.LI.item( itemprop="item" ): +e.A.link--lg.active(href="#"  itemprop="url")  Продукция
 		+e.LI.item--has-child( itemprop="item" )
 			+e.A.link--sm(href="#"  itemprop="url")  Щебень
-			.sub-menu-wrap: +b.UL.sub-menu
-				- for (var x = 0; x < 23; x++)
-					+e.LI.item( itemprop="item" )
-						+e.A.link(href="#"  itemprop="url")= x
-		each linkPatch, linkName in nav
+			+sub( "5-20","20-40","40-70","70-120","M400","M600","M800","M1000","M1200","M1400","Гранитный","Известняковый","Доломитовый","Жигулевский","Гравийный")
+		mixin li(a) 
 			+e.LI.item--has-child( itemprop="item" )
-				+e.A.link--sm(href= linkPatch  itemprop="url")= linkName
-				.sub-menu-wrap: +b.UL.sub-menu
-					- for (var x = 0; x < 5; x++)
-						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 3-10 
-							= x
+				+e.A.link(href="#" itemprop="url")&attributes(attributes)= a
+				block
+		+li("Песок")(class="site-nav__link--sm")
+			+sub("Песок растворный (волжский)","Песок речной","Песок обогащенный","Песок строительный")
+		+li("ПГС ОПГС")(class="site-nav__link--sm")
+			+sub("Песчано-гравийная смесь","Обогащенная песчано-гравийная смесь")
+		+li("Гравий")(class="site-nav__link--sm")
+			+sub("5-10","5-20","20-40","20-70","40-70")
+		+li("Бутовый камень")(class="site-nav__link--sm")
+			+sub("70-150","100-300","нестандартный")
+		+li("Отсев щебня")(class="site-nav__link--sm")
+			+sub("0-5","0-10","0-20")
+		+li("Смеси щебня")(class="site-nav__link--sm")
+			+sub("0-20","0-40","0-80","0-120")
+		+li("Узкие фракции щебня")(class="site-nav__link--sm")
+			+sub("3-10","5-10","5-15","10-15","20-70","40-70")
 
-		-
-			var nav2= {
-				"Аренда спецтехники":"#",
-				"Услуги":"#",
-				"Выполненные проекты":"#",
-				"Компания":"#", 
-			
-				}
-		each linkPatch2, linkName2 in nav2
-			+e.LI.item--has-child( itemprop="item" )
-				+e.A.link--lg(href= linkPatch2  itemprop="url")= linkName2
-				.sub-menu-wrap
-					+b.UL.sub-menu
-						- for (var x = 0; x < 5; x++)
-							+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 3-10 
-								= x
+		+li("Аренда спецтехники")(class="site-nav__link--lg")
+			+sub("Самосвал КАМАЗ кузов 10 м3","Самосвал КАМАЗ кузов 15 м3","Самосвал КАМАЗ кузов 30 м3","Фронтальный погрузчик Volvo","Фронтальный погрузчик Mitsuber","Экскаватор-погрузчик Caterpillar","Экскаватор-погрузчик JCB")
+ 
+		+li("Услуги")(class="site-nav__link--lg")
+			+sub("Уборка и вывоз снега")
+		
+		+li("Выполненные проекты")(class="site-nav__link--lg")
+			+sub("Аэропорт Бегишево","Автосалон DAF","Нефтепровод Газпром","Супермаркет Лента (пока этих достаточно)") 
+		+li("Компания")(class="site-nav__link--lg")
+			+sub("О компании","Ответы на вопросы","Новости","База знаний","Документы","Вакансии","Контакты") 
+ 
 		
 //- /menu
 

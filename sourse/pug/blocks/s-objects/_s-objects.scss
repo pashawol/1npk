@@ -42,6 +42,12 @@
 			display: block;
 			@include block(458,258);
 			// height: rem(428);
+			img{
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
 			@include media-breakpoint-between(xl, xl){
 				
 				// height: rem(380);
@@ -56,13 +62,17 @@
 			&::before{
 				opacity: 0.4;
 			}
+			@include media-breakpoint-up(md) {
+			
+			&:hover{
+				 
+				transform:  scale(1.04); 
+			}
+		}
 			@include media-breakpoint-up(sm) {
 				@include mt;
 				&:hover{
-					@include media-breakpoint-up(sm) {
-
-						transform:  scale(1.04);
-					}
+				 
 					box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
 					&::before{
 						
@@ -121,6 +131,11 @@
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {
+		.swiper-slide{
+			margin-right: 0 !important;
+		}
+	}
+	@include media-breakpoint-up(md) {
 		.swiper-container {
 			overflow: inherit;
 		}

@@ -1,3 +1,5 @@
+"use strict";
+
 jQuery(document).ready(function ($) {
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>'); // whenever we hover over a menu item that has a submenu
 
@@ -8,7 +10,7 @@ jQuery(document).ready(function ($) {
 		var menuItemPos = $menuItem.position();
 		var menuItemHeight = $menuItem.height();
 		var submenuWrapperHeight = $submenuWrapper.height();
-		let windowHeight = $(window).height(); // place the submenu in the correct position relevant to the menu item
+		var windowHeight = $(window).height(); // place the submenu in the correct position relevant to the menu item
 
 		$submenuWrapper.css({
 			left: $menuItem.width()
@@ -31,6 +33,10 @@ jQuery(document).ready(function ($) {
 	});
 
 	if (window.matchMedia("(min-width: 1200px)").matches) {
+		var getFirst = function getFirst() {
+			menuItems.removeClass("active").parent().first().find('a').addClass("active");
+		};
+
 		$(".top-nav").stick_in_parent({
 			// offset_top: $(".top-nav").height() + 30,
 			inner_scrolling: true,
@@ -57,28 +63,47 @@ jQuery(document).ready(function ($) {
 
 		menuItems.click(function (e) {
 			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+					offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
 			$('html, body').stop().animate({
 				scrollTop: offsetTop
 			}, 1100);
 			e.preventDefault();
-		}); // Bind to scroll
+			lastId = $(this).parent();
+		});
+		getFirst(); // Bind to scroll
 
 		$(window).scroll(function () {
 			// Get container scroll position
-			var fromTop = $(this).scrollTop() + topMenuHeight; // Get id of current scroll item
+			var fromTop = window.matchMedia("(min-width: 1200px)").matches ? $(this).scrollTop() + topMenuHeight : $(this).scrollTop() + topMenuHeight + 67; // Get id of current scroll item
 
 			var cur = scrollItems.map(function () {
 				if ($(this).offset().top < fromTop) return this;
 			}); // Get the id of the current element
 
 			cur = cur[cur.length - 1];
-			var id = cur && cur.length ? cur[0].id : "";
+			var id = cur && cur.length ? cur[0].id : ""; // if()
+			// console.log(cur)
 
-			if (lastId !== id) {
+			var menuItemPos = $(".top-nav").position();
+			var body = $('body').height();
+			var win = $(this).height();
+			var firstLi = menuItems.first(); // console.log($(this).scrollTop());
+			// console.log(body );
+			// console.log( win);
+			// console.log(body - win);
+
+			if (body - win <= fromTop) {
 				lastId = id; // Set/remove active class
 
-				menuItems.removeClass("active").parent().end().filter("[href='#" + id + "']").addClass("active");
+				menuItems.removeClass("active").parent().last().find('a').addClass("active");
+			} else if (fromTop < win) {
+				getFirst();
+			} else {
+				if (lastId !== id) {
+					lastId = id; // Set/remove active class
+
+					menuItems.removeClass("active").parent().end().filter("[href='#" + id + "']").addClass("active");
+				}
 			}
 		});
 	}
@@ -96,23 +121,23 @@ jQuery(document).ready(function ($) {
 	// 	});
 	// }, 100)
 
-	isMobile = {
-		Android: function () {
+	var isMobile = {
+		Android: function Android() {
 			return navigator.userAgent.match(/Android/i);
 		},
-		BlackBerry: function () {
+		BlackBerry: function BlackBerry() {
 			return navigator.userAgent.match(/BlackBerry/i);
 		},
-		iOS: function () {
+		iOS: function iOS() {
 			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
 		},
-		Opera: function () {
+		Opera: function Opera() {
 			return navigator.userAgent.match(/Opera Mini/i);
 		},
-		Windows: function () {
+		Windows: function Windows() {
 			return navigator.userAgent.match(/IEMobile/i);
 		},
-		any: function () {
+		any: function any() {
 			return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
 		}
 	};
@@ -140,16 +165,49 @@ jQuery(document).ready(function ($) {
 	});
 	$(".site-nav__item--has-child > a").each(function () {
 		var title = $(this).text();
+		var href = $(this).attr("href");
 		var toggleBlock = $(this).next().find("ul");
-		toggleBlock.prepend('<li class="hide-parent-js d-sm-none">' + title + '</li>');
+		toggleBlock.prepend("<li class=\"hide-parent-js d-sm-none\"> ".concat(title, " </li>\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"").concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
 		$(this).click(function (e) {
 			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
 
-			$(this).next().toggleClass("active"); // $(".top-submenu--js").slideUp(0);
+			$(".top-line").toggleClass("invisible");
+			$(this).next().toggleClass("active"); // setTimeout(() => {
+			// },500);
+			// $(".top-submenu--js").slideUp(0);
 		});
 	});
 	$(".hide-parent-js").click(function () {
 		$(this).parents(".sub-menu-wrap").removeClass('active');
+		$(".top-line").removeClass("invisible");
+	}); // анимация кнопок
+
+	$(".btn-primary, .btn-js").each(function () {
+		var B = $(this);
+		var A, C, z, D;
+		setInterval(function () {
+			if (B.find(".animate-js").length === 0) {
+				B.prepend("<span class='animate-js'></span>");
+			}
+
+			A = B.find(".animate-js");
+			A.removeClass("btn_animate");
+
+			if (!A.height() && !A.width()) {
+				C = Math.max(B.outerWidth(), B.outerHeight());
+				A.css({
+					height: C,
+					width: C
+				});
+			}
+
+			z = Math.round(Math.random() * A.width() - A.width() / 2);
+			D = Math.round(Math.random() * A.height() - A.height() / 2);
+			A.css({
+				top: D + "px",
+				left: z + "px"
+			}).addClass("btn_animate");
+		}, 3000);
 	});
 });

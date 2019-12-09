@@ -11,7 +11,17 @@ include ../../blocks/top-line/_top-line.pug
 include ../../blocks/top-nav/_top-nav.pug 
 include ../../blocks/header-block/_header-block.pug
 include ../../blocks/s-form/_s-form.pug
-
+include ../../blocks/aside/_aside.pug
+include ../../blocks/footer-white/_footer-white.pug
+include ../../blocks/s-geo/_s-geo.pug
+include ../../blocks/s-now/_s-now.pug
+include ../../blocks/s-team/_s-team.pug
+include ../../blocks/s-client/_s-client.pug
+include ../../blocks/s-objects/_s-objects.pug
+include ../../blocks/s-rent/_s-rent.pug
+include ../../blocks/s-video/_s-video.pug
+include ../../blocks/s-departure/_s-departure.pug
+include ../../blocks/s-advantages/_s-advantages.pug
 doctype html
 html(lang="ru")
 	head
@@ -44,6 +54,7 @@ html(lang="ru")
 	body(class= mainPage)
 		+ie11()
 		.main-wrapper
+			+aside
 			block pagecontent
 				h3 content
 		+modal()
