@@ -375,8 +375,8 @@ jQuery(document).ready(function ($) {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
 	JSCCommon.CustomInputFile();
-	JSCCommon.customRange();
-	JSCCommon.stickyFunc();
+	JSCCommon.customRange(); // JSCCommon.stickyFunc();
+
 	$(window).resize(function () {
 		JSCCommon.stickyFunc();
 	});

@@ -14,15 +14,13 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $h6-font-size * .98, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @extend .link-animate;
   @include hover {
     color: $body-color;
     text-decoration: none;
   }
-  @include media-breakpoint-down(sm) {
-    font-size: rem(16);
-  }
+ 
   &:focus,
   &.focus {
     outline: 0;

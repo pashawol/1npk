@@ -1,7 +1,7 @@
 "use strict";
 
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>'); // whenever we hover over a menu item that has a submenu
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/02.jpg);"></div>'); // whenever we hover over a menu item that has a submenu
 
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
@@ -167,7 +167,7 @@ jQuery(document).ready(function ($) {
 		var title = $(this).text();
 		var href = $(this).attr("href");
 		var toggleBlock = $(this).next().find("ul");
-		toggleBlock.prepend("<li class=\"hide-parent-js d-sm-none\"> ".concat(title, " </li>\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"").concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
+		toggleBlock.prepend("<li class=\"hide-parent-js d-sm-none\"> ".concat(title, " </li>\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item d-sm-none\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"").concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
 		$(this).click(function (e) {
 			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
@@ -209,5 +209,15 @@ jQuery(document).ready(function ($) {
 				left: z + "px"
 			}).addClass("btn_animate");
 		}, 3000);
+	}); // $(".sticky-block-js").stick_in_parent({
+	// 	// offset_top: $(".top-nav").height(), 
+	// 	parent: '.s-advantages__sticky-wrap',
+	// 	// // recalc_every: 1,
+	// 	 recalc_every: true,
+	// });
+
+	$('.sticky-block-js').hcSticky({
+		top: $(".top-nav").height(),
+		stickTo: '.s-advantages__sticky-wrap'
 	});
 });

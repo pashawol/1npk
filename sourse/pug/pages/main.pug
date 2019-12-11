@@ -30,6 +30,16 @@ block pagecontent
 			//- (class="top-nav--js")
 		
 		+top-nav()
+			-
+				let nav= {
+					"поставляемая продукция":"#s-prod",
+					"Аренда спецтехники":"#s-rent",
+					"Видео с наших площадок":"#s-video",
+					"О компании":"#s-now",
+					"выполненные проекты":"#s-objects",
+					"рассчитать стоимость":"#s-departure",
+					}
+			+mnu2(nav)
 	+s-prod()(class="under-top-nav")
 		+b.section-title.text-center
 			h2 Поставляемая продукция

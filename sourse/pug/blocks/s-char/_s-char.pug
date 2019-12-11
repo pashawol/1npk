@@ -1,6 +1,6 @@
-mixin char-whitout-item(t, i)
+mixin char-whitout-item(t, i, sub)
 	+s-char-body()
-		+b.section-title.text-center
+		+b.section-title
 			h2= t 
 		.row
 			.col-lg-12.col.order-lg-first.order-last
@@ -11,33 +11,39 @@ mixin char-whitout-item(t, i)
 					img.res-i.lazy(src="#" data-src=`img/${i}.jpg`, alt="")
 mixin s-char-body()
 	// start s-char
-	+b.s-char.section#s-char.lazy-background(class="section-border-bottom d-none d-md-block")&attributes(attributes)
+	+b.s-char.section#s-char.lazy-background(class="section-border-bottom ")&attributes(attributes)
 		.container
 			block
-			+e.btn.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+			//- +e.btn.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
 	// end s-char
 mixin s-char()
 	+s-char-body()
-		+b.section-title.text-center
-			h2 Характеристики щебня 
+		block
 		.row
-			.col-lg-12.col.order-lg-first.order-last
-				ul
-					li ГОСТ 8267-93
-					li Средняя плотность щебня от&nbsp;1,32 до&nbsp;1,38&nbsp;т/м3
-					li Морозостойкость 
-						br
-						| до&nbsp;300 циклов
-					li Прочность M400, M600, М800, М1000, М1200, М1400
-					li Радиоактивность щебня в&nbsp;пределах нормы
-					li Лещадность 1-3 
-						br
-						| группы
-					li Плотная горная порода
-			.col-lg-12.col-md-8
-				+e.img-wrap
-					img.res-i.lazy(src="#" data-src='img/char-img.jpg', alt="")
-
+			mixin item(t,p,f)
+					if !f
+						.col-xll-3.col-lg-4.col-sm-6
+							+e.title--bd= t
+							+e.caption--head= p
+					else
+						+e.slide.swiper-slide
+							+e.item
+								+e.title--foot= t
+								+e.caption--foot= p
+			+item("Средняя плотность",'от 1,32 до 1,38 т/м3')
+			+item("Морозостойкость",'до 300 циклов')
+			+item("Прочнсть",'M400, M600, М800, М1000, М1200, М1400')
+			+item("Радиоактивность",'в пределах нормы')
+			+item("Лещадность",'1-3 группы')
+			+item("Порода",'плотная горная')
+			+item("ГОСТ",'8267-93') 
+		+e.slider.swiper-container.slider--js
+			.swiper-wrapper
+				+item('Качественная продукция','Поставляемый щебень высокой прочности имеет паспорта качества.','f')
+				+item('Быстрая доставка','Быстрая доставка щебня до любого объекта, точно в срок.','f')
+				+item('Бесплатные образцы','В течении недели бесплатно доставим образцы щебня.','f')
+				+item('Отгрузка в первый день','Начинаем отгрузку материала в день обращения.','f')
+			.swiper-pagination
 mixin s-char-02-6
 	+s-char-body()
 		+b.section-title.text-center

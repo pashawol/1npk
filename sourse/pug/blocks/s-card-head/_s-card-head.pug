@@ -1,74 +1,129 @@
 mixin card-form()
 	block
 	form
-		+e.row-wrap
-			.row.row--sm
-				.col
-					+input('tel','+7 (___)___-__-__')(class="form-control-lg text-left")
-				.col-auto
-					+e.btn(type="submit") Оставить заявку
+		.row
+			.col-lg-12.col-md-6
+				+input('tel','+7 (___)___-__-__')
+			.col-lg-12.col-md-6
+				+e.btn.btn-primary.btn-block(type="submit") Оформить заявку
 		+polite
 
 
 mixin card-head-radio( ...items)
+	
 	+e.row.row.row--sm
 		each t in items
 			.col-auto
 				+b.prod-btn(href="#")&attributes(attributes)= t
+mixin card-head-radio2(t, num,  ...items)
+	+b.group-title= t
+	+e.row.row.row--sm.row-btns 
+		-for (var i = 0; i < items.length; i++)
+			.col-auto
+				+b.prod-btn(href="#" class=(i== (num - 1)  ? 'active': null))&attributes(attributes)= items[i]
+mixin card-head-radio3(t, num,  ...items)
+	+b.group-title= t
+	+e.row.row.row--sm.row-btns 
+		-for (var i = 0; i < items.length; i++)
+			label.col-auto
+				if i== (num - 1)
+					+b.INPUT.prod-btn-input(type="radio" name=`radio-${num}` checked)
+				else
+					+b.INPUT.prod-btn-input(type="radio" name=`radio-${num}` )
+				+b.SPAN.prod-btn--radio()&attributes(attributes)= items[i]
+					+e.SPAN.lab
 
 mixin s-card-head(t, t2,  p, ...items)
 	// start s-card-head
 	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
-		.container 
-			.row
-				.col-xl-5.col-md-6 
-					+e.slider-wrap
-						+e.label
-							+e.icon-wrap
-								+icon('wallet')
-								| Отсрочка платежа
-						+e.slider--js.swiper-container
-							.swiper-wrapper
-								each item in items
-									+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
-										.easyzoom( ) 
-											+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
-												img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
-							+arrow()
-						.prod-pagination
-				.col-xl-7.col-md-6.order-md-first
-					.text-md-left.text-center
-						+e.H1.title= t 
-							| 
-							span.text-primary.d-block= t2 
-						+e.presense.h55.d-none.d-md-block
-							span.text-body 20 000 тонн  
-							| 
-							| продукции в наличии
-						+b.prod-btn--active.--lg()= p
+		.container
 
-						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
+			+e.H1.title.text-lg-left.text-center= t 
+			+e.head-row.row.align-items-center.text-lg-left.text-center
+				+e.sub-title.col-lg-auto.text-primary.d-block= t2 
+				.col-auto
+					+e.label--bg
+						strong 20 000 тонн 
+						| 
+						|  в наличии
+				
+				.col-auto
+					+e.label--border Цена с карьера
+				.col-auto
+					+e.label
+						+e.icon-wrap
+							+icon('wallet')
+							| Отсрочка платежа
+			+e.body
+				.row
+					+e.col-left.col-lg-auto.col-md-6 
+						+e.slider-wrap.d-md-none
+							+e.slider--js.swiper-container
+								.swiper-wrapper
+									each item in items
+										+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
+											.easyzoom( ) 
+												+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
+													img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
+								+arrow()
+							.prod-pagination
+						+e.col-left-inner.d-none.d-md-block
+							+e.main-img-wrap
+								img.res-i.lazy(src="#" data-src=`img/@2x/prod-1.jpg`, alt="")
+							+b.search-place(href="modal-search-place")
+								.row
+									.col
+										+e.text Указать место подачи материала
+									.col-auto
+										+e.btn
+											+icon("mark")
+					.col-md
+						if block 
+							block
+						else
+							+e.btns-wrap
+								+card-head-radio2("Марка",4,"М400","М600","М800","М1000","М1200","М1400","Гранитный","Жигулевский","Известняковый","Гравийный","Доломитовый")
+								+card-head-radio2("Фракция",1,"5-20","20-40","40-70","70-120")
+								+card-head-radio3("Объем поставки",1,"10-100 тн","100-1000 тн","более 1000 тн")
+					.col-lg-auto
+						+b.form-wrap
+							+card-form()
+								.text-center 
+									.h55
+										strong Оформить заявку
+										|
+									p Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер
+			//- .row
+			//- 	.col-xl-5.col-md-6 
+			//- 		+e.slider-wrap
+			//- 			+e.slider--js.swiper-container
+			//- 				.swiper-wrapper
+			//- 					each item in items
+			//- 						+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
+			//- 							.easyzoom( ) 
+			//- 								+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
+			//- 									img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
+			//- 				+arrow()
+			//- 			.prod-pagination
+			//- 	.col-xl-7.col-md-6.order-md-first
+			//- 		+b.prod-btn--active.--lg()= p
+
+			//- 		+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
 					
-					block
-					+b.form-wrap.d-none.d-lg-block
-						+card-form()
-							.h55 
-								strong Оставьте заявку
-								|
-								| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
-			+b.form-wrap.d-none.d-md-block.d-lg-none
-				+card-form()
-					.h55 
-						strong Оставьте заявку
-						|
-						| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
+				
+			//- +b.form-wrap.d-none.d-md-block.d-lg-none
+			//- 	+card-form()
+			//- 		.h55 
+			//- 			strong Оставьте заявку
+			//- 			|
+			//- 			| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
 	// end s-card-head
 
 mixin s-card-head-shipping(t,  p, item, ...items)
 	// start s-card-head
 	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
 		.container 
-			.row
+			+e.main-row.row
 				.col-xl-5.col-md-6 
 					+e.slider-wrap
 						block
@@ -84,10 +139,8 @@ mixin s-card-head-shipping(t,  p, item, ...items)
 						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
 					each text in items
 						.h6= text
-					+b.form-wrap.d-none.d-lg-block
+					+b.form-wrap
 						+card-form()
-			+b.form-wrap.d-none.d-md-block.d-lg-none
-				+card-form()
 	// end s-card-head
 
 mixin s-card-head-shipping-3( p, item, ...items)

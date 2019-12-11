@@ -1,5 +1,10 @@
 .header{
-	position: relative;
+  position: relative;
+  @include media-breakpoint-up(md) {
+  + .section{
+    padding-top: rem(140);
+  }
+  }
   // 
   @include media-breakpoint-up(xl) {
   }

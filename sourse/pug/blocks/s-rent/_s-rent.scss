@@ -1,6 +1,8 @@
 
 	// start .s-rent
 	.s-rent {
+		position: relative;
+		z-index: 2;
 		 &__col{
 			 @include media-breakpoint-up(xl) {
 
@@ -80,7 +82,7 @@
 		height: rem(90);
 		line-height: rem(90);
 		margin-bottom: rem(30);
-		width: rem(122);
+		width: rem(100);
 	  @include media-breakpoint-between(md, lg) {
 			width: 100%;
 			margin-left: auto;

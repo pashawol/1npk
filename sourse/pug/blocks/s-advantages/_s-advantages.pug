@@ -2,8 +2,32 @@ mixin s-advantages()
 	// start s-advantages
 	+b.SECTION.s-advantages.section#s-advantages&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-advantages
-				
 			.row
+				+e.sticky-wrap.sticky-col.col-5.d-none.d-lg-block
+					
+					.sticky-block-js
+						img.res-i.lazy(src="#" data-src="img/@2x/advantages-img.png", alt="")
+				+e.col-text.col
+					+b.section-title
+						h2 10 весомых преимуществ 
+							|
+							span.text-primary сотрудничества с нами
+					.d-sm-none
+						img.res-i.lazy(src="#" data-src="img/@1x/advantages-img.png", alt="")
+					ol
+						mixin li(t,p)
+							li
+								strong= t
+								block
+						+li("Контроль веса")
+							| Каждый автомобиль едет через весы с&nbsp;сопровождающими документами, а&nbsp;также&nbsp;Вы всегда можете присутствовать на&nbsp;погрузке.
+						+li("Полный пакет документов")
+							| После отгрузки наша бухгалтерия формирует закрывающие документы. Клиент получает на&nbsp;электронный адрес скан закрывающих документов. При срочности оригинал документа привезет наш менеджер к&nbsp;вам в&nbsp;офис. Если срочности нет&nbsp;&mdash; в&nbsp;течении 2-ух недель придут к&nbsp;вам на&nbsp;почтовый адрес.
+						+li("Всегда на связи")
+							| Наши менеджеры на&nbsp;связи 7&nbsp;дней в&nbsp;неделю, вы&nbsp;всегда можете узнать где находится груз и&nbsp;задать любые вопросы.
+						+li("Фото с погрузки")
+							| Отправляем фотографии процесса погрузки на WhatsApp, Viber.
+						+li("Фото с погрузки")
+							| Отправляем фотографии процесса погрузки на WhatsApp, Viber.
+
 	// end s-advantages

@@ -32,9 +32,21 @@ block title
 
 block pagecontent
 	+header() 
-		+breadcrumb2('главная','продукция', title)
-		+s-card-head('Щебень по оптовым ценам от 460 руб/тн в т.ч. с НДС','по оптовым ценам', 'от 450 руб/тн с НДС', 1,2,3,4)
 		+top-line()
+		+breadcrumb2('главная','продукция', title)
+		+s-card-head('Щебень по оптовым ценам от 460 руб/тн в т.ч. с НДС','М1000 фракции 5-20', 'от 450 руб/тн с НДС', 1,2,3,4)
+		+top-nav()
+			-
+				let nav= {
+					"характеристики":"#",
+					"о компании":"#",
+					"Видео с наших площадок":"#",
+					"доставка":"#",
+					"наша техника":"#",
+					"реализованные проекты":"#",
+					"рассчитать стоимость":"#", 
+					}
+			+mnu2(nav)
 	//- +card-head-radio('5-20', '20-20', '40-70', '70-120')
 
 	//- +card-head-radio('M400', 'M600', 'M800', 'M1000', 'M1200', 'M1400')
@@ -42,19 +54,31 @@ block pagecontent
 	//- +card-head-radio('Гранитный', 'Известняковый', 'Доломитовый', 'Жигулевский')
 
 
-	+s-char(class="section-border-bottom d-none d-md-block")
+	+s-char
+		+b.section-title.text-lg-left.text-center
+			h2 Характеристики щебня 
+				| 
+				span.text-primary М1000 фракции 5-20
 
 	+s-now()(class="bg-wrap text-md-white bg-light")
 		+pic("s-now-bg","bg")(class="picture-bg d-none d-md-block")
+		.container
+			+b.section-title.text-center
+				h2 Наша компания сегодня
+				+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
 	+s-video
 		+b.section-title.text-center
 			h2 Видео с&nbsp;наших площадок 
 			+e.text Первая нерудная компания ведет видео-отчет каждой отгрузки
 	+s-shipping
+		+b.section-title
+			h2 Доставка автотранспортом 
+				|
+				span.text-primary от 10 тонн
 	+s-advantages 
 	+s-rent
 		+b.section-title.text-center
-			h2 Аренда спецтехники
+			h2 Наша спецтехника
 			+e.text Ежедневно на&nbsp;линии более 15&nbsp;единиц техники
 	+s-objects
 		+b.section-title.text-center

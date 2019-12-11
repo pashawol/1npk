@@ -1,1 +1,15 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M20,7H5.6C4.4,7,4,6.4,4,6l16-1.5V3c0-0.6-0.6-1.1-1.2-1L3.7,4.7c-1,0.2-1.7,1-1.7,2V20c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2  V9C22,7.9,21.1,7,20,7z M18.5,16c-0.8,0-1.5-0.7-1.5-1.5c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5C20,15.3,19.3,16,18.5,16z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#293C7D;}
+	.st1{fill:#4899D2;}
+</style>
+<path class="st0" d="M492,133.1H78.2c-21.1,0-38.2-17.1-38.2-38.2s17.1-38.2,38.2-38.2H492c11,0,20-8.9,20-20s-8.9-20-20-20l0,0
+	H78.2C35,16.6,0,51.7,0,94.9l0,0v299.5c0.1,55.8,45.2,100.9,101,101h310c55.8-0.1,100.9-45.2,101-101V153
+	C512,142,503.1,133.1,492,133.1z M411,455.4H101.2C67.4,455.4,40,428,40,394.2V162.9c11.7,6.6,24.8,10,38.2,10h393.8v221.8
+	C471.8,428.4,444.5,455.4,411,455.4z"/>
+<path class="st1" d="M375.7,359.1c-11,0-20-8.9-20-20v-53.9c0-11,8.9-20,19.9-20s20,8.9,20,19.9c0,0,0,0,0,0v54.1
+	C395.6,350.2,386.7,359.1,375.7,359.1z"/>
+</svg>

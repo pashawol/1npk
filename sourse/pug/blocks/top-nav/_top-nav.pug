@@ -13,18 +13,10 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.d-none.d-md-block&attributes(attributes)
 		+e.container.container
-			-
-				let nav= {
-					"поставляемая продукция":"#s-prod",
-					"Аренда спецтехники":"#s-rent",
-					"Видео с наших площадок":"#s-video",
-					"О компании":"#s-now",
-					"выполненные проекты":"#s-objects",
-					"рассчитать стоимость":"#s-departure",
-					}
 			.row 
 				.col
-					+mnu2(nav)
+					block
+					
 
 				+e.col.col-auto.d-none.d-xl-block
 					+e.link--tel(href="tel:8(800)100-73-75") 

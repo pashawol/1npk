@@ -465,7 +465,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.customRange();
 
 
-	JSCCommon.stickyFunc();
+	// JSCCommon.stickyFunc();
 
 	$(window).resize(function () {
 

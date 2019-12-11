@@ -38,7 +38,7 @@
 	top: 0;
 	top: 100%;
 	z-index: 100; 
-	background-color: #3b3836;
+	background-color: #413e3c;
 	position: relative;
 	// @include media-breakpoint-up(md) {
 		
@@ -321,7 +321,7 @@
 			text-transform: uppercase;
 			@include media-breakpoint-up(xxxl){
 
-				padding: rem(24) 0  rem(20);
+				padding: rem(24) 0  rem(24);
 			}
 			padding: rem(26) 0  rem(19);
 			// padding: rem(20) 0 ;

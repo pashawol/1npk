@@ -963,7 +963,13 @@ picture{
 
  
 .panel{
-	padding: rem(30);
+	@include media-breakpoint-up(xll) {
+
+		// padding: rem(30);
+		padding-left: rem(30);
+		padding-right: rem(30);
+	}
+	padding: rem(25) rem(15);
 	border: 1px solid #eeeeee;
 	background-color: #ffffff;
 }
