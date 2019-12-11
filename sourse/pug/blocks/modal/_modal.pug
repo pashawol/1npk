@@ -1,36 +1,6 @@
 
 mixin modal() 
- 
-	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
-		
-	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
-				
-	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
-	//- 			+b.wrap-polite
-	//- 				+b.custom-input.polite
-	//- 					+b.LABEL.custom-input.polite
-	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
-	//- 						+e.SPAN.lab
-	//- 						| Даю 
-	//- 						| 
-	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
-
-	//- 						| на хранение и обработку   персональных данных
-	
- 
-
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
+  
 	div(id="modal-nav" class="  mfp-hide modal-win modal-form " )
 		+b.nav-block
 			.container
@@ -178,5 +148,22 @@ mixin modal()
 				+e.text Персональный менеджер свяжется с Вами в течение 15 минут
 				+e.btn.btn-close-js(type="button") Закрыть 
 	// /#modal-thank
+
+
+	+b.modal-win-place(id="modal-search-place" class="  mfp-hide modal-win modal-form " )
+		+form-wrap
+			+e.map-wrap
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A85a146c8e6a2ac7955ce97953ec90397b21c350fb3063910efe3dcd76227180c&amp;width=500&amp;height=517&amp;lang=ru_RU&amp;scroll=false"></script>
+			.row
+				.col
+					+input('text','Введите адрес' )(class="input-focus" value="Россия, Самара, Ташкентская улица")
+						+b.input-dropdown-wrap.d-block
+							+b.input-dropdown.d-block
+								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
+								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
+								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+				.col-auto
+					+e.btn.btn-add-addr-js(type="button")
 
 	// modal

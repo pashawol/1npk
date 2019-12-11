@@ -5,6 +5,7 @@ mixin form-head()
 mixin input(t , pl)
 	+e.input-wrap.form-group
 		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+		block
 	// +e.input-wrap
 mixin sel(t )
 	+e.input-wrap.form-group

@@ -220,4 +220,9 @@ jQuery(document).ready(function ($) {
 		top: $(".top-nav").height(),
 		stickTo: '.s-advantages__sticky-wrap'
 	});
+	$(".btn-add-addr-js").click(function () {
+		var text = $(this).parents(".form-wrap").find(".form-wrap__input").val();
+		$(".search-place__text").text(text);
+		$.magnificPopup.close();
+	});
 });

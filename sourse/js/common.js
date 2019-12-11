@@ -118,17 +118,27 @@ var JSCCommon = {
 
 
 	magnificPopupCall: function () {
-		$('.popup-with-move-anim').magnificPopup({
+		let  modalDefault = {
+
 			type: 'inline',
 			fixedContentPos: true,
 			fixedBgPos: true,
 			overflowY: 'auto',
-			closeBtnInside: true,
 			preloader: false,
 			removalDelay: 300,
 			tClose: 'Закрыть (Esc)',
 			mainClass: 'show-modal',
+		}
+		$('.popup-with-move-anim').magnificPopup({
+			...modalDefault,
+			closeBtnInside: true,
 		});
+		
+		$('.popup-place-js').magnificPopup({
+			...modalDefault,
+			closeBtnInside: false,
+		});
+
 
 		$('.modal-map-btn').click(function (e) {
 			e.preventDefault();
