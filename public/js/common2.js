@@ -30,90 +30,72 @@ jQuery(document).ready(function ($) {
 				top: menuItemPos.top
 			});
 		}
+	}); // Cache selectors
+
+	var lastId,
+			topMenu = $(" .top-nav"),
+			// topMenuHeight = 20,
+	topMenuHeight = topMenu.outerHeight() - 1,
+			// All list items
+	menuItems = topMenu.find("a"),
+			// Anchors corresponding to menu items
+	scrollItems = menuItems.map(function () {
+		var item = $($(this).attr("href"));
+
+		if (item.length) {
+			return item;
+		}
+	}); // Bind click handler to menu items
+	// so we can get a fancy scroll animation
+
+	menuItems.click(function (e) {
+		var href = $(this).attr("href"),
+				offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight;
+		$('html, body').stop().animate({
+			scrollTop: offsetTop
+		}, 1100);
+		e.preventDefault();
+		lastId = $(this).parent();
 	});
 
-	if (window.matchMedia("(min-width: 1200px)").matches) {
-		var getFirst = function getFirst() {
-			menuItems.removeClass("active").parent().first().find('a').addClass("active");
-		};
+	function getFirst() {
+		menuItems.removeClass("active").parent().first().find('a').addClass("active");
+	} // getFirst();
+	// Bind to scroll
 
-		$(".top-nav").stick_in_parent({
-			// offset_top: $(".top-nav").height() + 30,
-			inner_scrolling: true,
-			parent: 'body' // // recalc_every: 1,
-			//  recalc_every: true,
 
-		}); // Cache selectors
+	$(window).scroll(function () {
+		// Get container scroll position
+		var fromTop = window.matchMedia("(min-width: 992px)").matches ? $(this).scrollTop() + topMenuHeight : $(this).scrollTop() + topMenuHeight + 67; // Get id of current scroll item
 
-		var lastId,
-				topMenu = $(" .top-nav ul"),
-				topMenuHeight = 20,
-				// topMenuHeight = topMenu.outerHeight()+15,
-		// All list items
-		menuItems = topMenu.find("a"),
-				// Anchors corresponding to menu items
-		scrollItems = menuItems.map(function () {
-			var item = $($(this).attr("href"));
+		var cur = scrollItems.map(function () {
+			if ($(this).offset().top < fromTop + topMenuHeight) return this;
+		}); // Get the id of the current element
 
-			if (item.length) {
-				return item;
-			}
-		}); // Bind click handler to menu items
-		// so we can get a fancy scroll animation
+		cur = cur[cur.length - 1];
+		var id = cur && cur.length ? cur[0].id : ""; // if()
+		// console.log(cur)
 
-		menuItems.click(function (e) {
-			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
-			$('html, body').stop().animate({
-				scrollTop: offsetTop
-			}, 1100);
-			e.preventDefault();
-			lastId = $(this).parent();
-		});
-		getFirst(); // Bind to scroll
+		var menuItemPos = $(".top-nav").position();
+		var body = $('body').height();
+		var win = $(this).height();
+		var firstLi = menuItems.first();
 
-		$(window).scroll(function () {
-			// Get container scroll position
-			var fromTop = window.matchMedia("(min-width: 1200px)").matches ? $(this).scrollTop() + topMenuHeight : $(this).scrollTop() + topMenuHeight + 67; // Get id of current scroll item
+		if (body - win + topMenuHeight <= fromTop) {
+			lastId = id; // Set/remove active class
 
-			var cur = scrollItems.map(function () {
-				if ($(this).offset().top < fromTop) return this;
-			}); // Get the id of the current element
-
-			cur = cur[cur.length - 1];
-			var id = cur && cur.length ? cur[0].id : ""; // if()
-			// console.log(cur)
-
-			var menuItemPos = $(".top-nav").position();
-			var body = $('body').height();
-			var win = $(this).height();
-			var firstLi = menuItems.first(); // console.log($(this).scrollTop());
-			// console.log(body );
-			// console.log( win);
-			// console.log(body - win);
-
-			if (body - win <= fromTop) {
+			menuItems.removeClass("active");
+			$(".top-menu__item:last-child").find('a').addClass("active");
+		} else if (fromTop + topMenuHeight < win) {
+			getFirst();
+		} else {
+			if (lastId !== id) {
 				lastId = id; // Set/remove active class
 
-				menuItems.removeClass("active").parent().last().find('a').addClass("active");
-			} else if (fromTop < win) {
-				getFirst();
-			} else {
-				if (lastId !== id) {
-					lastId = id; // Set/remove active class
-
-					menuItems.removeClass("active").parent().end().filter("[href='#" + id + "']").addClass("active");
-				}
+				menuItems.removeClass("active").parent().end().filter("[href='#" + id + "']").addClass("active");
 			}
-		});
-	}
-
-	; // $(' .select-js').select2({
-	// 	// language: "ru", 
-	// 	tags: true,
-	// 	tokenSeparators: [',', ' ']
-	// });
-
+		}
+	});
 	$('.select-js').selectize(); // setTimeout(function() {
 	// 	$(' .select-js').styler({
 	// 		selectVisibleOptions: 10,
@@ -172,7 +154,7 @@ jQuery(document).ready(function ($) {
 			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
 
-			$(".top-line").toggleClass("invisible");
+			$(".top-line__inner").toggleClass("invisible");
 			$(this).next().toggleClass("active"); // setTimeout(() => {
 			// },500);
 			// $(".top-submenu--js").slideUp(0);
@@ -180,7 +162,7 @@ jQuery(document).ready(function ($) {
 	});
 	$(".hide-parent-js").click(function () {
 		$(this).parents(".sub-menu-wrap").removeClass('active');
-		$(".top-line").removeClass("invisible");
+		$(".top-line__inner").removeClass("invisible");
 	}); // анимация кнопок
 
 	$(".btn-primary, .btn-js").each(function () {
@@ -216,13 +198,79 @@ jQuery(document).ready(function ($) {
 	// 	 recalc_every: true,
 	// });
 
+	$(".top-nav").hcSticky({
+		// top: -$(".top-nav").height(), 
+		stickTo: 'body' // // recalc_every: 1,
+		//  recalc_every: true,
+
+	});
 	$('.sticky-block-js').hcSticky({
-		top: $(".top-nav").height(),
+		top: $(".top-nav").height() + 60,
 		stickTo: '.s-advantages__sticky-wrap'
 	});
 	$(".btn-add-addr-js").click(function () {
 		var text = $(this).parents(".form-wrap").find(".form-wrap__input").val();
 		$(".search-place__text").text(text);
 		$.magnificPopup.close();
+	}); // quiz
+
+	var btnPrev = $(".modal-quiz__btn--back");
+	var btnNext = $(".modal-quiz__btn--next");
+	var step = $(".modal-quiz__step");
+	var active = $(".modal-quiz__step.active");
+	var lengthQuiz = $(".modal-quiz__step").length;
+
+	function addVal(active) {
+		var active = active.index();
+		var value = (active / lengthQuiz * 100).toFixed();
+		var label = $(".progress__value").attr("data-value", value + '%');
+		$(".progress__bar-current").css({
+			"width": value + '%'
+		});
+	}
+
+	function addNext() {
+		active.next().addClass("next");
+		active.prev().addClass("prev");
+	}
+
+	addNext();
+
+	function getNext() {
+		var active = $(".modal-quiz__step.active");
+
+		if (active.index() < lengthQuiz - 1) {
+			// console.log(lengthQuiz) 
+			addVal(active.next());
+			active.prev().removeClass('prev ').removeClass('next');
+			active.next().removeClass('prev ').removeClass('next');
+			active.removeClass("active").addClass("prev").next().addClass("active").next().addClass("next");
+
+			if (btnPrev.hasClass("disabled")) {
+				btnPrev.removeClass("disabled");
+			}
+		}
+	}
+
+	btnNext.click(function () {
+		getNext();
 	});
+	$(document).keypress(function (e) {
+		if (e.which == 13) {
+			getNext();
+		}
+	});
+	btnPrev.click(function () {
+		var active = $(".modal-quiz__step.active");
+
+		if (active.index() > 0) {
+			addVal(active.prev());
+			step.removeClass('prev');
+			active.prev().removeClass('prev ').removeClass('next');
+			active.next().removeClass('prev ').removeClass('next');
+			active.removeClass("active").addClass("next").prev().addClass("active").prev().addClass("prev");
+		} else {
+			$(this).addClass("disabled");
+		}
+	}); // /quiz
 });

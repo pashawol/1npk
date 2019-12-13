@@ -24,7 +24,7 @@ mixin s-rent()
 										each item in items
 											+e.item: +e.link.link-color(href='#')= item
 								+e.col.col-12
-									+e.btn.btn-primary(href="#") Заказать 
+									+e.btn.btn-primary.popup-with-move-anim(href="#modal-call-new" data-title="Заказать спецтехнику" data-btn="Заказать спецтехнику")  Заказать 
 					// /+e.col.col-4
 				+item("1",'Самосвалы КАМАЗ','от 800 руб/час','','','')
 					+e.item: +e.link.link-color(href='#') Кузов 10 м

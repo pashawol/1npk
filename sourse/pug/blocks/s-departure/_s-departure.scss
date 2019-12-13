@@ -2,13 +2,61 @@
 	// start .s-departure
 	.s-departure {
 		text-align: center;
-		@include media-breakpoint-down(xs) {
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(sm) {
+		&::before{
+			content: '';
+			z-index: -1;
+			background-color: #3b3836;
+			width: 100%;
+			height: 100%;
+			// z-index: -1;
+			position: absolute;
+	
+			opacity: 0.6;
+			top: 0;
+			left: 0;
+		}
+		}
+		@include media-breakpoint-up(sm) {
+		background-image: url(../img/@2x/s-departure-bg.jpg);
+	}
+		&__logo{
+			img{
+				max-width: 140px;
+				margin-bottom: 40px;
+			}
+		}
+	@include media-breakpoint-down(xs) {
 			padding-top: 0;
 			padding-bottom: 0;
 			&__head{
-				padding-top: rem(40);
-				padding-bottom: rem(20);
+				background-image: url(../img/@2x/s-departure-bg-sm.jpg);
+				padding-top: rem(60);
+				padding-bottom: rem(140);
 				position: relative;
+				z-index: 2;
+				@include bgs;
+				.section-title{
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+				&::before{
+					content: '';
+					z-index: -1;
+					background-color: #3b3836;
+					width: 100%;
+					height: 100%;
+					// z-index: -1;
+					position: absolute;
+					@include media-breakpoint-up(sm) {
+			
+					}
+					opacity: 0.6;
+					top: 0;
+					left: 0;
+				}
 				.container{
 					max-width: rem(470);
 				}
@@ -37,6 +85,10 @@
 			padding-bottom: rem(35);
 		}
 		 &__foot{
+			@include media-breakpoint-up(sm) {
+				background-color: transparent;
+			}
+			background-color: #ffffff;
 			 padding-top: rem(60);
 			 .row{
 				 justify-content: center;

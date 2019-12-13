@@ -8,11 +8,11 @@
 		}
 		text-align: center;
 		img{
-			margin-bottom: rem(20);
+			margin-bottom: rem(50);
 			@include media-breakpoint-up(sm){
-				max-width: 100%;
+				// max-width: 100%;
 			}
-			max-width: 95px;
+			// max-width: 95px;
 		}
 		.section-title{
 			@include media-breakpoint-up(xl) {
@@ -34,6 +34,11 @@
 			overflow: hidden;
 			.sticky-block-js{
 				padding-right: 20px;
+				min-height: rem(500);
+				@include media-breakpoint-up(xl) {
+					margin-top: 0;
+				}
+				margin-top: rem(80);
 				// position: absolute;
 				
 				// right: 35px;

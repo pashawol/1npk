@@ -11,7 +11,7 @@ mixin char-whitout-item(t, i, sub)
 					img.res-i.lazy(src="#" data-src=`img/${i}.jpg`, alt="")
 mixin s-char-body()
 	// start s-char
-	+b.s-char.section#s-char.lazy-background(class="section-border-bottom ")&attributes(attributes)
+	+b.s-char.section#s-char.lazy-background&attributes(attributes)
 		.container
 			block
 			//- +e.btn.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку

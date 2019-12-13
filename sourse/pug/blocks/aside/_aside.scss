@@ -263,10 +263,10 @@
 		&__head{
 			padding-top: rem(30);
 		}
-		margin-top: rem(90);
-		border-top: 1px solid  #413e3c;
+		padding-top: rem(90);
 		// border-top: 1px solid #000;
 		&__inner{
+			border-top: 1px solid  #413e3c;
 			padding-top: rem(30);
 			// pt
 			min-height: calc(100vh - #{rem(90)});
@@ -447,7 +447,7 @@
 			position: fixed;
 			left: 0 !important;
 			// top: 0 !important;
-			top: rem(-90) !important;
+			top: 0!important;
 			transform: translateX(-100%);
 			width: 100%;
 		 
@@ -506,10 +506,18 @@
 			}
 			border-bottom: 1px solid #4c4947;
 		}
-
+		&__img-wrap{
+			flex-shrink: 0;
+			text-align: center;
+			width: rem(40);
+			margin-right: rem(10);
+			text-align: center;
+		 
+		}
 		&__link {
 			display: block;
 			@include mt;
+			line-height: 1.2;
 			@include media-breakpoint-up(sm) {
 
 				color: #252525 !important;

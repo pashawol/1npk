@@ -145,8 +145,12 @@ var JSCCommon = {
 				mainClass: 'mfp-fade'
 			});
 		});
-		$('[href="#modal-call"], [href="#modal-profile"]').click(function () {
+		$('[href="#modal-call"], [href="#modal-profile"], [href="#modal-call-new"]').click(function () {
 			$($(this).attr('href')).find($(".form-wrap__title").text($(this).data('title')));
+
+			if ($(this).data("btn")) {
+				$($(this).attr('href')).find($(".form-wrap__btn").text($(this).data('btn')));
+			}
 		}); // / modal window
 		// modal галерея
 
@@ -515,6 +519,7 @@ jQuery(document).ready(function ($) {
 		var swiper6 = new Swiper($(this).find('.s-card-head__slider--js'), {
 			// slidesPerView: 5,
 			slidesPerView: 1,
+			spaceBetween: 10,
 			// centeredSlides: true,
 			loop: true,
 			loopFillGroupWithBlank: true,

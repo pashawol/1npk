@@ -72,7 +72,7 @@ mixin modal()
 	
 	+b.form(id="modal-city" class="  mfp-hide modal-win modal-form " )
 		+b.city
-			+e.title Выберите город
+			+e.title Выберите свой город
 			+e.UL.wrap
 				mixin li(a)
 					+e.LI.item: +e.link&attributes(attributes)(href="#")= a
@@ -140,30 +140,114 @@ mixin modal()
 
 	// #modal-city
 
-	+b.form-wrap(id="modal-thank" class="  mfp-hide modal-win modal-form " )
-		+e.block
-			.text-center
-				.h2.strong Спасибо за обращение!
-
-				+e.text Персональный менеджер свяжется с Вами в течение 15 минут
-				+e.btn.btn-close-js(type="button") Закрыть 
-	// /#modal-thank
 
 
+	mixin modal-map()
+		.modal-map-block
+			+e.map-wrap.d-none.d-md-block
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6cf7260e3ce038629899c6b246f874ba1d9787b2efe027673d7c435cb0b1b793&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+			+e.foot
+				.row
+					.col
+						// на инпут при фокусе class="input-focus"
+						+input('text','Введите адрес' )( value="Россия, Самара, Ташкентская улица")
+							+b.input-dropdown-wrap
+								+b.input-dropdown
+									+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
+									+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
+									+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+									+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+					.col-auto
+						+e.btn.btn-add-addr-js(type="button")
 	+b.modal-win-place(id="modal-search-place" class="  mfp-hide modal-win modal-form " )
 		+form-wrap
-			+e.map-wrap
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A85a146c8e6a2ac7955ce97953ec90397b21c350fb3063910efe3dcd76227180c&amp;width=500&amp;height=517&amp;lang=ru_RU&amp;scroll=false"></script>
-			.row
-				.col
-					+input('text','Введите адрес' )(class="input-focus" value="Россия, Самара, Ташкентская улица")
-						+b.input-dropdown-wrap.d-block
-							+b.input-dropdown.d-block
-								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
-								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
-								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
-								+e.item г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
-				.col-auto
-					+e.btn.btn-add-addr-js(type="button")
+			+modal-map()
+	+form-wrap()(id="modal-call-new" class="  mfp-hide modal-win modal-form-new  modal-win-new" )
+		+e.block-new
+			.text-center
+				+e.title
+
+				+e.text Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер 
+				+input('tel','Ваш телефон')(class='is-invalid') 
+				+e.btn(type="submit")
+				+polite
+	// /#modal-call-new
 
 	// modal
+	+b.modal-quiz(id="modal-quiz" class="  mfp-hide modal-win  " )
+		.form-wrap__block
+			+e.head
+				+b.progress
+					+e.bar
+						+e.bar-current(style="width: 0")
+							+e.value(data-value="0%")
+			+e.body 
+				mixin step(t, cl)
+					+e.step(class= cl)
+						+e.step-inner
+							.text-center
+								+e.title= t
+							+b.form-wrap&attributes(attributes)
+								block
+					// /+e.step  
+				+step('Укажите марку и фракцию ',"active")
+						+sel2("Выберите марку",'Марка')(class="  select-js")
+							option(value="")  Выберите марку
+							option(value=" Щебень")  Щебень
+							option(value=" Песок")  Песок
+							option(value=" ПГС ОПГС")  ПГС ОПГС
+							option(value=" Гравий")  Гравий
+							option(value=" Бутовый камень")  Бутовый камень
+							option(value=" Отсев щебня")  Отсев щебня
+							option(value=" Смеси щебня")  Смеси щебня
+							option(value=" Узкие фракции")  Узкие фракции
+							
+						+sel2("Выберите фракцию",'Фракция')(class=" select-js ")
+							option(value="")  Выберите фракцию
+							option(value=" Щебень")  Щебень
+							option(value=" Песок")  Песок
+							option(value=" ПГС ОПГС")  ПГС ОПГС
+							option(value=" Гравий")  Гравий
+							option(value=" Бутовый камень")  Бутовый камень
+							option(value=" Отсев щебня")  Отсев щебня
+							option(value=" Смеси щебня")  Смеси щебня
+							option(value=" Узкие фракции")  Узкие фракции
+				+step('Укажите объем поставки')
+					+in-rad("value")
+						+e.SPAN.text 10-100 тн
+					
+					+in-rad("value")
+						+e.SPAN.text 100-1000 тн
+					
+					+in-rad("value")
+						+e.SPAN.text более 1000 тн
+					
+					+input("text","Свое значение","Свое значение")(class="form-control-lg")
+				+step('Укажите место поставки')(class="form-wrap--map")
+					+modal-map()
+				+step('Как Вас зовут?') 
+					+input("tel","Имя и фамилия","Имя и фамилия")(class="form-control-lg")
+				+step('Контактные данные') 
+					+input("text","Телефон","Телефон")(class="form-control-lg" required)
+						.small.error-text Поле должно быть заполнено.
+			// /+e.step
+			+e.foot
+				+e.btn-wrap
+					+e.btn--back.btn-primary.disabled(type="button")
+						+icon("chevron-left")
+					
+					+e.btn--next.btn-primary(type="button") Продолжить
+				+e.foot-text или нажмите Enter
+	// /#modal-call-new
+
+	+b.form-wrap(id="modal-thank" class="  mfp-hide modal-win modal-win-new modal-form " )
+		+e.block-new
+			.text-center
+				+e.title.strong Спасибо за заказ
+
+				+e.text Ваш заказ принят в&nbsp;обработку. Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 5&nbsp;минут! 
+	// /#modal-thank
+	// modal
+
+
+	

@@ -121,7 +121,11 @@
 		@extend .btn-sm;
 		@extend .btn-primary;
 		position: absolute;
-		left: rem(30);
+		@include media-breakpoint-up(sm) {
+
+			left: rem(30);
+		}
+		left: rem(20);
 		bottom: rem(30);
 		font-size: 1rem;
 		@include media-breakpoint-between(md, lg) {

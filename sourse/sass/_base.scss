@@ -969,7 +969,7 @@ picture{
 		padding-left: rem(30);
 		padding-right: rem(30);
 	}
-	padding: rem(25) rem(15);
+	padding: rem(25) rem(25);
 	border: 1px solid #eeeeee;
 	background-color: #ffffff;
 }
@@ -1081,4 +1081,26 @@ a.link-color{
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
 .swiper-button-next:after, .swiper-button-prev:after{
 	display: none;
+}
+.block-add{
+	display: flex;
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+		padding: 0;
+		width: rem(58);
+		height: rem(58);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $body-color !important;
+	}
+	&__input{
+		@extend .form-control;
+		width: rem(58);
+		margin-left: rem(10);
+		margin-right: rem(10);
+		padding: 0;
+		text-align: center;
+	}
 }

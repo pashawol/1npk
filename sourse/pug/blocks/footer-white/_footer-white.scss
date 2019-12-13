@@ -3,7 +3,7 @@
 	.footer-white {
 		@include media-breakpoint-up(md) {
 
-			background-color: #ffffff;
+			// background-color: background-color: $light;
 		}
 		background-color: $light;
 		 padding-top: rem(25);

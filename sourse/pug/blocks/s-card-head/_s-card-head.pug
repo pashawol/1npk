@@ -93,30 +93,75 @@ mixin s-card-head(t, t2,  p, ...items)
 										strong Оформить заявку
 										|
 									p Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер
-			//- .row
-			//- 	.col-xl-5.col-md-6 
-			//- 		+e.slider-wrap
-			//- 			+e.slider--js.swiper-container
-			//- 				.swiper-wrapper
-			//- 					each item in items
-			//- 						+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
-			//- 							.easyzoom( ) 
-			//- 								+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
-			//- 									img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
-			//- 				+arrow()
-			//- 			.prod-pagination
-			//- 	.col-xl-7.col-md-6.order-md-first
-			//- 		+b.prod-btn--active.--lg()= p
 
-			//- 		+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
-					
+	// end s-card-head
+mixin s-card-head-19(t, t2,  p, ...items)
+	// start s-card-head
+	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
+		.container
+
+			+e.H1.title.text-lg-left.text-center= t 
+			+e.head-row.row.align-items-center.text-lg-left.text-center
+				+e.sub-title.col-lg-auto.text-primary.d-block= t2 
+				.col-auto
+					+e.label--bg
+						strong На линии
 				
-			//- +b.form-wrap.d-none.d-md-block.d-lg-none
-			//- 	+card-form()
-			//- 		.h55 
-			//- 			strong Оставьте заявку
-			//- 			|
-			//- 			| прямо сейчас, и&nbsp;получите материал на&nbsp;выгодных условиях:
+				.col-auto
+					+e.label--border Доступен для заказа
+				.col-auto
+					+e.label
+						+e.icon-wrap
+							+icon('wallet')
+							| Отсрочка платежа
+			+e.body
+				.row
+					+e.col-left.col-lg-auto.col-md-6 
+ 
+						+e.col-left-inner
+							+e.main-img-wrap
+								img.res-i.lazy(src="#" data-src=`img/@2x/cart-auto.jpg`, alt="")
+					.col-md: +e.col-center-inner
+						.d-none.d-md-block
+							+b.group-title Место подачи техники
+							+b.search-place.popup-place-js.mb-4(href="#modal-search-place")
+								.row
+									.col
+										+e.text Указать место подачи материала
+									.col-auto
+										+e.btn
+											+icon("mark")
+						.row
+							.col-6
+								+b.group-title Начало аренды
+								.row.row-small
+									.col-6
+										+input("text")
+									.col-6
+										+input("text")
+
+							.col-6
+								+b.group-title Конец аренды
+								.row.row-small
+									.col-6
+										+input("text")
+									.col-6
+										+input("text")
+						+b.group-title Количество
+						+b.block-add
+							+e.btn(type="button") -
+							+e.INPUT.input(type="text" value="1")
+							+e.btn(type="button") +
+
+					.col-lg-auto
+						+b.form-wrap
+							+card-form()
+								.text-center 
+									.h55
+										strong Оформить заявку
+										|
+									p Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер
+
 	// end s-card-head
 
 mixin s-card-head-shipping(t,  p, item, ...items)

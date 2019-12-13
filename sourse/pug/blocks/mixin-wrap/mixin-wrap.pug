@@ -92,8 +92,10 @@ mixin mnu()
 	mixin sub(...items)
 		.sub-menu-wrap: +b.UL.sub-menu
 			each item in items 
-				+e.LI.item( itemprop="item" )
-					+e.A.link(href="#"  itemprop="url")= item
+				+e.LI.item( itemprop="item" )&attributes(attributes)
+					+e.A.link(href="#"  itemprop="url")
+						block
+						= item
 	+b.UL.site-nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		+e.LI.item( itemprop="item" ): +e.A.link--lg.active(href="#"  itemprop="url")  Продукция
 		+e.LI.item--has-child( itemprop="item" )
@@ -119,8 +121,46 @@ mixin mnu()
 			+sub("3-10","5-10","5-15","10-15","20-70","40-70")
 
 		+li("Аренда спецтехники")(class="site-nav__link--lg")
-			+sub("Самосвал КАМАЗ кузов 10 м3","Самосвал КАМАЗ кузов 15 м3","Самосвал КАМАЗ кузов 30 м3","Фронтальный погрузчик Volvo","Фронтальный погрузчик Mitsuber","Экскаватор-погрузчик Caterpillar","Экскаватор-погрузчик JCB")
- 
+			.sub-menu-wrap: +b.UL.sub-menu 
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-1.png", alt="") 
+						| Самосвал КАМАЗ кузов&nbsp;10&nbsp;м3
+			
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-1.png", alt="") 
+						| Самосвал КАМАЗ кузов&nbsp;15&nbsp;м3
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-1.png", alt="") 
+						|  Самосвал КАМАЗ кузов&nbsp;30&nbsp;м3
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-2.png", alt="") 
+						| Фронтальный позгручик&nbsp;Volvo
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-2.png", alt="") 
+						| Фронтальный погрузчик&nbsp;Mitsuber
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-3.png", alt="") 
+						| Экскаватор-погрузчик&nbsp;Caterpillar
+				+e.LI.item( itemprop="item" )
+					+e.A.link(href="#"  itemprop="url")
+						+e.img-wrap
+							img.res-i(src="img/@2x/rent-3.png", alt="") 
+						| Экскаватор-погрузчик&nbsp;JCB
+
+			//- +sub("Самосвал КАМАЗ кузов 10 м3","Самосвал КАМАЗ кузов 15 м3","Самосвал КАМАЗ кузов 30 м3","Фронтальный погрузчик Volvo","Фронтальный погрузчик Mitsuber","Экскаватор-погрузчик Caterpillar","Экскаватор-погрузчик JCB")
+
 		+li("Услуги")(class="site-nav__link--lg")
 			+sub("Уборка и вывоз снега")
 		

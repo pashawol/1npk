@@ -3,7 +3,7 @@
 // }
 .top-nav { 
 	// position: absolute;
-	&.is_stuck{
+	&.sticky{
 		@include media-breakpoint-up(xl){
  
 				.top-menu{
@@ -50,7 +50,7 @@
 	right: 0;
 	width: 100%;
 	// padding-right: calc( 100vw - 100%);
-	position: absolute; 
+	// position: absolute; 
 	// &.fixed-top{
 
 	// 	transform: translateY(-100%);
@@ -86,7 +86,7 @@
 		// padding-left: rem(40);
 	}
 
-	&:not(.is_stuck) &__col{
+	&:not(.sticky) &__col{
 		width: 0;
 		position: relative;
 		padding: 0;

@@ -22,8 +22,7 @@
 
 		&__img-wrap{
 			display: block;
-			@include block;
-			border-radius: 5px;
+			@include block; 
 			background-color: $light;
 			>img{
 
@@ -38,7 +37,7 @@
 			margin-bottom: 14px;
 		}
 		&__slider-wrap{
-			// margin-top: rem(10);
+			margin-top: rem(10);
 			@include media-breakpoint-up(xxl) {
 
 				margin-left: -30px;
@@ -50,15 +49,7 @@
 			}
 			padding-bottom: 15px;
 		}
-		&__slider{
-			// max-width: 100%;
-			
-		}
-		&__slide{
-			
-			// max-width: 100%;
-		}
-
+ 
 		&__presense{
 			color: #848484;
 			margin-bottom: em(20);
@@ -211,9 +202,16 @@ font-size: 1rem;
 		box-shadow: none !important; 
 		position: relative;
 		padding-left: rem(32) !important;
-		padding-top: rem(8);
-		padding-bottom: rem(8);
 		padding-right: rem(20);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(8);
+			padding-top: rem(8);
+			margin-top: 0;
+		}
+		margin-top: rem(8);
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
 
 		&::before{
 			content: '';
@@ -349,4 +347,8 @@ font-size: 1rem;
 	.easyzoom-flyout{
 		display: none !important;
 	}
+}
+
+.row-small{
+	@include roww(10);
 }

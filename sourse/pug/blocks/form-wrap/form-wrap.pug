@@ -2,8 +2,10 @@ mixin form-head()
 	form.js-form-validate( data-parsley-validate="") 
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
-mixin input(t , pl)
+mixin input(t , pl, label)
 	+e.input-wrap.form-group
+		if label
+			.strong.text-white.mb-2= label
 		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 		block
 	// +e.input-wrap
@@ -14,8 +16,10 @@ mixin sel(t )
 			block
 	// +e.input-wrap
 	
-mixin sel2(t )
+mixin sel2(t , label)
 	+e.input-wrap.form-group
+		if label
+			.strong.text-white.mb-2= label
 		+e.SELECT( placeholder= t)&attributes(attributes)
 		 
 			block
@@ -114,4 +118,4 @@ mixin form-payment()
 					+select(" d-sm-none  d-block form-control form-control-lg ")
 
 				.col-sm-6
-					+e.btn.btn-primary.btn-lg.mt-0(type="button") Рассчитать стоимость поставки
+					+e.btn.btn-primary.btn-lg.mt-0.popup-with-move-anim(href="#modal-quiz") Рассчитать стоимость поставки
