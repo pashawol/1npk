@@ -282,6 +282,14 @@ jQuery(document).ready(function ($) {
 		}
 	}); // /quiz
 
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true
+	});
 	$(".s-advantages__btn-more--js").click(function () {
 		var _this = this;
 

@@ -297,6 +297,8 @@ var JSCCommon = {
 	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
+				// mask for input
+		$('.input-date-js').inputmask("99.99.9999");
 	},
 
 	CustomInputFile: function CustomInputFile() {
