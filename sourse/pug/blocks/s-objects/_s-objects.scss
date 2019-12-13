@@ -130,7 +130,7 @@
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
 		.swiper-slide{
 			margin-right: 0 !important;
 		}

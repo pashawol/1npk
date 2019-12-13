@@ -224,11 +224,14 @@ mixin modal()
 					
 					+input("text","Свое значение","Свое значение")(class="form-control-lg")
 				+step('Укажите место поставки')(class="form-wrap--map")
-					+modal-map()
+					.d-none.d-sm-block
+						+modal-map()
+					.d-sm-none
+						+input("text","Введите адрес объекта","Укажите адрес объекта")(class="form-control-lg")
 				+step('Как Вас зовут?') 
-					+input("tel","Имя и фамилия","Имя и фамилия")(class="form-control-lg")
+					+input("text","Имя и фамилия","Имя и фамилия")(class="form-control-lg")
 				+step('Контактные данные') 
-					+input("text","Телефон","Телефон")(class="form-control-lg" required)
+					+input("tel","Телефон","Телефон")(class="form-control-lg" required)
 						.small.error-text Поле должно быть заполнено.
 			// /+e.step
 			+e.foot

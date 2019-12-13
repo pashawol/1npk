@@ -72,7 +72,7 @@ mixin prodf(t,pr, ...items)
 						| 
 						+e.SPAN.price= pr
 				.col-auto
-					+e.btn.btn-primary(href="#") Заказать
+					+e.btn.btn-primary.popup-with-move-anim(href="#modal-call-new" data-title="Оставить заявку" data-btn="Оставить заявку") Заказать
 		+e.row.row
 
 			if block

@@ -211,7 +211,10 @@ jQuery(document).ready(function ($) {
 	$(".btn-add-addr-js").click(function () {
 		var text = $(this).parents(".form-wrap").find(".form-wrap__input").val();
 		$(".search-place__text").text(text);
-		$.magnificPopup.close();
+
+		if ($("#modal-search-place").is(":visible")) {
+			$.magnificPopup.close();
+		}
 	}); // quiz
 
 	var btnPrev = $(".modal-quiz__btn--back");
@@ -250,6 +253,10 @@ jQuery(document).ready(function ($) {
 				btnPrev.removeClass("disabled");
 			}
 		}
+
+		if (active.index() == lengthQuiz - 2) {
+			$(".modal-quiz__foot-text").addClass('op0');
+		}
 	}
 
 	btnNext.click(function () {
@@ -269,8 +276,17 @@ jQuery(document).ready(function ($) {
 			active.prev().removeClass('prev ').removeClass('next');
 			active.next().removeClass('prev ').removeClass('next');
 			active.removeClass("active").addClass("next").prev().addClass("active").prev().addClass("prev");
+			$(".modal-quiz__foot-text.op0").removeClass('op0');
 		} else {
 			$(this).addClass("disabled");
 		}
 	}); // /quiz
+
+	$(".s-advantages__btn-more--js").click(function () {
+		var _this = this;
+
+		$(".s-advantages li:hidden").slideDown(function () {
+			$(_this).hide();
+		});
+	});
 });

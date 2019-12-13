@@ -2,11 +2,21 @@
 .progress{
   margin-left: auto;
   margin-right: auto;
-  width: 396px;
-  margin-top: rem(50);
+  width: rem(396px);
   position: relative;
   color: $primary;
-  margin-bottom: rem(80);
+  @include media-breakpoint-down(xs){
+    padding-left: rem(10);
+    padding-right: rem(10);
+    margin-top: rem(80);
+  }
+  @include media-breakpoint-up(xxl) {
+
+    margin-top: rem(50);
+    margin-bottom: rem(80);
+  } 
+  margin-top: rem(30);
+  margin-bottom: rem(40);
   &__bar{
 
     height: 3px;
@@ -23,24 +33,24 @@
   &__value{ 
     position: absolute;
     overflow: hidden;
-    right: -20px;
-    bottom: 12px;
-    min-width: 40px;
+    right: rem(-20px);
+    bottom: rem(12px);
+    min-width: rem(40px);
     text-align: center;
     transition: all .3s ease;
    
-    padding-bottom: 4px;
+    padding-bottom: rem(4px);
     &::before{
       content: attr(data-value);
-      line-height: 24px;
+      line-height: rem(24px);
       display: block;
       white-space: nowrap;
-      font-size: 12px;
+      font-size: rem(12px);
       font-weight: 500;
       color: $body-color;
       background-color: $primary;
-      border-radius: 3px;
-      padding: 0 3px;
+      border-radius: rem(3px);
+      padding: 0 rem(3px);
     }
     &::after{
 
@@ -52,9 +62,9 @@
       bottom: 0;
       width: 0;
       height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 6px solid currentColor;
+      border-left: rem(6px) solid transparent;
+      border-right: rem(6px) solid transparent;
+      border-top: rem(6px) solid currentColor;
       transition: left .3s ease;
   }
   }
@@ -68,8 +78,13 @@
   .form-wrap__block{
     flex-direction: column;
     justify-content: space-between;
-    padding-top: rem(80);
-    padding-bottom: rem(80);
+    @include media-breakpoint-up(xxl) {
+
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+    }
+    padding-top: rem(30);
+    padding-bottom: rem(30);
     @include media-breakpoint-up(sm) {
 
       max-width: rem(908);
@@ -89,28 +104,42 @@
     justify-content: center; 
     margin-left: rem(-10);
     margin-right: rem(-10);
-    margin-bottom: rem(60);
+    @include media-breakpoint-up(xxl) {
+
+      margin-bottom: rem(60);
+    }
+    margin-bottom: rem(20);
   }
   &__btn{
     @extend .btn;
     @extend .btn-lg;
     @extend .btn-primary;
-    flex-grow: 1;
+    
     display: block;
     margin-left: rem(10);
     margin-right: rem(10);
     margin-bottom: rem(20);
     &.disabled{
-      pointer-events: none;
+      opacity: 0.5;
       span{
         display: none !important; 
       }
+      pointer-events: none;
     }
     .icon{
       font-size: rem(12);
     }
     &--back{
-      max-width: rem(58);
+      min-width: rem(68);
+      opacity: 0.5;
+      
+      
+        span{
+          display: none !important; 
+        }
+    }
+    &--next{
+      flex-grow: 1;
     }
   }
   &__foot{
@@ -125,6 +154,7 @@
   }
   .form-wrap{
     margin-left: auto;
+
     max-width: rem(396);
     margin-right: auto;
     width: 100%;
@@ -134,8 +164,11 @@
     }
   }
   .form-wrap--map{
-    max-width: rem(908);
-    width: 100%;
+    @include media-breakpoint-up(sm) {
+
+      max-width: rem(908);
+      width: 100%;
+    }
   }
   &__body{
     display: flex;
@@ -146,14 +179,28 @@
   
   &__title{
     margin-bottom: auto;
-    padding-bottom: rem(30);
-    min-height: 3em;
-    margin-bottom: rem(20);
+    @include media-breakpoint-up(xxl) {
+      
+      padding-bottom: rem(30);
+      min-height: 3em;
+      margin-bottom: rem(20);
+    }
+    min-height: 2em;
+    padding-bottom: rem(30 * .6);
+    // margin-bottom: rem(20 * .6);
+    @include media-breakpoint-down(xs) {
+      margin-bottom: rem(100);
+    }
   }
   &__step-inner{
     display: flex;
     flex-direction: column;
     height: 100%;
+    @include media-breakpoint-down(xs) {
+      // max-width: 312px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .custom-input__text{
     color: #ffffff;
@@ -193,6 +240,9 @@
       overflow: visible;
     }
   }
+}
+.op0{
+  opacity: 0;
 }
 // /.modal-quiz 
 .error-text{

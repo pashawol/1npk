@@ -268,7 +268,7 @@
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: rem(35px);
+	padding-left: rem(30px);
 	display: inline-block;
 	&__input{
 		position: absolute;
@@ -295,7 +295,7 @@
 		border: 1px solid #cdd2d9;
 		background-color: $light;
 		position: absolute; 
-		margin-right: rem(10px);
+		// margin-right: rem(10px);
 
 	}
 	&__input[type="checkbox"] + &__lab{

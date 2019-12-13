@@ -259,9 +259,9 @@ a {
 	background-color: #ffffff;
 	@include media-breakpoint-down(xs) {
 		border-width: 1px;
-		max-width: 280px;
+		// max-width: 280px;
 		padding: 40px 20px;
-		margin-top: 35px;
+		margin: 35px 20px 20px;
 		.city{
 			padding: 0;
 		}
@@ -411,6 +411,7 @@ a {
  
 .input-dropdown{
 	&-wrap{
+		display: none;
 		left: 0;
 		top: 100%;
 		width: 100%;
@@ -436,7 +437,6 @@ a {
 	max-height: rem(60 * 3);
 	overflow-y: auto;
 	background-color: #ffffff;
-	display: none;
 	border-radius: 0 0  5px  5px;
 	border: 1px solid #dddddd;
 	// border-bottom: 1px solid #dddddd;

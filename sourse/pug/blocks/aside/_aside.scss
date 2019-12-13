@@ -512,7 +512,9 @@
 			width: rem(40);
 			margin-right: rem(10);
 			text-align: center;
-		 
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
 		}
 		&__link {
 			display: block;

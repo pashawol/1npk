@@ -74,7 +74,7 @@
 				max-width: none;
 				display: block !important;
 			}
-			&:nth-child(5n + 1) {
+			&:nth-child(n + 6) {
 				display: none;
 			}
 			max-width: rem(440);
@@ -108,6 +108,19 @@
 		}
 		}
 		 
+		&__btn-more{
+			margin-left: auto;
+			margin-right: auto;
+			@extend .btn;
+			@extend .btn-block;
+			@extend .btn-light;
+			max-width: 147px;
+			&::before{
+				content: url(../img/@2x/plus.png);
+				display: inline-block;
+				margin-right: rem(10);
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {

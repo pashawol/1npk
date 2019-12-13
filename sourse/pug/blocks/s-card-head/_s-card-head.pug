@@ -25,13 +25,13 @@ mixin card-head-radio3(t, num,  ...items)
 	+b.group-title= t
 	+e.row.row.row--sm.row-btns 
 		-for (var i = 0; i < items.length; i++)
-			label.col-auto
+			.col-auto
 				if i== (num - 1)
-					+b.INPUT.prod-btn-input(type="radio" name=`radio-${num}` checked)
+					+in-rad(`radio-${num}`)(checked) 
+						+b.SPAN.text= items[i]
 				else
-					+b.INPUT.prod-btn-input(type="radio" name=`radio-${num}` )
-				+b.SPAN.prod-btn--radio()&attributes(attributes)= items[i]
-					+e.SPAN.lab
+					+in-rad(`radio-${num}`) 
+						+b.SPAN.text= items[i]
 
 mixin s-card-head(t, t2,  p, ...items)
 	// start s-card-head
