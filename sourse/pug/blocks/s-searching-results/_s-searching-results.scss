@@ -1,0 +1,104 @@
+
+	// start .s-searching-results
+	.s-searching-results {
+	h1{
+		margin-bottom: rem(34);
+		@include media-breakpoint-down (md) {
+			margin-bottom: rem(20);
+		}
+	}
+	h2 {
+	margin-left: rem(20);
+	font-weight: 700;
+	line-height: 1.7;
+	font-size: $h55-font-size;
+	font-style: italic;
+	.results {
+		font-style: normal;
+		}
+	}
+	.result-item {
+		margin-bottom: rem(15);
+		border: 1px solid #eeeeee;
+		display: flex;
+		justify-content: space-between;
+		padding: rem(18) rem(20) rem(17) rem(32);
+		@include media-breakpoint-down(sm) {
+			padding: rem(10) rem(15);
+		}
+		.result-wrap{
+			align-self: center;
+			p{
+				font-size: $h55-font-size;
+				font-weight: 400;
+			}
+			.request{
+				color: #389aff;
+				// Вынести цвет в переменную
+				padding-right: rem(5);
+			}
+		}
+		.s-searching-results__btn-to-go {
+			@extend .btn-primary;
+			border-radius: rem(5);
+			font-size: $em-base;
+			font-weight: 400;
+			padding: rem(13) rem(18);
+			@include media-breakpoint-down(sm) {
+				padding: rem(10);
+			}
+
+		}
+	}
+	.show-more {
+		margin-top: rem(60);
+		margin-bottom: rem(80);
+		button{
+			position: relative;
+			// @extend btn.light;
+			// @extend btn.lg;
+			font-size: $h6-font-size;
+			font-weight: 400;
+			padding: rem(22) rem(28);
+			padding-left: rem(57);
+			border: none;
+			background-color: $light;
+			border-radius: 5px;
+			&::after {
+				content: "+";
+				font-size: rem(30);
+				position: absolute;
+				top: 18%;
+				left: 12%;
+				color: $primary;
+			}
+		}
+	}
+
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.s-searching-results
