@@ -19,9 +19,9 @@
 		}
 		font-weight: 700;
 		line-height: 1.7;
-		font-size: $h55-font-size;
+		@extend .h55;
 		font-style: italic;
-		margin-bottom: rem(-4);
+		margin-bottom: rem(0);
 		.results {
 			font-style: normal;
 			}
@@ -32,7 +32,7 @@
 		border: 1px solid #eeeeee;
 		display: flex;
 		justify-content: space-between;
-		padding: rem(17) rem(19) rem(16) rem(30);
+		padding: rem(19) rem(19) rem(14) rem(30);
 		@include media-breakpoint-down(sm) {
 			padding: rem(10) rem(15);
 		}
@@ -50,12 +50,14 @@
 		@extend .btn-primary;
 		@extend .btn;
 		// border-radius: rem(5);
-		font-size: $em-base;
+		// font-size: $em-base;
+		font-size: 1rem;
 		// font-weight: 400;
 		flex-shrink: 0;
-		padding: rem(7) rem(16);
+		width: rem(98);
+		padding: rem(7) rem(18);
 		@include media-breakpoint-down(sm) {
-			padding: rem(10);
+			// padding: rem(10);
 		}
 	}
 	.show-more {

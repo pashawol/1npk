@@ -7,5 +7,5 @@ mixin s-nothing-found()
 			.empty
 				p По&nbsp;запросу <span class="request">&laquo;щебень&raquo;</span> ничего не&nbsp;найдено. Для поиска нужной страницы попробуйте скорректировать запрос, воспользоваться навигационным меню или вернитесь на&nbsp;главную страницу.
 			.go-back
-				+e.back(href="#") Вернуться на главную
+				+e.back.btn-primary(href="#") Вернуться на главную
 	// end s-nothing-found
