@@ -1,14 +1,13 @@
 
 	// start .s-nothing-found
 	.s-nothing-found {
+	margin-top: rem(-39);
 	h1 {
-		// margin-bottom: rem(34);
-		@include media-breakpoint-down (md) {
-			margin-bottom: rem(20);
-		}
+		margin-bottom: rem(-13);
 	}
 	.empty {
-		margin-bottom: rem(56);
+		max-width: 1090px;
+		padding-bottom: rem(49);
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(30);
 		}
@@ -22,17 +21,20 @@
 		}
 	}
 	.go-back {
+		margin-bottom: rem(555);
 		.s-nothing-found__back {
+			margin-left: 2px;
 			@extend .btn-primary;
 			border-radius: rem(5);
 			font-size: $h6-font-size;
 			font-weight: 400;
-			padding: rem(23) rem(40) rem(18) rem(38);
+			padding: rem(20) rem(40) rem(18) rem(38);
 			@include media-breakpoint-down(sm) {
 				padding: rem(20) rem(15);
 			}
 		}
 	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

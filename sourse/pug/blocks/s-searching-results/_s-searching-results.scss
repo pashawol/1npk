@@ -1,65 +1,68 @@
 
 	// start .s-searching-results
 	.s-searching-results {
+	margin-top: rem(-39);
 	h1{
-		margin-bottom: rem(34);
+		margin-bottom: rem(35);
 		@include media-breakpoint-down (md) {
 			margin-bottom: rem(20);
 		}
 	}
 	h2 {
-	margin-left: rem(20);
-	font-weight: 700;
-	line-height: 1.7;
-	font-size: $h55-font-size;
-	font-style: italic;
-	.results {
-		font-style: normal;
+		letter-spacing: 0.8;
+		margin-left: rem(18);
+		font-weight: 700;
+		line-height: 1.7;
+		font-size: $h55-font-size;
+		font-style: italic;
+		margin-bottom: rem(-4);
+		.results {
+			font-style: normal;
+			}
 		}
-	}
 	.result-item {
+		align-items: center;
 		margin-bottom: rem(15);
 		border: 1px solid #eeeeee;
 		display: flex;
 		justify-content: space-between;
-		padding: rem(18) rem(20) rem(17) rem(32);
+		padding: rem(17) rem(19) rem(16) rem(30);
 		@include media-breakpoint-down(sm) {
 			padding: rem(10) rem(15);
 		}
-		.result-wrap{
-			align-self: center;
-			p{
-				font-size: $h55-font-size;
-				font-weight: 400;
-			}
-			.request{
-				color: #389aff;
-				// Вынести цвет в переменную
-				padding-right: rem(5);
-			}
-		}
-		.s-searching-results__btn-to-go {
-			@extend .btn-primary;
-			border-radius: rem(5);
-			font-size: $em-base;
+		p{
+			font-size: $h55-font-size;
 			font-weight: 400;
-			padding: rem(13) rem(18);
-			@include media-breakpoint-down(sm) {
-				padding: rem(10);
-			}
-
+			margin-bottom: 0;
+		}
+		.request{
+			color: $accent;
+			// padding-right: rem(5);
+		}
+	}
+	&__btn-to-go {
+		@extend .btn-primary;
+		@extend .btn;
+		// border-radius: rem(5);
+		font-size: $em-base;
+		// font-weight: 400;
+		flex-shrink: 0;
+		padding: rem(7) rem(16);
+		@include media-breakpoint-down(sm) {
+			padding: rem(10);
 		}
 	}
 	.show-more {
 		margin-top: rem(60);
-		margin-bottom: rem(80);
+		margin-bottom: rem(27);
 		button{
 			position: relative;
-			// @extend btn.light;
-			// @extend btn.lg;
+			// @extend .btn-light;
+			@extend .btn-light;
+			@extend .btn-lg;
 			font-size: $h6-font-size;
 			font-weight: 400;
-			padding: rem(22) rem(28);
+			padding: rem(17) rem(28);
 			padding-left: rem(57);
 			border: none;
 			background-color: $light;
@@ -68,8 +71,8 @@
 				content: "+";
 				font-size: rem(30);
 				position: absolute;
-				top: 18%;
-				left: 12%;
+				top: 15%;
+				left: 13%;
 				color: $primary;
 			}
 		}

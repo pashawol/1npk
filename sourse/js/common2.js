@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/02.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/nothing.png);"></div>')
 	// whenever we hover over a menu item that has a submenu
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
