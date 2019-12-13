@@ -60,7 +60,7 @@
 			// @extend .btn-light;
 			@extend .btn-light;
 			@extend .btn-lg;
-			font-size: $h6-font-size;
+			font-size: 1rem;
 			font-weight: 400;
 			padding: rem(17) rem(28);
 			padding-left: rem(57);
@@ -71,7 +71,7 @@
 				content: "+";
 				font-size: rem(30);
 				position: absolute;
-				top: 15%;
+				top: 10%;
 				left: 13%;
 				color: $primary;
 			}
