@@ -2,15 +2,21 @@
 	// start .s-searching-results
 	.s-searching-results {
 	margin-top: rem(-39);
+	@include media-breakpoint-down(md) {
+		margin-top: rem(-20);
+	}
 	h1{
 		margin-bottom: rem(35);
 		@include media-breakpoint-down (md) {
 			margin-bottom: rem(20);
 		}
 	}
-	h2 {
+	h3 {
 		letter-spacing: 0.8;
 		margin-left: rem(18);
+		@include media-breakpoint-down(md) {
+			margin-left: rem(10);
+		}
 		font-weight: 700;
 		line-height: 1.7;
 		font-size: $h55-font-size;
