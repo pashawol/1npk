@@ -342,7 +342,7 @@ $(".s-advantages__btn-more--js").click(function(){
 
 $('.video-bg').YTPlayer({
 	fitToBackground: true,
-	videoId: $(this).data('url'),
+	videoId: 'DX_UeAOIT_c',
 	playerVars: {
 		modestbranding: 0,
 		autoplay: 1,
