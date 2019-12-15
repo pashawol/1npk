@@ -10,8 +10,14 @@
 		border-radius: 5px;
 		z-index: 2;
 		@extend .img-animate;
- 
- 
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			@include mt;
+			
+			&:hover{
+				transform:  scale(1.04);
+			}
+		}
 	}
 	.swiper-pagination{
 		position: static;
@@ -37,12 +43,20 @@
 		}
 		text-align: center;
 	}
+	@include media-breakpoint-up(md) {
+		.swiper-container{
+			overflow: inherit;
+		}
+	}
 
 	&__col{
+		@include mt;
+	
 		@include media-breakpoint-up(md) {
 
 			margin: 0;
 			margin-bottom: 30px;
+			margin-right: 0 !important;
 		} 
 		@include media-breakpoint-down(sm) {
 			padding: 0;

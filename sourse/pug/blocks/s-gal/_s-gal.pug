@@ -7,11 +7,11 @@ mixin s-gal()
 				
 			+e.slider-wrapper
 				+e.slider.slider--js.swiper-container
-					.swiper-wrapper.gal
+					.swiper-wrapper
 						mixin item(i)
 							+e.col.col-lg-4.col-md-6.swiper-slide
-								+e.item.img-bg(href=`img/video-${i}.jpg`  )
-									img.lazy-bg(src="#"  data-src=`img/video-${i}.jpg`  , alt="")
+								+e.item.img-bg(href=`img/gal-${i}.jpg`  data-fancybox="gal")
+									img.lazy-bg(src="#"  data-src=`img/gal-${i}.jpg`  , alt="")
 							// +e.col-lg-4.col-md-6.swiper-slide
 							
 						+item('1')

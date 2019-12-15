@@ -126,6 +126,25 @@
 								display: block;
 							}
 		} 
+		&__btn-more{
+			margin-left: auto;
+			margin-right: auto;
+			@extend .btn;
+			@extend .btn-block;
+			@extend .btn-light;
+			max-width:  rem(200);
+			margin-top: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-top: rem(40);
+				margin-bottom: rem(40);
+			}
+			margin-bottom: rem(20);
+			&::before{
+				content: url(../img/@2x/plus.png);
+				display: inline-block;
+				margin-right: rem(10);
+			}
+		}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

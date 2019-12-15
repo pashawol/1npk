@@ -1,0 +1,30 @@
+mixin s-structures()
+	// start s-structures
+	+b.SECTION.s-structures.section#s-structures&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 С&nbsp;какими структурами мы&nbsp;работаем
+				
+			+e.slider.slider--js.swiper-container
+				.swiper-wrapper
+					mixin item(i,t)
+						+e.slide.swiper-slide.col-lg-4.col-md-6
+							+e.item
+								img.bg.object-fit-js(src=`img/@2x/structures-${i}.jpg`, alt='') 
+								+e.icon-wrap
+									img.i(src=`img/svg/structures-i-${i}.svg`, alt='') 
+								block
+					+item("1",'')
+						+e.title Торговые центры
+					+item("2",'')
+						+e.title Заправочные станции АЗС
+					+item("3",'')
+						+e.title Заводы производители
+					+item("4",'')
+						+e.title Автостоянки, гаражные кооперативы
+					+item("5",'')
+						+e.title Торговые организации, магазины и&nbsp;склады
+					+item("6",'')
+						+e.title Государственные учреждения
+		.swiper-pagination
+	// end s-structures

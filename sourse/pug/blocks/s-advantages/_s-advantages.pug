@@ -44,3 +44,40 @@ mixin s-advantages()
 					.d-sm-none
 						+e.btn-more--js(type="button") Показать еще
 	// end s-advantages
+
+
+	
+mixin s-advantages-20()
+	// start s-advantages
+	+b.SECTION.s-advantages.section#s-advantages&attributes(attributes)
+		.container
+			.row
+				+e.sticky-wrap.sticky-col.col-5.d-none.d-lg-block
+					
+					.sticky-block-js
+						img.res-i(src="img/@2x/advantages-img-snow.png", alt="")
+				+e.col-text.col
+					+b.section-title
+						h2  Почему клиенты выбирают нас
+					.d-sm-none
+						img.res-i.lazy(src="#" data-src="img/@2x/advantages-img-snow-sm.jpg", alt="")
+					ol
+						mixin li(t,p)
+							li
+								strong= t
+								block
+						+li("Спецтехника")
+							| Мы&nbsp;располагаем всей техникой в&nbsp;достаточном количестве.
+						+li("Работаем 24/7")
+							| Для Вашего удобства наша компания может производить уборку и&nbsp;вывоз снега в&nbsp;ночное время.
+						+li("Законность")
+							| Вывозим снег на&nbsp;специально выделенные полигоны. Оффициально и&nbsp;легально.
+						+li("Моментальное реагирование")
+							| Выезжаем на&nbsp;заказ в&nbsp;течение двух часов.
+						+li("Варианты оплаты")
+							| Наличный и&nbsp;безналичный расчёт с&nbsp;НДС.
+					.d-sm-none
+						+e.btn-more--js(type="button") Показать еще
+	// end s-advantages
+
+

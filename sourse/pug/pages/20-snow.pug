@@ -1,0 +1,95 @@
+extends layout/main.pug
+
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-rent/_s-rent.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-departure/_s-departure.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-structures/_s-structures.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-snow-foot/_s-snow-foot.pug
+include ../blocks/get-template/_get-template.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Снег'
+	title= title
+block pagecontent
+	//- +aside
+	.snow-block.lazy-background
+	+header() 
+		+top-line()
+		+get-template
+		
+		+top-nav()
+			-
+				let nav= {
+					"услуги":"#s-prod",
+					"наша спецтехника":"#s-rent",
+					"О компании":"#s-now",
+					"наши преимущества":"#s-advanages",
+					"этапы работ":"#s-steps",
+					"с кем мы работаем":"#s-objects",
+					"получить шаблон договора":"#s-snow-foot",
+					}
+			+mnu2(nav)
+	+s-prod-20
+		+b.section-title.text-center
+			h2 Мы&nbsp;работаем в&nbsp;следующих категориях
+			+e.text Вся техника находится в&nbsp;нашей собственности, поэтому мы&nbsp;готовы предоставить для вас гибкие условия работы
+	+s-rent()(class="bg-white-mob")
+		+b.section-title.text-center
+			h2 Наша спецтехника
+			+e.text Ежедневно на&nbsp;линии более 15&nbsp;единиц техники
+	+s-now()(class="bg-wrap text-md-white bg-light")
+		.video-bg.d-none.d-md-block(data-url="DX_UeAOIT_c")
+		.container
+			+b.section-title.text-center
+				h2 Наша компания сегодня
+				+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
+	+s-advantages-20
+	+s-structures
+	+s-steps
+	//- +s-snow-foot
+	//- +s-departure
+
+	//- +s-form()
+	//- +s-shipping
+	//- +s-now(class="text-md-white")
+	//- 	img.lazy-bg.d-none.d-md-block(src="#" data-src='img/bg-now.jpg', alt="")
+	//- 	.container
+	//- 		+b.section-title.text-center
+	//- 			h2 Наша компания сегодня
+	//- 			+e.text Основным направлением нашей деятельности является дистрибуция нерудных материалов любых объемов и&nbsp;любыми доступными способами по&nbsp;территории России
+	//- 		+e.logo.d-none.d-md-block
+	//- 			img.res-i.lazy(src="#" data-src="img/logo--lg.png", alt="")
+	//- 	+b.section-title.text-center
+	//- 			h2 Виды доставки
+	//- 			+e.text Осуществляем доставку любыми способами до&nbsp;Вашего объекта
+	//- +s-geo
+	//- 	+b.section-title.text-center
+	//- 		h2 География поставок
+	//- 		+e.text Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
+	//- +s-team
+	//- +s-client
+	//- +s-calc
+	//- 	+b.section-title.text-center
+	//- 			h2 Узнайте сейчас точную стоимость поставки продукции до&nbsp;объекта
+	//- 			+e.text Уже сейчас вы&nbsp;можете иметь представление о&nbsp;стоимости нужного для вас объема продукции, доставки и&nbsp;итоговой стоимости
+	//- +s-contact()
+	+get-template-foot
+	+footer()
+	
+	

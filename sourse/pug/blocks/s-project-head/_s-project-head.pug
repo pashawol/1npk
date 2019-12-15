@@ -1,23 +1,20 @@
 mixin s-project-head()
 	// start s-project-head
-	+b.s-project-head.section#s-project-head&attributes(attributes)
-		.container
-			.row
-				.col.order-md-first 
-					+b.section-title.text-md-left.text-center
-						h1 Строительство 
-							br
-							| аэропорта «Бегишево»
-
-				.col-12
-					+e.img-wrap.img-bg
-						img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="")
-				.col-md-auto.order-md-first.align-self-center
-					+b.section-title--video
-						+b.play-block.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg`)
-							+e.icon-wrap
-								+icon('play')
-							| Посмотреть видео с&nbsp;отгрузки
+	+b.s-project-head--bg.pt-0#s-project-head.bg-wrap&attributes(attributes)
+		picture.picture-bg
+			img.lazy(src="#" data-src="img/project-main-bg.jpg", alt="") 
+		.container 
+			+e.logo-wrap
+				img.res-i(src="img/@2x/logo-project.png", alt="") 
+			+e.text Реализованный проект
+			h1 Строительство  аэропорта 
+				br
+				| «Бегишево» 
+			+b.section-title--video
+				+b.play-block(href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-background=`img/video-${i}.jpg` data-fancybox="video")
+					+e.icon-wrap
+						+icon('play')
+					| Посмотреть видео с&nbsp;отгрузки
 	// end s-project-head
 
 

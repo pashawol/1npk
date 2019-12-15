@@ -242,6 +242,62 @@ mixin modal()
 					+e.btn--next.btn-primary(type="button") Продолжить
 				+e.foot-text или нажмите Enter
 	// /#modal-call-new
+	+b.modal-quiz(id="modal-quiz2" class="  mfp-hide modal-win  " )
+		.form-wrap__block
+			+e.head
+				+b.progress
+					+e.bar
+						+e.bar-current(style="width: 0")
+							+e.value(data-value="0%")
+			+e.body 
+				mixin step(t, cl)
+					+e.step(class= cl)
+						+e.step-inner
+							.text-center
+								+e.title= t
+							+b.form-wrap&attributes(attributes)
+								block
+					// /+e.step  
+				+step('Укажите адрес объекта',"active")(class="form-wrap--map")
+					.d-none.d-sm-block
+						+modal-map()
+					.d-sm-none
+						+input("text","Введите адрес объекта","Укажите адрес объекта")(class="form-control-lg")
+				+step('Что вам требуется')
+					+in-rad("value")
+						+e.SPAN.text  Уборка снега (услуги погрузчика)
+					
+					+in-rad("value")
+						+e.SPAN.text  Вывоз снега с&nbsp;утилизацией
+					
+					+in-rad("value")
+						+e.SPAN.text Уборка и&nbsp;вывоз снега с&nbsp;утилизацией в&nbsp;комплексе
+						
+				+step('Примерная площадь территории для уборки')
+					+in-rad("value")
+						+e.SPAN.text до 1000 м2
+					
+					+in-rad("value")
+						+e.SPAN.text  от 1000 м2 до 5000 м2
+					
+					+in-rad("value")
+						+e.SPAN.text более 5000 м2
+
+ 
+				+step('Как Вас зовут?') 
+					+input("text","Имя и фамилия","Имя и фамилия")(class="form-control-lg")
+				+step('Контактные данные') 
+					+input("tel","Телефон","Телефон")(class="form-control-lg" required)
+						.small.error-text Поле должно быть заполнено.
+			// /+e.step
+			+e.foot
+				+e.btn-wrap
+					+e.btn--back.btn-primary.disabled(type="button")
+						+icon("chevron-left")
+					
+					+e.btn--next.btn-primary(type="button") Продолжить
+				+e.foot-text или нажмите Enter
+	// /#modal-call-new
 
 	+b.form-wrap(id="modal-thank" class="  mfp-hide modal-win modal-win-new modal-form " )
 		+e.block-new

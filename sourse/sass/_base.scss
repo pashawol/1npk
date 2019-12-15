@@ -5,7 +5,7 @@ html {
 	// background-repeat: no-repeat;
  
 	// background-image: url(../screen/BZ_Article_Desktop.jpg);
-	overflow-x: hidden;
+	// overflow-x: hidden;
 } 
 body{
 
@@ -138,12 +138,15 @@ body{
 }
 .page-head{
 	line-height: (32 / 20);
+	+ .section{
+		padding-top: rem(30);
+	}
 	@include media-breakpoint-up(xl) {
-		padding-top: rem(50);
 		text-align: left;
 	}
 	
-	padding-top: rem(46);
+	// padding-top: rem(46);
+	padding-top: rem(30);
 	text-align: center;
 	h1{
 		font-weight: bold;
@@ -171,7 +174,9 @@ body{
 	// 	// max-width: em(600);
 	// }
 }
+
 }
+
 
 // @include media-breakpoint-up(lg) {
 // 	.container {
@@ -1106,3 +1111,49 @@ a.link-color{
 }
 
 // ::-webkit-inner-spin-button { display: none; }
+
+.fancybox-thumbs__list a:before {
+	border: 6px solid $accent; 
+}
+
+
+.bg-white-mob{
+	@include media-breakpoint-down(sm) {
+		background-color: #ffffff !important;
+	} 
+}
+
+
+.snow-block{
+	position: absolute;
+	pointer-events: none;
+	&.visible{
+
+		@include media-breakpoint-up(md) {
+			
+			background: url(../img/@2x/snow.png) repeat 0 0;
+		}
+		background: url(../img/@1x/snow.png) repeat 0 0;
+	}
+    position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+    box-sizing: border-box;
+    top: 0; 
+    animation: move-bg 10s linear infinite;
+		-webkit-animation: move-bg 10s linear infinite;
+		
+		z-index: 20;
+}
+
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0
+  }
+
+  100% {
+    background-position: 300px 300px
+  }
+}

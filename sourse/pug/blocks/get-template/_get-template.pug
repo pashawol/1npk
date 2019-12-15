@@ -1,0 +1,64 @@
+mixin get-template()
+	// start get-template
+	+b.SECTION.get-template--head.section.bg-wrap&attributes(attributes)
+		//- picture.picture-bg
+		picture.picture-bg
+			source(srcset='img/@2x/webp/get-template-bg.webp', type='image/webp', media='(min-width:576px)') 
+			source(srcset='img/@2x/get-template-bg.jpg', type='image/jpg', media='(min-width:576px)') 
+			source(srcset='img/@2x/webp/get-template-bg-mob.webp', type='image/webp' ) 
+			img.object-fit-js(src='img/@2x/get-template-bg-mob.jpg', alt='') 
+		//- +e.tr
+		+e.td
+			.container
+				+e.text--top Вывезем снег недорого, четко и&nbsp;профессионально с&nbsp;утилизацией, в&nbsp;кротчайшие сроки
+				
+				h1 Уборка и&nbsp;вывоз снега с&nbsp;официальной утилизацией на&nbsp;полигон 
+					br 
+					| от&nbsp;130&nbsp;руб/м
+					sup 3
+				+e.row-wrap
+					.row
+						mixin item(i)
+							+e.col.col-md-6
+								img.res-i(src=`img/@2x/get-i-${i}.png`, alt="")
+								block
+						+item('1')
+							div
+								strong 12&nbsp;самосвалов  
+								| на&nbsp;линии прямо сейчас
+						+item('2')
+							div
+								strong 6&nbsp;погрузчиков на&nbsp;линии 
+								| прямо сейчас
+				+e.text--foot Ответьте на&nbsp;5&nbsp;вопросов и&nbsp;получите договор на&nbsp;персональных условиях
+				+e.btn.popup-with-move-anim(href="#modal-quiz2") Получить шаблон договора
+	// end get-template
+
+	
+mixin get-template-foot()
+	// start get-template
+	+b.SECTION.get-template--foot.section.bg-wrap&attributes(attributes)
+		//- picture.picture-bg
+		picture.picture-bg.lazy
+			source(srcset="#" data-srcset='img/@2x/webp/get-template-foot-bg.webp', type='image/webp', media='(min-width:576px)') 
+			source(srcset="#" data-srcset='img/@2x/get-template-foot-bg.jpg', type='image/jpg', media='(min-width:576px)') 
+			source(srcset="#" data-srcset='img/@2x/webp/get-template-foot-bg-mob.webp', type='image/webp' ) 
+			img.object-fit-js(src="#" data-src='img/@2x/get-template-foot-bg-mob.jpg', alt='') 
+		//- +e.tr
+		+e.td
+			.container
+				.d-sm-none
+					+e.logo
+						img(src="img/logo.png", alt="")
+				+e.text--top Вывезем снег недорого, четко и профессионально с утилизацией, в кротчайшие сроки
+				
+				h2  Уборка и&nbsp;вывоз снега 
+					br 
+					| с&nbsp;официальной утилизацией на&nbsp;полигон 
+					br 
+					| от&nbsp;130&nbsp;руб/м <sup>3</sup>
+				 
+				+e.text--foot.order-0 Ответьте на&nbsp;5&nbsp;вопросов и&nbsp;получите договор на&nbsp;персональных условиях
+				+e.btn.popup-with-move-anim(href="#modal-quiz2") Получить шаблон договора
+	// end get-template
+

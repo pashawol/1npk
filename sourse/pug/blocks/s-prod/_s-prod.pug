@@ -82,6 +82,16 @@ mixin prodf(t,pr, ...items)
 					each item in items
 						+e.item: +e.link(href='#')= item
 		+pic("prod")
+mixin prod-snow(t,pr, i)
+	+b.item-prod--snow&attributes(attributes)
+		+e.head
+			+e.title
+				strong= t
+				| 
+				+e.SPAN.price= pr
+		block
+		+e.btn.btn-primary.popup-with-move-anim(href="#modal-call-new" data-title="Оставить заявку" data-btn="Оставить заявку") Заказать
+		+pic(i)
 
 mixin s-prod()
 	// start s-prod
@@ -273,6 +283,39 @@ mixin s-prod-03-()
 					+prod-cap( ' Отгрузка', 'в первый день ' ) 
 						+e.text.h6 Начинаем отгрузку материала в&nbsp;день обращения
 
+
+
+	// end s-prod
+
+
+mixin s-prod-20()
+	// start s-prod
+	+b.s-prod.section#s-prod.lazy-background&attributes(attributes)
+		.container
+			block
+				
+			.row
+				+e.col.col-xl-4.col-md-6
+					+prod-snow("Вывоз снега"," от 120 руб/м3",'snow-1') 
+						ul
+							li Самосвалы КАМАЗ кузов 10&nbsp;м<sup>3</sup>, 15&nbsp;м<sup>3</sup>, 20&nbsp;м<sup>3</sup>
+				// /+e.col.col-xl-4.col-md-6
+ 
+				+e.col.col-xl-4.col-md-6
+					+prod-snow("Уборка территории от снега","1500 руб/час",'snow-2') 
+						ul
+							li Экскаваторы-погрузчики
+							li Фронтальные погрузчики
+				// /+e.col.col-xl-4.col-md-6
+ 
+				+e.col.col-xl-4.col-md-6
+					+prod-snow("Утилизация снега ","на полигоне от 1000 руб",'snow-3') 
+						ul
+							li Талоны на&nbsp;утилизацию
+				// /+e.col.col-xl-4.col-md-6
+ 
+
+ 
 
 
 	// end s-prod

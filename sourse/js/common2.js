@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/02.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/20.jpg);"></div>')
 	// whenever we hover over a menu item that has a submenu
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
@@ -175,16 +175,18 @@ $(".site-nav__item--has-child > a").each(function(){
 	var title= $(this).text();
 	var href= $(this).attr("href");
 	var toggleBlock = $(this).next().find("ul");
-	toggleBlock.prepend(`<li class="hide-parent-js d-sm-none"> ${title} </li>
+	// <li class="hide-parent-js d-sm-none"> ${title} </li>
+	toggleBlock.prepend(`
 											<li class="sub-menu__item d-sm-none">
 												<a class="sub-menu__link" href="${href}">${title} </a>
 											</li>`)
 	$(this).click(function (e) {
+		$(".hide-parent-js").addClass("active")
 			e.preventDefault();
 			// $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
 			
-			$(".top-line__inner").toggleClass("invisible");
+			// $(".top-line__inner").toggleClass("invisible");
 			$(this).next().toggleClass("active");
 			// setTimeout(() => {
 			// },500);
@@ -193,8 +195,10 @@ $(".site-nav__item--has-child > a").each(function(){
 	})
 });
 $(".hide-parent-js").click(function(){
-	$(this).parents(".sub-menu-wrap").removeClass('active');
-	$(".top-line__inner").removeClass("invisible");
+	
+	$(this).removeClass('active');
+	$(".sub-menu-wrap.active").removeClass('active');
+	// $(".top-line__inner").removeClass("invisible");
 })
 
 	// анимация кнопок
@@ -246,13 +250,15 @@ $(".btn-add-addr-js").click(function(){
 		$.magnificPopup.close(); 
 	}
 })
+$(".modal-quiz").each(function(){
+var th = $(this);
 
 // quiz
-var btnPrev = $(".modal-quiz__btn--back");
-var btnNext = $(".modal-quiz__btn--next");
-var step = $(".modal-quiz__step"); 
-var active = $(".modal-quiz__step.active");
-var lengthQuiz=  $(".modal-quiz__step").length;
+var btnPrev = th.find(".modal-quiz__btn--back");
+var btnNext = th.find(".modal-quiz__btn--next");
+var step = th.find(".modal-quiz__step"); 
+var active = th.find(".modal-quiz__step.active");
+var lengthQuiz=  th.find(".modal-quiz__step").length;
  
 function addVal(active) {
 	var active = active.index();
@@ -313,7 +319,7 @@ btnPrev.click(function(){
 		}
 
 	})
-
+})
 // /quiz
 
 var breadSl = new Swiper('.breadcrumb-slider-js', {
@@ -330,4 +336,19 @@ $(".s-advantages__btn-more--js").click(function(){
 		$(this).hide();
 	});
 })
+
+
+$('.video-bg').YTPlayer({
+	fitToBackground: true,
+	videoId: $(this).data('url'),
+	playerVars: {
+		modestbranding: 0,
+		autoplay: 1,
+		controls: 1,
+		showinfo: 0,
+		branding: 0,
+		rel: 0,
+		autohide: 0, 
+	}
+});
 })

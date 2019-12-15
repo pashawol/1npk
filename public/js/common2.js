@@ -1,7 +1,7 @@
 "use strict";
 
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/02.jpg);"></div>'); // whenever we hover over a menu item that has a submenu
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/20.jpg);"></div>'); // whenever we hover over a menu item that has a submenu
 
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
@@ -148,21 +148,23 @@ jQuery(document).ready(function ($) {
 	$(".site-nav__item--has-child > a").each(function () {
 		var title = $(this).text();
 		var href = $(this).attr("href");
-		var toggleBlock = $(this).next().find("ul");
-		toggleBlock.prepend("<li class=\"hide-parent-js d-sm-none\"> ".concat(title, " </li>\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item d-sm-none\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"").concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
+		var toggleBlock = $(this).next().find("ul"); // <li class="hide-parent-js d-sm-none"> ${title} </li>
+
+		toggleBlock.prepend("\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item d-sm-none\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"".concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
 		$(this).click(function (e) {
+			$(".hide-parent-js").addClass("active");
 			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
 			// searchTogggle();
+			// $(".top-line__inner").toggleClass("invisible");
 
-			$(".top-line__inner").toggleClass("invisible");
 			$(this).next().toggleClass("active"); // setTimeout(() => {
 			// },500);
 			// $(".top-submenu--js").slideUp(0);
 		});
 	});
 	$(".hide-parent-js").click(function () {
-		$(this).parents(".sub-menu-wrap").removeClass('active');
-		$(".top-line__inner").removeClass("invisible");
+		$(this).removeClass('active');
+		$(".sub-menu-wrap.active").removeClass('active'); // $(".top-line__inner").removeClass("invisible");
 	}); // анимация кнопок
 
 	$(".btn-primary, .btn-js").each(function () {
@@ -215,71 +217,74 @@ jQuery(document).ready(function ($) {
 		if ($("#modal-search-place").is(":visible")) {
 			$.magnificPopup.close();
 		}
-	}); // quiz
+	});
+	$(".modal-quiz").each(function () {
+		var th = $(this); // quiz
 
-	var btnPrev = $(".modal-quiz__btn--back");
-	var btnNext = $(".modal-quiz__btn--next");
-	var step = $(".modal-quiz__step");
-	var active = $(".modal-quiz__step.active");
-	var lengthQuiz = $(".modal-quiz__step").length;
+		var btnPrev = th.find(".modal-quiz__btn--back");
+		var btnNext = th.find(".modal-quiz__btn--next");
+		var step = th.find(".modal-quiz__step");
+		var active = th.find(".modal-quiz__step.active");
+		var lengthQuiz = th.find(".modal-quiz__step").length;
 
-	function addVal(active) {
-		var active = active.index();
-		var value = (active / lengthQuiz * 100).toFixed();
-		var label = $(".progress__value").attr("data-value", value + '%');
-		$(".progress__bar-current").css({
-			"width": value + '%'
-		});
-	}
+		function addVal(active) {
+			var active = active.index();
+			var value = (active / lengthQuiz * 100).toFixed();
+			var label = $(".progress__value").attr("data-value", value + '%');
+			$(".progress__bar-current").css({
+				"width": value + '%'
+			});
+		}
 
-	function addNext() {
-		active.next().addClass("next");
-		active.prev().addClass("prev");
-	}
+		function addNext() {
+			active.next().addClass("next");
+			active.prev().addClass("prev");
+		}
 
-	addNext();
+		addNext();
 
-	function getNext() {
-		var active = $(".modal-quiz__step.active");
+		function getNext() {
+			var active = $(".modal-quiz__step.active");
 
-		if (active.index() < lengthQuiz - 1) {
-			// console.log(lengthQuiz) 
-			addVal(active.next());
-			active.prev().removeClass('prev ').removeClass('next');
-			active.next().removeClass('prev ').removeClass('next');
-			active.removeClass("active").addClass("prev").next().addClass("active").next().addClass("next");
+			if (active.index() < lengthQuiz - 1) {
+				// console.log(lengthQuiz) 
+				addVal(active.next());
+				active.prev().removeClass('prev ').removeClass('next');
+				active.next().removeClass('prev ').removeClass('next');
+				active.removeClass("active").addClass("prev").next().addClass("active").next().addClass("next");
 
-			if (btnPrev.hasClass("disabled")) {
-				btnPrev.removeClass("disabled");
+				if (btnPrev.hasClass("disabled")) {
+					btnPrev.removeClass("disabled");
+				}
+			}
+
+			if (active.index() == lengthQuiz - 2) {
+				$(".modal-quiz__foot-text").addClass('op0');
 			}
 		}
 
-		if (active.index() == lengthQuiz - 2) {
-			$(".modal-quiz__foot-text").addClass('op0');
-		}
-	}
-
-	btnNext.click(function () {
-		getNext();
-	});
-	$(document).keypress(function (e) {
-		if (e.which == 13) {
+		btnNext.click(function () {
 			getNext();
-		}
-	});
-	btnPrev.click(function () {
-		var active = $(".modal-quiz__step.active");
+		});
+		$(document).keypress(function (e) {
+			if (e.which == 13) {
+				getNext();
+			}
+		});
+		btnPrev.click(function () {
+			var active = $(".modal-quiz__step.active");
 
-		if (active.index() > 0) {
-			addVal(active.prev());
-			step.removeClass('prev');
-			active.prev().removeClass('prev ').removeClass('next');
-			active.next().removeClass('prev ').removeClass('next');
-			active.removeClass("active").addClass("next").prev().addClass("active").prev().addClass("prev");
-			$(".modal-quiz__foot-text.op0").removeClass('op0');
-		} else {
-			$(this).addClass("disabled");
-		}
+			if (active.index() > 0) {
+				addVal(active.prev());
+				step.removeClass('prev');
+				active.prev().removeClass('prev ').removeClass('next');
+				active.next().removeClass('prev ').removeClass('next');
+				active.removeClass("active").addClass("next").prev().addClass("active").prev().addClass("prev");
+				$(".modal-quiz__foot-text.op0").removeClass('op0');
+			} else {
+				$(this).addClass("disabled");
+			}
+		});
 	}); // /quiz
 
 	var breadSl = new Swiper('.breadcrumb-slider-js', {
@@ -296,5 +301,18 @@ jQuery(document).ready(function ($) {
 		$(".s-advantages li:hidden").slideDown(function () {
 			$(_this).hide();
 		});
+	});
+	$('.video-bg').YTPlayer({
+		fitToBackground: true,
+		videoId: $(this).data('url'),
+		playerVars: {
+			modestbranding: 0,
+			autoplay: 1,
+			controls: 1,
+			showinfo: 0,
+			branding: 0,
+			rel: 0,
+			autohide: 0
+		}
 	});
 });

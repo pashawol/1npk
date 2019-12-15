@@ -5,9 +5,11 @@ mixin top-line()
 			.container
 				.row
 					.col-auto
-						+b.toggle-menu-mobile--js2
-							span
-							+e.text.d-none.d-sm-inline Открыть меню
+						.toggle-wrap
+							+b.toggle-menu-mobile--js2
+								span
+								+e.text.d-none.d-sm-inline Открыть меню
+							.hide-parent-js
 					.col-auto
 						+e.logo
 							a(href="/")

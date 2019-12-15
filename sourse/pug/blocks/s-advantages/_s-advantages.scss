@@ -3,6 +3,12 @@
 	.s-advantages {
 		position: relative;
 		overflow: hidden;
+		h2{
+			@include media-breakpoint-up(xl) {
+
+				max-width: rem(370);
+			}
+		}
 		@include media-breakpoint-up(sm) {
 			text-align: left;
 		}

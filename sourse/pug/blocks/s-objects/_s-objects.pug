@@ -58,18 +58,19 @@ mixin s-objects-04()
 			block
 			.row
 				mixin prod(i,  p)
-					+e.col.col-md-6
+					+e.col.col-lg-4.col-md-6
 						+e.item.img-bg.img-animate(href="#")
 							img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
 							+e.DIV.title= p
 								
 					// /+e.col.col
-				+prod('1','Строительство аэропорта «Бегишево»') 
+				- for (var x = 0; x < 3; x++)
+					+prod('1','Строительство аэропорта «Бегишево»') 
 
-				+prod('2','Строительство автосалона грузовой техники «DAF»') 
-				+prod('3','Строительство терминалов ТК «ПЭК»') 
-				+prod('4','Строительные работы на объекте «ТАНЭКО»')  
-			+e.btn--md(href="#") Загрузить еще
+					+prod('2','Строительство автосалона грузовой техники «DAF»') 
+					+prod('3','Строительство терминалов ТК «ПЭК»') 
+				//- +prod('4','Строительные работы на объекте «ТАНЭКО»')  
+			+e.btn-more(href="#") Показать еще
 	// end s-objects
 
 
@@ -81,7 +82,7 @@ mixin s-objects-06-1
 			+e.slider.slider--js.swiper-container
 				.swiper-wrapper
 					mixin prod(i,  p)
-						+e.col.col-md-6.swiper-slide
+						+e.col.col-lg-4.col-md-4.swiper-slide
 							+e.item.img-bg.img-animate(href="#")
 								img.lazy-bg(src="#" data-src=`img/object-${i}.jpg` alt="") 
 								+e.DIV.title= p
@@ -90,6 +91,7 @@ mixin s-objects-06-1
 					+prod('1','Строительство аэропорта «Бегишево»') 
 
 					+prod('2','Строительство автосалона грузовой техники «DAF»') 
+					+prod('3','Строительство терминалов ТК «ПЭК»') 
 				.swiper-pagination
 	// end s-objects
 

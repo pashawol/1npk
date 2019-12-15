@@ -1,0 +1,90 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+include ../blocks/s-about-text/_s-about-text.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-project-head/_s-project-head.pug
+include ../blocks/s-soc/_s-soc.pug
+include ../blocks/s-gal/_s-gal.pug
+
+ 
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '6.1 Страница кейса'
+	title= title
+block pagecontent
+	+header() 
+		+top-line()
+		//- +breadcrumb2('главная','аренда спецтехники', title)
+
+		+s-project-head
+	+s-applications-whithoutItem(class="section-border-bottom ") 
+		.row 
+			+e.col--project.col-md-3.col-6  
+				+e.title Щебень 20-40
+				+e.text поставляемая продукция
+			
+			+e.col--project.col-md-3.col-6  
+				+e.title 800 тонн
+				+e.text объем поставляемой продукции
+			
+			+e.col--project.col-md-3.col-6  
+				+e.title Автотранспорт
+				+e.text способ доставки материала
+			
+			+e.col--project.col-md-3.col-6  
+				+e.title 7 дней
+				+e.text время на&nbsp;поставку и&nbsp;закрытие сделки
+	// start s-about-text
+	+b.s-about-text--project.section.text-center(class="section-border-bottom ")
+		.container
+			.row
+				mixin col(i)
+					+e.col.col-md
+						+e.img-wrap
+							img.lazy(src="#" data-src=`img/project-i-${i}.png`, alt="")
+						block
+					// /+e.col.col
+				+col('1')
+					+e.text Бесперебойное
+						br
+						| снабжение материалом
+				
+				+col('2')
+					+e.text Склады в&nbsp;различных городах уменьшают автотранспортную дистанцию, обеспечивая наиболее низкую стоимость доставки до&nbsp;потребителя
+				+col('3')
+					+e.text Обязательная сертификация всей имеющейся продукции
+				
+	// end s-about-text
+	+s-gal(class="section-border-bottom ") 
+	//- // start s-work
+	//- +b.s-work.section.section-border-bottom
+	//- 	.container
+	//- 		+b.section-title.text-center
+	//- 			h2 Хотите также?
+	//- 			+e.text Рассчитайте стоимость своего проекта и закажите все материалы
+	//- 			+e.btn--lg(href="#") Перейти в калькулятор поставок
+	//- // end s-work
+
+	+s-content(class="section-border-bottom")
+		h5.strong Доставка щебня фракции 20-40
+		p СЕО ТЕКСТ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+		p СЕО ТЕКСТ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	+s-objects-06-1
+		+b.section-title.text-center.mw-100
+			h2.mw-100 Посмотрите другие наши проекты
+	+s-soc('Поделиться проектом')(class="section-border-bottom ") 
+	+s-departure
+	+footer()
