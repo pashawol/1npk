@@ -4,6 +4,7 @@
 	display: block;
 	position: relative;
 	z-index: 200;
+	min-height: 100vh;
 	&::before{
 		content: '';
 		z-index: -1;
@@ -86,7 +87,18 @@
 	}
 
 	&--contact {
+		h1{
+		}	@include media-breakpoint-up(sm) {
+			margin-left: 0 !important;
 
+			text-align: left;
+			.header-block__text--top{
+				text-align: left;
+			}
+		}
+		&::before{
+			display: none;
+		}
 		background-image: url(../img/head-contact--sm.jpg);
 		background-position: center right;
 
@@ -245,10 +257,23 @@
 
 		@include media-breakpoint-up(lg) {
 			background-image: url(../img/head-about.jpg);
-
+			padding-top: rem(80);
+			width: 100%;
+			display: table;
+		}
+		&::before{
+			display: none;
 		}
 	}
-
+	&__body-about{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&__text-top{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(944);
+	}
 
 	&__text--contract {
 		max-width: em(360);
@@ -338,7 +363,21 @@
 			// padding-bottom: rem(30);
 		}
 	}
- 
+	&--table{
+		width: 100%;
+		display: table;
+		@include media-breakpoint-up(sm){
+
+			text-align: left;
+		}
+		h1{
+			// text-align: left;
+		}
+	}
+	&__td{
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
 
 

@@ -3,7 +3,7 @@ extends layout/main.pug
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
-include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-doc/_s-doc.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-geo/_s-geo.pug
 include ../blocks/s-now/_s-now.pug
@@ -13,18 +13,16 @@ include ../blocks/s-objects/_s-objects.pug
 include ../blocks/s-calc/_s-calc.pug
 include ../blocks/aside-nav/_aside-nav.pug
 
-block variables
-	- let  mainPage= null
 block title
-	- let  title= '6. Реализованные проекты'
-	title= title
+	title  9. Документы
+
 
 block pagecontent
 	+header() 
 		+top-line()
-		+breadcrumb2('главная','Реализованные проекты')
+		+breadcrumb2('Главная','Документы ')
 		+b.page-head.container 
-				h1.mb-0 Реализованные проекты
-	+s-objects-04
-	+s-departure
+			h1 Документы 
+	+s-doc 
+	
 	+footer()

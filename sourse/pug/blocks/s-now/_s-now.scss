@@ -99,7 +99,8 @@
 			&:not(.text-md-white)	&__item--foot{
 				@include media-breakpoint-up(lg) {
 
-					border: 2px solid $gray;
+					border: 1px solid #eeeeee;
+
 					box-shadow: none;
 					@include mt;
 					&:hover{

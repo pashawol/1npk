@@ -400,31 +400,21 @@ var JSCCommon = {
 	},
 
 	accordion: function () {
-		if (document.querySelector('.main-row__col-aside')) {
-		var  ell = document.querySelector('.main-row__col-aside')
-
+ 
 		$('.accord__head').click(function () {
 			var th = $(this);
 			th.next().slideToggle()
-				.parent().siblings().find('.accord__body').slideUp(function(){
-
-					ell.classList.add('align-self-baseline')
-				});
+				.parent().siblings().find('.accord__body').slideUp(
+					
+				);
 				 return false;
 				});
-				window.addEventListener('scroll', function(){
-					ell.classList.remove('align-self-baseline')
-					
-				})
+ 
 				$('.accord__close').click(function () {
 					var th = $(this);
-					th.parents('.accord__body').slideUp(function(){
-
-						ell.classList.remove('align-self-baseline')
-					});
+					th.parents('.accord__body').slideUp( );
 			return false;
-		});
-	}
+		}); 
 
 	},
 	videoBg: function () {
@@ -634,13 +624,21 @@ jQuery(document).ready(function ($) {
 			slidesPerView: 3,
 			watchOverflow: true,
 			spaceBetween: 0,
-			watchOverflow: true,
-			slidesPerGroup: 2,
-			slidesPerColumn: 2,
+			watchOverflow: true, 
 			spaceBetween: 30,
-
+			loop: true,
 			lazy: {
 				loadPrevNext: true,
+			},
+			breakpoints: {
+				// when window width is <= 320px
+
+				// when window width is <= 480px
+				768: {
+					slidesPerView: 5,
+					spaceBetween: 30, 
+				},
+				 
 			},
 
 			// centeredSlides: true,
@@ -716,9 +714,9 @@ jQuery(document).ready(function ($) {
 
 				// when window width is <= 480px
 				768: {
-					slidesPerView: 20,
-					spaceBetween: 0,
-					loop: false,
+					slidesPerView: 3,
+					spaceBetween: 30,
+					loop: true,
 				},
 				 
 			},

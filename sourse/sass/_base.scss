@@ -255,6 +255,12 @@ body {
 .main-wrapper {
 	position: relative;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	.footer-white{
+		margin-top: auto;
+	}
 }
 
 .slick-slide img {
@@ -663,10 +669,9 @@ a.bdb{
 		}
 		@include media-breakpoint-up(md) {
 			background-color: transparent ;
+			border: 2px solid #dddddd;
 			// border: 2px solid #dddddd !important;
-			&:hover{
-				background-color: transparent !important;
-			}
+		 
 			&-active,
 			&:hover{
 				border-color: $primary !important; 
@@ -1156,4 +1161,17 @@ a.link-color{
   100% {
     background-position: 300px 300px
   }
+}
+
+
+.mx-100{
+	max-width: 100% !important;
+}
+
+.slider--js{
+	.swiper-slide{
+		@include media-breakpoint-up(md){
+			margin-right: 0 !important;
+		}
+	}
 }

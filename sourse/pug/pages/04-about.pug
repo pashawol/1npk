@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+//- include ../blocks/s-shipping/_s-shipping.pug
+//- include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+//- include ../blocks/s-objects/_s-objects.pug
+//- include ../blocks/s-calc/_s-calc.pug
+include ../blocks/s-why/_s-why.pug
+
+include ../blocks/s-about-text/_s-about-text.pug
+include ../blocks/s-director/_s-director.pug
+include ../blocks/s-problems/_s-problems.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-conditions/_s-conditions.pug
+include ../blocks/s-values/_s-values.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-departure/_s-departure.pug
+block title
+	title  4. О компании
+
+block pagecontent
+	+header() 
+		+top-line()
+		+header-block-04()
+	+s-about-text(class="section-border-bottom")
+	+s-director
+	+s-why-04
+	+s-problems(class="section-border-bottom")
+	
+	+s-geo()
+		+b.section-title.text-center
+			h2 География поставок
+			+e.text.h55.fw-400.text-primary Осуществляем поставки от&nbsp;карьера до&nbsp;объекта по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
+	+s-values(class="section-border-bottom")
+	//- +s-team-04
+	+b.s-work.section.section-border-bottom
+		.container
+			+b.section-title.text-center
+				h2 Командная работа — залог успеха!
+				+e.text Заполните и&nbsp;отправьте краткую анкету соискателя, чтобы мы&nbsp;могли подобрать вам работу и&nbsp;пригласить на&nbsp;собеседование
+				+e.btn.popup-with-move-anim(href="#modal-profile"  data-title='Анкета соискателя') Заполнить анкету
+	+s-client
+	+s-work
+	+s-conditions
+	+s-departure
+	+footer()
+	
+	

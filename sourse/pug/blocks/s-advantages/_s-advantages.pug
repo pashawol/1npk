@@ -9,9 +9,12 @@ mixin s-advantages()
 						img.res-i(src="img/@2x/advantages-img.png", alt="")
 				+e.col-text.col
 					+b.section-title
-						h2 10 весомых преимуществ 
-							|
-							span.text-primary сотрудничества с нами
+						if block
+							block
+						else
+							h2.mx-100 10 весомых преимуществ 
+								|
+								span.text-primary сотрудничества с нами
 					.d-sm-none
 						img.res-i.lazy(src="#" data-src="img/@2x/advantages-img-sm.jpg", alt="")
 					ol

@@ -14,13 +14,14 @@
 				align-items: center;
 				padding-top: rem(10px);
 				padding-bottom: rem(30px);
-				min-height: rem(100px);
+				// min-height: rem(100px);
+				height: initial;
 				text-align: center;
 			
 				
 			}
 			&__slider{
-				max-width: rem(900px);
+				max-width: rem(1106px);
 				margin-left: auto;
 				margin-right: auto;
 				// padding-bottom: 40px;

@@ -20,21 +20,10 @@ block title
 
 block pagecontent
 	+header() 
-		+top-nav()(class="fixed-page ")
-		//- +header-block()
-	+b.main-row.row.no-gutters
-		+e.col-aside.col-xl-auto 
-			+e.current-nav.toggle-btn-js.d-xl-none
-				.container Вакансии
-			
-			+aside-nav
-
-
-
-		+e.col-main.col
-			+b.page-head.container
-				+breadcrumb('Вакансии', 'Главная')
-				h1 Вакансии
-			+s-faq-18
+		+top-line()
+		+breadcrumb2('Главная','Вакансии')
+		+b.page-head.container 
+			h1 Вакансии
+	+s-faq-18
 	
 	+footer()

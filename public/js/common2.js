@@ -60,8 +60,15 @@ jQuery(document).ready(function ($) {
 
 	function getFirst() {
 		menuItems.removeClass("active").parent().first().find('a').addClass("active");
-	} // getFirst();
-	// Bind to scroll
+	}
+
+	var fromTop = window.matchMedia("(min-width: 992px)").matches ? $(this).scrollTop() + topMenuHeight : $(this).scrollTop() + topMenuHeight + 67;
+	var body = $('body').height();
+	var win = $(this).height();
+
+	if (fromTop < win) {
+		getFirst();
+	} // Bind to scroll
 
 
 	$(window).scroll(function () {
@@ -86,7 +93,7 @@ jQuery(document).ready(function ($) {
 
 			menuItems.removeClass("active");
 			$(".top-menu__item:last-child").find('a').addClass("active");
-		} else if (fromTop + topMenuHeight < win) {
+		} else if (fromTop < win) {
 			getFirst();
 		} else {
 			if (lastId !== id) {
@@ -144,28 +151,25 @@ jQuery(document).ready(function ($) {
 		$(this).parent().toggleClass("active").siblings().removeClass("active");
 		searchTogggle();
 		$(this).next().toggleClass("active"); // $(".top-submenu--js").slideUp(0);
-	});
+	}); // мобильное меню
+
 	$(".site-nav__item--has-child > a").each(function () {
 		var title = $(this).text();
 		var href = $(this).attr("href");
 		var toggleBlock = $(this).next().find("ul"); // <li class="hide-parent-js d-sm-none"> ${title} </li>
 
-		toggleBlock.prepend("\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"sub-menu__item d-sm-none\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"sub-menu__link\" href=\"".concat(href, "\">").concat(title, " </a>\n\t\t\t\t\t\t\t\t\t\t\t</li>"));
+		toggleBlock.prepend("\n\t<li class=\"sub-menu__item d-sm-none\">\n\t<a class=\"sub-menu__link\" href=\"".concat(href, "\">").concat(title, " </a>\n\t</li>"));
 		$(this).click(function (e) {
 			$(".hide-parent-js").addClass("active");
-			e.preventDefault(); // $(this).parent().toggleClass("active").siblings().removeClass("active");
-			// searchTogggle();
-			// $(".top-line__inner").toggleClass("invisible");
-
-			$(this).next().toggleClass("active"); // setTimeout(() => {
-			// },500);
-			// $(".top-submenu--js").slideUp(0);
+			e.preventDefault();
+			$(this).next().toggleClass("active");
 		});
 	});
 	$(".hide-parent-js").click(function () {
 		$(this).removeClass('active');
 		$(".sub-menu-wrap.active").removeClass('active'); // $(".top-line__inner").removeClass("invisible");
-	}); // анимация кнопок
+	}); // мобильное меню
+	// анимация кнопок
 
 	$(".btn-primary, .btn-js").each(function () {
 		var B = $(this);

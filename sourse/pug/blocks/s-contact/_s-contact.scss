@@ -52,11 +52,12 @@
 				text-align: left;
 			}
 			&__btn{
-				margin-top: em(12);
-				max-width: rem(198px);
+				// margin-top: em(12);
+				// max-width: rem(198px);
 				margin-left: auto;
 				margin-right: auto;
 				margin-bottom: rem(30px);
+				margin-top: 0;
 			}
 			&__polite{
 				margin-left: auto;

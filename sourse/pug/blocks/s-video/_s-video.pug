@@ -1,9 +1,9 @@
 mixin s-video()
 	// start s-video
-	+b.s-video.section#s-video.lazy-background&attributes(attributes)
+	+b.s-video.not-slide-def.section#s-video.lazy-background&attributes(attributes)
 		.container
 			block
-			+e.slider--js.swiper-container
+			+e.slider.slider--js.swiper-container
 				.swiper-wrapper
 					mixin item(i)
 						+e.slide.swiper-slide
@@ -26,21 +26,24 @@ mixin s-video-03-()
 	+b.s-video.section#s-video.lazy-background&attributes(attributes)
 		.container
 			block
-			+e.slider--js.swiper-container.gal
-				.swiper-wrapper
-					mixin item(i)
-						+e.slide.swiper-slide
-							+e.item.img-bg(href=`img/video-${i}.jpg` data-background=`img/video-${i}.jpg` class="swiper-lazy")
-								img(src="#"  data-src=`img/video-${i}.jpg` class="swiper-lazy", alt="")
-						// +e.slide.swiper-slide
-					+item('1')
-					+item('2')
-					+item('3')
-					
-					+item('1')
-					+item('2')
+			+e.slider-wrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(i)
+							+e.slide.swiper-slide
+								+e.item.img-bg(href=`img/gal-${i}.jpg` data-fancybox="video-gal"  data-background=`img/gal-${i}.jpg` class="swiper-lazy")
+									img(src="#"  data-src=`img/gal-${i}.jpg` class="swiper-lazy", alt="")
+							// +e.slide.swiper-slide
+						+item('1')
+						+item('2')
+						+item('3')
+						
+						+item('1')
+						+item('2')
 
-			+b.swiper-pagination--lg
+				.d-none.d-md-block
+					+arrow()
+			+b.swiper-pagination
 	// end s-video
 mixin s-video-tech()
 	// start s-video

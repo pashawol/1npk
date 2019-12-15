@@ -112,6 +112,7 @@
 	}
 
 	&__item {
+		text-align: left;
 		@include media-breakpoint-up(lg) {
 
 			padding: rem(32) rem(30);
@@ -189,9 +190,12 @@
 	}
 	text-align: center;
 		h1{
-			color: #ffffff;
+			// color: #ffffff;
 			font-weight: bold;
-			margin-bottom: rem(55);
+			&.text-white{
+
+				margin-bottom: rem(55);
+			}
 		}
 		&__text{
 			color: $primary;

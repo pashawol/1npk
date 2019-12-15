@@ -24,21 +24,10 @@ block title
 
 block pagecontent
 	+header() 
-		+top-nav()(class="fixed-page ")
-		//- +header-block()
-	+b.main-row.row.no-gutters
-		+e.col-aside.col-xl-auto 
-			+e.current-nav.toggle-btn-js.d-xl-none
-				.container База знаний
-			
-			+aside-nav
-
-
-
-		+e.col-main--block-2.col  
-			+b.page-head.container
-				+breadcrumb('База знаний', 'Главная')
-				h1 База знаний 
-			+s-project-head-bz
+		+top-line()
+		+breadcrumb2('Главная','База знаний ')
+		+b.page-head.container 
+			h1 База знаний 
+	+s-project-head-bz
 		 
 	+footer()

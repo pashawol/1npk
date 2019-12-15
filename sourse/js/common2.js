@@ -70,7 +70,14 @@ jQuery(document).ready(function ($) {
 					.removeClass("active").parent()
 					.first().find('a').addClass("active");
 		}
-		// getFirst();
+		var fromTop = window.matchMedia("(min-width: 992px)").matches 
+		? ($(this).scrollTop()+ topMenuHeight) 
+		:( $(this).scrollTop()+ topMenuHeight + 67 );
+		let body= $('body').height();
+		let win = $(this).height();
+		if ((fromTop) < win) {
+			getFirst();
+		}
 		// Bind to scroll
 		$(window).scroll(function(){
 			// Get container scroll position
@@ -101,7 +108,7 @@ jQuery(document).ready(function ($) {
 					.removeClass("active")
 					$(".top-menu__item:last-child").find('a').addClass("active");
 				}
-			else if ((fromTop + topMenuHeight) < win) {
+			else if ((fromTop) < win) {
 				getFirst();
 			}
 			else{
@@ -171,27 +178,21 @@ jQuery(document).ready(function ($) {
 
 });
 
+
+// мобильное меню
 $(".site-nav__item--has-child > a").each(function(){
 	var title= $(this).text();
 	var href= $(this).attr("href");
 	var toggleBlock = $(this).next().find("ul");
 	// <li class="hide-parent-js d-sm-none"> ${title} </li>
 	toggleBlock.prepend(`
-											<li class="sub-menu__item d-sm-none">
-												<a class="sub-menu__link" href="${href}">${title} </a>
-											</li>`)
+	<li class="sub-menu__item d-sm-none">
+	<a class="sub-menu__link" href="${href}">${title} </a>
+	</li>`)
 	$(this).click(function (e) {
 		$(".hide-parent-js").addClass("active")
-			e.preventDefault();
-			// $(this).parent().toggleClass("active").siblings().removeClass("active");
-			// searchTogggle();
-			
-			// $(".top-line__inner").toggleClass("invisible");
-			$(this).next().toggleClass("active");
-			// setTimeout(() => {
-			// },500);
-			// $(".top-submenu--js").slideUp(0);
-			
+		e.preventDefault(); 
+		$(this).next().toggleClass("active"); 
 	})
 });
 $(".hide-parent-js").click(function(){
@@ -200,13 +201,14 @@ $(".hide-parent-js").click(function(){
 	$(".sub-menu-wrap.active").removeClass('active');
 	// $(".top-line__inner").removeClass("invisible");
 })
+// мобильное меню
 
-	// анимация кнопок
-	$(".btn-primary, .btn-js").each(function() {
-		var B = $(this);
-		var A, C, z, D;
-		setInterval(function() {
-				if (B.find(".animate-js").length === 0) {
+// анимация кнопок
+$(".btn-primary, .btn-js").each(function() {
+	var B = $(this);
+	var A, C, z, D;
+	setInterval(function() {
+		if (B.find(".animate-js").length === 0) {
 						B.prepend("<span class='animate-js'></span>");
 				}
 				A = B.find(".animate-js");

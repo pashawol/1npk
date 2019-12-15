@@ -5,7 +5,7 @@
 		<title>17. База знаний</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width ">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=no "><meta name="format-detection" content="telephone=no">
 		<meta property="og:image" content="path/to/image.jpg">
 		<link rel="shortcut icon" type="image/ico" href="img/favicon/favicon.ico">
 		<!-- Custom Browsers Color-->
@@ -14,400 +14,483 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css">
 		<link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.min.css">
+		<link rel="stylesheet" href="libs/selectize.js/css/selectize.css">
+		<link rel="stylesheet" href="libs/jQuery.YoutubeBackground/src/style.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
-	<body>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start HEADER.header-->
 			<header class="header"> 
-				<!-- start top-nav-->
-				<div class="top-nav fixed-page">
-					<div class="top-nav__container container">
-						<div class="row">
-							<div class="col-md-auto col d-none d-sm-block"><a class="top-nav__logo top-nav__logo--top" href="#"><img src="img/logo.png" alt=""/></a><a class="top-nav__logo top-nav__logo--fixed" href="#"><img src="img/logo-dark.png" alt=""/></a>
+				<!-- start .top-line-->
+				<div class="top-line">
+					<div class="top-line__inner d-xl-none"> 
+						<div class="container">
+							<div class="row">
+								<div class="col-auto">
+									<div class="toggle-wrap">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js2"><span></span>
+											<div class="toggle-menu-mobile__text d-none d-sm-inline">Открыть меню
+											</div>
+										</div>
+										<div class="hide-parent-js"></div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-line__logo"><a href="/"><img src="img/logo.png" alt=""/></a>
+									</div>
+								</div>
+								<div class="top-line__col col-auto">
+									<div class="d-none d-sm-block"><a class="top-line__link top-line__link--tel" href="tel:8(800)100-73-75"> <span class="top-line__icon-wrap">
+										<svg class="icon icon-call ">
+											<use xlink:href="img/svg/sprite.svg#call"></use>
+										</svg></span>+7 (917) 926-27-77</a>
+									</div>
+									<div class="d-sm-none"><a class="top-line__link-city popup-with-move-anim" href="#modal-city">
+										<svg class="icon icon-mark ">
+											<use xlink:href="img/svg/sprite.svg#mark"></use>
+										</svg></a>
+									</div>
+								</div>
 							</div>
-							<div class="col d-none d-md-block"><a class="top-nav__link popup-with-move-anim" href="#modal-city">
+						</div>
+					</div>
+					<!-- start aside-->
+					<aside class="aside aside--js">
+						<div class="aside__inner">
+							<div class="aside__head">
+								<div class="aside__logo d-none d-xl-block"><a href="/"><img src="img/logo.png" alt=""/></a>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Например, щебень 5-20" name="text"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button class="form-wrap__btn-search" type="button">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</form>
+								</div>
+							</div>
+							<ul class="site-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="site-nav__item" itemprop="item"><a class="site-nav__link site-nav__link--lg active" href="#" itemprop="url"> Продукция</a>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link--sm" href="#" itemprop="url"> Щебень</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-20</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-40</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">70-120</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M400</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M600</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M800</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1000</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1200</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">M1400</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Гранитный</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Известняковый</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Доломитовый</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Жигулевский</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Гравийный</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Песок</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок растворный (волжский)</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок речной</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок обогащенный</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песок строительный</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">ПГС ОПГС</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Песчано-гравийная смесь</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Обогащенная песчано-гравийная смесь</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Гравий</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-10</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-20</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-40</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-70</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Бутовый камень</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">70-150</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">100-300</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">нестандартный</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Отсев щебня</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-5</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-10</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-20</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Смеси щебня</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-20</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-40</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-80</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">0-120</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--sm" href="#" itemprop="url">Узкие фракции щебня</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">3-10</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-10</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">5-15</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">10-15</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">20-70</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">40-70</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Аренда спецтехники</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu"> 
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-1.png" alt=""/></span>Самосвал КАМАЗ кузов&nbsp;10&nbsp;м3</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-1.png" alt=""/></span>Самосвал КАМАЗ кузов&nbsp;15&nbsp;м3</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-1.png" alt=""/></span> Самосвал КАМАЗ кузов&nbsp;30&nbsp;м3</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-2.png" alt=""/></span>Фронтальный позгручик&nbsp;Volvo</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-2.png" alt=""/></span>Фронтальный погрузчик&nbsp;Mitsuber</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-3.png" alt=""/></span>Экскаватор-погрузчик&nbsp;Caterpillar</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"><span class="sub-menu__img-wrap"><img class="res-i" src="img/@2x/rent-3.png" alt=""/></span>Экскаватор-погрузчик&nbsp;JCB</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Услуги</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Уборка и вывоз снега</a>
+											</li>
+										</ul>
+									</div>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url">Доставка автотранспортом</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Выполненные проекты</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Аэропорт Бегишево</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Автосалон DAF</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Нефтепровод Газпром</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Супермаркет Лента (пока этих достаточно)</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="site-nav__item site-nav__item--has-child" itemprop="item"><a class="site-nav__link site-nav__link site-nav__link--lg" href="#" itemprop="url">Компания</a>
+									<div class="sub-menu-wrap">
+										<ul class="sub-menu">
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> О компании</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Ответы на вопросы</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Новости</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> База знаний</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Документы</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Вакансии</a>
+											</li>
+											<li class="sub-menu__item" itemprop="item"><a class="sub-menu__link" href="#" itemprop="url"> Контакты</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<div class="aside__foot d-none d-sm-block"><a class="aside__link-city popup-with-move-anim" href="#modal-city">
 								<svg class="icon icon-map ">
 									<use xlink:href="img/svg/sprite.svg#map"></use>
-								</svg>Набережные Челны</a>
+								</svg>Набережные Челны</a><br/><a class="aside__mail" href="mailto:info@1pnk.com">info@1pnk.com</a><br/><a class="aside__link aside__link--tel" href="tel:8(800)100-73-75">8 (800) 100-73-75</a>
 							</div>
-							<div class="top-nav__cont-wrap col-sm-auto col">
-								<div class="row text-sm-right">
-									<div class="col-xxl-auto order-xxl-last"><a class="top-nav__link top-nav__link--tel" href="tel:8(800)100-73-75">8 (800) 100-73-75</a>
-									</div>
-									<div class="col-xxl-auto d-none d-sm-block"><a class="top-nav__link" href="mailto:info@pn-company.ru">info@pn-company.ru</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto d-none d-xl-block"><a class="top-nav__btn" href="#">Калькулятор поставок</a>
-							</div>
-							<div class="col-auto"><a class="toggle-menu-mobile toggle-menu-mobile--js popup-with-move-anim" href="#modal-nav"><span></span>
-								<div class="toggle-menu-mobile__text d-none d-lg-block">Меню
-								</div></a>
+							<div class="d-sm-none"><a class="aside__link-btn" href="tel:+7(917)926-27-77">
+								<svg class="icon icon-call ">
+									<use xlink:href="img/svg/sprite.svg#call"></use>
+								</svg>Позвонить +7 (917) 926-27-77</a>
 							</div>
 						</div>
-					</div>
+					</aside>
+					<!-- end aside-->
 				</div>
-				<!-- end top-nav-->
+				<!-- end .top-line-->
+				<nav class="breadcrumb-wrap" aria-label="breadcrumb">
+					<div class="container">
+						<div class="breadcrumb-slider-js swiper-container">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">База знаний </span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</div>
+					</div>
+				</nav>
+				<div class="page-head container"> 
+					<h1>База знаний </h1>
+				</div>
 			</header>
 			<!-- end HEADER.header-->
-			<div class="main-row row no-gutters">
-				<div class="main-row__col-aside col-xl-auto"> 
-					<div class="main-row__current-nav toggle-btn-js d-xl-none">
-						<div class="container">База знаний</div>
-					</div>
-					<!-- start aside-nav-->
-					<div class="aside-nav section d-xl-block toggle-aside-nav-js">
-						<ul class="aside-nav__list">
-							<li class="aside-nav__item aside-nav__item--has-children aside-nav__item--js">
-								<div class="aside-nav__link aside-nav__link--main aside-nav__link--js">Продукция
-								</div>
-								<div class="toggle--js active"></div>
-								<ul class="aside-nav__sub aside-nav__sub--open">
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Щебень</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Отсев щебня</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Бутовый камень</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Узкие фракции</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Смеси щебня</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Песок</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Гравий</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">ПГС ОПГС</a>
-									</li>
-								</ul>
-							</li>
-							<li class="aside-nav__item aside-nav__item--has-children aside-nav__item--js">
-								<div class="aside-nav__link aside-nav__link--main aside-nav__link--js">Доставка
-								</div>
-								<div class="toggle--js"></div>
-								<ul class="aside-nav__sub">
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Доставка автотранспортом</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Доставка ЖД-вагонами</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Доставка баржами по воде</a>
-									</li>
-								</ul>
-							</li>
-							<li class="aside-nav__item aside-nav__item--has-children aside-nav__item--js">
-								<div class="aside-nav__link aside-nav__link--main aside-nav__link--js">Возможно вы искали это
-								</div>
-								<div class="toggle--js"></div>
-								<ul class="aside-nav__sub">
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">40 причин заказать у&nbsp;нас</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Компания в цифрах</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Какие проблемы клиента мы решаем</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Видео с&nbsp;отгрузок</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Качество продукции</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Этапы работ</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Отсрочка платежа</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Наши площадки</a>
-									</li>
-									<li class="aside-nav__item aside-nav__item--sub"><a class="aside-nav__link aside-nav__link--sub" href="#">Бонусы закупщикам</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<!-- end aside-nav-->
-				</div>
-				<div class="main-row__col-main main-row__col-main--block-2 col"> 
-					<div class="page-head container">
-						<nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">База знаний</span>
-						</nav>
-						<h1>База знаний </h1>
-					</div>
-					<!-- start s-project-head-->
-					<div class="s-project-head s-project-head--bz s-project-head--artical section pb-0" id="s-project-head">
-						<div class="container"><a class="s-project-head__img-wrap s-project-head__img-wrap--bz s-project-head__img-wrap--artical img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/project-head-img.jpg" alt=""/></a>
-							<div class="date-row row row--md align-items-center">
-								<div class="col-auto">
-									<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-								</div>
-								<div class="col-auto">
-									<div class="fw-400">
-										<svg class="icon icon-eye ">
-											<use xlink:href="img/svg/sprite.svg#eye"></use>
-										</svg>313
-									</div>
-								</div>
-								<div class="col-auto">
-									<div class="badge badge--primary">Песок
-									</div>
-								</div>
+			<!-- start s-project-head-->
+			<div class="s-project-head s-project-head--bz s-project-head--artical section pb-0" id="s-project-head">
+				<div class="container"><a class="s-project-head__img-wrap s-project-head__img-wrap--bz s-project-head__img-wrap--artical img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/project-head-img.jpg" alt=""/></a>
+					<div class="date-row row row--md align-items-center">
+						<div class="col-auto">
+							<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+						</div>
+						<div class="col-auto">
+							<div class="fw-400">
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>313
 							</div>
-							<div class="s-project-head__title"> <a class="text-body" href="#">Как купить качественный песок и&nbsp;не&nbsp;ошибиться с&nbsp;поставщиком?</a>
-							</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-							<div class="s-project-head__body">
-								<div class="row">
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-										<div class="s-project-head__col col-md-6">
-											<artical class="s-project-head__item">
-												<div class="date-row row row--md align-items-center">
-													<div class="col-auto">
-														<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
-													</div>
-													<div class="col-auto">
-														<div class="fw-400">
-															<svg class="icon icon-eye ">
-																<use xlink:href="img/svg/sprite.svg#eye"></use>
-															</svg>313
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="badge badge--primary">Песок
-														</div>
-													</div>
-												</div>
-												<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
-												</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
-											</artical>
-										</div>
-										<!-- /+e.col.col-md-6-->
-								</div><a class="s-project-head__btn-more" href="#">Загрузить еще</a>
+						</div>
+						<div class="col-auto">
+							<div class="badge badge--primary">Песок
 							</div>
 						</div>
 					</div>
-					<!-- end s-project-head-->
+					<div class="s-project-head__title"> <a class="text-body" href="#">Как купить качественный песок и&nbsp;не&nbsp;ошибиться с&nbsp;поставщиком?</a>
+					</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+					<div class="s-project-head__body">
+						<div class="row">
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+								<div class="s-project-head__col col-md-6">
+									<artical class="s-project-head__item">
+										<div class="date-row row row--md align-items-center">
+											<div class="col-auto">
+												<div class="text-gray2 fw-400"> 4 февраля 2019 </div>
+											</div>
+											<div class="col-auto">
+												<div class="fw-400">
+													<svg class="icon icon-eye ">
+														<use xlink:href="img/svg/sprite.svg#eye"></use>
+													</svg>313
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="badge badge--primary">Песок
+												</div>
+											</div>
+										</div>
+										<div class="s-project-head__item-title"><a class="text-body" href="#">Чем отличается ПГС от ОПГС длинное название в 2 строки?</a>
+										</div><a class="s-project-head__btn-head" href="#">Читать полностью</a>
+									</artical>
+								</div>
+								<!-- /+e.col.col-md-6-->
+						</div><a class="s-project-head__btn-more" href="#">Загрузить еще</a>
+					</div>
 				</div>
 			</div>
-			<footer class="footer">
-				<div class="footer__body">
-					<div class="footer__container container">
-						<div class="d-none d-md-block">
-							<div class="row">
-								<div class="col-lg-auto d-none d-lg-block"><a class="footer__logo" href="#"><img class="lazy" src="#" data-src="img/logo.png" alt=""/></a>
-									<div class="footer__copy">«Первая нерудная компания».<br/>Все права защищены, © 2019
-									</div>
-								</div>
-								<div class="footer__col col-xxxl-3 col-auto">
-									<div class="footer__title"><a href="#">Продукция</a>
-									</div>
-									<ul class="footer__list">
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Щебень</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Отсев щебня</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Бутовый камень</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Узкие фракции</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Смеси щебня</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Песок</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Гравий</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">ПГС ОПГС</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-auto">
-									<div class="footer__title"><a href="#">Доставка</a>
-									</div>
-									<ul class="footer__list">
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Автодоставка</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Ж/Д доставка</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Морская доставка</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-auto">
-									<div class="footer__title"><a href="#">Компания</a>
-									</div>
-									<ul class="footer__list">
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Реализованные проекты </a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Ответы на вопросы</a>
-										</li>
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Отзывы клиентов</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-auto">
-									<div class="footer__title"><a href="#">Контакты</a>
-									</div>
-									<ul class="footer__list">
-										<li class="footer__list-item"><a class="footer__list-link" href="#">Документы</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-auto d-none d-xl-block"><a class="footer__btn-outline btn-sm" href="#">Калькулятор поставок</a>
-								</div>
-							</div>
+			<!-- end s-project-head-->
+			<!-- start footer-white-->
+			<footer class="footer-white" id="footer-white">
+				<div class="container"> 
+					<div class="row">
+						<div class="footer-white__col col-md-auto">«Первая нерудная компания». Все права защищены, © 2019
 						</div>
-					</div>
-					<div class="d-md-none text-center"><a class="footer__btn btn-lg" href="tel:8(800)100-73-75">Позвонить</a><a class="footer__btn-outline btn-lg popup-with-move-anim" href="#modal-call" data-title="Оставить заявку">Оставить заявку</a>
-						<div class="soc"><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-whatsup ">
-								<use xlink:href="img/svg/sprite.svg#whatsup"></use>
-							</svg></a><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-telegram ">
-								<use xlink:href="img/svg/sprite.svg#telegram"></use>
-							</svg></a><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-viber ">
-								<use xlink:href="img/svg/sprite.svg#viber"></use>
-							</svg></a>
+						<div class="footer-white__col col-md-auto order-md-first"><a class="link-color" href="#">Политика конфиденциальности</a>
 						</div>
-					</div>
-				</div>
-				<div class="footer__foot">
-					<div class="footer__container container">
-						<div class="footer__copy d-md-none">«Первая нерудная компания».<br/>Все права защищены, © 2019
-						</div>
-						<div class="row">
-							<div class="col-md-auto"><a class="footer__list-link" href="#">Политика конфиденциальности</a>
-							</div>
-							<div class="col-auto d-none d-md-block">
-								<div class="soc"><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-whatsup ">
-										<use xlink:href="img/svg/sprite.svg#whatsup"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-viber ">
-										<use xlink:href="img/svg/sprite.svg#viber"></use>
-									</svg></a>
-								</div>
-							</div>
-							<div class="col-md-auto">
-								<div class="footer__developer">Разработка сайта — <a href="#" target="_blank">Ishmetov.Studio</a>
-								</div>
-							</div>
+						<div class="footer-white__col col-md-auto">
+							Разработка сайта —  <a class="link-color" href="#">Ishmetov</a>
 						</div>
 					</div>
 				</div>
 			</footer>
+			<!-- end footer-white--><a class="popup-with-move-anim" href="#modal-thank">Спасибо</a>
 		</div>
 		<div class="  mfp-hide modal-win modal-form " id="modal-nav">
 			<div class="nav-block">
@@ -485,7 +568,7 @@
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" type="tel" placeholder="Ваш телефон"/>
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш E-mail"/>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш E-mail"/> 
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваш вопрос"></textarea>
@@ -497,7 +580,7 @@
 						<button class="form-wrap__btn" type="submit">Отправить
 						</button>
 						<div class="form-wrap__polite">
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">Отправляя, вы&nbsp;соглашаетесь с&nbsp;<a class="tdu" href="#">политикой конфиденциальности </a>и&nbsp;<a class="tdu" href="#">пользовательским соглашением</a></span>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"> Отправляя, вы&nbsp;соглашаетесь с&nbsp;<a class="tdn" href="#">политикой конфиденциальности </a>и&nbsp;<a class="tdn" href="#">пользовательским соглашением</a></span>
 							</label>
 						</div>
 					</div>
@@ -520,7 +603,7 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="d-none d-sm-block">
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш E-mail"/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш E-mail"/> 
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваш вопрос"></textarea>
@@ -533,7 +616,7 @@
 						<button class="form-wrap__btn" type="submit">Отправить
 						</button>
 						<div class="form-wrap__polite">
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">Отправляя, вы&nbsp;соглашаетесь с&nbsp;<a class="tdu" href="#">политикой конфиденциальности </a>и&nbsp;<a class="tdu" href="#">пользовательским соглашением</a></span>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"> Отправляя, вы&nbsp;соглашаетесь с&nbsp;<a class="tdn" href="#">политикой конфиденциальности </a>и&nbsp;<a class="tdn" href="#">пользовательским соглашением</a></span>
 							</label>
 						</div>
 					</div>
@@ -543,155 +626,509 @@
 		<!-- /#modal-profile-->
 		<div class="form mfp-hide modal-win modal-form" id="modal-city">
 			<div class="city">
-				<div class="city__title">Выберите город
+				<div class="city__title">Выберите свой город
 				</div>
-				<div class="city__wrap row">
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">А
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Альметьевск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Б
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Белебей</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Белорецк</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Бирск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Благовещенск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Бугульма</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Е
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Елабуга</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">З
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Заинск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Зеленодольск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">И
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Ишимбай</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">К
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Казань</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Кумертау</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Л
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Лениногорск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">М
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Мелеуз</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Менделеевск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Мензелинск</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Н
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Набережные Челны</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нефтекамск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нижнекамск</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Нурлат</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">О
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Октябрьский</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="city__group">
-							<div class="city__group-title">С
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Салават</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Стерлитамак</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Сибай</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Т
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Туймазы</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">У
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Уфа</a>
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Учалы</a>
-							</div>
-						</div>
-						<!-- /+e.group-->
-						<div class="city__group">
-							<div class="city__group-title">Ч
-							</div>
-							<div class="city__item"><a class="city__link" href="#">Чистополь</a>
-							</div>
-						</div>
-					</div>
-					<!-- /+e.group-->
-				</div>
+				<ul class="city__wrap">
+					<li class="city__item"><a class="city__link" href="#">Азнакаево</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Аксубаево</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Актаныш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Алексеевское</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Альметьевск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Апастово</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Арск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бавлы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Базарные Матаки</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Балтаси</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Богатые Сабы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Болгар</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Большая Атня</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Большие Кайбицы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Белебей</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Белорецк</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бирск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Благовещенск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Бугульма</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Буинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Верхний Услон</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Волжск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Высокая Гора</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Елабуга</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Заинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Зеленодольск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Ишимбай</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Йошкар-Ола</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Казань</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Камское Устье</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Канаш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Кумертау</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Кукмор</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Лаишево</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Лениногорск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мамадыш</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мелеуз</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Менделеевск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Мензелинск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Можга</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Муслюмово</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Набережные Челны</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Нефтекамск</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Нижнекамск</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Нурлат</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Октябрьский</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Пестрецы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Рыбная Слобода</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Сарманово</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Тетюши</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Туймазы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Уруссу</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Уфа</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Учалы</a>
+					</li>
+					<li class="city__item"><a class="city__link" href="#">Черемшан</a>
+					</li>
+					<li class="city__item"><a class="city__link strong" href="#">Чистополь</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<!-- #modal-city-->
-		<div class="form-wrap mfp-hide modal-win modal-form" id="modal-thank">
-			<div class="form-wrap__block">
-				<div class="text-center">
-					<div class="h2 strong">Спасибо за обращение!</div>
-					<div class="form-wrap__text">Персональный менеджер свяжется с Вами в течение 15 минут
+		<div class="modal-win-place mfp-hide modal-win modal-form" id="modal-search-place">
+			<div class="form-wrap">
+				<form>
+					<div class="modal-map-block">
+						<div class="form-wrap__map-wrap d-none d-md-block"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6cf7260e3ce038629899c6b246f874ba1d9787b2efe027673d7c435cb0b1b793&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+						</div>
+						<div class="form-wrap__foot">
+							<div class="row">
+								<div class="col">
+									<!-- на инпут при фокусе class="input-focus"-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите адрес" value="Россия, Самара, Ташкентская улица"/>
+										<div class="input-dropdown-wrap">
+											<div class="input-dropdown">
+												<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
+												</div>
+												<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
+												</div>
+												<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+												</div>
+												<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-auto">
+									<button class="form-wrap__btn btn-add-addr-js" type="button">
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<button class="form-wrap__btn btn-close-js" type="button">Закрыть 
-					</button>
+				</form>
+			</div>
+		</div>
+		<div class="form-wrap mfp-hide modal-win modal-form-new modal-win-new" id="modal-call-new">
+			<form>
+				<div class="form-wrap__block-new">
+					<div class="text-center">
+						<div class="form-wrap__title">
+						</div>
+						<div class="form-wrap__text">Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер 
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" type="tel" placeholder="Ваш телефон"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn" type="submit">
+						</button>
+						<div class="form-wrap__polite">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"> Отправляя, вы&nbsp;соглашаетесь с&nbsp;<a class="tdn" href="#">политикой конфиденциальности </a>и&nbsp;<a class="tdn" href="#">пользовательским соглашением</a></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- /#modal-call-new-->
+		<!-- modal-->
+		<div class="modal-quiz mfp-hide modal-win" id="modal-quiz">
+			<div class="form-wrap__block">
+				<div class="modal-quiz__head">
+					<div class="progress">
+						<div class="progress__bar">
+							<div class="progress__bar-current" style="width: 0">
+								<div class="progress__value" data-value="0%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-quiz__body"> 
+					<div class="modal-quiz__step active">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Укажите марку и фракцию 
+								</div>
+							</div>
+							<div class="form-wrap">
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Марка</div>
+									<select class="select-js" placeholder="Выберите марку">
+										<option value=""> Выберите марку</option>
+										<option value=" Щебень"> Щебень</option>
+										<option value=" Песок"> Песок</option>
+										<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+										<option value=" Гравий"> Гравий</option>
+										<option value=" Бутовый камень"> Бутовый камень</option>
+										<option value=" Отсев щебня"> Отсев щебня</option>
+										<option value=" Смеси щебня"> Смеси щебня</option>
+										<option value=" Узкие фракции"> Узкие фракции</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Фракция</div>
+									<select class="select-js" placeholder="Выберите фракцию">
+										<option value=""> Выберите фракцию</option>
+										<option value=" Щебень"> Щебень</option>
+										<option value=" Песок"> Песок</option>
+										<option value=" ПГС ОПГС"> ПГС ОПГС</option>
+										<option value=" Гравий"> Гравий</option>
+										<option value=" Бутовый камень"> Бутовый камень</option>
+										<option value=" Отсев щебня"> Отсев щебня</option>
+										<option value=" Смеси щебня"> Смеси щебня</option>
+										<option value=" Узкие фракции"> Узкие фракции</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Укажите объем поставки
+								</div>
+							</div>
+							<div class="form-wrap">
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">10-100 тн</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">100-1000 тн</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">более 1000 тн</span>
+								</label>
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Свое значение</div><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Свое значение"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Укажите место поставки
+								</div>
+							</div>
+							<div class="form-wrap form-wrap form-wrap--map">
+								<div class="d-none d-sm-block">
+									<div class="modal-map-block">
+										<div class="form-wrap__map-wrap d-none d-md-block"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6cf7260e3ce038629899c6b246f874ba1d9787b2efe027673d7c435cb0b1b793&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+										</div>
+										<div class="form-wrap__foot">
+											<div class="row">
+												<div class="col">
+													<!-- на инпут при фокусе class="input-focus"-->
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите адрес" value="Россия, Самара, Ташкентская улица"/>
+														<div class="input-dropdown-wrap">
+															<div class="input-dropdown">
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-auto">
+													<button class="form-wrap__btn btn-add-addr-js" type="button">
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-sm-none">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="strong text-white mb-2">Укажите адрес объекта</div><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Введите адрес объекта"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Как Вас зовут?
+								</div>
+							</div>
+							<div class="form-wrap"> 
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Имя и фамилия</div><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Имя и фамилия"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Контактные данные
+								</div>
+							</div>
+							<div class="form-wrap"> 
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Телефон</div><input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Телефон" required="required"/>
+									<div class="small error-text">Поле должно быть заполнено.</div>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+				</div>
+				<!-- /+e.step-->
+				<div class="modal-quiz__foot">
+					<div class="modal-quiz__btn-wrap">
+						<button class="modal-quiz__btn modal-quiz__btn--back btn-primary disabled" type="button">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</button>
+						<button class="modal-quiz__btn modal-quiz__btn--next btn-primary" type="button">Продолжить
+						</button>
+					</div>
+					<div class="modal-quiz__foot-text">или нажмите Enter
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /#modal-call-new-->
+		<div class="modal-quiz mfp-hide modal-win" id="modal-quiz2">
+			<div class="form-wrap__block">
+				<div class="modal-quiz__head">
+					<div class="progress">
+						<div class="progress__bar">
+							<div class="progress__bar-current" style="width: 0">
+								<div class="progress__value" data-value="0%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-quiz__body"> 
+					<div class="modal-quiz__step active">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Укажите адрес объекта
+								</div>
+							</div>
+							<div class="form-wrap form-wrap form-wrap--map">
+								<div class="d-none d-sm-block">
+									<div class="modal-map-block">
+										<div class="form-wrap__map-wrap d-none d-md-block"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6cf7260e3ce038629899c6b246f874ba1d9787b2efe027673d7c435cb0b1b793&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+										</div>
+										<div class="form-wrap__foot">
+											<div class="row">
+												<div class="col">
+													<!-- на инпут при фокусе class="input-focus"-->
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите адрес" value="Россия, Самара, Ташкентская улица"/>
+														<div class="input-dropdown-wrap">
+															<div class="input-dropdown">
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 5
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+																</div>
+																<div class="input-dropdown__item">г <span class="text-accent">Самара</span>, ул <span class="text-accent">Ташкентская</span>, д 7
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-auto">
+													<button class="form-wrap__btn btn-add-addr-js" type="button">
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-sm-none">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="strong text-white mb-2">Укажите адрес объекта</div><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Введите адрес объекта"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Что вам требуется
+								</div>
+							</div>
+							<div class="form-wrap">
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text"> Уборка снега (услуги погрузчика)</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text"> Вывоз снега с&nbsp;утилизацией</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">Уборка и&nbsp;вывоз снега с&nbsp;утилизацией в&nbsp;комплексе</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Примерная площадь территории для уборки
+								</div>
+							</div>
+							<div class="form-wrap">
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">до 1000 м2</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text"> от 1000 м2 до 5000 м2</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="value"/><span class="custom-input__lab"></span><span class="custom-input__text">более 5000 м2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Как Вас зовут?
+								</div>
+							</div>
+							<div class="form-wrap"> 
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Имя и фамилия</div><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Имя и фамилия"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+					<div class="modal-quiz__step">
+						<div class="modal-quiz__step-inner">
+							<div class="text-center">
+								<div class="modal-quiz__title">Контактные данные
+								</div>
+							</div>
+							<div class="form-wrap"> 
+								<div class="form-wrap__input-wrap form-group">
+									<div class="strong text-white mb-2">Телефон</div><input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Телефон" required="required"/>
+									<div class="small error-text">Поле должно быть заполнено.</div>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<!-- /+e.step  -->
+				</div>
+				<!-- /+e.step-->
+				<div class="modal-quiz__foot">
+					<div class="modal-quiz__btn-wrap">
+						<button class="modal-quiz__btn modal-quiz__btn--back btn-primary disabled" type="button">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</button>
+						<button class="modal-quiz__btn modal-quiz__btn--next btn-primary" type="button">Продолжить
+						</button>
+					</div>
+					<div class="modal-quiz__foot-text">или нажмите Enter
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /#modal-call-new-->
+		<div class="form-wrap mfp-hide modal-win modal-win-new modal-form" id="modal-thank">
+			<div class="form-wrap__block-new">
+				<div class="text-center">
+					<div class="form-wrap__title strong">Спасибо за заказ
+					</div>
+					<div class="form-wrap__text">Ваш заказ принят в&nbsp;обработку. Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 5&nbsp;минут! 
+					</div>
 				</div>
 			</div>
 		</div>
@@ -718,9 +1155,13 @@
 		<script src="libs/jquery.touchSwipe.min.js"></script>
 		<script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/jquery.inputmask.bundle.min.js"></script>
-		<script src="libs/wow.min.js"></script>
 		<script src="libs/sticky-kit.js"></script>
 		<script src="libs/EasyZoom/src/easyzoom.js"></script>
+		<!-- add libs-->
+		<script src="libs/selectize.js/js/standalone/selectize.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="libs/jQuery.YoutubeBackground/src/jquery.youtubebackground.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/common2.js"></script>
 	</body>
 </html>

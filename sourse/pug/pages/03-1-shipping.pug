@@ -1,0 +1,60 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+include ../blocks/s-card-head/_s-card-head.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-char/_s-char.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-shipping2/_s-shipping2.pug
+include ../blocks/s-text/_s-text.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-rent/_s-rent.pug
+include ../blocks/s-advantages/_s-advantages.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Доставка автотранспортом'
+	title= title
+block pagecontent
+	+header() 
+		+top-line()
+		+breadcrumb2('главная','аренда спецтехники', title)
+		+s-card-head-shipping( title,'Объем ковша 2 м2', 'от 450 руб/тн с НДС', 1,2,3,4)
+		
+		//- +s-card-head-shipping('Доставка автотранспортом', 'от 40 тонн', '1' ,'Услуга "Доставка  автотранспортом" для тех, кому необходимо доставить материал на объект как можно быстрее, при этом минимизировать стоимость доставки. ','Доставка материала до любого объекта осуществляется на самосвалах КАМАЗ, МАЗ и Тонарах, вместимость каждого от 15 до 40 тонн. Также возможна комбинированная доставка: ЖД-вагонами и автотранспортом.')  
+ 
+		+s-now-03-
+		+s-rent
+			+b.section-title.text-center
+				h2 Наша спецтехника
+				+e.text Ежедневно на&nbsp;линии более 15&nbsp;единиц техники
+		+s-video-03-(class="section-border-bottom")
+			+b.section-title.text-center
+				h2 Как проходит погрузка автотранспорта
+
+		//- +s-char(class="section-border-bottom d-none d-md-block")
+		+s-advantages()(class="section-border-bottom")
+			h2.mx-100  Почему клиенты выбирают доставку автотранспортом
+				| 
+				span.text-primary в&nbsp;нашей компании?
+		+s-contact-whithoutTitle
+			+b.section-title.text-center.pb-0
+				h2.mw-100 Заказать доставку автотранспортом 
+					| 
+					span.text-primary.d-block   на выгодных условиях
+				.h6 Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер
+	+footer()

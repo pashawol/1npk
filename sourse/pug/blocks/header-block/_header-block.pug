@@ -40,30 +40,29 @@ mixin header-block-09()
 
 mixin header-block-04() 
 	+header-block-body()(class="header-block--about")
-		h1 О компании
+		+e.body-about
+			h1 О компании
 
-		+e.text--top.h55 Первая нерудная компания&nbsp;&mdash; надежный партнер и&nbsp;ведущий поставщик 
-			br.d-none.d-md-block
-			| нерудных материалов по&nbsp;Республике Татарстан 
-			br.d-none.d-md-block 
-			| и&nbsp;Республике Башкортостан  
-
+			+e.text-top.h55.text-primary Первая нерудная компания&nbsp;&mdash; надежный партнер и&nbsp;ведущий поставщик нерудных материалов по&nbsp;Республике Татарстан и&nbsp;Республике Башкортостан
 mixin header-block-07() 
-	+header-block-body()(class="header-block--contact")
-		.row
-			.col.align-self-lg-center
-				h1 Контакты
-				+e.text--contract.h55.d-none.d-md-block Чтобы обсудить условия поставки или другой вопрос, свяжитесь с&nbsp;нами
-			.col-lg-auto 
-				+e.group
-					+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
-					+e.text--top.h55 Отдел по работе с клиентами
-				
-				+e.group
-					+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
-					+e.text--top.h55 Отдел продаж
-				
-				+e.group.d-none.d-md-block
-					+e.link--mail.h4.strong(href="tel:info@pn-company.ru") info@pn-company.ru
-					+e.text--sm.h6 Техническая поддержка клиентов
-				
+	+header-block-body()(class="header-block--contact   header-block--table")
+		+e.td
+			.container
+				<div class="header-block__logo text-center d-sm-none"><img class="res-i" src="img/logo.png" alt=""></div>
+				.row
+					.col.align-self-lg-center
+						h1 Контакты
+						+e.text--contract.h55.d-none.d-md-block Чтобы обсудить условия поставки или другой вопрос, свяжитесь с&nbsp;нами
+					.col-lg-auto 
+						+e.group
+							+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+							+e.text--top.h55 Отдел по работе с клиентами
+						
+						+e.group
+							+e.link--tel.h2.strong(href="tel:8(800)100-73-75") 8 (800) 100-73-75
+							+e.text--top.h55 Отдел продаж
+						
+						+e.group.d-none.d-md-block
+							+e.link--mail.h4.strong(href="tel:info@pn-company.ru") info@pn-company.ru
+							+e.text--sm.h6 Техническая поддержка клиентов
+					

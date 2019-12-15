@@ -12,29 +12,28 @@ include ../blocks/s-client/_s-client.pug
 include ../blocks/s-objects/_s-objects.pug
 include ../blocks/s-calc/_s-calc.pug
 include ../blocks/aside-nav/_aside-nav.pug
+include ../blocks/s-news/_s-news.pug
 
 block title
-	title  2. Продукция
+	title  14. Новости
 
 
 block pagecontent
 	+header() 
-		+top-nav()(class="fixed-page ")
-		//- +header-block()
-	+b.main-row.row.no-gutters
-		+e.col-aside.col-xl-auto 
-			+e.current-nav.toggle-btn-js.d-xl-none
-				.container Продукция
-			
-			+aside-nav
-
-
-
-		+e.col-main.col
-			+b.page-head.container
-				+breadcrumb('Продукция', 'Главная')
-				h1 Поставляемая продукция
-				+e.text Всегда в наличии более 20 000 тонн нерудных материалов
-			+s-prod 
+		+top-line()
+		+breadcrumb2('Главная','Новости')
+		+b.page-head.container 
+			.row.align-items-center
+				.col.text-xl-left.text-center
+					h1 Новости 
+				.col-xl-auto
+					+e.row.row.row--sm.justify-content-center
+						.col-auto
+							+b.prod-btn--head(href="#").active 2019
+						.col-auto
+							+b.prod-btn--head(href="#") 2018
+						.col-auto
+							+b.prod-btn--head(href="#") 2017
+		+s-news
 	
 	+footer()

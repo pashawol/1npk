@@ -334,26 +334,16 @@ var JSCCommon = {
 		});
 	},
 	accordion: function accordion() {
-		if (document.querySelector('.main-row__col-aside')) {
-			var ell = document.querySelector('.main-row__col-aside');
-			$('.accord__head').click(function () {
-				var th = $(this);
-				th.next().slideToggle().parent().siblings().find('.accord__body').slideUp(function () {
-					ell.classList.add('align-self-baseline');
-				});
-				return false;
-			});
-			window.addEventListener('scroll', function () {
-				ell.classList.remove('align-self-baseline');
-			});
-			$('.accord__close').click(function () {
-				var th = $(this);
-				th.parents('.accord__body').slideUp(function () {
-					ell.classList.remove('align-self-baseline');
-				});
-				return false;
-			});
-		}
+		$('.accord__head').click(function () {
+			var th = $(this);
+			th.next().slideToggle().parent().siblings().find('.accord__body').slideUp();
+			return false;
+		});
+		$('.accord__close').click(function () {
+			var th = $(this);
+			th.parents('.accord__body').slideUp();
+			return false;
+		});
 	},
 	videoBg: function videoBg() {
 		if ($('div').is("#bgvid")) {
@@ -505,8 +495,15 @@ jQuery(document).ready(function ($) {
 			slidesPerView: 3,
 			watchOverflow: true,
 			spaceBetween: 0
-		}, _defineProperty(_ref2, "watchOverflow", true), _defineProperty(_ref2, "slidesPerGroup", 2), _defineProperty(_ref2, "slidesPerColumn", 2), _defineProperty(_ref2, "spaceBetween", 30), _defineProperty(_ref2, "lazy", {
+		}, _defineProperty(_ref2, "watchOverflow", true), _defineProperty(_ref2, "spaceBetween", 30), _defineProperty(_ref2, "loop", true), _defineProperty(_ref2, "lazy", {
 			loadPrevNext: true
+		}), _defineProperty(_ref2, "breakpoints", {
+			// when window width is <= 320px
+			// when window width is <= 480px
+			768: {
+				slidesPerView: 5,
+				spaceBetween: 30
+			}
 		}), _defineProperty(_ref2, "navigation", {
 			nextEl: $(this).find('.swiper-button-next'),
 			prevEl: $(this).find('.swiper-button-prev')
@@ -567,9 +564,9 @@ jQuery(document).ready(function ($) {
 				// when window width is <= 320px
 				// when window width is <= 480px
 				768: {
-					slidesPerView: 20,
-					spaceBetween: 0,
-					loop: false
+					slidesPerView: 3,
+					spaceBetween: 30,
+					loop: true
 				}
 			},
 			on: {

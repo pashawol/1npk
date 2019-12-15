@@ -8,7 +8,13 @@
 
 		padding-bottom: rem(40);
 	}
+	&--shipping{
+		@include media-breakpoint-up(lg) {
 
+			padding-bottom: rem(60);
+		}
+ 
+	}
 	.h6{
 		@include media-breakpoint-up(md) {
 

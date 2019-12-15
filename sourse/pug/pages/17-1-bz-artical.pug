@@ -1,0 +1,139 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+include ../blocks/s-about-text/_s-about-text.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-project-head/_s-project-head.pug
+include ../blocks/s-soc/_s-soc.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-faq/_s-faq.pug
+include ../blocks/s-shipping2/_s-shipping2.pug
+include ../blocks/s-category/_s-category.pug
+
+block title
+	title 17.1. База знаний статья
+
+
+block pagecontent
+	+header() 
+		+top-line()
+		+s-project-head-bz-artical
+	+s-content()(class="py-0")
+		p Деятельность любого промышленного производства стоит на «трех китах»:
+			|
+			a(href="#") отточенная работа специалистов
+			|, качественное сырье для изготовления деталей и высокотехнологичное оборудование. Без этого не обойтись ни комплексу, 
+			|
+			strong организованному в крупных масштабах, ни частному производственному цеху.
+		h2 Заголовок < h2> 34px
+		p Деятельность любого промышленного производства стоит на «трех китах»: отточенная работа специалистов, качественное сырье для изготовления деталей и высокотехнологичное оборудование.
+		
+		h3 Заголовок < h3> 28px
+		p Деятельность любого промышленного производства стоит на «трех китах»: отточенная работа специалистов, качественное сырье для изготовления деталей и высокотехнологичное оборудование.
+		
+		h4 Заголовок < h4> 22px
+		p Деятельность любого промышленного производства стоит на «трех китах»: отточенная работа специалистов, качественное сырье для изготовления деталей и высокотехнологичное оборудование.
+		
+		h5 Заголовок < h5> 20px
+		p Деятельность любого промышленного производства стоит на «трех китах»: отточенная работа специалистов, качественное сырье для изготовления деталей и высокотехнологичное оборудование.
+		// start s-card-head
+		+b.s-card-head.pt-3
+			.row.align-items-center
+				.col-md-6  
+					+e.img-wrap--bz.img-bg( )
+						img.lazy-bg(src="#" data-src=`img/head-ship-1.jpg`   alt="")
+					
+				.col-md-6
+					p.h6 На&nbsp;сегодняшний день на&nbsp;строительстве практически любого объекта не&nbsp;обойтись без щебня. Поэтому когда доставка этого материала.
+
+					p.h6 хорошо организована и&nbsp;налажена, это обеспечивает максимальное удобство заказчикам. На&nbsp;сегодняшний день на строительстве практически любого объекта не&nbsp;обойтись без щебня. Поэтому когда доставка этого материала.
+
+					p.h6 Хорошо организована и&nbsp;налажена, это обеспечивает 	максимальное удобство заказчикам.
+		// end s-card-head
+	
+				
+		+b.s-applications--slider-wrap.section
+			+b.section-title
+				.h4.strong Области применения песка:
+			+e.slider-wrapper
+				+e.slider.slider--js2.swiper-container
+					.swiper-wrapper
+						+e.slide.swiper-slide.col-xl-auto.col-md  Производство
+							br
+							| бетона
+						+e.slide.swiper-slide.col-xl-auto.col-md  Возведение
+							br
+							| железобетонных
+							br
+							| конструкций
+						+e.slide.swiper-slide.col-xl-auto.col-md  Закладка
+							br
+							| фундамента
+						//- +e.slide.swiper-slide.col-xl-auto.col-md  Строительство
+						//- 	br
+						//- 	| производвенных
+						//- 	br
+						//- 	| зданий
+						//- +e.slide.swiper-slide.col-xl-auto.col-md  Сооружение Ж/Д
+						//- 	br
+						//- 	| насыпей и строительство
+						//- 	br
+						//- 	| трамвайных путей 
+				.swiper-pagination
+		.row
+			.col-lg-6
+				h5 Маркированный список:
+				+e.UL.ul
+					li Название списка 1
+					li Очень длинное название и описание списка 2
+					li Название списка 3
+					li Очень длинное название и описание списка 2
+			
+			.col-lg-6
+				h5 Нумерной список:
+				+e.OL.ol
+					li Название списка 1
+					li Очень длинное название и описание списка 2
+					li Очень длинное название и описание списка 2
+					li Длинное название списка 4
+	+s-category(class="pb-0")
+		.col-12
+			+b.section-title 
+				.h4.strong Фракции щебня:
+		.col-md-3
+			+s-category-item('Узкие фракции','3-10','5-10','10-15','10-20','20-70','25-60')
+		.col-md-3
+			+s-category-item('Отсев щебня','0-5','0-10','0-20')
+		.col-md-3
+			+s-category-item('Смеси щебня','0-20','0-40','0-80','0-120')
+		.col-md-3
+			+s-category-item('Бутовый камень','70-150','100-300','нестандартный')
+	+s-shipping2(class=" ")
+		+b.section-title 
+			.h4.strong Виды доставки в нашей компании:
+	+s-faq-16()
+		+b.section-title 
+			.h4.strong Скрытый список:
+	+s-gal-17-1()(class="pb-0")
+	+s-calc()
+		.section-title.mw-100
+			.row
+				.col-xl-9.h4.strong Узнайте сейчас точную стоимость поставки продукции до&nbsp;вашего объекта: 
+	+s-soc('Поделиться статьей')(class="pt-0 section-border-bottom")
+	+s-contact-whithoutTitle()(class="s-contact--40")
+		+b.section-title.text-center.pb-0
+			h2 Оставьте заявку прямо сейчас и&nbsp;получите материал
+			+e.text.h4.strong на выгодных условиях
+			.h6 Заполните форму и&nbsp;персональный менеджер свяжется с&nbsp;Вами в&nbsp;течение 15&nbsp;минут
+	+footer()

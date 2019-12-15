@@ -219,28 +219,34 @@ mixin s-card-head-19(t, t2,  p, ...items)
 
 	// end s-card-head
 
-mixin s-card-head-shipping(t,  p, item, ...items)
+mixin s-card-head-shipping(t, t2)
 	// start s-card-head
-	+b.s-card-head.section#s-card-head.lazy-background&attributes(attributes)
-		.container 
-			+e.main-row.row
-				.col-xl-5.col-md-6 
-					+e.slider-wrap
-						block
-						
-						+e.img-wrap.img-bg( )
-							img.lazy-bg(src="#" data-src=`img/head-ship-${item}.jpg`   alt="")
-					 
-				.col-xl-7.col-md-6.order-md-first
-					.text-md-left.text-center
-						+e.H1.title= t   
-						+b.prod-btn--active.--lg.--shipping()= p
+	+b.s-card-head--shipping.section#s-card-head.lazy-background&attributes(attributes)
+		.container
 
-						+e.btn.d-md-none.popup-with-move-anim(href="#modal-call" data-title='Оставить заявку') Оставить заявку
-					each text in items
-						.h6= text
-					+b.form-wrap
-						+card-form()
+			+e.H1.title.text-lg-left.text-center= t  
+				| 
+				span.text-primary Объем ковша 2 м
+					sup 2
+			+e.body
+				.row
+					+e.col-left.col-lg-auto.col-md-6.align-self-center  
+						+e.col-left-inner
+							+e.main-img-wrap.text-center
+								img.res-i.lazy(src="#" data-src=`img/@2x/kamaz.png`, alt="")
+					.col-md.align-self-center: +e.col-center-inner 
+						p Услуга &laquo;Доставка автотранспортом&raquo; для тех, кому необходимо доставить материал на&nbsp;объект как можно быстрее, при этом минимизировать стоимость доставки.
+
+						p Доставка материала до&nbsp;любого объекта осуществляется на&nbsp;самосвалах КАМАЗ, МАЗ и&nbsp;Тонарах, вместимость каждого от&nbsp;15&nbsp;до&nbsp;40&nbsp;тонн.
+					.col-lg-auto
+						+b.form-wrap
+							+card-form()
+								.text-center 
+									.h55
+										strong Оформить заявку
+										|
+									p Введите номер телефона и&nbsp;в&nbsp;течение 5&nbsp;минут с&nbsp;вами свяжется наш менеджер
+
 	// end s-card-head
 
 mixin s-card-head-shipping-3( p, item, ...items)

@@ -176,6 +176,10 @@
 			}
 		}
 	}
+	&--cap &__title{
+		@extend .h5;
+		font-weight: bold;
+	}
 	&--cap  &__caption{
 		@include media-breakpoint-up(xl) {
 			
