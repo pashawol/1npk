@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-doc/_s-doc.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+ 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '40 причин заказать у нас'
+	title 16.1. 40 причин заказать у нас
+
+block pagecontent
+	+header() 
+		+top-line()
+		+breadcrumb2('главная','продукция', title)
+		+b.page-head.container 
+			h1= title
+	+s-doc-16-1()(class="section-border-bottom")
+	+s-contact-whithoutTitle()(class="s-contact--40")
+		+b.section-title.text-center.pb-0
+			h2 Ищете надёжного партнёра по&nbsp;поставке нерудных материалов? 
+			.h6 Оставьте заявку и&nbsp;мы&nbsp;предоставим для вас выгодные условия, а&nbsp;также бесплатно доставим образцы материала
+	+footer()

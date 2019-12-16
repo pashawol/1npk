@@ -610,14 +610,15 @@ a.tdu{
 }
 a.bdb{
 	text-decoration: none !important;
-	border-bottom: 1px solid  ;
-	@include media-breakpoint-up(sm) {
+	@extend .body-link;
+	// border-bottom: 1px solid  ;
+	// @include media-breakpoint-up(sm) {
 
-		&:hover{
-			color: $primary;
-			border-color: transparent;
-		}
-	}
+	// 	&:hover{
+	// 		color: $primary;
+	// 		border-color: transparent;
+	// 	}
+	// }
 }
 
 .img-animate{

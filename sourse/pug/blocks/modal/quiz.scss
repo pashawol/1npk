@@ -78,7 +78,7 @@
   .form-wrap{
 
 		&__map-wrap{
-      @include block(900, 249);
+      @include block(900, 220);
     }
   }
   .form-wrap__block{
@@ -187,12 +187,12 @@
     margin-bottom: auto;
     @include media-breakpoint-up(xxl) {
       
-      padding-bottom: rem(30);
+      // padding-bottom: rem(20);
       // min-height: 3em;
-      margin-bottom: rem(20);
+      margin-bottom: rem(10);
     }
     min-height: 2em;
-    padding-bottom: rem(30 * .6);
+    padding-bottom: rem(30 * .5);
     // margin-bottom: rem(20 * .6);
     @include media-breakpoint-down(xs) {
       margin-bottom: rem(100);

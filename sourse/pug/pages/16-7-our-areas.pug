@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+include ../blocks/s-about-text/_s-about-text.pug
+include ../blocks/s-applications/_s-applications.pug
+include ../blocks/s-project-head/_s-project-head.pug
+include ../blocks/s-soc/_s-soc.pug
+include ../blocks/s-gal/_s-gal.pug
+
+block title
+	title 16.7. Наши площадки
+
+
+block pagecontent
+	+header() 
+		+top-line()
+		+breadcrumb2('главная','Наши площадки')  
+		+b.page-head.container.text-xl-left.text-center
+			//- +breadcrumb('Видео с отгрузок', 'Главная')
+			h1 Наши площадки
+			.h55.text-primary.strong  В&nbsp;нашем распоряжении более 5&nbsp;карьеров по&nbsp;Поволжью и&nbsp;Центральному федеральному округу.
+	+s-gal-16-7()(class="section-border-bottom")
+	+s-now-17-1(class="section-border-bottom   s-now--our-areas")
+		+b.section-title.text-center 
+			h2 Наши возможности сегодня
+	+s-contact-whithoutTitle()(class="s-contact--40")
+		+b.section-title.text-center.pb-0
+			h2 Ищете надёжного партнёра по&nbsp;поставке нерудных материалов? 
+			.h6 Оставьте заявку и&nbsp;мы&nbsp;предоставим для вас выгодные условия, а&nbsp;также бесплатно доставим образцы материала
+	+footer()

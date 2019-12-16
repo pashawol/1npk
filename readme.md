@@ -19,3 +19,16 @@
 1. <https://pashawol.github.io/1npk/public/20-searching-results.html>
 1. <https://pashawol.github.io/1npk/public/21-searching-nothing-found.html>
 1. <https://pashawol.github.io/1npk/public/17-bz.html> 
+==========================
+1. <https://pashawol.github.io/1npk/public/22-rent.html> 
+1. <https://pashawol.github.io/1npk/public/08-rew.html> 
+1. <https://pashawol.github.io/1npk/public/16-1-40.html> 
+1. <https://pashawol.github.io/1npk/public/10-404.html> 
+1. <https://pashawol.github.io/1npk/public/16-2-video.html> 
+1. <https://pashawol.github.io/1npk/public/16-3-geo.html> 
+1. <https://pashawol.github.io/1npk/public/16-4-problems.html> 
+1. <https://pashawol.github.io/1npk/public/16-5-product-q.html> 
+1. <https://pashawol.github.io/1npk/public/16-7-our-areas.html> 
+1. <https://pashawol.github.io/1npk/public/16-8-withdrawal.html> 
+1. <https://pashawol.github.io/1npk/public/16-9-program-l.html> 
+1. <https://pashawol.github.io/1npk/public/16-10-steps.html> 

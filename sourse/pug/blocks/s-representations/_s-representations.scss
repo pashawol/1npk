@@ -140,6 +140,7 @@
 	display: flex;
 	line-height: 1.2;
 	@extend .body-link;
+	border: none !important;
 	@include media-breakpoint-up(md) {
 
 		margin-top: 10px;
@@ -168,7 +169,7 @@
 	}
 	.h6{
 		margin-bottom: 0;
-		color: $body-color;
+		// color: $body-color;
 
 	}
 	.h6 span{
@@ -178,8 +179,8 @@
 	}
 	&:hover{
 		.h6 span{
-			color: $primary;
-			border-color: $primary;
+			color: #f41224;
+			border-color: #f41224;
 		}
 
 	}

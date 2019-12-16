@@ -17,26 +17,28 @@ mixin header-block()
 			+form-payment()
 
 mixin header-block-09()
-	+header-block-body()(class="header-block--rew")
-		h1 Отзывы клиентов о&nbsp;сотрудничестве с&nbsp;нашей компанией
-		+e.text--top.h55.d-sm-block.d-none За&nbsp;долгие годы работы к&nbsp;нам обратились множество клиентов с&nbsp;разными потребностями. Спасибо за&nbsp;ваше доверие.
-		.row.justify-content-between
-			.col-md-6.col-12
-				+e.text-block
-					//- +e.text.d-sm-block.d-none Оставьте заявку прямо сейчас и&nbsp;получите материал на&nbsp;выгодных услов
-					+e.btn--js(href="#"  ) Смотреть отзывы
-			.col-auto.d-md-block.d-none
-				+e.item
-					+e.count 7&nbsp;лет
-					+e.text успешной работы
-						br
-						| с&nbsp;2012 года
-			.col-auto.d-md-block.d-none
-				+e.item
-					+e.count 6&nbsp;560
-					+e.text клиентов за&nbsp;последние
-						br
-						| 4&nbsp;года 
+	+header-block-body()(class="header-block--rew header-block--table")
+		+e.td
+			.container
+				h1 Отзывы клиентов о&nbsp;сотрудничестве с&nbsp;нашей компанией
+				+e.text--top.h55.d-sm-block.d-none За&nbsp;долгие годы работы к&nbsp;нам обратились множество клиентов с&nbsp;разными потребностями. Спасибо за&nbsp;ваше доверие.
+				.row.justify-content-between
+					.col-md-6.col-12
+						+e.text-block
+							//- +e.text.d-sm-block.d-none Оставьте заявку прямо сейчас и&nbsp;получите материал на&nbsp;выгодных услов
+							+e.btn--js(href="#"  ) Смотреть отзывы
+					.col-auto.d-md-block.d-none
+						+e.item
+							+e.count 7&nbsp;лет
+							+e.text успешной работы
+								br
+								| с&nbsp;2012 года
+					.col-auto.d-md-block.d-none
+						+e.item
+							+e.count 6&nbsp;560
+							+e.text клиентов за&nbsp;последние
+								br
+								| 4&nbsp;года 
 
 mixin header-block-04() 
 	+header-block-body()(class="header-block--about")

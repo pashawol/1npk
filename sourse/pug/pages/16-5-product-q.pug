@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-doc/_s-doc.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-geo/_s-geo.pug
+include ../blocks/s-now/_s-now.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-client/_s-client.pug
+include ../blocks/s-objects/_s-objects.pug
+include ../blocks/s-calc/_s-calc.pug
+include ../blocks/aside-nav/_aside-nav.pug
+
+block title
+	title 16.5. Качество продукции
+
+
+block pagecontent
+	+header() 
+		+top-line()
+		+breadcrumb2('главная','Качество продукции') 
+		+b.page-head.container
+			//- +breadcrumb('Качество продукции', 'Главная')
+			h1 Качество продукции 
+	+s-doc-16-5 
+	
+	+footer()

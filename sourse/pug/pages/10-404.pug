@@ -12,28 +12,15 @@ include ../blocks/s-client/_s-client.pug
 include ../blocks/s-objects/_s-objects.pug
 include ../blocks/s-calc/_s-calc.pug
 include ../blocks/aside-nav/_aside-nav.pug
+include ../blocks/s-404/_s-404.pug
 
 block title
-	title 16.5. Качество продукции
+	title  10. 404
 
 
 block pagecontent
 	+header() 
-		+top-nav()(class="fixed-page ")
-		//- +header-block()
-	+b.main-row.row.no-gutters
-		+e.col-aside.col-xl-auto 
-			+e.current-nav.toggle-btn-js.d-xl-none
-				.container Качество продукции
-			
-			+aside-nav
-
-
-
-		+e.col-main--block-2.col  
-			+b.page-head.container
-				//- +breadcrumb('Качество продукции', 'Главная')
-				h1 Качество продукции 
-			+s-doc-16-5 
+		+top-line()
+	+s-404
 	
-	+footer()
+	//- +footer()

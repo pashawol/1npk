@@ -11,20 +11,21 @@ include ../blocks/s-team/_s-team.pug
 include ../blocks/s-client/_s-client.pug
 include ../blocks/s-objects/_s-objects.pug
 include ../blocks/s-calc/_s-calc.pug
-include ../blocks/s-rew/_s-rew.pug
-include ../blocks/s-rew-gal/_s-rew-gal.pug
+include ../blocks/aside-nav/_aside-nav.pug
 
 block title
-	title 8. Отзывы клиентов
+	title  3. Аренда спецтехники
+
+
 
 block pagecontent
 	+header() 
-		+top-nav()(class="top-nav--js")
-		+header-block-09()
-		
-	+s-rew(class="section-border-bottom")
-	+s-rew-gal
-	//- +s-contact()
+		+top-line()
+		+breadcrumb2('главная','Аренда спецтехники')
+ 
+		+b.page-head.container 
+			h1 Аренда спецтехники
+			+e.text Ежедневно на линии более 15 единиц техники
+	+s-rent()(class="bg-white")
+	
 	+footer()
-	
-	
