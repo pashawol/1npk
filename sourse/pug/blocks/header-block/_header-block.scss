@@ -97,6 +97,7 @@
 			@include media-breakpoint-up(sm) {
 			 
 				text-align: left; 
+				margin-left: 0;
 			}
 		}	@include media-breakpoint-up(sm) {
 			margin-left: 0 !important;

@@ -139,6 +139,7 @@
 .doc-link{
 	display: flex;
 	line-height: 1.2;
+	@extend .body-link;
 	@include media-breakpoint-up(md) {
 
 		margin-top: 10px;
