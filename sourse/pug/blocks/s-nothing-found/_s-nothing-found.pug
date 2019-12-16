@@ -1,0 +1,11 @@
+mixin s-nothing-found()
+	// start s-nothing-found
+	+b.SECTION.s-nothing-found.section#s-nothing-found&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Результаты поиска
+			.empty
+				p По&nbsp;запросу <span class="request">&laquo;щебень&raquo;</span> ничего не&nbsp;найдено. Для поиска нужной страницы попробуйте скорректировать запрос, воспользоваться навигационным меню или вернитесь на&nbsp;главную страницу.
+			.go-back
+				+e.back.btn-primary(href="#") Вернуться на главную
+	// end s-nothing-found
