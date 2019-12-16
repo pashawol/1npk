@@ -33,6 +33,13 @@
 		display: flex;
 		justify-content: space-between;
 		padding: rem(19) rem(19) rem(14) rem(30);
+		@include media-breakpoint-up(sm) {
+
+			@include mt;
+			&:hover{
+				box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);
+			}
+		}
 		@include media-breakpoint-down(sm) {
 			padding: rem(10) rem(15);
 		}

@@ -54,6 +54,8 @@
 		@include media-breakpoint-up(sm) {
 			background-image: url(../img/@2x/header-bg-lg.jpg);
 			// padding-bottom: 0;
+			height: inherit;
+			min-height: 1px;
 		} 
 		padding-bottom: rem(60);
 		background-image: url(../img/@2x/header-bg-sm.jpg);
