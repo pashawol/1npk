@@ -1,6 +1,6 @@
 .s-about-text {
 	&__title{
-		@extend .h1;
+		@extend .h2;
 		@extend .text-primary;
 		font-weight: bold;
 		margin-bottom: em(6);
@@ -16,6 +16,7 @@
 		margin-right: auto;
 	}
 	&__col{
+		margin-bottom: rem(60);
 		@include media-breakpoint-down(md) {
 
 			margin-bottom: rem(30);
@@ -42,7 +43,7 @@
 	//
 	@include media-breakpoint-up(xl) {
 		// padding-top: 185px;
-		padding-bottom: rem(70px);
+		padding-bottom: rem(50px);
 		
 		&--project{
 			

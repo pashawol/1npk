@@ -3,8 +3,9 @@
 	.s-searching-results {
 	margin-top: rem(-39);
 	@include media-breakpoint-down(md) {
-		margin-top: rem(-20);
+		// margin-top: rem(-20);
 	}
+	min-height: 70vh;
 	h1{
 		margin-bottom: rem(35);
 		@include media-breakpoint-down (md) {
@@ -94,6 +95,39 @@
 	}
 
 
+
+	.empty {
+		max-width: 1090px;
+		@include media-breakpoint-up(lg) {
+		padding-bottom: rem(49);
+		margin-bottom: rem(30);
+	}
+	margin-bottom: rem(20);
+		p {
+			font-size: $h55-font-size;
+			line-height: 1.7;
+			font-weight: 400;
+			.request {
+				font-weight: 700;
+			}
+		}
+	}
+	.go-back {
+		// margin-bottom: rem(555);
+	}
+			&__back {
+				margin-left: 2px;
+				@extend .btn;
+				@extend .btn-primary;
+				border-radius: rem(5);
+				font-size: $h6-font-size;
+				font-weight: 400;
+				padding: rem(20) rem(40) rem(18) rem(38);
+				@include media-breakpoint-down(sm) {
+					padding: rem(20) rem(15);
+				}
+			}
+	
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

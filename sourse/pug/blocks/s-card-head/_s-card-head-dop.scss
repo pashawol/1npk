@@ -93,7 +93,7 @@
 	}
 	margin-bottom: rem(5);
 		span{
-			font-size: em(12.5);
+			// font-size: em(12.5);
 		}
 	}
 	.form-wrap {
@@ -161,12 +161,18 @@
 		
 		text-align: center;
 		margin-top: rem(5);
-		height: rem(260);
-		line-height: rem(260);
-		vertical-align: middle;
+		@include media-breakpoint-up(sm) {
+
+			height: rem(260);
+			line-height: rem(260);
+			vertical-align: middle;
+		}
 		margin-bottom: rem(28);
 		img{
 			max-height: 100%;
+			@include media-breakpoint-down(xs){
+					max-width: 150px;
+			}
 		}
 	}
 	&__col-left-inner{

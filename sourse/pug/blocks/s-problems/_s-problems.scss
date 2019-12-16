@@ -45,17 +45,23 @@
 		
 	}
 
-	@include media-breakpoint-up(xl) {
-
-		.item-prod--cap  {
-			min-height: rem(208);
+	
+	.item-prod--cap  {
+		@include media-breakpoint-up(xl) {
+			min-height: rem(188);
 		}
+		min-height: rem(158);
 	}
 	.swiper-pagination{
 		width: 100%;
 		@include media-breakpoint-up(md) {
 
 			display: none !important;
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		.container{
+			max-width: rem(1170);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

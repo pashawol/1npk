@@ -172,7 +172,15 @@ mixin modal()
 				+e.btn(type="submit")
 				+polite
 	// /#modal-call-new
-
+	mixin step(t, cl)
+		+e.step(class= cl)
+			+e.step-inner
+				.text-center
+					+e.title= t
+				+e.step-body
+					+b.form-wrap&attributes(attributes)
+						block
+		// /+e.step  
 	// modal
 	+b.modal-quiz(id="modal-quiz" class="  mfp-hide modal-win  " )
 		.form-wrap__block
@@ -181,15 +189,7 @@ mixin modal()
 					+e.bar
 						+e.bar-current(style="width: 0")
 							+e.value(data-value="0%")
-			+e.body 
-				mixin step(t, cl)
-					+e.step(class= cl)
-						+e.step-inner
-							.text-center
-								+e.title= t
-							+b.form-wrap&attributes(attributes)
-								block
-					// /+e.step  
+			+e.body  
 				+step('Укажите марку и фракцию ',"active")
 						+sel2("Выберите марку",'Марка')(class="  select-js")
 							option(value="")  Выберите марку
@@ -240,7 +240,7 @@ mixin modal()
 						+icon("chevron-left")
 					
 					+e.btn--next.btn-primary(type="button") Продолжить
-				+e.foot-text или нажмите Enter
+				+e.foot-text.d-none.d-sm-block или нажмите Enter
 	// /#modal-call-new
 	+b.modal-quiz(id="modal-quiz2" class="  mfp-hide modal-win  " )
 		.form-wrap__block
@@ -250,14 +250,7 @@ mixin modal()
 						+e.bar-current(style="width: 0")
 							+e.value(data-value="0%")
 			+e.body 
-				mixin step(t, cl)
-					+e.step(class= cl)
-						+e.step-inner
-							.text-center
-								+e.title= t
-							+b.form-wrap&attributes(attributes)
-								block
-					// /+e.step  
+				
 				+step('Укажите адрес объекта',"active")(class="form-wrap--map")
 					.d-none.d-sm-block
 						+modal-map()
@@ -296,7 +289,7 @@ mixin modal()
 						+icon("chevron-left")
 					
 					+e.btn--next.btn-primary(type="button") Продолжить
-				+e.foot-text или нажмите Enter
+				+e.foot-text.d-none.d-sm-block или нажмите Enter
 	// /#modal-call-new
 
 	+b.form-wrap(id="modal-thank" class="  mfp-hide modal-win modal-win-new modal-form " )

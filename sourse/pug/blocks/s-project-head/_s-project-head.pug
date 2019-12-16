@@ -39,7 +39,7 @@ mixin s-project-head-bz()
 	// start s-project-head
 	+b.s-project-head--bz.--artical.section#s-project-head.pb-0&attributes(attributes)
 		
-		.container
+		.container.text-left
 			+e.img-wrap--bz.--artical.img-bg.img-animate(href="#")
 				img.lazy-bg(src="#" data-src="img/project-head-img.jpg", alt="") 
 			.date-row.row.row--md.align-items-center
@@ -51,7 +51,7 @@ mixin s-project-head-bz()
 						| 313
 				.col-auto
 					+b.badge--primary Песок
-			+e.title 
+			+e.title.text-left
 				a.text-body(href="#") Как купить качественный песок и&nbsp;не&nbsp;ошибиться с&nbsp;поставщиком?
 			+e.btn-head(href="#") Читать полностью
 			+e.body

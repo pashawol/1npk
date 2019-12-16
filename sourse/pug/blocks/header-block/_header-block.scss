@@ -4,7 +4,11 @@
 	display: block;
 	position: relative;
 	z-index: 200;
-	min-height: 100vh;
+	@include media-breakpoint-up(sm) {
+
+		min-height: 100vh;
+	}
+	min-height: calc(100vh - #{rem(140)});
 	&::before{
 		content: '';
 		z-index: -1;
@@ -90,6 +94,10 @@
 
 	&--contact {
 		h1{
+			@include media-breakpoint-up(sm) {
+			 
+				text-align: left; 
+			}
 		}	@include media-breakpoint-up(sm) {
 			margin-left: 0 !important;
 
@@ -258,6 +266,7 @@
 		text-align: center;
 
 		@include media-breakpoint-up(lg) {
+			min-height: rem(640);
 			background-image: url(../img/head-about.jpg);
 			padding-top: rem(80);
 			width: 100%;

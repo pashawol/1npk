@@ -84,12 +84,12 @@
 		 }
 		 &__btn{
 			 @extend .btn;
-			 @extend .btn-sm;
+			//  @extend .btn-sm;
 			 border: 1px solid #dddddd;
 
 				margin-top: rem(10px);
 				@include media-breakpoint-up(sm) {
-					border-width: 2px ;
+					// border-width: 2px ;
 					
 					width: em(220);
 					margin-bottom: rem(30);
@@ -128,7 +128,7 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {
 		&::before{
-			display: none;
+			// display: none;
 		}
 	}
 	@include media-breakpoint-down(xs) {} 
@@ -139,7 +139,10 @@
 .doc-link{
 	display: flex;
 	line-height: 1.2;
-	margin-top: 10px;
+	@include media-breakpoint-up(md) {
+
+		margin-top: 10px;
+	}
 	text-decoration: none !important;
  //  @extend .body-link;
  &--lg &__before{

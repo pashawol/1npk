@@ -187,7 +187,7 @@ $(".site-nav__item--has-child > a").each(function(){
 	// <li class="hide-parent-js d-sm-none"> ${title} </li>
 	toggleBlock.prepend(`
 	<li class="sub-menu__item d-sm-none">
-	<a class="sub-menu__link" href="${href}">${title} </a>
+	<a class="sub-menu__link strong" href="${href}">${title} </a>
 	</li>`)
 	$(this).click(function (e) {
 		$(".hide-parent-js").addClass("active")

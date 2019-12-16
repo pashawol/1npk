@@ -10,12 +10,12 @@ mixin s-client()
 					.swiper-wrapper
 						- for (var x = 1; x < 7; x++)
 							+e.slide.swiper-slide
-								img.res-i.lazy(src="#" data-src=`img/client-${x}.png`, alt="")
+								img.res-i.swiper-lazy(src="#" data-src=`img/client-${x}.png`, alt="")
 							// /+e.slide.swiper-slide
 							
 						- for (var x = 1; x < 7; x++)
 							+e.slide.swiper-slide
-								img.res-i.lazy(src="#" data-src=`img/client-${x}.png`, alt="")
+								img.res-i.swiper-lazy(src="#" data-src=`img/client-${x}.png`, alt="")
 							// /+e.slide.swiper-slide
 				.swiper-pagination.swiper-pagination--lg
 				+arrow()

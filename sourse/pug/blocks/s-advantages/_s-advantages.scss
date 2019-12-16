@@ -15,6 +15,16 @@
 		text-align: center;
 		img{
 			margin-bottom: rem(50);
+			@include media-breakpoint-down(xxl) {
+				max-width: 80%;
+			}
+			@include media-breakpoint-down(xl) {
+				max-width: 80%;
+			}
+			@include media-breakpoint-down(lg) {
+				max-width: 100%;
+			}
+
 			@include media-breakpoint-up(sm){
 				// max-width: 100%;
 			}

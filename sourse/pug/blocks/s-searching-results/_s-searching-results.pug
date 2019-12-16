@@ -48,3 +48,18 @@ mixin s-searching-results()
 			.show-more.text-center
 				button.btn-primary(type="button") Показать еще
 	// end s-searching-results
+
+
+mixin s-searching-results2()
+	// start s-searching-results
+	+b.SECTION.s-searching-results.section#s-searching-results&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Результаты поиска
+			.empty
+				p По&nbsp;запросу <span class="request">&laquo;щебень&raquo;</span> ничего не&nbsp;найдено. Для поиска нужной страницы попробуйте скорректировать запрос, воспользоваться навигационным меню или вернитесь на&nbsp;главную страницу.
+			.go-back
+				+e.back.btn-primary(href="#") Вернуться на главную
+	// end s-searching-results
+
+

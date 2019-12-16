@@ -158,7 +158,7 @@ jQuery(document).ready(function ($) {
 		var href = $(this).attr("href");
 		var toggleBlock = $(this).next().find("ul"); // <li class="hide-parent-js d-sm-none"> ${title} </li>
 
-		toggleBlock.prepend("\n\t<li class=\"sub-menu__item d-sm-none\">\n\t<a class=\"sub-menu__link\" href=\"".concat(href, "\">").concat(title, " </a>\n\t</li>"));
+		toggleBlock.prepend("\n\t<li class=\"sub-menu__item d-sm-none\">\n\t<a class=\"sub-menu__link strong\" href=\"".concat(href, "\">").concat(title, " </a>\n\t</li>"));
 		$(this).click(function (e) {
 			$(".hide-parent-js").addClass("active");
 			e.preventDefault();

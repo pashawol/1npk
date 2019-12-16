@@ -107,20 +107,47 @@
 			@extend .btn-sm;
 			@extend .btn-outline-gray3;
 			@include media-breakpoint-up(md) {
+				&:hover{
+					border-color: #5ea9ff !important;
+			background-color: #fff;
+				}
 				
 				width: rem(170);
 			}
 			width: rem(120);
 		}
 		&__btn-more{
-			@extend .btn;
-			@extend .btn-primary;
+			position: relative;
+			// @extend .btn-light;
+			@extend .btn-light;
+			@extend .btn-lg;
 			@extend .btn-block;
+			font-size: 1rem;
+			font-weight: 400;
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+			// padding: rem(17) rem(28);
+			// padding-left: rem(57);
+			border: none;
+			background-color: $light;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&::before {
+				content: "+";
+				font-size: rem(30);
+				// position: absolute;
+				top: 10%;
+				left: 13%;
+				margin-right: rem(20);
+				color: $primary;
+			}
 			@include media-breakpoint-up(md) {
 
-				width: rem(227);
-				margin-top: rem(70);
-				margin-bottom: rem(40);
+				width: rem(200);
+				margin-top: rem(60);
+				margin-bottom: rem(80);
 			}
 			width: rem(190px);
 			margin-left: auto;

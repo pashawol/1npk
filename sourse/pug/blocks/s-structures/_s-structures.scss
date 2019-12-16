@@ -27,6 +27,11 @@
 			}
 			text-align: center;
 		}
+		.swiper-container{
+			@include media-breakpoint-up(md){
+				overflow: inherit;
+			}
+		}
 		.swiper-pagination{
 			width: 100%;
 			@include media-breakpoint-up(md) {
@@ -64,6 +69,7 @@
 		position: relative;
 		z-index: 2;
 		background-color: #413e3c;
+
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: center;
@@ -73,6 +79,14 @@
 		height: rem(258);
 		color: #ffffff;
 		@extend .h55;
+
+		@include mt;
+		@include media-breakpoint-up(md) {
+			
+			&:hover{
+				transform:  scale(1.04);
+			}
+		}
 
 	}
 	&__icon-wrap{

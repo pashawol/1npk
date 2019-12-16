@@ -32,6 +32,11 @@
 			max-width: em(170);
 		}
 	//
+	@include media-breakpoint-up(xxl) {
+		.container{
+			max-width: rem(1170);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

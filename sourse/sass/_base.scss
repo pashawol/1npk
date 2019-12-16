@@ -255,11 +255,11 @@ body {
 .main-wrapper {
 	position: relative;
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+	// display: flex;
+	// flex-direction: column;
+	// min-height: 100vh;
 	.footer-white{
-		margin-top: auto;
+		// margin-top: auto;
 	}
 }
 
@@ -587,12 +587,12 @@ input::-webkit-inner-spin-button {
 
 
 .body-link{
-	color: $body-color;
+	color: $accent;
 	border-bottom: 1px solid transparent;
 	@include media-breakpoint-up(sm) {
 		&:hover{
-			color: $primary;
-			border-color: $primary;
+			color: #f41224;
+    border-color: #f41224;
 		}
 
 	}

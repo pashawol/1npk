@@ -25,6 +25,7 @@
 	}
 	.form-wrap{
 		padding-bottom: rem(15px);
+		padding-top: rem(20);
 		@include media-breakpoint-up(md) {
 			padding-top: rem(60);
 			max-width: rem(944px);

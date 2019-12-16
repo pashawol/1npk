@@ -12,16 +12,17 @@
 		justify-content: space-between;
 		// opacity: 0.6;
 		// opacity: 0.7; 
-		@extend h6;
+		@extend .h55;
 		margin-bottom: 0;
 		border-radius: 5px;
 		font-weight: bold;
 		padding: em(20) em(28);
 		@include media-breakpoint-up(xl) {
 
-			height: rem(380px);
+			height: rem(280px);
 		}
-		height: rem(358px);
+		// height: rem(358px);
+		height: rem(280px);
 		line-height: (28 / 18);
 		overflow: hidden;
 		&::before{
@@ -40,6 +41,11 @@
 		max-width: em(300);
 }
 		
+@include media-breakpoint-up(xxl) {
+	.container{
+		max-width: rem(1170);
+	}
+}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

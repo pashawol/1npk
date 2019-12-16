@@ -75,6 +75,12 @@
 
 .modal-quiz{
   border: none;
+  .form-wrap{
+
+		&__map-wrap{
+      @include block(900, 249);
+    }
+  }
   .form-wrap__block{
     flex-direction: column;
     justify-content: space-between;
@@ -182,7 +188,7 @@
     @include media-breakpoint-up(xxl) {
       
       padding-bottom: rem(30);
-      min-height: 3em;
+      // min-height: 3em;
       margin-bottom: rem(20);
     }
     min-height: 2em;
@@ -191,6 +197,18 @@
     @include media-breakpoint-down(xs) {
       margin-bottom: rem(100);
     }
+  }
+  &__step{
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+  }
+  &__step-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
   }
   &__step-inner{
     display: flex;
@@ -219,18 +237,16 @@
     transition: all .15s cubic-bezier(.42,0,.79,.33);
     &.prev {
       transform: translateX(-15px);
-      will-change: transform;
-      display: block;
+      will-change: transform; 
     }
     &.next {
       transform: translateX(7px);
       transition: all .15s cubic-bezier(.42,0,.79,.33);
-      will-change: transform;
-      display: block;
+      will-change: transform; 
   }
     &.active{
       transition: all .4s cubic-bezier(.21,.67,.58,1) .15s;
-      display: block;
+      
       visibility: visible;
       position: relative;
       opacity: 1;

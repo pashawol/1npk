@@ -161,10 +161,11 @@ var JSCCommon = {
 
 
 		$('[href="#modal-call"], [href="#modal-profile"], [href="#modal-call-new"]').click(function () {
-			$($(this).attr('href')).find($(".form-wrap__title").text($(this).data('title')));
+			var modal = 	$($(this).attr('href'));
+			modal.find(modal.find(".form-wrap__title").text($(this).data('title')));
 			if($(this).data("btn")){
-				$($(this).attr('href')).find($(".form-wrap__btn").text($(this).data('btn')));
-
+				modal.find(modal.find(".form-wrap__btn").text($(this).data('btn')));
+		 
 			}
 		})
 		// / modal window

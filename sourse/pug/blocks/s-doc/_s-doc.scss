@@ -17,7 +17,7 @@
 
 	&__link{
 		@include media-breakpoint-down(xs) {
-			border-bottom: 1px solid ;
+			// border-bottom: 1px solid ;
 		} 
 	}
 	&__col{
@@ -44,7 +44,7 @@
 		@include media-breakpoint-up(md) {
 			padding: em(30) em(30) em(21);
 
-			border: 2px solid $gray;
+			border:1px solid $gray;
 			@include mt;
 			&:hover{
 				box-shadow: 0 10px $h55-font-size rgba(51, 51, 51, 0.1);

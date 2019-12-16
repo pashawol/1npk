@@ -10,11 +10,10 @@
 	 @extend .h6;
 	 font-weight: normal;
 	 a {
-		 @extend .text-gray2;
+		 @extend .body-link;
 		//  @extend .tdu;
 		
-		border-bottom: 1px solid;
-		
+ 
 		text-decoration: none !important;
 		// @include mt;
 		&:hover{
