@@ -62,9 +62,9 @@ mixin s-card-head(t, t2,  p, ...items)
 								.swiper-wrapper
 									each item in items
 										+e.slide.swiper-slide(data-thumb=`img/prod-slide-${item}.jpg`)
-											.easyzoom( ) 
-												+e.img-wrap.img-bg(href=`img/prod-slide-lg.jpg` data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
-													img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
+											//- .easyzoom( ) 
+											+e.img-wrap.img-bg(  data-background=`img/prod-slide-${item}.jpg` class="swiper-lazy")
+												img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
 								+arrow()
 							.prod-pagination
 						+b.search-place.popup-place-js(href="#modal-search-place")
