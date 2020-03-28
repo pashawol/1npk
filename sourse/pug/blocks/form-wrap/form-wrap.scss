@@ -1,190 +1,228 @@
-.form-wrap{
-	&__row-wrap{
+.form-wrap {
+	&__row-wrap {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: rem(812);
 	}
-	&__block{
+
+	&__block {
 
 		box-shadow: 0 10px 30px rgba(51, 51, 51, 0.15);
 		border-radius: 5px;
 		border: 2px solid #e7e7e7;
+
 		@include media-breakpoint-down(sm) {
 			border-width: 1px;
-	} 
+		}
+
 		background-color: #ffffff;
+
 		@include media-breakpoint-up(lg) {
-			max-width: 458px; 
-			
+			max-width: 458px;
+
 			padding: rem(50px) rem(65px) rem(30px);
 		}
+
 		padding: rem(50px) rem(20px) rem(30px);
-		&--calc{
-			@include media-breakpoint-up(xl) { 
-				
+
+		&--calc {
+			@include media-breakpoint-up(xl) {
+
 				padding: rem(50px) rem(65px) rem(30px);
 			}
+
 			@include media-breakpoint-up(lg) {
-			
+
 				// padding: rem(50px) rem(65px) rem(30px);
 				// padding: rem(50px) rem(40px) rem(30px);
 				padding-left: rem(40px);
 				padding-right: rem(40px);
 			}
+
 			// padding: 50px 20px 30px;
 		}
 	}
-	&__title{
+
+	&__title {
 		text-align: center;
 		@extend .h55;
 		font-weight: bold;
 		margin-bottom: em(9);
 	}
-	&__text{
+
+	&__text {
 		text-align: center;
-	 
+
 		margin-bottom: em(27);
 
 	}
- 	&__input-wrap{
- 
- 	}
- 	&__input{
+
+	&__input-wrap {}
+
+	&__input {
 		//  outline: 0 !important;
 		//  resize: none;
-		 text-align: center;
-		 @include media-breakpoint-up(sm){
+		text-align: center;
 
-			 &:hover{
-				 border-color: $primary;
-				}
+		@include media-breakpoint-up(sm) {
+
+			&:hover {
+				border-color: $primary;
 			}
-	 }
-	 select:not(:focus):hover{
-		 border-color: #dddddd;
-	 }
-	 textarea{
-		 @include media-breakpoint-up(xl) {
+		}
+	}
 
-			 height: rem(115);
-		 }
-		 height: rem(108);
-	 }
- 	&__btn{
-		 cursor: pointer;
-		 @extend .btn;
-		 @extend .btn-primary;
-		 @extend .btn-block;
-		 margin-top: em(15);
-		 @include media-breakpoint-up(xl) {
+	select:not(:focus):hover {
+		border-color: #dddddd;
+	}
+
+	textarea {
+		@include media-breakpoint-up(xl) {
+
+			height: rem(115);
+		}
+
+		height: rem(108);
+	}
+
+	&__btn {
+		cursor: pointer;
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-block;
+		margin-top: em(15);
+
+		@include media-breakpoint-up(xl) {
 
 			//  font-size: $h6-font-size;
 			//  padding-top: rem(15);
 			//  padding-bottom: rem(15);
-			}
-			margin-bottom: em(18);
-			&--w100{
-				max-width: 100%;
-				width: 100%;
-			}
- 	}
- 	label{
- 		width: 100%;
- 		display: block;
-	 }
-	 
-	 &__group{
-			padding-bottom: rem(20);
-			@include media-breakpoint-up(lg) {
+		}
 
-				&--sm{
-					max-width: 458px;
-				}
+		margin-bottom: em(18);
+
+		&--w100 {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	label {
+		width: 100%;
+		display: block;
+	}
+
+	&__group {
+		padding-bottom: rem(20);
+
+		@include media-breakpoint-up(lg) {
+
+			&--sm {
+				max-width: 458px;
 			}
-	 }
-	 &__group-title{
-		 font-weight: bold;
+		}
+	}
+
+	&__group-title {
+		font-weight: bold;
 		@extend .h55;
 		margin-bottom: em(15);
 		line-height: 1.2;
-	 }
-	 &__result--lg{
-		 @extend h2;
-		 font-weight: bold;
-	 }
-	 &__block-group{
-		 padding-bottom: rem(10);
-		 &:not(:last-child){
-
-			 border-bottom: 1px solid #dadada;
-			 margin-bottom: rem(25);
-			}
-	 }
-	 &__block-text{
 	}
-	&__block-i{
+
+	&__result--lg {
+		@extend h2;
+		font-weight: bold;
+	}
+
+	&__block-group {
+		padding-bottom: rem(10);
+
+		&:not(:last-child) {
+
+			border-bottom: 1px solid #dadada;
+			margin-bottom: rem(25);
+		}
+	}
+
+	&__block-text {}
+
+	&__block-i {
 		padding-left: 100px;
 		margin-top: rem(20px);
 		position: relative;
 		padding-bottom: rem(10px);
-		&::before{
+
+		&::before {
 			content: url(../img/truck.png);
 			left: 0;
 			top: 5px;
 			position: absolute;
 		}
-		.text-secondary{
+
+		.text-secondary {
 			line-height: 1.4;
 			margin-bottom: .8em;
 		}
-	 }
-	 &__symbol{
-		 position: absolute;
-		 right: rem(20px);
-		 @include a-cent(y);
-		 margin-top: rem(1px);
-	 }
-	 &--payment{
-		 margin-left: auto;
-		 margin-right: auto;
-		max-width: rem(908px); 
+	}
 
-	 }
+	&__symbol {
+		position: absolute;
+		right: rem(20px);
+		@include a-cent(y);
+		margin-top: rem(1px);
+	}
+
+	&--payment {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(908px);
+
+	}
+
 	//  &--payment
-	 &__panel{
-		 margin-left: 0;
-		 margin-right: 0;
-		 @include media-breakpoint-up(sm) {
+	&__panel {
+		margin-left: 0;
+		margin-right: 0;
+
+		@include media-breakpoint-up(sm) {
 			box-shadow: 0 5px 15px rgba(37, 37, 37, 0.15);
 			padding: rem(30) rem(30) rem(8);
 		}
+
 		// margin-left: -15px;
 		// margin-right: -15px;
 		@include media-breakpoint-up(lg) {
 
 			background-color: #ffffff;
 		}
+
 		padding: rem(30) 0 rem(8);
-	 }
-	 &__title-payment{
-		 text-align: center;
-		 @extend .h55;
-		 color: $primary;
-		 font-weight: bold;
-		 margin-bottom: rem(37);
-	 }
-	 &__polite{
-		 font-size: rem(12);
-		 margin-top: rem(5);
-		 a{
-			 @extend .text-accent;
-		 }
-	 }
+	}
+
+	&__title-payment {
+		text-align: center;
+		@extend .h55;
+		color: $primary;
+		font-weight: bold;
+		margin-bottom: rem(37);
+	}
+
+	&__polite {
+		font-size: rem(12);
+		margin-top: rem(5);
+
+		a {
+			@extend .text-accent;
+		}
+	}
 }
+
 // .form-wrap
-.form-control{
+.form-control {
 	position: relative;
-	.irs--big{
+
+	.irs--big {
 		margin-left: -.6rem;
 		margin-right: -.6rem;
 		// position: absolute;
@@ -193,7 +231,7 @@
 		// width: 100%;
 	}
 }
- 
+
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -231,55 +269,62 @@
 @include media-breakpoint-down(xs) {}
 
 
-.custom-radio{
+.custom-radio {
 	@extend .h6;
 	cursor: pointer;
-	&__input{
-		position: absolute; 
+
+	&__input {
+		position: absolute;
 		width: 1px;
 		height: 1px;
 		margin: -1px;
 		border: 0;
 		padding: 0;
-		clip: rect(0 0 0 0 );
+		clip: rect(0 0 0 0);
 		overflow: hidden;
 	}
-	&__text{
+
+	&__text {
 		border-radius: 5px;
 		border: 2px solid #f2f1f0;
+
 		@include media-breakpoint-down(sm) {
 			border-width: 1px;
-	} 
+		}
+
 		background-color: #f2f1f0;
 		text-align: center;
 		// @include mt;
 		display: block;
 		padding: em(7) em(12);
 		margin-bottom: em(12);
+
 		@include media-breakpoint-up(sm) {
 
-			&:hover{
+			&:hover {
 				background-color: #ffffff;
 			}
 		}
 	}
-	&__input:checked ~ &__text{
+
+	&__input:checked~&__text {
 		border-color: $primary;
 		background-color: #ffffff;
 	}
 }
 
-.custom-input{
+.custom-input {
 	display: block;
 	margin: auto;
 	text-align: left;
-	 
+
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
 	padding-left: rem(30px);
 	display: inline-block;
-	&__input{
+
+	&__input {
 		position: absolute;
 		// opacity: 0;
 		width: 1px;
@@ -287,10 +332,11 @@
 		margin: -1px;
 		border: 0;
 		padding: 0;
-		clip: rect(0 0 0 0 );
+		clip: rect(0 0 0 0);
 		overflow: hidden;
 	}
-	&__lab{
+
+	&__lab {
 		left: 0;
 		display: block;
 		@include mt;
@@ -303,13 +349,14 @@
 		border-radius: 3px;
 		border: 1px solid #cdd2d9;
 		background-color: $light;
-		position: absolute; 
+		position: absolute;
 		// margin-right: rem(10px);
 
 	}
-	&__input[type="checkbox"] + &__lab{
-		&::after{ 
-			content:   '';
+
+	&__input[type="checkbox"]+&__lab {
+		&::after {
+			content: '';
 			width: rem(15);
 			height: rem(15);
 			background-size: 100%;
@@ -317,19 +364,21 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			position: absolute;
-			@include a-cent; 
+			@include a-cent;
 			opacity: 0;
 			// margin-top: rem(3);
 			// margin-top: 3px;
 		}
 	}
-	&__input[type="radio"] + &__lab{
+
+	&__input[type="radio"]+&__lab {
 		width: rem(20);
 		height: rem(20);
 		border-radius: 50%;
 		background-color: transparent;
 		color: $accent;
-		&::after{ 
+
+		&::after {
 			content: '';
 			position: absolute;
 			@include a-cent;
@@ -341,66 +390,77 @@
 		}
 	}
 
-	&__input[type="checkbox"]:checked + &__lab{
+	&__input[type="checkbox"]:checked+&__lab {
 		// background-color: $success;
-		 
+
 	}
-	&__input:checked + &__lab{ 
-		&::after{
+
+	&__input:checked+&__lab {
+		&::after {
 
 			opacity: 1;
 		}
 	}
-	&__input[type="radio"]:checked + &__lab{ 
-			border-color: currentColor;
-			border-width: 2px;
-		&::after{
+
+	&__input[type="radio"]:checked+&__lab {
+		border-color: currentColor;
+		border-width: 2px;
+
+		&::after {
 
 			opacity: 1;
 		}
 	}
 
 }
-.range-block{
+
+.range-block {
 	position: relative;
 	margin-bottom: rem(28);
-	.range-result-js{
+
+	.range-result-js {
 		text-align: right;
 		padding-right: rem(30px);
 	}
 }
-.range-result-js{
+
+.range-result-js {
 	border: .125rem solid #ddd !important;
 
 }
+
 .irs--big {
-height: rem(2px);
+	height: rem(2px);
 	// z-index: -1;
 	position: relative;
 	bottom: 0;
 	top: auto;
 	position: absolute;
 	width: 100%;
-	.irs-line{
+
+	.irs-line {
 		// top: -20px;
 	}
 }
-.irs--big .irs-line{
+
+.irs--big .irs-line {
 	z-index: 2;
 	height: rem(4px);
-border-radius: rem(2px);
-background:  transparent;
-border: 1px solid transparent;
-margin-top: -36px;
+	border-radius: rem(2px);
+	background: transparent;
+	border: 1px solid transparent;
+	margin-top: -36px;
 }
+
 .irs--big .irs-bar {
 	height: rem(4px);
 	border-radius: rem(2px);
 	background: $primary;
-	border: rem(1px) solid  $primary;
+	border: rem(1px) solid $primary;
 	box-shadow: none;
 	top: 0;
 }
+
 .irs--big .irs-handle {
 	width: $h4-font-size;
 	height: $h4-font-size;
@@ -410,7 +470,8 @@ margin-top: -36px;
 	background: #ffffff !important;
 	top: rem(-14px);
 	z-index: 10;
-	&::before{
+
+	&::before {
 		content: '';
 		position: absolute;
 		@include a-cent;
@@ -428,7 +489,7 @@ margin-top: -36px;
 //  // height: auto;
 // 	&__select{
 // 		// background-color: transparent;
-		 
+
 // 		box-shadow: none !important; 
 // 		background-image: none !important;
 // 		text-shadow: none;
@@ -443,7 +504,7 @@ margin-top: -36px;
 // 		border-radius: rem(6);
 // 		@include mt;
 // 		&:hover{
-		 
+
 // 		}
 // 		&-text{
 // 			// width: 100% !important;
@@ -451,7 +512,7 @@ margin-top: -36px;
 // 		}
 // 	}	
 // 	&__select:hover &__trigger{
-		 
+
 // 	}
 // 	&__trigger{
 // 		border: none;
@@ -465,46 +526,50 @@ margin-top: -36px;
 // 		background-repeat: no-repeat;
 // 		@include mt;
 // 		&:hover{
-			
+
 
 // 		}
 // 	}
 // 	&__trigger-arrow { 
 // 		border: none;
-    
+
 // }
 // li{
 // 	font-size: rem(16);
 // 	padding: em(10px) 10px em(10px);
 // 	&:hover {
-     
+
 //     color: #fff;
 // }
 // }
 // }
 
 
-.add-file{
-	cursor: pointer; 
+.add-file {
+	cursor: pointer;
 	@extend .form-control;
-		border-radius: 5px;
-		background-color: #ffffff;
-		display: flex !important;
-		align-items: center;
-		text-align: left;
-		border: 2px solid $primary;
-		@include media-breakpoint-down(sm) {
-			border-width: 1px;
-	} 
-		// padding: rem(18px) rem(21px);
-		cursor: pointer;
-		&::before{
-			content: url(../img/office-48-512.png);
-			margin-right: 10px;
-			position: relative;
-			top: 2px;
-		} 
-	&__input{
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: flex !important;
+	align-items: center;
+	text-align: left;
+	border: 2px solid $primary;
+
+	@include media-breakpoint-down(sm) {
+		border-width: 1px;
+	}
+
+	// padding: rem(18px) rem(21px);
+	cursor: pointer;
+
+	&::before {
+		content: url(../img/office-48-512.png);
+		margin-right: 10px;
+		position: relative;
+		top: 2px;
+	}
+
+	&__input {
 		// opacity: 0;
 		visibility: hidden;
 		width: 1px;
@@ -512,9 +577,10 @@ margin-top: -36px;
 		margin: -1px;
 		position: absolute;
 	}
-	&__filename{
+
+	&__filename {
 		@include ellips;
-		max-width: calc(100% - 40px );
+		max-width: calc(100% - 40px);
 	}
 }
 
@@ -537,7 +603,7 @@ margin-top: -36px;
 // 		@extend .form-control;
 // 		@extend .form-control-lg;
 // 		text-align: left;
-	 
+
 // 		padding-right: rem(37);
 // 		text-transform: uppercase;
 // 		.select2-selection__arrow b{
@@ -550,11 +616,11 @@ margin-top: -36px;
 // 			// 	right: rem(20);
 // 			display: none;
 // 				// border-width: 7px 7px 0 7px;
-			
+
 // 		}
 // 		.select2-selection__rendered{
 // 			white-space: normal;
-		 
+
 // 			 padding-left: 0;
 // 			 padding-bottom: 5px;
 // 		}
@@ -616,7 +682,7 @@ margin-top: -36px;
 // 			display: none;
 // 		}
 // 		&.opened{
-			
+
 // 			box-shadow: 0 2px 10px rgba(0,0,0,.2); 
 // 		}
 // 					&.opened &__select{
@@ -655,7 +721,7 @@ margin-top: -36px;
 // 			width: 100% !important;
 // 			@extend .h6;
 // 			margin-bottom: 0;
-		
+
 // 		}
 // 	}
 // 	.jq-selectbox__trigger-arrow{
@@ -705,36 +771,38 @@ margin-top: -36px;
 // 	border-bottom: 1px solid #dddddd;
 // }
 
-.selectize-control{
+.selectize-control {
 	text-align: left;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	height: rem(70);
 }
-.selectize-input{
+
+.selectize-input {
 
 	@extend .form-control;
 	@extend .form-control-lg;
 	// @include media-breakpoint-down(sm) {
 	// 	height: calc(1.5em * .94 + 2.25rem * .94 + .25rem * .94);
-  //   padding: (1.125rem * .94) 1rem;
+	//   padding: (1.125rem * .94) 1rem;
 	// }
 	border: 1px solid #dddddd;
-	position: relative; 
+	position: relative;
 	text-align: left;
 	background-image: url(../img/chevron-down.svg) !important;
 	background-repeat: no-repeat;
 
 	background-repeat: no-repeat !important;
-	background-position: calc(100% - 10px) 50%  !important;
-	background-size: rem(17) rem(9)  !important;
+	background-position: calc(100% - 10px) 50% !important;
+	background-size: rem(17) rem(9) !important;
 	z-index: 100;
 	margin-bottom: 0;
 	box-shadow: none !important;
-	&.focus{
+
+	&.focus {
 		border-bottom-left-radius: 0;
-								border-bottom-right-radius: 0;
-								// border-bottom-color: transparent;
+		border-bottom-right-radius: 0;
+		// border-bottom-color: transparent;
 		// &::before{
 		// 	content: '';
 		// 	position: absolute;
@@ -745,79 +813,89 @@ margin-top: -36px;
 		// 	top: 0;
 		// 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 		// }
-	
+
 	}
 }
 
 .selectize-control.single .selectize-input {
+
 	&:after,
-	&::before{
+	&::before {
 
 		display: none !important;
 	}
 }
-		.selectize-input > input{
-			// @extend .h6;
-			font-size: $btn-font-size-lg;
-			margin-bottom: 0;
-			line-height: 1.8;
+
+.selectize-input>input {
+	// @extend .h6;
+	font-size: $btn-font-size-lg;
+	margin-bottom: 0;
+	line-height: 1.8;
+}
+
+.dropdown-active+.selectize-dropdown {
+	z-index: 300;
+}
+
+.selectize-dropdown {
+	// border: none;
+	// z-index: 101;
+	border-radius: 0;
+	border: 1px solid #dddddd;
+	border-top: none;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+
+		@include media-breakpoint-up(md) {
+
+			height: calc(100% + #{rem(68)});
 		}
 
-		.dropdown-active +  .selectize-dropdown{
-			z-index: 300;
-		}
-		.selectize-dropdown{
-			// border: none;
-			// z-index: 101;
-			border-radius: 0;
-			border: 1px solid #dddddd;
-			border-top: none;
-			&::after{
-				content: '';
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 100%;
-				z-index: -1;
-				@include media-breakpoint-up(md) {
+		height: calc(100% + #{rem(60)});
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	}
+}
 
-					height: calc(100% + #{rem(68)});
-				}
-				height: calc(100% + #{rem(60)});
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-			}
-		}
-		.selectize-dropdown-content{
-			border-radius: 0 0 5px 5px;
-			// margin-top: -1px;
-			.option{
-				@extend .h6;
-				padding: rem(19) rem(20);
-				margin-bottom: 0;
-				cursor: pointer;
-				@include mt;
-				&:not(:last-child){
-					border-bottom: 1px solid #dddddd;
-				}
-				&.selected.active,
-				&.active,
-				&:hover{
-					background-color: #fafafa;
-					color: $body-color;
-				}
-			}
+.selectize-dropdown-content {
+	border-radius: 0 0 5px 5px;
+
+	// margin-top: -1px;
+	.option {
+		@extend .h6;
+		padding: rem(19) rem(20);
+		margin-bottom: 0;
+		cursor: pointer;
+		@include mt;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #dddddd;
 		}
 
-		.select-default{
-			// @extend .form-control-lg;
-			@include media-breakpoint-down(sm) {
-
-			}
+		&.selected.active,
+		&.active,
+		&:hover {
+			background-color: #fafafa;
+			color: $body-color;
 		}
+	}
+}
 
-		.select-js-wrap{
-			@include media-breakpoint-up(sm) {
-				display: block;
-			}
-			display: none;
-		}
+.select-default {
+
+	// @extend .form-control-lg;
+	@include media-breakpoint-down(sm) {}
+}
+
+.select-js-wrap {
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+
+	display: none;
+}
