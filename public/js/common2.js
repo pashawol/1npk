@@ -1,8 +1,8 @@
 "use strict";
 
 jQuery(document).ready(function ($) {
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/20.jpg);"></div>'); // whenever we hover over a menu item that has a submenu
-
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/20.jpg);"></div>')
+	// whenever we hover over a menu item that has a submenu
 	$('.site-nav__item').on('mouseover', function () {
 		var $menuItem = $(this),
 				$submenuWrapper = $('> .sub-menu-wrap', $menuItem); // grab the menu item's position relative to its positioned parent
@@ -147,7 +147,13 @@ jQuery(document).ready(function ($) {
 		$("body").toggleClass("fixed");
 	});
 	$(".menu-mobile-page__inner .menu > .menu-item-has-children > a").click(function (e) {
-		e.preventDefault();
+		var browserdevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+		if (browserdevice) {
+			// some code..
+			e.preventDefault();
+		}
+
 		$(this).parent().toggleClass("active").siblings().removeClass("active");
 		searchTogggle();
 		$(this).next().toggleClass("active"); // $(".top-submenu--js").slideUp(0);
@@ -161,7 +167,14 @@ jQuery(document).ready(function ($) {
 		toggleBlock.prepend("\n\t<li class=\"sub-menu__item d-sm-none\">\n\t<a class=\"sub-menu__link strong\" href=\"".concat(href, "\">").concat(title, " </a>\n\t</li>"));
 		$(this).click(function (e) {
 			$(".hide-parent-js").addClass("active");
-			e.preventDefault();
+			var browserdevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+			if (browserdevice) {
+				// some code..
+				e.preventDefault();
+			} // e.preventDefault();
+
+
 			$(this).next().toggleClass("active");
 		});
 	});

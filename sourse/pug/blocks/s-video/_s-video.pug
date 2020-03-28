@@ -3,7 +3,8 @@ mixin s-video()
 	+b.s-video.not-slide-def.section#s-video.lazy-background&attributes(attributes)
 		.container
 			block
-			+e.slider.slider--js.swiper-container
+			// Добавил класс .slider-column--js убрал  .slider--js
+			+e.slider.swiper-container.slider-column--js
 				.swiper-wrapper
 					mixin item(i)
 						+e.slide.swiper-slide
@@ -17,6 +18,7 @@ mixin s-video()
 					
 					+item('4')
 					+item('5')
+					+item('6')
 					+item('6')
 
 			+b.swiper-pagination--lg

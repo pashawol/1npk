@@ -3,7 +3,7 @@ var JSCCommon = {
 	LazyFunction: function () {
 		// Для лэзи загрузки 
 
- 
+
 
 		// лэзи 
 		document.addEventListener("DOMContentLoaded", function () {
@@ -118,7 +118,7 @@ var JSCCommon = {
 
 
 	magnificPopupCall: function () {
-		let  modalDefault = {
+		let modalDefault = {
 
 			type: 'inline',
 			fixedContentPos: true,
@@ -133,7 +133,7 @@ var JSCCommon = {
 			...modalDefault,
 			closeBtnInside: true,
 		});
-		
+
 		$('.popup-place-js').magnificPopup({
 			...modalDefault,
 			closeBtnInside: false,
@@ -161,11 +161,11 @@ var JSCCommon = {
 
 
 		$('[href="#modal-call"], [href="#modal-profile"], [href="#modal-call-new"]').click(function () {
-			var modal = 	$($(this).attr('href'));
+			var modal = $($(this).attr('href'));
 			modal.find(modal.find(".form-wrap__title").text($(this).data('title')));
-			if($(this).data("btn")){
+			if ($(this).data("btn")) {
 				modal.find(modal.find(".form-wrap__btn").text($(this).data('btn')));
-		 
+
 			}
 		})
 		// / modal window
@@ -225,7 +225,7 @@ var JSCCommon = {
 			fixedContentPos: false
 		});
 		// /modal галерея
-		
+
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -246,7 +246,7 @@ var JSCCommon = {
 				},
 			},
 		});
-		$(".modal-close-js").click(function() {
+		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})
 	},
@@ -258,7 +258,7 @@ var JSCCommon = {
 			// slidesPerView: 5,
 			slidesPerView: 1,
 			watchOverflow: true,
-			spaceBetween: 0,  
+			spaceBetween: 0,
 			autoplay: {
 				delay: 3000,
 			},
@@ -266,27 +266,27 @@ var JSCCommon = {
 				el: '.swiper-pagination--lg',
 				clickable: true,
 			},
-			loop: true,  
+			loop: true,
 			on: {
-				init: function () { 
+				init: function () {
 					JSCCommon.magnificPopupCall();
 				},
-			} 
+			}
 		}
 
-		var mySwiper5 = new Swiper($(".tabs__content.active").find('.slider--js3'), params); 
+		var mySwiper5 = new Swiper($(".tabs__content.active").find('.slider--js3'), params);
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
-			.addClass('active').siblings().removeClass('active')
-			.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-			.eq($(this).index()).addClass('active').fadeIn(function () {
-				var slider = $(this).find('.slider--js3'); 
-						slider.hasClass("swiper-container-initialized") 
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).addClass('active').fadeIn(function () {
+					var slider = $(this).find('.slider--js3');
+					slider.hasClass("swiper-container-initialized")
 						? mySwiper5.update()
 						: mySwiper5 = new Swiper(slider, params)
-					 
-					});
-			 
+
+				});
+
 		});
 
 		// }
@@ -298,7 +298,7 @@ var JSCCommon = {
 	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-				// mask for input
+		// mask for input
 		$('.input-date-js').inputmask("99.99.9999");
 	},
 
@@ -401,21 +401,21 @@ var JSCCommon = {
 	},
 
 	accordion: function () {
- 
+
 		$('.accord__head').click(function () {
 			var th = $(this);
 			th.next().slideToggle()
 				.parent().siblings().find('.accord__body').slideUp(
-					
+
 				);
-				 return false;
-				});
- 
-				$('.accord__close').click(function () {
-					var th = $(this);
-					th.parents('.accord__body').slideUp( );
 			return false;
-		}); 
+		});
+
+		$('.accord__close').click(function () {
+			var th = $(this);
+			th.parents('.accord__body').slideUp();
+			return false;
+		});
 
 	},
 	videoBg: function () {
@@ -613,10 +613,54 @@ jQuery(document).ready(function ($) {
 			});
 		})
 	}
-	sliderSection('.section', '.slider--js', '.swiper-pagination')
-	sliderSection('.section', '.slider--js2', '.swiper-pagination') 
+	// slider
+	$('.section').each(function () {
+		var swiper4 = new Swiper($(this).find('.slider-column--js'), {
+			// slidesPerView: 5,
+			slidesPerView: 1,
+			watchOverflow: true,
+			spaceBetween: 30,
+			slidesPerColumn: 1,
+			slidesPerColumnFill: 'row',
+			touchStartForcePreventDefault: true,
+			breakpoints: {
 
- 
+				768: {
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+				},
+				992: {
+					slidesPerView: 3,
+					slidesPerColumn: 2,
+				},
+
+			},
+			// autoplay: {
+			// 	delay: 3000,
+			// },
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				clickable: true,
+			},
+			// loop: true,
+			loopFillGroupWithBlank: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			on: {
+				init: function () {
+					/* do something */
+					JSCCommon.magnificPopupCall();
+				},
+			}
+
+		});
+	})
+
+	sliderSection('.section', '.slider--js', '.swiper-pagination')
+	sliderSection('.section', '.slider--js2', '.swiper-pagination')
+
+
 
 	$('.section').each(function () {
 
@@ -625,7 +669,7 @@ jQuery(document).ready(function ($) {
 			slidesPerView: 3,
 			watchOverflow: true,
 			spaceBetween: 0,
-			watchOverflow: true, 
+			watchOverflow: true,
 			spaceBetween: 30,
 			loop: true,
 			lazy: {
@@ -637,9 +681,9 @@ jQuery(document).ready(function ($) {
 				// when window width is <= 480px
 				768: {
 					slidesPerView: 5,
-					spaceBetween: 30, 
+					spaceBetween: 30,
 				},
-				 
+
 			},
 
 			// centeredSlides: true,
@@ -709,7 +753,7 @@ jQuery(document).ready(function ($) {
 			},
 			loop: true,
 			loopFillGroupWithBlank: true,
-		 
+
 			breakpoints: {
 				// when window width is <= 320px
 
@@ -719,7 +763,7 @@ jQuery(document).ready(function ($) {
 					spaceBetween: 30,
 					loop: true,
 				},
-				 
+
 			},
 			on: {
 				init: function () {

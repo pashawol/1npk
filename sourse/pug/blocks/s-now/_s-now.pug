@@ -177,10 +177,10 @@ mixin s-now-16-6()
 	+b.s-now--numbers.section.pb-lg-0#s-now&attributes(attributes) 
 		+e.slider-wrap
 			.container
-				+e.slider.slider--js.swiper-container
-					.swiper-wrapper
+				// переделал
+				.row
 						mixin item(t)
-							+e.slide.swiper-slide.col-md-3
+							+e.slide.swiper-slide.col-md-3.col-6
 								+e.item--top.--border
 									+e.count--md= t
 									block
@@ -205,7 +205,7 @@ mixin s-now-16-6()
 								br
 								| 
 								| и&nbsp;46&nbsp;на подряде
-		.swiper-pagination
+		//- .swiper-pagination
 		.container.container--foot
 			.row
 				mixin itemf(t)

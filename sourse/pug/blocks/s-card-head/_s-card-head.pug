@@ -56,8 +56,8 @@ mixin s-card-head(t, t2,  p, ...items)
 							| Отсрочка платежа
 			+e.body
 				.row
-					+e.col-left.col-lg-auto.col-md-6 
-						+e.slider-wrap.d-md-none
+					+e.col-left-inner.col-lg-auto.col-md-6 
+						+e.slider-wrap
 							+e.slider--js.swiper-container
 								.swiper-wrapper
 									each item in items
@@ -67,16 +67,16 @@ mixin s-card-head(t, t2,  p, ...items)
 													img(src="#" data-src=`img/prod-slide-${item}.jpg` class="swiper-lazy"  alt="")
 								+arrow()
 							.prod-pagination
-						+e.col-left-inner.d-none.d-md-block
-							+e.main-img-wrap
-								img.res-i.lazy(src="#" data-src=`img/@2x/prod-1.jpg`, alt="")
-							+b.search-place.popup-place-js(href="#modal-search-place")
-								.row
-									.col
-										+e.text Указать место подачи материала
-									.col-auto
-										+e.btn
-											+icon("mark")
+						+b.search-place.popup-place-js(href="#modal-search-place")
+							.row
+								.col
+									+e.text Указать место подачи материала
+								.col-auto
+									+e.btn
+										+icon("mark")
+						//- +e.col-left-inner.d-none.d-md-block
+						//- 	+e.main-img-wrap
+						//- 		img.res-i.lazy(src="#" data-src=`img/@2x/prod-1.jpg`, alt="")
 					.col-md
 						if block 
 							block

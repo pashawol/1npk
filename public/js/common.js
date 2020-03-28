@@ -463,55 +463,95 @@ jQuery(document).ready(function ($) {
 	function sliderSection(sec, sl, pag) {
 		// slider
 		$(sec).each(function () {
-			var _ref;
+			var _Swiper;
 
-			var swiper4 = new Swiper($(this).find(sl), (_ref = {
+			var swiper4 = new Swiper($(this).find(sl), (_Swiper = {
 				// slidesPerView: 5,
 				slidesPerView: 1,
 				watchOverflow: true,
 				spaceBetween: 30
-			}, _defineProperty(_ref, "watchOverflow", true), _defineProperty(_ref, "touchStartForcePreventDefault", true), _defineProperty(_ref, "autoplay", {
+			}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "touchStartForcePreventDefault", true), _defineProperty(_Swiper, "autoplay", {
 				delay: 3000
-			}), _defineProperty(_ref, "pagination", {
+			}), _defineProperty(_Swiper, "pagination", {
 				el: $(this).find(pag),
 				clickable: true
-			}), _defineProperty(_ref, "loop", true), _defineProperty(_ref, "loopFillGroupWithBlank", true), _defineProperty(_ref, "lazy", {
+			}), _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopFillGroupWithBlank", true), _defineProperty(_Swiper, "lazy", {
 				loadPrevNext: true
-			}), _defineProperty(_ref, "on", {
+			}), _defineProperty(_Swiper, "on", {
 				init: function init() {
 					/* do something */
 					JSCCommon.magnificPopupCall();
 				}
-			}), _ref));
+			}), _Swiper));
 		});
-	}
+	} // slider
 
+
+	$('.section').each(function () {
+		var swiper4 = new Swiper($(this).find('.slider-column--js'), {
+			// slidesPerView: 5,
+			slidesPerView: 1,
+			watchOverflow: true,
+			spaceBetween: 30,
+			slidesPerColumn: 1,
+			slidesPerColumnFill: 'row',
+			touchStartForcePreventDefault: true,
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					slidesPerColumn: 2
+				},
+				992: {
+					slidesPerView: 3,
+					slidesPerColumn: 2
+				}
+			},
+			// autoplay: {
+			// 	delay: 3000,
+			// },
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				clickable: true
+			},
+			// loop: true,
+			loopFillGroupWithBlank: true,
+			lazy: {
+				loadPrevNext: true
+			},
+			on: {
+				init: function init() {
+					/* do something */
+					JSCCommon.magnificPopupCall();
+				}
+			}
+		});
+	});
 	sliderSection('.section', '.slider--js', '.swiper-pagination');
 	sliderSection('.section', '.slider--js2', '.swiper-pagination');
 	$('.section').each(function () {
-		var _ref2;
+		var _Swiper2;
 
-		var swiper5 = new Swiper($(this).find('.s-client__slider--js'), (_ref2 = {
+		var swiper5 = new Swiper($(this).find('.s-client__slider--js'), (_Swiper2 = {
 			// slidesPerView: 5,
 			slidesPerView: 3,
 			watchOverflow: true,
 			spaceBetween: 0
-		}, _defineProperty(_ref2, "watchOverflow", true), _defineProperty(_ref2, "spaceBetween", 30), _defineProperty(_ref2, "loop", true), _defineProperty(_ref2, "lazy", {
+		}, _defineProperty(_Swiper2, "watchOverflow", true), _defineProperty(_Swiper2, "spaceBetween", 30), _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "lazy", {
 			loadPrevNext: true
-		}), _defineProperty(_ref2, "breakpoints", {
+		}), _defineProperty(_Swiper2, "breakpoints", {
 			// when window width is <= 320px
 			// when window width is <= 480px
 			768: {
 				slidesPerView: 5,
 				spaceBetween: 30
 			}
-		}), _defineProperty(_ref2, "navigation", {
+		}), _defineProperty(_Swiper2, "navigation", {
 			nextEl: $(this).find('.swiper-button-next'),
 			prevEl: $(this).find('.swiper-button-prev')
-		}), _defineProperty(_ref2, "pagination", {
+		}), _defineProperty(_Swiper2, "pagination", {
 			el: $(this).find('.swiper-pagination'),
 			clickable: true
-		}), _ref2));
+		}), _Swiper2));
 		var titles = [];
 		$('.s-card-head__slider--js .swiper-slide').each(function (i) {
 			titles.push($(this).data('thumb'));

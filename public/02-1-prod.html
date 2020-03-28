@@ -332,8 +332,8 @@
 						</div>
 						<div class="s-card-head__body">
 							<div class="row">
-								<div class="s-card-head__col-left col-lg-auto col-md-6"> 
-									<div class="s-card-head__slider-wrap d-md-none">
+								<div class="s-card-head__col-left-inner col-lg-auto col-md-6"> 
+									<div class="s-card-head__slider-wrap">
 										<div class="s-card-head__slider s-card-head__slider--js swiper-container">
 											<div class="swiper-wrapper">
 												<div class="s-card-head__slide swiper-slide" data-thumb="img/prod-slide-1.jpg">
@@ -352,25 +352,25 @@
 													<div class="easyzoom"> <a class="s-card-head__img-wrap img-bg swiper-lazy" href="img/prod-slide-lg.jpg" data-background="img/prod-slide-4.jpg"><img class="swiper-lazy" src="#" data-src="img/prod-slide-4.jpg" alt=""/></a>
 													</div>
 												</div>
+												<div class="s-card-head__slide swiper-slide" data-thumb="img/prod-slide-1.jpg">
+													<div class="easyzoom"> <a class="s-card-head__img-wrap img-bg swiper-lazy" href="img/prod-slide-lg.jpg" data-background="img/prod-slide-1.jpg"><img class="swiper-lazy" src="#" data-src="img/prod-slide-1.jpg" alt=""/></a>
+													</div>
+												</div>
 											</div>
 											<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev"><img src="img/chevron-left.svg" alt=""/></div>
 											<div class="swiper-button-hand swiper-button-hand-next swiper-button-next"><img src="img/chevron-right.svg" alt=""/></div>
 										</div>
 										<div class="prod-pagination"></div>
-									</div>
-									<div class="s-card-head__col-left-inner d-none d-md-block">
-										<div class="s-card-head__main-img-wrap"><img class="res-i lazy" src="#" data-src="img/@2x/prod-1.jpg" alt=""/>
-										</div><a class="search-place popup-place-js" href="#modal-search-place">
-										<div class="row">
-											<div class="col"><span class="search-place__text">Указать место подачи материала</span>
-											</div>
-											<div class="col-auto"><span class="search-place__btn">
-												<svg class="icon icon-mark ">
-													<use xlink:href="img/svg/sprite.svg#mark"></use>
-												</svg></span>
-											</div>
-										</div></a>
-									</div>
+									</div><a class="search-place popup-place-js" href="#modal-search-place">
+									<div class="row">
+										<div class="col"><span class="search-place__text">Указать место подачи материала</span>
+										</div>
+										<div class="col-auto"><span class="search-place__btn">
+											<svg class="icon icon-mark ">
+												<use xlink:href="img/svg/sprite.svg#mark"></use>
+											</svg></span>
+										</div>
+									</div></a>
 								</div>
 								<div class="col-md">
 									<div class="s-card-head__btns-wrap">
@@ -691,7 +691,8 @@
 						<div class="section-title__text">Первая нерудная компания ведет видео-отчет каждой отгрузки
 						</div>
 					</div>
-					<div class="s-video__slider slider slider--js swiper-container">
+					<!-- Добавил класс .slider-column--js убрал  .slider--js-->
+					<div class="s-video__slider swiper-container slider-column slider-column--js">
 						<div class="swiper-wrapper">
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-1.jpg" alt=""/></picture></a>
@@ -711,6 +712,10 @@
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
 									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-5.jpg" alt=""/></picture></a>
+								</div>
+								<!-- +e.slide.swiper-slide-->
+								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
+									<picture class="picture-bg"><img class="object-fit-js" src="img/@2x/video-6.jpg" alt=""/></picture></a>
 								</div>
 								<!-- +e.slide.swiper-slide-->
 								<div class="s-video__slide swiper-slide"><a class="s-video__item s-video__item--video bg-wrap" href="http://www.youtube.com/watch?v=0O2aH4XLbto" data-fancybox="video-gal" data-animation-duration="500">
@@ -875,41 +880,48 @@
 						<div class="section-title__text">За 7 лет мы выполнили проекты различной сложности и для разного уровня клиентов
 						</div>
 					</div>
-					<div class="s-objects__slider slider slider--js swiper-container">
+					<!-- Добавил класс .slider-column--js убрал  .slider--js-->
+					<div class="s-objects__slider swiper-container slider-column slider-column--js">
 						<div class="swiper-wrapper">
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-1.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-1.jpg" alt=""/>
 									<div class="s-objects__title">Строительство аэропорта «Бегишево»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-2.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-2.jpg" alt=""/>
 									<div class="s-objects__title">Строительство автосалона грузовой техники «DAF»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-3.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-3.jpg" alt=""/>
 									<div class="s-objects__title">Строительство терминалов ТК «ПЭК»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-4.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-4.jpg" alt=""/>
 									<div class="s-objects__title">Строительные работы на объекте «ТАНЭКО»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-1.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-1.jpg" alt=""/>
 									<div class="s-objects__title">Строительство аэропорта «Бегишево»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
-								<div class="s-objects__col col-lg-4 col-md-6 swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-2.jpg" alt=""/>
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-2.jpg" alt=""/>
+									<div class="s-objects__title">Строительство автосалона грузовой техники «DAF»
+									</div></a>
+								</div>
+								<!-- /+e.col.col-->
+								<div class="swiper-slide"><a class="s-objects__item img-bg img-animate" href="#"><img class="lazy-bg" src="#" data-src="img/object-2.jpg" alt=""/>
 									<div class="s-objects__title">Строительство автосалона грузовой техники «DAF»
 									</div></a>
 								</div>
 								<!-- /+e.col.col-->
 						</div>
-						<div class="swiper-pagination"></div>
-					</div><a class="s-objects__btn btn-primary" href="#">Смотреть все проекты</a>
+					</div>
+					<!-- вынес пагинацию-->
+					<div class="swiper-pagination"></div><a class="s-objects__btn btn-primary" href="#">Смотреть все проекты</a>
 				</div>
 			</div>
 			<!-- end s-objects-->

@@ -5333,7 +5333,7 @@
 		var proto = $Number.prototype; // Opera ~12 has broken Object#toString
 
 		var BROKEN_COF = cof(_dereq_(71)(proto)) == NUMBER;
-		var TRIM = 'trim' in String.prototype; // 7.1.3 ToNumber(argument)
+		var TRIM = ('trim' in String.prototype); // 7.1.3 ToNumber(argument)
 
 		var toNumber = function (argument) {
 			var it = toPrimitive(argument, false);
