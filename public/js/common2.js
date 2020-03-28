@@ -166,16 +166,15 @@ jQuery(document).ready(function ($) {
 
 		toggleBlock.prepend("\n\t<li class=\"sub-menu__item d-sm-none\">\n\t<a class=\"sub-menu__link strong\" href=\"".concat(href, "\">").concat(title, " </a>\n\t</li>"));
 		$(this).click(function (e) {
-			$(".hide-parent-js").addClass("active");
 			var browserdevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+			$(".hide-parent-js").addClass("active");
 
 			if (browserdevice) {
 				// some code..
-				e.preventDefault();
-			} // e.preventDefault();
+				e.preventDefault(); // e.preventDefault();
 
-
-			$(this).next().toggleClass("active");
+				$(this).next().toggleClass("active");
+			}
 		});
 	});
 	$(".hide-parent-js").click(function () {

@@ -194,14 +194,14 @@ jQuery(document).ready(function ($) {
 	<a class="sub-menu__link strong" href="${href}">${title} </a>
 	</li>`)
 		$(this).click(function (e) {
-			$(".hide-parent-js").addClass("active")
 			let browserdevice = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+			$(".hide-parent-js").addClass("active")
 			if (browserdevice) {
 				// some code..
 				e.preventDefault();
+				// e.preventDefault();
+				$(this).next().toggleClass("active");
 			}
-			// e.preventDefault();
-			$(this).next().toggleClass("active");
 		})
 	});
 	$(".hide-parent-js").click(function () {
