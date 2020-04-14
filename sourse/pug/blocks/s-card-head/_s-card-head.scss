@@ -1,7 +1,12 @@
 .s-card-head {
 	@include media-breakpoint-up(lg) {
 
-		padding-bottom: rem(30);
+		padding-bottom: rem(25);
+
+		.search-place {
+			// padding-bottom: rem(30);
+			margin-bottom: rem(35);
+		}
 	}
 
 	@include media-breakpoint-up(md) {
@@ -64,7 +69,7 @@
 
 		@include media-breakpoint-up(xl) {
 
-			margin-bottom: rem(30);
+			margin-bottom: rem(20);
 		}
 
 		margin-bottom: rem(20);

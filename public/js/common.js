@@ -525,7 +525,8 @@ jQuery(document).ready(function ($) {
 				}
 			}
 		});
-	});
+	}); // sliderSection('.section', '.slider-line--js', '.swiper-pagination')
+
 	sliderSection('.section', '.slider--js', '.swiper-pagination');
 	sliderSection('.section', '.slider--js2', '.swiper-pagination');
 	$('.section').each(function () {

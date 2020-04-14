@@ -362,4 +362,49 @@ jQuery(document).ready(function ($) {
 			autohide: 0,
 		}
 	});
+
+	// slider
+	$('.section').each(function () {
+		var swiper4 = new Swiper($(this).find('.slider-line--js'), {
+			// slidesPerView: 5,
+			slidesPerView: 1,
+			watchOverflow: true,
+			spaceBetween: 30,
+			loop: true,
+			breakpoints: {
+
+				768: {
+					slidesPerView: 2,
+					// spaceBetween: 30,
+				},
+				992: {
+					// spaceBetween: 0,
+					slidesPerView: 3,
+				},
+
+			},
+			// autoplay: {
+			// 	delay: 3000,
+			// },
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				clickable: true,
+			},
+			// loop: true,
+			loopFillGroupWithBlank: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			on: {
+				init: function () {
+					/* do something */
+					JSCCommon.magnificPopupCall();
+				},
+			}
+
+		});
+	})
+
+
+
 })

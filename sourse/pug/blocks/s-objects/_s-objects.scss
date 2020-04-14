@@ -39,7 +39,15 @@
 		// padding-bottom: em(29);
 	}
 
-	.swiper-wrapper {
+	.slider-line--js {
+		@include media-breakpoint-up(md) {
+
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+
+	.slider-line--js.swiper-wrapper {
 		// margin-bottom: rem(30px);
 
 		// @include media-breakpoint-up(md) {
